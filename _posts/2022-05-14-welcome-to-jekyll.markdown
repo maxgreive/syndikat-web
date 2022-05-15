@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "That which does not kill us makes us stronger"
+title: That which does not kill us makes us stronger
 author: max
 image: https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/02/jomez.jpeg
 date: 2022-04-14 15:59:32 +0200

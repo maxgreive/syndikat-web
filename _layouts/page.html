@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      {% if page.image %}
+        <div class="col col-12">
+          <div class="page-image">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{- page.image -}}" alt="{{ page.title | escape }}" class="lazy">
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- page.title -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <article class="page">
+    <div class="page__content">
+      {{ content }}
+    </div>
+  </article>
+</div>

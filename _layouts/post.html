@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="post-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-{% if page.video %}12{% else %}6 col-d-12{% endif %}">
+        {% if page.video %}
+          <div class="post-video">
+            <div class="post-video__wrap">
+              <iframe src="https://www.youtube.com/embed/{{ page.video }}" loading="lazy" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        {% else %}
+          <div class="post-image">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ page.image }}" alt="{{ page.title | escape }}" class="lazy">
+          </div>
+        {% endif %}
+      </div>
+      <div class="col col-{% if page.video %}12{% else %}6 col-d-12{% endif %}">
+        <div class="post__info{% if page.video %} post__info-video{% endif %}">
+          <div class="post__tags">
+            {% for tag in page.tags %}
+              <span class="post__tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <h1 class="post__title">{{ page.title }}</h1>
+          {%- assign author = site.data.authors[page.author] -%}
+          <div class="post__meta">
+            <span class="post__author-image">
+              <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{- author.image -}}">
+            </span>
+
+            <div class="post__meta-bottom">
+              <a href="//twitter.com/{{- author.twitter -}}" class="post__author">{{- author.name -}}</a>
+              <time class="post__date" datetime="{{- page.date -}}">{{- page.date | date_to_long_string -}}</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <article class="post">
+    <div class="post__content">{{ content }}</div>
+    {% include components/post_share.html %}
+  </article>
+</div>

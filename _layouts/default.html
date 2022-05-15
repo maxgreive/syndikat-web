@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+{% include snippets/head.html %}
+
+<body>
+  {% include components/header.html %}
+  {% include snippets/search.html %}
+
+  <main class="content" aria-label="Content">
+    {{ content }}
+  </main>
+
+  {% include components/footer.html %}
+  <script src="/assets/js/scripts.js"></script>
+  <script src="/assets/js/common.js"></script>
+</body>
+
+</html>

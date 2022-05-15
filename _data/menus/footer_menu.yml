@@ -1,0 +1,7 @@
+items:
+  - label: Blog
+    link: /blog
+  - label: Satzung
+    link: /satzung
+  - label: Impressum
+    link: /impressum

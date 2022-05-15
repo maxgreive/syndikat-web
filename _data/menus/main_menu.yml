@@ -1,0 +1,10 @@
+title: Menu
+items:
+  - label: Home
+    link: /
+  - label: About
+    link: /about/
+  - label: Membership
+    link: /membership/
+  - label: Contact
+    link: /contact/

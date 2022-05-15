@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,21 +18,37 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: syndikat.golf
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Ein Discgolfverein aus Köln, Berlin und anderswo in Deutschland.
+  Tritt unserem Discord bei und werde Teil einer großartigen Community!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "//syndikat.golf" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: maxgreive
+github_username:  maxgreive
+permalink: /:categories/:title/
+sharing_image: https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-11-at-3.39.05-PM-1536x855.jpg
 
 # Build settings
 theme: minima
+paginate: 6
+paginate_path: "/blog/page/:num/"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+socials:
+  - name: twitter
+    url: https://twitter.com
+  - name: facebook
+    url: https://facebook.com
+  - name: instagram
+    url: https://instagram.com
+  - name: pinterest
+    url: https://pinterest.com
+  - name: youtube
+    url: https://youtube.com
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "That which does not kill us makes us stronger"
+title: Oh yeah! We're live
 author: max
-image: https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/02/jomez.jpeg
-date: 2022-04-14 15:59:32 +0200
+image: https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/02/LVC-D2-K-42-1536x1024.jpeg
+date: 2022-04-30 15:59:32 +0200
 categories: blog
-tags: Coverage
+video: GQKEyX9fbwE
+tags: Courses
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace [Andre Furtado](https://unsplash.com/photos/u_6Zj2d1I5Q) diversity and empowerment.
@@ -16,7 +17,7 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 
 Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
 
-![Kitchen](https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-05-at-2.14.40-PM-1536x898.jpg#wide)
+![Kitchen](https://cdn.discgolf.ultiworld.com/wp-content/uploads/2022/02/LVC-D2-K-42-1536x1024.jpeg#wide)
 *Photo by [Andre Furtado](https://unsplash.com/photos/u_6Zj2d1I5Q) on [Unsplash](https://unsplash.com/)*
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.

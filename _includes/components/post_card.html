@@ -1,0 +1,34 @@
+<div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+    <div class="article__head">
+      {%- if include.item.date -%}
+        <time class="article__date" datetime="{{- include.item.date -}}">
+          {{- include.item.date | date_to_string -}}
+        </time>
+      {%- endif -%}
+      {%- if include.item.video -%}
+        <div class="video-icon">
+          <div class="circle pulse"></div>
+          <div class="circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <polygon points="40,30 65,50 40,70"></polygon>
+            </svg>
+          </div>
+        </div>
+      {%- endif -%}
+      <a class="article__image" href="{{- include.item.url -}}">
+        <img {% if include.lazy == "false" %}class="lazy" data-{% endif %}src="{%- if include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}" alt="{{- include.item.title | escape -}}">
+      </a>
+    </div>
+    <div class="article__content">
+      <h2 class="article__title">
+        <a href="{{- include.item.url -}}">
+          {{- include.item.title -}}
+        </a>
+      </h2>
+      {%- if include.item.excerpt -%}
+        <p class="article__excerpt">{{- include.item.excerpt | strip_html | slice: 0, 92 -}} …</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

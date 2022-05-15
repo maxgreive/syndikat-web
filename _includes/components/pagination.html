@@ -1,0 +1,33 @@
+{% if paginator.total_pages > 1 %}
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <nav class="pagination animate">
+          <div class="pagination__inner">
+            <div class="pagination__list">
+              {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination__prev pagination__item">
+                  <i class="ion ion-ios-arrow-back"></i> Vorherige
+                </a>
+              {% else %}
+                <span class="pagination__prev pagination__item disabled">
+                  <i class="ion ion-ios-arrow-back"></i> Vorherige
+                </span>
+              {% endif %}
+              <div class="pagination__count pagination__item">Seite {{ paginator.page }} von {{ paginator.total_pages }}</div>
+              {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}" class="pagination__next pagination__item">
+                  Nächste <i class="ion ion-ios-arrow-forward"></i>
+                </a>
+              {% else %}
+                <span class="pagination__next pagination__item disabled">
+                  Nächste <i class="ion ion-ios-arrow-forward"></i>
+                </span>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endif %}

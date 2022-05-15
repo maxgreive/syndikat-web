@@ -1,0 +1,36 @@
+{%- capture sharing_image -%}
+  {%- if page.image -%}
+    {{- page.image -}}
+  {%- else -%}
+    {{- site.sharing_image | absolute_url -}}
+  {%- endif -%}
+{%- endcapture -%}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} &ndash; {{ site.title }}</title>
+    <meta name='description' content="{{ site.description }}">
+    <link rel="canonical" href="https://syndikat.golf/">
+    <link rel="alternate" type="application/rss+xml" title="syndikat.golf" href="/feed.xml">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image:src" content="{{- sharing_image -}}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{- sharing_image -}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" as="style">
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+    {% include snippets/styles.html %}
+  </head>

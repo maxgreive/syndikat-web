@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row animate">
+
+    {% for post in include.posts limit: 9 %}
+      {% include components/post_card.html item=post %}
+    {% endfor %}
+  </div>
+</div>

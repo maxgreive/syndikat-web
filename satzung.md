@@ -57,7 +57,7 @@ Organe des Vereins sind:
 1. die Mitgliederversammlung
 1. der Vorstand
 
-# § 8 Mitgliederversammlung
+# § 8 Mitglieder&shy;versammlung
 
 1. Die Mitgliederversammlung ist das oberste Organ des Vereins. Sie findet einmal jährlich im zweiten Halbjahr des Geschäftsjahres statt.
 1. Die Einladung zur Mitgliederversammlung ist den Mitgliedern mit Angabe der Tagesordnung 14 Tage vor dem Termin durch den Vorstand per E-Mail zuzustellen.

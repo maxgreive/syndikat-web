@@ -3,8 +3,8 @@ items:
   - label: Home
     link: /
   - label: About
-    link: /about/
+    link: /pages/about/
   - label: Membership
-    link: /membership/
+    link: /pages/membership/
   - label: Contact
     link: /contact/

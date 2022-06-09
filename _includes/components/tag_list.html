@@ -4,7 +4,7 @@
       <div class="col col-12">
         <div class="section__head">
           <h3 class="section__title">Tags</h3>
-          <a href="/tags/" class="section__link">Alle ansehen</a>
+          <a href="/blog/tags/" class="section__link">Alle ansehen</a>
         </div>
         <div class="row">
           {%- for tag in site.tags limit: 4 -%}
@@ -14,7 +14,7 @@
               {%- endfor -%}
             {%- endcapture -%}
             <div class="col col-3 col-d-6 col-m-12">
-              <a href="/tags#{{- tag[0] | downcase -}}" class="tag-image">
+              <a href="/blog/tags#{{- tag[0] | downcase -}}" class="tag-image">
                 <span class="tag-name">{{- tag[0] -}}</span>
                 <img class="lazy" data-src="{{- tag_image -}}" alt="{{- tag[0] -}}">
               </a>

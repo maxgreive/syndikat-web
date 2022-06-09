@@ -2,6 +2,6 @@ items:
   - label: Blog
     link: /blog
   - label: Satzung
-    link: /satzung
+    link: /pages/satzung
   - label: Impressum
-    link: /impressum
+    link: /pages/impressum

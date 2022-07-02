@@ -15,7 +15,7 @@ Dann freuen wir uns über Deine Anmeldung!
 - DFV-Nummer (wird bei offiziellen Turnieren benötigt)
 - Vereinstraining
 - Versicherung bei Turnieren
-- 10% bei [frisbeeshop.com](http://frisbeeshop.com)
+- 15% bei [frisbeeshop.com](http://frisbeeshop.com)
 - Member-Access auf dem Discord-Server
 
 ### Wo melde ich mich an?

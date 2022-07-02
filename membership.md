@@ -5,7 +5,7 @@ layout: page
 
 # Mitmachen
 
-Du willst Turnieren spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
+Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
 
 Dann freuen wir uns über Deine Anmeldung!
 

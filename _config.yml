@@ -38,17 +38,17 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-socials:
-  - name: twitter
-    url: https://twitter.com
-  - name: facebook
-    url: https://facebook.com
-  - name: instagram
-    url: https://instagram.com
-  - name: pinterest
-    url: https://pinterest.com
-  - name: youtube
-    url: https://youtube.com
+# socials:
+  #- name: twitter
+  #  url: https://twitter.com
+  #- name: facebook
+  #  url: https://facebook.com
+  #- name: instagram
+  #  url: https://instagram.com
+  #- name: pinterest
+  #  url: https://pinterest.com
+  #- name: youtube
+  #  url: https://youtube.com
 
 # Exclude from processing.
 # The following items will not be processed, by default.

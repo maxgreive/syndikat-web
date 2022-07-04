@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-image: https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MjU5OTg4MA&ixlib=rb-1.2.1&q=80&w=1080
+image: /assets/images/about-title.jpg
 permalink: /about/
 ---
 

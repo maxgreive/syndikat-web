@@ -3,6 +3,7 @@ layout: post
 title: Wöchentliche Liga ab August
 image: /assets/images/posts/syndication-weekly-header.png
 tags: turniere league
+author: max
 ---
 
 Den Rückbaumaßnahmen an der Scheibenstraße zum Trotz wird es ab August [eine kleine Sommer-Liga](https://udisc.com/leagues/syndication-weekly) geben. Spieler*innen aller Levels sind eingeladen teilzunehmen und über die nächsten Wochen Punkte zu sammeln.

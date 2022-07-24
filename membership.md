@@ -18,6 +18,11 @@ Dann freuen wir uns über Deine Anmeldung!
 - 15% bei [frisbeeshop.com](http://frisbeeshop.com)
 - Member-Access auf dem Discord-Server
 
+### Kosten
+
+- Vollmitgliedschaft: 30 € pro Jahr
+- Mitgliedschaft ermäßigt: 24 € pro Jahr
+
 ### Wo melde ich mich an?
 
 Am einfachsten ist es, wenn du einfach dieses Formular ausfüllst: [Anmeldeformular](https://forms.gle/N94kK7713uuPJZCq6)

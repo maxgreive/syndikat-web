@@ -9,6 +9,9 @@ Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen 
 
 Dann freuen wir uns über Deine Anmeldung!
 
+<button onclick="window.open('//forms.gle/N94kK7713uuPJZCq6')" type="button" class="button button--big button--primary">Jetzt anmelden!</button>
+
+
 ### Benefits
 
 - Welcome Package

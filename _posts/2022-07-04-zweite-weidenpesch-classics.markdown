@@ -4,6 +4,7 @@ title:  Zweite Weidenpesch Classics im August
 date:   2022-07-04 22:11:32 +0200
 author: max
 tags: turniere
+draft: true
 image: /assets/images/weidenpesch-classics.jpg
 ---
 

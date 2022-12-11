@@ -6,6 +6,8 @@ tags: turniere league
 author: max
 ---
 
+> **Update:** Seit dem 30. Oktober treffen wir uns nun immer sonntags am Disc Golf-Kurs! Tee-Off um 13 Uhr.
+
 Den Rückbaumaßnahmen an der Scheibenstraße zum Trotz wird es ab August [eine kleine Sommer-Liga](https://udisc.com/leagues/syndication-weekly) geben. Spieler*innen aller Levels sind eingeladen teilzunehmen und über die nächsten Wochen Punkte zu sammeln.
 
 Unter dem Namen "Syndication Weekly" treffen wir uns **dienstags um 19:30 Uhr** am Kurs an der Scheibenstraße. Los geht's am 02. August!

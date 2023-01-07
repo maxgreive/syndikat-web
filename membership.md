@@ -3,7 +3,7 @@ title: Membership
 layout: page
 ---
 
-# Mitmachen
+## Mitmachen
 
 Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
 

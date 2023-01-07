@@ -4,6 +4,8 @@ items:
     link: /
   - label: About
     link: /about/
+  - label: Events
+    link: /events/
   - label: Membership
     link: /membership/
   - label: Contact

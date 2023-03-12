@@ -21,7 +21,7 @@
 title: syndikat.golf
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ein Discgolfverein aus Köln, Baden-Württemberg, Berlin und anderswo in Deutschland.
+  Ein Discgolfverein aus Köln und anderswo in Deutschland.
   Tritt unserem Discord bei und werde Teil einer großartigen Community!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://syndikat.golf" # the base hostname & protocol for your site, e.g. http://example.com

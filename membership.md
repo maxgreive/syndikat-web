@@ -14,7 +14,6 @@ Dann freuen wir uns über Deine Anmeldung!
 
 ### Benefits
 
-- Welcome Package
 - DFV-Nummer (wird bei offiziellen Turnieren benötigt)
 - Vereinstraining
 - Versicherung bei Turnieren

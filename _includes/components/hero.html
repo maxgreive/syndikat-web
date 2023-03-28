@@ -7,11 +7,11 @@
             <h1 class="hero__title">Hey, wir sind das Syndikat</h1>
             <p class="hero__description">{{- site.description | escape -}}</p>
             <div class="hero__subscribe">
-              <form class="subscribe-form validate" action="//discord.gg/bus8ZcaNFT" method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
-                <label class="screen-reader-text" for="join-discord">Discord URL</label>
-                <input class="subscribe-email email" id="join-discord" type="text" name="EMAIL" placeholder="discord.gg/bus8ZcaNFT" readonly>
-                <button class="button button--primary subscribe-button" id="membedded-subscribe" type="submit" name="subscribe">Join Discord</button>
-              </form>
+              <button class="button button--primary button--icon" id="btn-discord" type="submit" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT')">
+                {% include snippets/logo-discord.html %}
+                Join Discord
+              </button>
+              <a href="/membership" class="button" id="btn-membership" type="submit">Mitglied werden</a>
             </div>
           </div>
           <div class="hero__right">

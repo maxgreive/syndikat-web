@@ -119,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if (lightense) {
     Lightense(".page__content img:not(.no-lightense), .post__content img:not(.no-lightense), .gallery__image img:not(.no-lightense)", {
     padding: 60,
-    offset: 30
+    offset: 30,
+    background: "rgba(26, 26, 31, .8)"
     });
   }
 

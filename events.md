@@ -7,7 +7,7 @@ layout: page
 
 Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine Runde, danach Open End freies Spielen.
 
-> Jeden Sonntag, 13 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56)
+> Jeden Dienstag, 18:30 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56)
 
 ## Weitere Events
 

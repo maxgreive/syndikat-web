@@ -3,5 +3,7 @@ items:
     link: /blog
   - label: Satzung
     link: /satzung
+  - label: FAQs
+    link: /faq
   - label: Impressum
     link: /impressum

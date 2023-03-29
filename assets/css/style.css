@@ -239,6 +239,10 @@ summary {
   font-weight: bold
 }
 
+summary::-webkit-details-marker {
+  display:none;
+}
+
 template {
   display: none
 }

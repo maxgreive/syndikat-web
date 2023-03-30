@@ -28,7 +28,7 @@ url: "https://syndikat.golf" # the base hostname & protocol for your site, e.g. 
 twitter_username: maxgreive
 github_username:  maxgreive
 permalink: /blog/:categories/:title/
-sharing_image: /assets/images/syndikat-sharing-image.jpg
+sharing_image: /assets/images/syndikat-sharing-image.png
 
 # Build settings
 theme: minima

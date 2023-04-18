@@ -5,9 +5,9 @@ layout: page
 
 ## Syndication Weekly
 
-Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine Runde, danach Open End freies Spielen.
+Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine Runde, danach freies Spielen bis die Sonne unter geht.
 
-> Jeden Dienstag, 18:30 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56)
+> Jeden Dienstag, 19:00 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) – [Event auf UDisc.com](https://udisc.com/leagues/syndication-weekly)
 
 ## Weitere Events
 

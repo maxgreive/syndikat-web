@@ -1,9 +1,9 @@
 items:
   - label: Blog
-    link: /blog
+    link: /blog/
   - label: Satzung
-    link: /satzung
+    link: /satzung/
   - label: FAQs
-    link: /faq
+    link: /faq/
   - label: Impressum
-    link: /impressum
+    link: /impressum/

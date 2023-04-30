@@ -37,6 +37,7 @@ paginate_path: "/blog/page/:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
 
 # socials:
   #- name: twitter

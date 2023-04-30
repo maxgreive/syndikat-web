@@ -1,5 +1,6 @@
 ---
 layout: page
+sitemap: false
 ---
 
 Deine Nachricht wurde erfolgreich übermittelt.

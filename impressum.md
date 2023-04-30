@@ -15,13 +15,13 @@ E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)
 
 Johannes Eisentraut<br>
 50935 Köln<br>
-E-Mail: [birdie@syndikat.golf](birdie@syndikat.golf)
+E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)
 
 ### 2. Vorsitzender:
 
 Max Greive<br>
 50679 Köln<br>
-E-Mail: [max@syndikat.golf](max@syndikat.golf)
+E-Mail: [max@syndikat.golf](mailto:max@syndikat.golf)
 
 
 Das Impressum gilt für: [https://syndikat.golf/](https://syndikat.golf/)

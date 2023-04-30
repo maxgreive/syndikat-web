@@ -20,6 +20,6 @@ Wenn die Winterzeit beginnt, wechseln wir wieder auf den Sonntag als unser regul
 
 Wir freuen uns darauf, Dich bei unserer wöchentlichen Liga zu begrüßen und hoffen, dass Du dich uns anschließt, um Deine Disc-Golf-Fähigkeiten zu verbessern und neue Freunde zu finden.
 
-Bei Fragen oder Anregungen stehen wir [per Email](birdie@syndikat.golf) oder auf unserem [Discord-Server](https://discord.gg/bus8ZcaNFT) zur Verfügung.
+Bei Fragen oder Anregungen stehen wir [per Email](mailto:birdie@syndikat.golf) oder auf unserem [Discord-Server](https://discord.gg/bus8ZcaNFT) zur Verfügung.
 
 In diesem Sinne - wir sehen uns auf dem Platz.

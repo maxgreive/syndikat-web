@@ -2,6 +2,7 @@
 layout: post
 title: Rück- und Ausblick über die wöchentliche Liga
 image: /assets/images/posts/syndication-rueckblick.jpg
+thumbnail: /assets/images/posts/thumbnails/syndication-rueckblick.jpg
 tags: league
 author: max
 ---

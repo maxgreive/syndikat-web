@@ -2,6 +2,7 @@
 layout: post
 title: Wöchentliche Liga ab August
 image: /assets/images/posts/syndication-weekly-header.png
+thumbnail: /assets/images/posts/thumbnails/syndication-weekly-header.jpg
 tags: turniere league
 author: max
 ---

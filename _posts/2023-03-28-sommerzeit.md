@@ -2,6 +2,7 @@
 layout: post
 title: Die Sommerzeit ist da!
 image: /assets/images/posts/sommerzeit.jpg
+thumbnail: /assets/images/posts/thumbnails/sommerzeit.jpg
 tags: league
 author: max
 ---

@@ -10,7 +10,11 @@
           {%- for tag in site.tags limit: 4 -%}
             {%- capture tag_image -%}
               {%- for post in tag[1] limit: 1 -%}
-                {{- post.image -}}
+                {%- if post.thumbnail -%}
+                  {{- post.thumbnail -}}
+                {%- else -%}
+                  {{- post.image -}}
+                {%- endif -%}
               {%- endfor -%}
             {%- endcapture -%}
             <div class="col col-3 col-d-6 col-m-12">

@@ -2,6 +2,7 @@
 layout: post
 title: Abwechslung durch Würfel App
 image: /assets/images/posts/discgolf-dice-game.jpg
+thumbnail: /assets/images/posts/thumbnails/discgolf-dice-game.jpg
 tags: app training
 author: max
 ---

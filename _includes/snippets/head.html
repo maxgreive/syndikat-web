@@ -37,5 +37,9 @@
         document.documentElement.classList.add('dark-mode');
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+
+    {% if page.layout == 'dice-game' %}
+      <script src="/assets/js/dice-game.js" defer></script>
+    {% endif %}
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>

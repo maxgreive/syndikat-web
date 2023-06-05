@@ -8,5 +8,7 @@ items:
     link: /events/
   - label: Membership
     link: /membership/
+  - label: Disc Dice Game
+    link: /disc-dice/
   - label: Contact
     link: /contact/

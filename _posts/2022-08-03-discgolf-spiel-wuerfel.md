@@ -9,8 +9,8 @@ author: max
 
 Der Kurs an der Scheibenstraße wird auf Dauer etwas eintönig. Auf YouTube und in den sozialen Netzwerken läuft man zwangsläufig dem Discgolf-Würfel-Spiel über den Weg, das Abhilfe schaffen soll.
 
-Wir haben eine digitale Version gebaut, die im Smartphone-Browser läuft. Unter [disc-dice.netlify.app](https://disc-dice.netlify.app) könnt ihr sie ausprobieren.
+Wir haben eine digitale Version gebaut, die im Smartphone-Browser läuft. [Hier könnt ihr sie ausprobieren](/disc-dice).
 
 Die Würfel bestimmen, mit welcher Scheiben-Wurf-Kombination ihr vom Tee werfen müsst. Hyzer Putter? Anhyzer Driver? Viele ungewöhnliche Konstellationen sind möglich und zwingen euch neue Würfe auszuprobieren.
 
-By the way: "Wildcard" ist der Joker, bei dem ihr euch eine Scheibe oder einen Wurf aussuchen könnt.
+By the way: Beim Joker dürft ihr euch eine Scheibe oder einen Wurf aussuchen.

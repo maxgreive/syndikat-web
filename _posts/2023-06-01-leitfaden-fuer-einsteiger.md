@@ -3,7 +3,7 @@ layout: post
 title: "Disc Golf in Köln: Ein Leitfaden für Einsteiger"
 image: /assets/images/posts/beginner.jpg
 thumbnail: /assets/images/posts/thumbnails/beginner.jpg
-tags: turnier
+tags: einsteiger
 author: max
 ---
 

@@ -3567,6 +3567,15 @@ table td {
   padding: 0;
 }
 
+.form__input[type="date"]
+{
+  display:block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: auto;
+  min-height: 1.2em;
+}
+
 
 .form__checkbox-group {
   display: grid;

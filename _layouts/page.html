@@ -13,11 +13,13 @@ layout: default
         </div>
       {% endif %}
 
+      {% unless page.hide_title %}
       <div class="col col-12">
         <div class="page__info">
           <h1 class="page__title">{{- page.title -}}</h1>
         </div>
       </div>
+      {% endunless %}
     </div>
   </div>
 </div>

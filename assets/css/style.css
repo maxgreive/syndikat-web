@@ -4356,7 +4356,7 @@ table td {
   position: relative;
   padding: 3rem;
   background: var(--background-alt-color);
-  color: var(--dark-blue);
+  color: var(--link-color);
   font-weight: 700;
   margin: 1rem;
   border-radius: 1rem;

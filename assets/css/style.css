@@ -3558,7 +3558,7 @@ table td {
 
 .form__input[type="radio"],
 .form__input[type="checkbox"] {
-  width: auto;
+  max-width: 16px;
 }
 
 

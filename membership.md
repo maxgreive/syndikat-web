@@ -9,7 +9,7 @@ Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen 
 
 Dann freuen wir uns über Deine Anmeldung!
 
-<a href="/register" class="button button--big button--primary">Jetzt anmelden!</a>
+<a href="/register/" class="button button--big button--primary">Jetzt anmelden!</a>
 
 
 ### Benefits
@@ -27,6 +27,6 @@ Dann freuen wir uns über Deine Anmeldung!
 
 ### Wo melde ich mich an?
 
-Am einfachsten ist es, wenn du einfach dieses Formular ausfüllst: [Anmeldeformular](https://forms.gle/N94kK7713uuPJZCq6)
+Am einfachsten ist es, wenn du einfach dieses Formular ausfüllst: [Anmeldeformular](/register/)
 
 Nach erfolgreicher Anmeldung melden wir uns bei dir und erklären, wie es weiter geht.

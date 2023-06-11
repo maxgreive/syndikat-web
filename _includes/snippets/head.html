@@ -32,9 +32,11 @@
     <link href="/assets/fonts/Jost.css" rel="stylesheet">
     <link href="/assets/css/ionicons.min.css" rel="stylesheet">
     <script>
-      if (localStorage.getItem("theme") === "dark") {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const sessionTheme = sessionStorage.getItem("theme");
+
+      if (!sessionTheme && prefersDark || sessionTheme === 'dark') {
         document.documentElement.setAttribute("dark", "");
-        document.documentElement.classList.add('dark-mode');
       }
     </script>
 

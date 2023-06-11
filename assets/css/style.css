@@ -2750,11 +2750,11 @@ table td {
   display: none
 }
 
-.dark-mode .toggle-sun {
+[dark] .toggle-sun {
   display: block
 }
 
-.dark-mode .toggle-moon {
+[dark] .toggle-moon {
   display: none
 }
 
@@ -2963,8 +2963,8 @@ table td {
   transform: none
 }
 
-.dark-mode .pagination__next.disabled,
-.dark-mode .pagination__prev.disabled {
+[dark] .pagination__next.disabled,
+[dark] .pagination__prev.disabled {
   opacity: 0.78
 }
 

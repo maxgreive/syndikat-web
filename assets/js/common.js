@@ -67,15 +67,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Theme Switcher
   function darkMode() {
-    if (html.classList.contains('dark-mode')) {
-      html.classList.remove('dark-mode');
-      localStorage.removeItem("theme");
-      document.documentElement.removeAttribute("dark");
-    } else {
-      html.classList.add('dark-mode');
-      localStorage.setItem("theme", "dark");
-      document.documentElement.setAttribute("dark", "");
+    if (document.documentElement.hasAttribute('dark')) {
+      return setDarkTheme();
     }
+    return setDarkTheme(true);
+  }
+
+  function setDarkTheme(isDark) {
+    sessionStorage.setItem("theme", isDark ? "dark" : "light");
+
+    if (isDark) {
+      return document.documentElement.setAttribute("dark", "");
+    }
+    return document.documentElement.removeAttribute("dark");
   }
 
 

@@ -3530,6 +3530,11 @@ table td {
   color: var(--text-alt-color)
 }
 
+.form__group--captcha {
+  display: flex;
+  justify-content: center;
+}
+
 .form__title {
   font-weight: bold;
 }

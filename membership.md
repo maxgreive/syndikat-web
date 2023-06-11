@@ -1,9 +1,7 @@
 ---
-title: Membership
+title: Mitglied werden
 layout: page
 ---
-
-## Mitmachen
 
 Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
 
@@ -27,6 +25,6 @@ Dann freuen wir uns über Deine Anmeldung!
 
 ### Wo melde ich mich an?
 
-Am einfachsten ist es, wenn du einfach dieses Formular ausfüllst: [Anmeldeformular](/register/)
+Am einfachsten ist es, wenn Du [einfach dieses Formular ausfüllst](/register/). Nach erfolgreicher Anmeldung melden wir uns bei dir und erklären, wie es weiter geht.
 
-Nach erfolgreicher Anmeldung melden wir uns bei dir und erklären, wie es weiter geht.
+Wenn Du Fragen hast, [schreib uns über das Kontaktformular](/contact/).

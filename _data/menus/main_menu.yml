@@ -2,13 +2,13 @@ title: Menu
 items:
   - label: Home
     link: /
-  - label: About
+  - label: Über uns
     link: /about/
   - label: Events
     link: /events/
-  - label: Membership
+  - label: Mitglied werden
     link: /membership/
-  - label: Disc Dice Game
+  - label: Disc Dice
     link: /disc-dice/
-  - label: Contact
+  - label: Kontakt
     link: /contact/

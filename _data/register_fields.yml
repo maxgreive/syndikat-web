@@ -27,7 +27,7 @@
 - id: birthday
   title: Geburtsdatum
   type: text
-  placeholder: TT.MM.YYYY
+  placeholder: DD.MM.YYYY
   required: true
 - id: dfv-number
   title: DFV-Nummer vorhanden

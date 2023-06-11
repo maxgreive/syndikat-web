@@ -26,7 +26,8 @@
   type: tel
 - id: birthday
   title: Geburtsdatum
-  type: date
+  type: text
+  placeholder: TT.MM.YYYY
   required: true
 - id: dfv-number
   title: DFV-Nummer vorhanden

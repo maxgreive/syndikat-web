@@ -3558,13 +3558,15 @@ table td {
 
 .form__input[type="radio"],
 .form__input[type="checkbox"] {
-  max-width: 16px;
+  width: auto;
+  padding: 0;
 }
 
 
 .form__checkbox-group {
   display: grid;
   grid-template-columns: auto 1fr;
+  align-items: center;
   gap: 1rem;
   padding-left: 20px;
 }

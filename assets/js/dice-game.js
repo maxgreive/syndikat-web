@@ -53,6 +53,11 @@ const dice = diceData.map(data => data.flatMap(item => Array(item.quantity).fill
 const $dice = document.querySelectorAll(".die");
 
 document.querySelector("[data-roll-dice]").addEventListener("click", function () {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'dice_roll'
+  });
+
   $dice.forEach((die, index) => {
     die.textContent = "...";
     window.setTimeout(() => {

@@ -9,7 +9,7 @@ layout: page
         <p class="page-description">{{ page.description }}</p>
       </div>
     {% endif %}
-    <form class="form" id="contact-form" action="/success?ref={{ page.title | slugify }}" name="contact" method="POST" data-netlify="true">
+    <form class="form" id="contact-form" action="/success?ref={{ page.title | slugify }}" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
       <div class="form__group">
         <label class="form__label screen-reader-text" for="form-name">Dein Name</label>
         <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required>
@@ -22,6 +22,9 @@ layout: page
         <label class="form__label screen-reader-text" for="form-text">Deine Nachricht</label>
         <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Nachricht" required></textarea>
       </div>
+
+      <div data-netlify-recaptcha="true"></div>
+
       <div class="form__group">
         <button class="button button--primary" type="submit">Abschicken</button>
       </div>

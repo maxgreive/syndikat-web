@@ -1,4 +1,4 @@
-<form class="form" id="register-form" action="/success?ref={{ page.title | slugify }}" name="signup" method="POST" data-netlify="true">
+<form class="form" id="register-form" action="/success?ref={{ page.title | slugify }}" name="signup" method="POST" data-netlify="true" data-netlify-recaptcha="true">
   {% for field in site.data.register_fields %}
   <div class="form__group form__group--{{ field.type }}{% if field.required %} form__group--required{% endif %}">
 
@@ -40,6 +40,8 @@
     {% endif %}
   </div>
   {% endfor %}
+
+  <div data-netlify-recaptcha="true"></div>
 
   <div class="form__group">
     <button class="button button--big button--primary" type="submit">Anmelden</button>

@@ -3556,6 +3556,12 @@ table td {
   border-color: var(--brand-color)
 }
 
+.form__input[type="radio"],
+.form__input[type="checkbox"] {
+  width: auto;
+}
+
+
 .form__checkbox-group {
   display: grid;
   grid-template-columns: auto 1fr;

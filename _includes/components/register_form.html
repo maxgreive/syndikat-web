@@ -1,0 +1,47 @@
+<form class="form" id="register-form" action="/success?ref={{ page.title | slugify }}" name="signup" method="POST" data-netlify="true">
+  {% for field in site.data.register_fields %}
+  <div class="form__group form__group--{{ field.type }}{% if field.required %} form__group--required{% endif %}">
+
+    {% if field.type == 'radio' %}
+    <label class="form__title">{{ field.title }}</label>
+    {% if field.tooltip %}
+    {% include snippets/tooltip.html content=field.tooltip %}
+    {% endif %}
+    {% for option in field.options %}
+    <div class="form__checkbox-group">
+      <input class="form__input" id="form-{{ field.id | append: '-' | append: forloop.index }}" type="radio" name="{{ field.id }}"{% if field.required %} required{% endif %}>
+      <label class="form__label" for="form-{{ field.id | append: '-' | append: forloop.index }}">{{ option.label }}</label>
+    </div>
+    {% endfor %}
+
+    {% elsif field.type == 'checkbox' %}
+    <label class="form__title">{{ field.title }}</label>
+    {% if field.tooltip %}
+    {% include snippets/tooltip.html content=field.tooltip %}
+    {% endif %}
+    {% if field.text %}
+    <p><em>{{ field.text }}</em></p>
+    {% endif %}
+    <div class="form__checkbox-group">
+      <input class="form__input" id="form-{{ field.id | append: '-' | append: forloop.index }}" type="{{ field.type }}" name="{{ field.id }}"{% if field.required %} required{% endif %}>
+      <label class="form__label" for="form-{{ field.id | append: '-' | append: forloop.index }}">{{ field.label }}</label>
+    </div>
+
+    {% elsif field.type == 'info' %}
+    <label class="form__title" for="form-{{ field.id | append: '-' | append: forloop.index }}">{{ field.title }}</label>
+    <p><em>{{ field.text }}</em></p>
+
+    {% elsif field.type == 'section' %}
+    <h2 class="form__headline" id="{{ field.id }}">{{ field.title }}</h2>
+
+    {% else %}
+    <label class="form__title" for="form-{{ field.id }}">{{ field.title }}</label>
+    <input class="form__input" id="form-{{ field.id }}" type="{{ field.type }}" name="{{ field.id }}" placeholder="{{ field.placeholder | default: field.title }}"{% if field.required %} required{% endif %}>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <div class="form__group">
+    <button class="button button--big button--primary" type="submit">Anmelden</button>
+  </div>
+</form>

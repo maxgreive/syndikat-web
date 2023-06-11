@@ -7,6 +7,7 @@
   --gray: #9e9e9e;
   --dark: #0c101a;
   --dark-blue: #1e2740;
+  --red: #f87171;
   --background-color: var(--white);
   --background-alt-color: var(--light-blue);
   --text-color: var(--dark-blue);
@@ -14,6 +15,7 @@
   --heading-font-color: var(--dark-blue);
   --link-color: var(--dark-blue);
   --link-color-hover: var(--dark-blue);
+  --warning-color: var(--red);
   --button-color: var(--white);
   --button-background-color: var(--brand-color);
   --button-background-hover: #4338ca;
@@ -2396,7 +2398,7 @@ a {
   transition: all 0.35s
 }
 
-a:hover {
+a:not(.button):hover {
   color: var(--link-color-hover)
 }
 
@@ -2460,6 +2462,7 @@ table td {
   outline: none;
   cursor: pointer;
   transition: all .25s;
+  text-align: center;
   color: var(--heading-font-color);
   background: var(--background-alt-color)
 }
@@ -3514,6 +3517,23 @@ table td {
   margin-bottom: 0
 }
 
+.form__group--required .form__title::after {
+  content: "*";
+  font-size: 16px;
+  margin-left: 5px;
+  color: var(--warning-color);
+}
+
+.form__group--info em,
+.form__group--checkbox em {
+  font-size: 18px;
+  color: var(--text-alt-color)
+}
+
+.form__title {
+  font-weight: bold;
+}
+
 .form__input {
   width: 100%;
   padding: 20px;
@@ -3534,6 +3554,13 @@ table td {
 
 .form__input:focus {
   border-color: var(--brand-color)
+}
+
+.form__checkbox-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding-left: 20px;
 }
 
 .section__head {
@@ -3919,14 +3946,14 @@ table td {
   color: var(--text-color)
 }
 
-.post a,
-.page a {
+.post a:not(.button),
+.page a:not(.button) {
   font-weight: 500;
   border-bottom: 1px solid var(--border-color)
 }
 
-.post a:hover,
-.page a:hover {
+.post a:not(.button):hover,
+.page a:not(.button):hover {
   color: var(--link-color);
   border-bottom-color: var(--link-color-hover)
 }

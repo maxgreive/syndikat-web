@@ -1,0 +1,90 @@
+- id: personal_info
+  title: Persönliche Daten
+  type: section
+- id: email
+  title: E-Mail
+  type: email
+  required: true
+- id: name
+  title: Vor- und Nachname
+  type: text
+  required: true
+- id: address
+  title: Straße und Hausnummer
+  type: address
+  required: true
+- id: zip
+  title: Postleitzahl
+  type: text
+  required: true
+- id: city
+  title: Ort
+  type: text
+  required: true
+- id: phone
+  title: Telefonnummer
+  type: tel
+- id: birthday
+  title: Geburtsdatum
+  type: date
+  required: true
+- id: dfv-number
+  title: DFV-Nummer vorhanden
+  type: radio
+  tooltip: Wenn du bereits in einem anderen Verein (Discgolf, Ultimate, etc.) angemeldet bist/warst, schick uns bitte deine aktuelle DFV-Nummer zu, damit wir dich ummelden können.
+  options:
+    - label: Ja
+      value: true
+    - label: Nein
+      value: false
+  required: true
+- id: payment_info
+  title: Zahlungsinformationen
+  type: section
+- id: membership-type
+  title: Art der Mitgliedschaft
+  type: radio
+  options:
+    - label: Aktives Mitglied
+      value: true
+    - label: Fördermitglied
+      value: false
+  required: true
+- id: reduction
+  title: Ermäßigung
+  label: Ich bin ermäßigungsberechtigt
+  type: checkbox
+  tooltip: "Schüler:innen, Arbeitssuchende und Rentner:innen zahlen einen ermäßigten Beitrag. Ein entsprechender Nachweis ist vorzulegen."
+- id: iban
+  title: IBAN
+  type: text
+  required: true
+- id: account-owner
+  title: Kontoinhaber
+  type: text
+  required: true
+- id: sepa-mandate
+  type: info
+  title: SEPA-Mandat
+  text: "Mit Absenden dieses Anmeldeformulars ermächtige ich Sie, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von Disc Golf Syndikat e.V. auf mein Konto gezogenen Lastschriften einzulösen. Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen."
+- id: legal
+  title: Rechtliches
+  type: section
+- id: terms
+  title: Satzung
+  label: Ich erkenne die Satzung des Disc Golf Syndikat e.V. an
+  text: "Die Satzung findest du <a href=\"\/syndikat.golf\/satzung\">hier</a>"
+  type: checkbox
+  required: true
+- id: disclaimer
+  title: Widerrufsbelehrung
+  label: Ich habe die Widerrufsbelehrung gelesen und zur Kenntnis genommen
+  text: "Hiermit ermächtige ich Sie widerruflich, die von mir zu entrichtenden Zahlungen für den Mitgliedsbeitrag ab nächstmöglichem Zeitpunkt bei Fälligkeit mittels Lastschrift einzuziehen. Wenn mein Konto die erforderliche Deckung nicht aufweist, besteht seitens des kontoführenden Kreditinstitutes keine Verpflichtung zur Einlösung. Teileinlösungen werden im Lastschriftverfahren nicht vorgenommen."
+  type: checkbox
+  required: true
+- id: privacy
+  title: Einwilligung Datenverarbeitung
+  label: Ich habe die Datenschutzerklärung gelesen und willige der Verwendung meiner Daten ein
+  text: "Ich erkläre mich damit einverstanden, dass meine persönlichen Daten (Name, Anschrift, Geburtsdatum, E-Mail-Adresse) durch den Disc Golf Syndikat e.V. zur Zusendung von Informationen rund um den Verein genutzt werden. Meine personenbezogenen Daten werden niemals an Dritte ohne gesetzliche Grundlage übermittelt. Unser Verein ist verpflichtet, folgende mitgliedsbezogene Daten an den Deutschen Frisbeesportverband zu übermitteln: Name, Geburtsdatum, Eintrittsdatum. Mit dieser Übermittlung im Rahmen des Vereinszwecks bin ich einverstanden. Mir ist bekannt, dass ich diese Einwilligung jederzeit durch schriftliche Information an den Disc Golf Syndikat e.V. widerrufen kann. Datenschutzhinweis: Die Daten werden durch den Disc Golf Syndikat e.V. gemäß folgender Datenschutzinformation verarbeitet: <a href=\"/datenschutz\">Datenschutz<\/a>."
+  type: checkbox
+  required: true

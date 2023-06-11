@@ -153,4 +153,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+
+  /* =======================
+  // Tooltips
+  ======================= */
+  tippy('.tooltip');
+
+  /* =======================
+  // Form Cache
+  ======================= */
+
+  [...document.querySelectorAll('.form__input')].forEach(input => {
+    const fieldId = input.id;
+    const formId = input.form.id;
+    const formContentOnLoad = JSON.parse(window.sessionStorage.getItem(formId + '-content')) || {};
+
+    if (formContentOnLoad[fieldId]) {
+      document.getElementById(fieldId).value = formContentOnLoad[fieldId];
+      if (formContentOnLoad[fieldId] === 'on') {
+        document.getElementById(fieldId).checked = true;
+      }
+    }
+
+    input.addEventListener('input', e => {
+      const currentContent = JSON.parse(window.sessionStorage.getItem(formId + '-content')) || {};
+      if (['radio', 'checkbox'].includes(e.target.type)) {
+        [...e.target.closest('.form__group').querySelectorAll('input')].forEach(input => {
+          currentContent[input.id] = 'off';
+        });
+        currentContent[fieldId] = e.target.checked ? 'on' : 'off';
+        window.sessionStorage.setItem(formId + '-content', JSON.stringify(currentContent));
+      } else {
+        currentContent[fieldId] = e.target.value;
+        window.sessionStorage.setItem(formId + '-content', JSON.stringify(currentContent));
+      }
+    });
+  });
 });

@@ -39,7 +39,7 @@
               <div class="gallery" style="grid-template-columns: repeat(3, auto);">
                 {% for item in gallery.items %}
                   <div class="gallery__image">
-                    <img src="{{ item.image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
+                    <img src="{{ item.image }}" data-src="{{ item.original_image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
                   </div>
                 {% endfor %}
               </div>

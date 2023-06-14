@@ -116,15 +116,25 @@ document.addEventListener("DOMContentLoaded", function() {
   imageLink = document.querySelectorAll(".page__content a img, .post__content a img, .gallery__image a img");
 
   if (imageLink) {
-    for (var i = 0; i < imageLink.length; i++) imageLink[i].parentNode.classList.add("image-link");
-    for (var i = 0; i < imageLink.length; i++) imageLink[i].classList.add("no-lightense");
+    imageLink.forEach(link => link.parentNode.classList.add("image-link"));
+    imageLink.forEach(link => link.classList.add("no-lightense"));
   }
 
   if (lightense) {
     Lightense(".page__content img:not(.no-lightense), .post__content img:not(.no-lightense), .gallery__image img:not(.no-lightense)", {
     padding: 60,
     offset: 30,
-    background: "rgba(26, 26, 31, .8)"
+    background: "rgba(26, 26, 31, .8)",
+    beforeShow(config) {
+      if (!config.target.dataset.src) return;
+      config.target.dataset.tempSrc = config.target.src;
+      config.target.src = config.target.dataset.src;
+    },
+    afterHide(config) {
+      if (!config.target.dataset.src) return;
+      config.target.src = config.target.dataset.tempSrc;
+      config.target.removeAttribute('data-temp-src');
+    }
     });
   }
 

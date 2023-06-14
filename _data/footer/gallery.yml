@@ -1,20 +1,29 @@
 title: Impressionen
 items:
-  - image: /assets/images/gallery/basket.jpg
+  - original_image: /assets/images/gallery/basket.jpg
+    image: /assets/images/gallery/basket_thumb.jpg
     alt: Disc Golf Korb in Köln
-  - image: /assets/images/gallery/hole-7.jpg
+  - original_image: /assets/images/gallery/hole-7.jpg
+    image: /assets/images/gallery/hole-7_thumb.jpg
     alt: Bahn 7 in Köln
-  - image: /assets/images/gallery/scheibenstrasse.jpg
+  - original_image: /assets/images/gallery/scheibenstrasse.jpg
+    image: /assets/images/gallery/scheibenstrasse_thumb.jpg
     alt: Straßenschild der Scheibenstraße
-  - image: /assets/images/gallery/walking-to-basket.jpg
+  - original_image: /assets/images/gallery/walking-to-basket.jpg
+    image: /assets/images/gallery/walking-to-basket_thumb.jpg
     alt: Eine Gruppe von Discgolfern
-  - image: /assets/images/gallery/discs-in-basket.jpg
+  - original_image: /assets/images/gallery/discs-in-basket.jpg
+    image: /assets/images/gallery/discs-in-basket_thumb.jpg
     alt: Disc Golf Scheiben in einem Korb
-  - image: /assets/images/weidenpesch-classics.jpg
+  - original_image: /assets/images/gallery/weidenpesch-classics.jpg
+    image: /assets/images/gallery/weidenpesch-classics_thumb.jpg
     alt: Spielergruppe an einem Teepad
-  - image: /assets/images/gallery/crowd-watching.jpg
+  - original_image: /assets/images/gallery/crowd-watching.jpg
+    image: /assets/images/gallery/crowd-watching_thumb.jpg
     alt: Eine Person beim Wurf einer Disc Golf-Scheibe
-  - image: /assets/images/gallery/discraft-buzzz.jpg
+  - original_image: /assets/images/gallery/discraft-buzzz.jpg
+    image: /assets/images/gallery/discraft-buzzz_thumb.jpg
     alt: Scheibe mit Aufschrift 'Discraft'
-  - image: /assets/images/gallery/smugglers.jpg
+  - original_image: /assets/images/gallery/smugglers.jpg
+    image: /assets/images/gallery/smugglers_thumb.jpg
     alt: Korb am Kurs 'Smugglers Notch'

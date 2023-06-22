@@ -34,9 +34,9 @@
   type: radio
   tooltip: Wenn du bereits in einem anderen Verein (Discgolf, Ultimate, etc.) angemeldet bist/warst, schick uns bitte deine aktuelle DFV-Nummer zu, damit wir dich ummelden können.
   options:
-    - label: Ja
+    - label: Ja, ich besitze bereits eine DFV-Nummer
       value: true
-    - label: Nein
+    - label: Nein, ich habe noch keine DFV-Nummer
       value: false
   required: true
 - id: payment_info
@@ -74,7 +74,7 @@
 - id: terms
   title: Satzung
   label: Ich erkenne die Satzung des Disc Golf Syndikat e.V. an
-  text: "Die Satzung findest du <a href=\"\/syndikat.golf\/satzung\">hier</a>"
+  text: "Die Satzung findest du <a href=\"\/satzung\">hier</a>"
   type: checkbox
   required: true
 - id: disclaimer

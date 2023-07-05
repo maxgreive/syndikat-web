@@ -3,7 +3,7 @@ layout: post
 title: "Ankündigung: Cologne Disc Golf Summer 2023"
 image: /assets/images/posts/cdgs.jpg
 thumbnail: /assets/images/posts/thumbnails/cdgs.jpg
-tags: event
+tags: events
 author: max
 ---
 

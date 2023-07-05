@@ -3648,6 +3648,10 @@ table td {
   }
 }
 
+.section-tags .col:nth-of-type(n+5) {
+  display: none;
+}
+
 .tag-image {
   margin-bottom: 32px;
   position: relative;

@@ -13,9 +13,9 @@ wir freuen uns, euch hiermit herzlich zum Cologne Disc Golf Summer 2023 einzulad
 
 <a href="/assets/misc/cdgs23.ics" class="button button--primary">Zum Kalender hinzufügen</a>
 
-Das Sommerfest findet natürlich am Disc Golf-Platz an der Scheibenstraße statt und wir bereiten eine Vielzahl an Aktivitäten vor. Selbstverständlich kann die eine oder andere Disc Golf gespielt werden, es wird aber auch viele Spiele geben.
+Das Sommerfest findet natürlich am Discgolfplatz an der Scheibenstraße statt und wir bereiten eine Vielzahl an Aktivitäten vor. Selbstverständlich kann die eine oder andere Runde Disc Golf gespielt werden, es wird aber auch viele Spiele geben.
 
-Wir haben einige aufregende Wettbewerbe für euch geplant! Nehmt teil am "Ring of Fire", der Putting Challenge, bei der der konsistenteste Werfer gewinnt. Zeigt euer präzises Putten bei der Putting-Challenge und sichert euch tolle Preise. Bei der CTP-Challenge (Closest to the Pin) könnt ihr euer Zielgenauigkeit testen und eure Fähigkeiten beim Approachen unter Beweis stellen.
+Wir haben einige aufregende Wettbewerbe geplant! Nehmt teil am "Ring of Fire", der Putting Challenge, bei der der konsistenteste Werfer gewinnt. Zeigt euer präzises Putten bei der Putting-Challenge. Bei der CTP-Challenge (Closest to the Pin) könnt ihr eure Zielgenauigkeit testen und eure Fähigkeiten beim Approachen unter Beweis stellen.
 
 Für alle Disc-Golferinnen und -golfer haben wir außerdem eine **Scheiben-Tauschbörse** organisiert. Bringt eure ungenutzten Scheiben mit und tauscht sie mit anderen Spielerinnen und Spielern. So könnt ihr eure Sammlung erweitern und vielleicht das perfekte Stück für euer Spiel finden.
 

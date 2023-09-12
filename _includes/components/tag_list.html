@@ -7,7 +7,7 @@
           <a href="/tags/" class="section__link">Alle ansehen</a>
         </div>
         <div class="row">
-          {%- for tag in site.tags limit: 4 -%}
+          {%- for tag in site.tags reversed -%}
             {%- capture tag_image -%}
               {%- for post in tag[1] limit: 1 -%}
                 {%- if post.thumbnail -%}

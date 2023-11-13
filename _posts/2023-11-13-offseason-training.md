@@ -9,21 +9,21 @@ author: max
 
 Kein Disc Golfer freut sich auf den Winter. Kurze Tage, kalt, windig und wenig Sonne. Doch auch die Offseason kann genutzt werden, um Fortschritte im eigenen Spiel zu machen. Hier sind einige Tipps und Strategien, um das Beste aus der Offseason herauszuholen:
 
-## 1. Reflektion und Analyse:
+## 1. Reflexion und Analyse:
 
 Der Start der Offseason bietet den perfekten Moment für eine tiefgehende Reflexion über vergangene Leistungen. Betrachte kritisch, was in der letzten Monaten gut gelaufen ist und welche Bereiche noch Entwicklungspotenzial haben. Identifiziere klare Ziele und erstelle einen Plan, wie du dich in der kommenden Saison verbessern kannst.
 
 ## 2. Physisches Training:
 
-Nutze die Offseason, um deine körperliche Verfassung auf das nächste Level zu heben. Ein ausgewogenes Training, das Kraft und Flexibilität anspricht, kann die Grundlage für mehr Stabilität und kraftvolle Würfe schaffen. Konzentriere dich besonders auf Übungen, die die Kernmuskulatur (Core) stärken und somit die Basis für kraftvolle Drives legen.
+Nutze die Offseason, um deine körperliche Verfassung auf das nächste Level zu heben. Ein ausgewogenes Training, das Kraft und Flexibilität anspricht, kann die Grundlage für mehr Stabilität und kraftvolle Würfe schaffen. Konzentriere dich besonders auf Übungen, die die Kernmuskulatur (Core) stärken und somit die Basis für ordentliche Drives legen.
 
 Dafür musst du keine Mitgliedschaft im Fitnessstudio abschließen. Youtube bietet genügend Übungen, die du von zuhause absolvieren kannst. [Ich kann dafür die Videos von Mark Lauren empfehlen](https://www.youtube.com/watch?v=dt4kA5US3Z0), mit denen ich vor einigen Jahren gute Fortschritte erzielt habe.
 
-Alternativ kannst du dir auch ein sportliches Hobby ausüben, das dich in den Wintermonaten fit hält. Beispielsweise Bouldern, Klettern, Schwimmen, Laufen, Radfahren und Yoga. 
+Alternativ kannst du dir auch ein anderes sportliches Hobby ausüben, das dich in den Wintermonaten fit hält. Beispielsweise Bouldern, Klettern, Schwimmen, Laufen, Radfahren oder Yoga. 
 
 ## 3. Technikverbesserung:
 
-Verfeinere deine Wurftechnik. Dies könnte die ideale Zeit sein, um einen erfahrenen Spieler zu konsultieren oder moderne Tools wie Videoanalysen zu nutzen. Durch eine gründliche Analyse und Optimierung deiner Technik kannst du präzisere und effizientere Drives und Putts entwickeln.
+Verfeinere deine Wurftechnik. Dies könnte die ideale Zeit sein, um einen erfahrenen Spieler zu konsultieren oder moderne Tools wie Videoanalysen zu nutzen. Durch eine gründliche Analyse und Optimierung deiner Technik kannst du präzisere und effizientere Drives und Putts entwickeln. Du brauchst auch nicht zwingend einen mobilen Korb. Such dir einen Baum oder ein anderes Ziel auf das du werfen kannst.
 
 ## 4. Mentaltraining:
 
@@ -41,7 +41,7 @@ Nutze die Pause, um deine Ausrüstung zu überprüfen. Sind deine Discs noch in 
 
 ## 7. Gemeinschaft und Teamgeist:
 
-Die Offseason ist auch eine großartige Zeit, um den Teamgeist zu stärken. Verbringe Zeit mit deinem Disc Golf-Verein oder organisiere Treffen mit anderen Spielern. Gemeinsame Trainingseinheiten oder soziale Veranstaltungen fördern nicht nur den Teamgeist, sondern bieten auch Gelegenheit zum Erfahrungsaustausch.
+Die Offseason ist auch eine großartige Zeit, um den Teamgeist zu stärken. Verbringe Zeit mit deinem Disc Golf-Verein oder organisiere Treffen mit anderen Spielern. Gemeinsame Trainingseinheiten oder Veranstaltungen fördern nicht nur den Teamgeist, sondern bieten auch Gelegenheit zum Erfahrungsaustausch.
 
 ![Syndication Weekly im November 2023](/assets/images/posts/syndication-november.jpg)
 
@@ -49,7 +49,7 @@ Die Offseason ist auch eine großartige Zeit, um den Teamgeist zu stärken. Verb
 
 ## 8. Reise in wärmere Gefilde:
 
-Dieser Punkt ist mehr als nur ein sportliches Abenteuer – es ist auch eine Möglichkeit, neue Disc Golf-Plätze zu entdecken, in einer anderen Umgebung zu trainieren und gleichzeitig die Seele aufzutanken. Ein Tapetenwechsel kann die Motivation steigern und neue Inspiration für das Spiel bringen. Wenn du im Ausland spielst, schick uns bitte ein Foto, wir werden es neidisch hier veröffentlichen.
+Dieser Punkt ist mehr als nur ein sportliches Abenteuer – es ist auch eine Möglichkeit, neue Disc Golf-Plätze zu entdecken, in einer anderen Umgebung zu trainieren und gleichzeitig die Seele aufzutanken. Ein Tapetenwechsel kann die Motivation steigern und neue Inspiration für das Spiel bringen. Wenn du im Ausland spielst, schick uns bitte ein Foto, wir werden es hier dann neidisch veröffentlichen.
 
 ## 9. Ziele setzen:
 

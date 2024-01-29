@@ -9,7 +9,7 @@
     {% endif %}
     {% for option in field.options %}
     <div class="form__checkbox-group">
-      <input class="form__input" id="form-{{ field.id | append: '-' | append: forloop.index }}" type="radio" name="{{ field.id }}"{% if field.required %} required{% endif %}>
+      <input class="form__input" id="form-{{ field.id | append: '-' | append: forloop.index }}" type="radio" value="{{ option.value }}" name="{{ field.id }}"{% if field.required %} required{% endif %}>
       <label class="form__label" for="form-{{ field.id | append: '-' | append: forloop.index }}">{{ option.label }}</label>
     </div>
     {% endfor %}

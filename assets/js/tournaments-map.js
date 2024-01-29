@@ -36,7 +36,7 @@ function initMap(tournaments) {
   tournaments.forEach((tournament) => {
     if (!tournament.coords.lat) return;
     const iconElement = document.querySelector("[data-icon]").content.firstElementChild.cloneNode(true);
-    iconElement.style.fill = `rgb(30, 144, ${Math.random() * (196 - 255 + 1) + 196})`;
+    iconElement.style.fill = `hsl(220deg 50% ${Math.floor(Math.random() * (70 - 50 + 1) + 50)}%)`;
     const sizeMultiplier = Math.random() * 0.3 + 1;
     const icon = L.divIcon({
       html: iconElement,

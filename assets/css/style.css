@@ -4408,11 +4408,11 @@ table td {
 .leaflet-container .popup-title {
   font-weight: 700;
   font-size: 15px;
-  margin-bottom: 0;
+  margin: 0;
   display: block;
 }
 
-.leaflet-container .leaflet-popup a {
+.leaflet-container .leaflet-popup-content a {
   font-weight: 500;
   color: var(--link-color);
   border-bottom: 1px solid var(--border-color);
@@ -4420,6 +4420,6 @@ table td {
   margin-top: 0.5rem;
 }
 
-.leaflet-container .leaflet-popup a:hover {
+.leaflet-container .leaflet-popup-content a:hover {
   border-bottom-color: var(--link-color-hover);
 }

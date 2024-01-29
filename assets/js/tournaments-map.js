@@ -1,13 +1,16 @@
 window.addEventListener('CookiebotOnConsentReady', () => {
-  if (window.CookieConsent.consent.marketing) return getTournaments(items => initMap(items));
+  if (window.CookieConsent.consent.marketing) getTournaments(items => initMap(items));
 
-  return handleNoConsent();
+  return handleConsent(window.CookieConsent.consent.marketing);
 });
 
-function handleNoConsent() {
-  document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-    <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="window.CookieConsent.show();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
-  `);
+function handleConsent(consent) {
+  if (document.querySelector('.map-no-consent')) document.querySelector('.map-no-consent').remove();
+  if (!consent) {
+    document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
+      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="window.CookieConsent.show();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
+    `);
+  }
 }
 
 async function getTournaments(cb) {

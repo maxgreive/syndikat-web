@@ -14,7 +14,7 @@ function handleConsent(consent) {
   if (document.querySelector('.map-no-consent')) document.querySelector('.map-no-consent').remove();
   if (!consent) {
     document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="handleOpenConsent();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
+      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="handleOpenConsent();">im Cookie-Tool den Marketing-Services zugestimmt werden</a> und gegebenenfalls der AdBlocker deaktiviert werden..</span>
     `);
   }
 }

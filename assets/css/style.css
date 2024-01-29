@@ -4392,6 +4392,8 @@ table td {
 #tournaments-map {
   height: 600px;
   max-height: 80vh;
+  background: var(--background-alt-color);
+  display: flex;
 }
 
 [dark] .leaflet-layer,
@@ -4422,4 +4424,10 @@ table td {
 
 .leaflet-container .leaflet-popup-content a:hover {
   border-bottom-color: var(--link-color-hover);
+}
+
+.map-no-consent {
+  margin: auto;
+  font-style: italic;
+  font-size: 15px;
 }

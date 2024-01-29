@@ -4389,6 +4389,18 @@ table td {
   }
 }
 
+#tournaments-map {
+  height: 600px;
+  max-height: 90vh;
+}
+
+[dark] .leaflet-layer,
+[dark] .leaflet-control-zoom-in,
+[dark] .leaflet-control-zoom-out,
+[dark] .leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
 .leaflet-container {
   font-family: "Jost", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -4400,7 +4412,7 @@ table td {
   display: block;
 }
 
-.leaflet-container a {
+.leaflet-container .leaflet-popup a {
   font-weight: 500;
   color: var(--link-color);
   border-bottom: 1px solid var(--border-color);
@@ -4408,6 +4420,6 @@ table td {
   margin-top: 0.5rem;
 }
 
-.leaflet-container a:hover {
+.leaflet-container .leaflet-popup a:hover {
   border-bottom-color: var(--link-color-hover);
 }

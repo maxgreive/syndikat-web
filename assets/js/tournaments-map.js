@@ -22,6 +22,18 @@ function initMap(tournaments) {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
+  L.control.resetView({
+    position: "topleft",
+    title: "Reset view",
+    latlng: L.latLng([51, 9.5]),
+    zoom: 6,
+  }).addTo(map);
+
+  const markers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 40
+  });
+
   tournaments.forEach((tournament) => {
     if (!tournament.coords.lat) return;
     const iconElement = document.querySelector("[data-icon]").content.firstElementChild.cloneNode(true);
@@ -32,7 +44,9 @@ function initMap(tournaments) {
       iconSize: [16 * sizeMultiplier, 25 * sizeMultiplier],
       className: "icon"
     });
-    const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon }).addTo(map);
+
+    const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon });
+    markers.addLayer(marker);
     const isOneDay = tournament?.dates?.startTournament === tournament?.dates?.endTournament;
 
     marker.bindPopup(`
@@ -46,6 +60,8 @@ function initMap(tournaments) {
       maxWidth: 250
     });
   });
+
+  markers.addTo(map);
 }
 
 function formatDate(date) {

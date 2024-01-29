@@ -29,7 +29,9 @@
     {% endif %}
     <meta property="og:image" content="{{- sharing_image -}}">
     <link rel="icon" href="/assets/favicon.png" sizes="any"><!-- 32×32 -->
-    <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg" as="image" type="image/jpg">
+    {% if page.layout == 'index' %}
+      <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg" as="image" type="image/jpg">
+    {% endif %}
     <link href="/assets/fonts/Jost.css" rel="stylesheet">
     <link href="/assets/css/ionicons.min.css" rel="stylesheet">
     <script>
@@ -47,9 +49,11 @@
     <link href="/assets/css/vendors/leaflet.css" rel="stylesheet">
     <link href="/assets/css/vendors/MarkerCluster.css" rel="stylesheet">
     <link href="/assets/css/vendors/MarkerCluster.Default.css" rel="stylesheet">
+    <link href="/assets/css/vendors/leaflet.resetview.css" rel="stylesheet">
 
     <script src="/assets/js/vendors/leaflet.js" defer></script>
     <script src="/assets/js/vendors/leaflet.markercluster.js" defer></script>
+    <script src="/assets/js/vendors/leaflet.resetview.js" defer></script>
     <script src="/assets/js/tournaments-map.js" defer></script>
     {% endif %}
     <link rel="stylesheet" href="/assets/css/style.css">

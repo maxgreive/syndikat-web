@@ -42,7 +42,15 @@
     </script>
 
     {% if page.layout == 'dice-game' %}
-      <script src="/assets/js/dice-game.js" defer></script>
+    <script src="/assets/js/dice-game.js" defer></script>
+    {% elsif page.layout == 'tournaments-map' %}
+    <link href="/assets/css/vendors/leaflet.css" rel="stylesheet">
+    <link href="/assets/css/vendors/MarkerCluster.css" rel="stylesheet">
+    <link href="/assets/css/vendors/MarkerCluster.Default.css" rel="stylesheet">
+
+    <script src="/assets/js/vendors/leaflet.js" defer></script>
+    <script src="/assets/js/vendors/leaflet.markercluster.js" defer></script>
+    <script src="/assets/js/tournaments-map.js" defer></script>
     {% endif %}
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>

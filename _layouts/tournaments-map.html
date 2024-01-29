@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- page.title -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <div class="page">
+    <div class="page__content">
+      <div>
+        {{ content }}
+      </div>
+
+      <template data-icon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.2 347.64" height="100%">
+          <path d="M167.59 188.88c5.3-12.31 10.37-25.67 14.95-40.05a440.7 440.7 0 0 0 20.33-116.42V4.14c-30.78-3-61.75-3.83-92.67-3.55-7.48.06-88.79 1-88.79 3.55v28.3A440.29 440.29 0 0 0 41.7 148.86c4.58 14.38 9.65 27.74 15 40.05H.54l5.34 71a525 525 0 0 0 54.82 9.08c12.6 1.41 24.61 2.29 36 2.77v75.38h31.1v-75.4c11.29-.49 23.22-1.36 35.72-2.76a525.2 525.2 0 0 0 54.83-9.08l5.34-71z"></path>
+        </svg>
+      </template>
+    </div>
+  </div>
+</div>
+
+<div id="tournaments-map">&nbsp;</div>
+
+<style>
+  #tournaments-map {
+    height: 600px;
+  }
+
+  [dark] .leaflet-layer,
+  [dark] .leaflet-control-zoom-in,
+  [dark] .leaflet-control-zoom-out,
+  [dark] .leaflet-control-attribution {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+  }
+</style>

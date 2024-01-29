@@ -1,6 +1,8 @@
 items:
   - label: Blog
     link: /blog/
+  - label: Kontakt
+    link: /contact/
   - label: Satzung
     link: /satzung/
   - label: FAQs

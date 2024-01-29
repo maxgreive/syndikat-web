@@ -4388,3 +4388,26 @@ table td {
     flex-direction: row
   }
 }
+
+.leaflet-container {
+  font-family: "Jost", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.leaflet-container .popup-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 0;
+  display: block;
+}
+
+.leaflet-container a {
+  font-weight: 500;
+  color: var(--link-color);
+  border-bottom: 1px solid var(--border-color);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.leaflet-container a:hover {
+  border-bottom-color: var(--link-color-hover);
+}

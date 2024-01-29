@@ -1,12 +1,12 @@
 window.addEventListener('CookiebotOnConsentReady', () => {
   if (window.CookieConsent.consent.marketing) return getTournaments(items => initMap(items));
 
-  return handleNoConsent;
+  return handleNoConsent();
 });
 
 function handleNoConsent() {
   document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-    <span class="map-no-consent">Um die Karte zu sehen, muss im Cookie-Tool den Marketing-Services zugestimmt werden.</span>
+    <span class="map-no-consent">Um die Karte zu sehen, muss <a onclick="window.CookieConsent.show();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
   `);
 }
 

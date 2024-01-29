@@ -3952,8 +3952,8 @@ table td {
   color: var(--text-alt-color)
 }
 
-.post,
-.page {
+.post:not(.page-fluid),
+.page:not(.page-fluid) {
   max-width: 760px;
   margin: 0 auto 60px;
   color: var(--text-color)

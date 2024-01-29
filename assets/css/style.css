@@ -3959,14 +3959,14 @@ table td {
   color: var(--text-color)
 }
 
-.post a:not(.button),
-.page a:not(.button) {
+a:not(.button),
+a:not(.button) {
   font-weight: 500;
   border-bottom: 1px solid var(--border-color)
 }
 
-.post a:not(.button):hover,
-.page a:not(.button):hover {
+a:not(.button):hover,
+a:not(.button):hover {
   color: var(--link-color);
   border-bottom-color: var(--link-color-hover)
 }

@@ -6,7 +6,7 @@ window.addEventListener('CookiebotOnConsentReady', () => {
 
 function handleNoConsent() {
   document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-    <span class="map-no-consent">Um die Karte zu sehen, muss <a onclick="window.CookieConsent.show();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
+    <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="window.CookieConsent.show();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
   `);
 }
 

@@ -1,7 +1,8 @@
 window.addEventListener('CookiebotOnConsentReady', () => {
-  if (window.CookieConsent.consent.marketing) getTournaments(items => initMap(items));
+  const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+  if (consentGiven) getTournaments(items => initMap(items));
 
-  return handleConsent(window.CookieConsent.consent.marketing);
+  return handleConsent(consentGiven);
 });
 
 function handleConsent(consent) {

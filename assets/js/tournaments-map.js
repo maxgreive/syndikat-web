@@ -78,7 +78,7 @@ function initMap(tournaments) {
       ${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}<br />
       ${tournament.dates.endTournament && !isOneDay ? "Letzter Spieltag: " + formatDate(tournament.dates.endTournament) + "<br />" : ""}
       Registrierung: ${tournament.dates.startRegistration ? 'ab ' + formatDate(tournament.dates.startRegistration) : "unbekannt"}<br />
-      <a href="${tournament.link}">Turnier auf discgolf.de</a>
+      <a href="${tournament.link}" target="_blank" rel="noopener">Turnier auf discgolf.de</a>
     `, {
       maxWidth: 250
     });

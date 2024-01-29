@@ -4428,6 +4428,8 @@ table td {
 
 .map-no-consent {
   margin: auto;
+  padding: 1rem;
   font-style: italic;
   font-size: 15px;
+  text-align: center;
 }

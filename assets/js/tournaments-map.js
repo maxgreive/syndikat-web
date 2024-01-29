@@ -5,6 +5,11 @@ window.addEventListener('CookiebotOnConsentReady', () => {
   return handleConsent(consentGiven);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+  return handleConsent(consentGiven);
+});
+
 function handleConsent(consent) {
   if (document.querySelector('.map-no-consent')) document.querySelector('.map-no-consent').remove();
   if (!consent) {

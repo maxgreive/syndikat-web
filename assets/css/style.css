@@ -3952,21 +3952,23 @@ table td {
   color: var(--text-alt-color)
 }
 
-.post:not(.page-fluid),
-.page:not(.page-fluid) {
+.post,
+.page {
   max-width: 760px;
   margin: 0 auto 60px;
   color: var(--text-color)
 }
 
-a:not(.button),
-a:not(.button) {
+.post a:not(.button):not([role="button"]),
+.page a:not(.button):not([role="button"]),
+#tournaments-map a:not(.button):not([role="button"]) {
   font-weight: 500;
   border-bottom: 1px solid var(--border-color)
 }
 
-a:not(.button):hover,
-a:not(.button):hover {
+.post a:not(.button):not([role="button"]):hover,
+.page a:not(.button):not([role="button"]):hover,
+#tournaments-map a:not(.button):not([role="button"]):hover {
   color: var(--link-color);
   border-bottom-color: var(--link-color-hover)
 }
@@ -4397,7 +4399,8 @@ a:not(.button):hover {
 }
 
 [dark] .leaflet-layer,
-[dark] .leaflet-control {
+[dark] .leaflet-control,
+[dark] .leaflet-popup-content-wrapper {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
@@ -4418,7 +4421,6 @@ a:not(.button):hover {
 
 .leaflet-container .leaflet-popup-content a {
   font-weight: 500;
-  color: #1e2740;
   border-bottom: 1px solid var(--border-color);
   display: inline-block;
   margin-top: 0.5rem;

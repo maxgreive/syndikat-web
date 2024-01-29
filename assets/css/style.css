@@ -3960,15 +3960,13 @@ table td {
 }
 
 .post a:not(.button):not([role="button"]),
-.page a:not(.button):not([role="button"]),
-#tournaments-map a:not(.button):not([role="button"]) {
+.page a:not(.button):not([role="button"]) {
   font-weight: 500;
   border-bottom: 1px solid var(--border-color)
 }
 
 .post a:not(.button):not([role="button"]):hover,
-.page a:not(.button):not([role="button"]):hover,
-#tournaments-map a:not(.button):not([role="button"]):hover {
+.page a:not(.button):not([role="button"]):hover {
   color: var(--link-color);
   border-bottom-color: var(--link-color-hover)
 }
@@ -4400,7 +4398,8 @@ table td {
 
 [dark] .leaflet-layer,
 [dark] .leaflet-control,
-[dark] .leaflet-popup-content-wrapper {
+[dark] .leaflet-popup-content-wrapper,
+[dark] .leaflet-popup-tip {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
@@ -4421,13 +4420,13 @@ table td {
 
 .leaflet-container .leaflet-popup-content a {
   font-weight: 500;
-  border-bottom: 1px solid var(--border-color);
+  color: #1e2740;
   display: inline-block;
   margin-top: 0.5rem;
 }
 
 .leaflet-container .leaflet-popup-content a:hover {
-  border-bottom-color: var(--link-color-hover);
+  color: #1e2740 !important;
 }
 
 .map-no-consent {

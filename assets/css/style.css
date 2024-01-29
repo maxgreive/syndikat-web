@@ -4397,10 +4397,12 @@ table td {
 }
 
 [dark] .leaflet-layer,
-[dark] .leaflet-control-zoom-in,
-[dark] .leaflet-control-zoom-out,
-[dark] .leaflet-control-attribution {
+[dark] .leaflet-control {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+[dark] .marker-cluster span {
+  color: #1e2740;
 }
 
 .leaflet-container {
@@ -4416,7 +4418,7 @@ table td {
 
 .leaflet-container .leaflet-popup-content a {
   font-weight: 500;
-  color: var(--link-color);
+  color: #1e2740;
   border-bottom: 1px solid var(--border-color);
   display: inline-block;
   margin-top: 0.5rem;

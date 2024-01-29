@@ -14,7 +14,7 @@ async function getTournaments(cb) {
   const cachedData = window.sessionStorage.getItem('tournament-data');
 
   if (!cachedData) {
-    const response = await fetch("http://localhost:8080");
+    const response = await fetch("https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/");
     const tournaments = await response.json();
     window.sessionStorage.setItem('tournament-data', JSON.stringify(tournaments));
     return cb(tournaments);

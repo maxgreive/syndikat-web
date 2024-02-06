@@ -14,7 +14,7 @@ function handleConsent(consent) {
   if (document.querySelector('.map-no-consent')) document.querySelector('.map-no-consent').remove();
   if (!consent) {
     document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="handleOpenConsent();">im Cookie-Tool den Marketing-Services zugestimmt werden</a>.</span>
+      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="handleOpenConsent();">im Cookie-Tool den Marketing-Services zugestimmt werden</a> und gegebenenfalls der AdBlocker deaktiviert werden..</span>
     `);
   }
 }
@@ -78,7 +78,7 @@ function initMap(tournaments) {
       ${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}<br />
       ${tournament.dates.endTournament && !isOneDay ? "Letzter Spieltag: " + formatDate(tournament.dates.endTournament) + "<br />" : ""}
       Registrierung: ${tournament.dates.startRegistration ? 'ab ' + formatDate(tournament.dates.startRegistration) : "unbekannt"}<br />
-      <a href="${tournament.link}">Turnier auf discgolf.de</a>
+      <a href="${tournament.link}" target="_blank" rel="noopener">Turnier auf discgolf.de</a>
     `, {
       maxWidth: 250
     });

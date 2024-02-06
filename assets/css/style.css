@@ -2549,7 +2549,7 @@ table td {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 2000;
     opacity: 0;
     visibility: hidden;
     background-color: var(--background-color)
@@ -2772,7 +2772,7 @@ table td {
 }
 
 .search.is-visible {
-  z-index: 100;
+  z-index: 2000;
   opacity: 1;
   transition: all .25s ease
 }

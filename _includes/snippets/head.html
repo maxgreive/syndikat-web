@@ -28,7 +28,10 @@
       <meta name="description" content="{{ site.description | escape }}">
     {% endif %}
     <meta property="og:image" content="{{- sharing_image -}}">
-    <link rel="icon" href="/assets/favicon.png" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
     {% if page.layout == 'index' %}
       <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg" as="image" type="image/jpg">
     {% endif %}

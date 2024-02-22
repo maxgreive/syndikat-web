@@ -102,11 +102,12 @@ function renderMarker(tournament, layer) {
 
   marker.bindPopup(`
       <p class="popup-title">${tournament.title}</p>
-      Ort: ${tournament.location}<br />
-      ${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}<br />
-      ${tournament.dates.endTournament && !isOneDay ? `Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}<br />` : ""}
-      ${tournament.dates.startRegistration ? `Registrierung: ab ${formatDate(tournament.dates.startRegistration)}<br />` : ""}
-      <a href="${tournament.link}" target="_blank" rel="noopener">Turnierausschreibung ansehen</a>
+      Ort: ${tournament.location}
+      <p>${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}</p>
+      ${tournament.dates.endTournament && !isOneDay ? `<p>Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}</p>` : ""}
+      ${tournament.dates.startRegistration ? `<p>Registrierung: ab ${formatDate(tournament.dates.startRegistration)}</p>` : ""}
+      ${tournament.relatedTournaments ? `<p>Verbundene Runden: ${tournament.relatedTournaments.map(t => `<a href="https://discgolfmetrix.com/${t.id}">${t.round}</a>`).join(', ')}</p>` : ''}
+      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen</a></p>
     `, {
     maxWidth: 250
   });

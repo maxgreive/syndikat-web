@@ -9,4 +9,4 @@ Hier findest du einen Überblick über alle aktuellen Disc Golf-Turniere in Deut
 
 > Auf dem Ebenen-Icon oben rechts kannst du zwischen Turnieren von discgolf.de und discgolfmetrix.com wechseln.
 
-_Die Daten für diese Karte werden live von discgolf.de und discgolfmetrix.com geholt, wende dich bei Fragen zu den Turnieren an die Ausrichter._
+_Die Daten für diese Karte werden live von discgolf.de und discgolfmetrix.com geladen, wende dich daher bei Fragen zu den Turnieren an die Ausrichter._

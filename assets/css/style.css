@@ -4411,6 +4411,10 @@ table td {
   font-family: "Jost", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.leaflet-popup-content p {
+  margin: 0;
+}
+
 .leaflet-container .popup-title {
   font-weight: 700;
   font-size: 15px;
@@ -4422,6 +4426,9 @@ table td {
   font-weight: 500;
   color: #1e2740;
   display: inline-block;
+}
+
+.leaflet-container .popup-link {
   margin-top: 0.5rem;
 }
 

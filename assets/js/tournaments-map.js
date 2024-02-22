@@ -98,7 +98,7 @@ function renderMarker(tournament, layer) {
 
   const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon });
   layer.addLayer(marker);
-  const isOneDay = tournament?.dates?.startTournament === tournament?.dates?.endTournament;
+  const isOneDay = tournament?.dates?.endTournament && tournament?.dates?.startTournament === tournament?.dates?.endTournament;
 
   marker.bindPopup(`
       <p class="popup-title">${tournament.title}</p>

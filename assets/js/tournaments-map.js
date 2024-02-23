@@ -1,6 +1,12 @@
+const API_URL = "https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/";
+const endpoints = {
+  official: API_URL,
+  metrix: API_URL + 'metrix'
+}
+
 window.addEventListener('CookiebotOnConsentReady', () => {
   const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-  if (consentGiven) getTournaments(items => initMap(items));
+  if (consentGiven) initMap();
 
   return handleConsent(consentGiven);
 });
@@ -24,26 +30,52 @@ function handleOpenConsent() {
   return window.CookieConsent.show();
 }
 
-async function getTournaments(cb) {
-  const cachedData = window.sessionStorage.getItem('tournament-data');
+async function getTournaments(type) {
+  const url = endpoints[type];
+  const cachedData = window.sessionStorage.getItem(`tournament-data-${type}`);
 
   if (!cachedData) {
-    const response = await fetch("https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/");
+    const response = await fetch(url);
     const tournaments = await response.json();
-    window.sessionStorage.setItem('tournament-data', JSON.stringify(tournaments));
-    return cb(tournaments);
+    window.sessionStorage.setItem(`tournament-data-${type}`, JSON.stringify(tournaments));
+    return tournaments;
   }
 
-  return cb(JSON.parse(cachedData));
+  return JSON.parse(cachedData);
 }
 
-function initMap(tournaments) {
-  const map = L.map("tournaments-map").setView([51, 9.5], 6);
-
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+async function initMap() {
+  const osmLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+  });
+
+  const tournaments = await getTournaments('official');
+  const metrix = await getTournaments('metrix');
+
+  const markers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 40
+  });
+
+  const metrixMarkers = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 40
+  });
+
+  metrix.forEach(tournament => renderMarker(tournament, metrixMarkers));
+  tournaments.forEach((tournament) => renderMarker(tournament, markers));
+
+  const map = L.map("tournaments-map", {
+    layers: [osmLayer, markers]
+  }).setView([51, 9.5], 6);
+
+  const overlayMaps = {
+    'Discgolf.de': markers,
+    'Metrix': metrixMarkers
+  }
+
+  L.control.layers(null, overlayMaps).addTo(map);
 
   L.control.resetView({
     position: "topleft",
@@ -51,40 +83,34 @@ function initMap(tournaments) {
     latlng: L.latLng([51, 9.5]),
     zoom: 6,
   }).addTo(map);
+}
 
-  const markers = L.markerClusterGroup({
-    showCoverageOnHover: false,
-    maxClusterRadius: 40
+function renderMarker(tournament, layer) {
+  if (!tournament.coords.lat) return;
+  const iconElement = document.querySelector("[data-icon]").content.firstElementChild.cloneNode(true);
+  iconElement.style.fill = `hsl(220deg 50% ${Math.floor(Math.random() * (70 - 50 + 1) + 50)}%)`;
+  const sizeMultiplier = Math.random() * 0.3 + 1;
+  const icon = L.divIcon({
+    html: iconElement,
+    iconSize: [16 * sizeMultiplier, 25 * sizeMultiplier],
+    className: "icon"
   });
 
-  tournaments.forEach((tournament) => {
-    if (!tournament.coords.lat) return;
-    const iconElement = document.querySelector("[data-icon]").content.firstElementChild.cloneNode(true);
-    iconElement.style.fill = `hsl(220deg 50% ${Math.floor(Math.random() * (70 - 50 + 1) + 50)}%)`;
-    const sizeMultiplier = Math.random() * 0.3 + 1;
-    const icon = L.divIcon({
-      html: iconElement,
-      iconSize: [16 * sizeMultiplier, 25 * sizeMultiplier],
-      className: "icon"
-    });
+  const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon });
+  layer.addLayer(marker);
+  const isOneDay = tournament?.dates?.endTournament && tournament?.dates?.startTournament === tournament?.dates?.endTournament;
 
-    const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon });
-    markers.addLayer(marker);
-    const isOneDay = tournament?.dates?.startTournament === tournament?.dates?.endTournament;
-
-    marker.bindPopup(`
+  marker.bindPopup(`
       <p class="popup-title">${tournament.title}</p>
-      Ort: ${tournament.location}<br />
-      ${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}<br />
-      ${tournament.dates.endTournament && !isOneDay ? "Letzter Spieltag: " + formatDate(tournament.dates.endTournament) + "<br />" : ""}
-      Registrierung: ${tournament.dates.startRegistration ? 'ab ' + formatDate(tournament.dates.startRegistration) : "unbekannt"}<br />
-      <a href="${tournament.link}" target="_blank" rel="noopener">Turnier auf discgolf.de</a>
+      Ort: ${tournament.location}
+      <p>${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}</p>
+      ${tournament.dates.endTournament && !isOneDay ? `<p>Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}</p>` : ""}
+      ${tournament.dates.startRegistration ? `<p>Registrierung: ab ${formatDate(tournament.dates.startRegistration)}</p>` : ""}
+      ${tournament.relatedTournaments ? `<p>Verbundene Runden: ${tournament.relatedTournaments.map(t => `<a href="https://discgolfmetrix.com/${t.id}">${t.round}</a>`).join(', ')}</p>` : ''}
+      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen</a></p>
     `, {
-      maxWidth: 250
-    });
+    maxWidth: 250
   });
-
-  markers.addTo(map);
 }
 
 function formatDate(date) {

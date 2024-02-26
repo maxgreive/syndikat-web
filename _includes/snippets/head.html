@@ -45,6 +45,8 @@
         document.documentElement.setAttribute("dark", "");
       }
     </script>
+    <script src="/assets/js/vendors/js.cookie.min.js" defer></script>
+
 
     {% if page.layout == 'dice-game' %}
     <script src="/assets/js/dice-game.js" defer></script>
@@ -54,10 +56,12 @@
     <link href="/assets/css/vendors/MarkerCluster.Default.css" rel="stylesheet">
     <link href="/assets/css/vendors/leaflet.resetview.css" rel="stylesheet">
 
+    {% if page.layout == 'tournaments-map' %}
     <script src="/assets/js/vendors/leaflet.js" defer></script>
     <script src="/assets/js/vendors/leaflet.markercluster.js" defer></script>
     <script src="/assets/js/vendors/leaflet.resetview.js" defer></script>
     <script src="/assets/js/tournaments-map.js" defer></script>
+    {% endif %}
     {% endif %}
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>

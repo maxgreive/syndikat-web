@@ -37,7 +37,7 @@ async function getTournaments(type) {
   if (!cachedData) {
     const response = await fetch(url);
     const tournaments = await response.json();
-    Cookies.set(`tournament-data-${type}`, JSON.stringify(tournaments), {expires: 1});
+    Cookies.set(`tournament-data-${type}`, JSON.stringify(tournaments), {expires: 1, sameSite: 'Strict'});
     return tournaments;
   }
 

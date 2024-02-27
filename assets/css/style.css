@@ -4443,3 +4443,16 @@ table td {
   font-size: 15px;
   text-align: center;
 }
+
+.map-no-consent a {
+  text-decoration: underline;
+}
+
+.leaflet-control-messagebox {
+	display: none;
+	border: 2px solid rgba(185, 28, 28, 0.6);
+	color: #b91c1c;
+	background-color: #fef2f2;
+	padding: 5px 15px;
+	border-radius: 5px;
+}

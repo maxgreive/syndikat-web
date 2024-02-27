@@ -4,26 +4,12 @@ const endpoints = {
   metrix: API_URL + 'metrix'
 }
 
+let map = null;
+
 window.addEventListener('CookiebotOnConsentReady', () => {
   const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-  if (consentGiven) initMap();
-
-  return handleConsent(consentGiven);
+  return initMap(consentGiven);
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-  return handleConsent(consentGiven);
-});
-
-function handleConsent(consent) {
-  if (document.querySelector('.map-no-consent')) document.querySelector('.map-no-consent').remove();
-  if (!consent) {
-    document.querySelector('#tournaments-map').insertAdjacentHTML('afterbegin', `
-      <span class="map-no-consent">Um die Karte zu sehen, muss <a href="#" onclick="handleOpenConsent();">im Cookie-Tool den Marketing-Services zugestimmt werden</a> und gegebenenfalls der AdBlocker deaktiviert werden..</span>
-    `);
-  }
-}
 
 function handleOpenConsent() {
   if (!window.CookieConsent) return;
@@ -31,20 +17,26 @@ function handleOpenConsent() {
 }
 
 async function getTournaments(type) {
-  const url = endpoints[type];
-  const response = await fetch(url);
-  const tournaments = await response.json();
-  return tournaments;
+  try {
+    const url = endpoints[type];
+    const response = await fetch(url);
+    const tournaments = await response.json();
+    return tournaments;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-async function initMap() {
-  const osmLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+async function initMap(consent) {
+  if (map) map.remove();
+
+  const osmLayer = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="http://www.openstreetmap.de/copyright">OpenStreetMap</a>'
   });
 
-  const tournaments = await getTournaments('official');
-  const metrix = await getTournaments('metrix');
+  const tournaments = consent ? await getTournaments('official') : [];
+  const metrix = consent ? await getTournaments('metrix') : [];
 
   const markers = L.markerClusterGroup({
     showCoverageOnHover: false,
@@ -57,11 +49,17 @@ async function initMap() {
   });
 
   metrix.forEach(tournament => renderMarker(tournament, metrixMarkers));
-  tournaments.forEach((tournament) => renderMarker(tournament, markers));
+  tournaments.forEach(tournament => renderMarker(tournament, markers));
 
-  const map = L.map("tournaments-map", {
-    layers: [osmLayer, markers]
+  map = L.map("tournaments-map", {
+    layers: [osmLayer, markers],
+    messagebox: !consent
   }).setView([51, 9.5], 6);
+
+  if (map.messagebox) {
+    map.messagebox.options.timeout = 99999;
+    map.messagebox.show('Hinweis: Cookies akzeptieren, um Turniere zu laden.');
+  }
 
   const overlayMaps = {
     'Discgolf.de': markers,

@@ -32,16 +32,9 @@ function handleOpenConsent() {
 
 async function getTournaments(type) {
   const url = endpoints[type];
-  const cachedData = Cookies.get(`tournament-data-${type}`);
-
-  if (!cachedData) {
-    const response = await fetch(url);
-    const tournaments = await response.json();
-    Cookies.set(`tournament-data-${type}`, JSON.stringify(tournaments), {expires: 1, sameSite: 'Strict'});
-    return tournaments;
-  }
-
-  return JSON.parse(cachedData);
+  const response = await fetch(url);
+  const tournaments = await response.json();
+  return tournaments;
 }
 
 async function initMap() {

@@ -90,9 +90,10 @@ function renderMarker(tournament, layer) {
   const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon: icon });
   layer.addLayer(marker);
   const isOneDay = tournament?.dates?.endTournament && tournament?.dates?.startTournament === tournament?.dates?.endTournament;
+  const badgeHTML = tournament.badge ? `<span class="popup-badge">${tournament.badge}</span>` : "";
 
   marker.bindPopup(`
-      <p class="popup-title">${tournament.title}</p>
+      <p class="popup-title">${badgeHTML}${tournament.title}</p>
       Ort: ${tournament.location}
       <p>${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}</p>
       ${tournament.dates.endTournament && !isOneDay ? `<p>Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}</p>` : ""}

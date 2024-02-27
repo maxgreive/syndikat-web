@@ -242,7 +242,7 @@ summary {
 }
 
 summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
 
 template {
@@ -4436,6 +4436,17 @@ table td {
   color: #1e2740 !important;
 }
 
+.popup-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  background: #fca5a5;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
 .map-no-consent {
   margin: auto;
   padding: 1rem;
@@ -4449,10 +4460,10 @@ table td {
 }
 
 .leaflet-control-messagebox {
-	display: none;
-	border: 2px solid rgba(185, 28, 28, 0.6);
-	color: #b91c1c;
-	background-color: #fef2f2;
-	padding: 5px 15px;
-	border-radius: 5px;
+  display: none;
+  border: 2px solid rgba(185, 28, 28, 0.6);
+  color: #b91c1c;
+  background-color: #fef2f2;
+  padding: 5px 15px;
+  border-radius: 5px;
 }

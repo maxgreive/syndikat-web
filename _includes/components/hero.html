@@ -16,7 +16,17 @@
           </div>
           <div class="hero__right">
             <div class="hero__image">
-              <img class="lazy" data-src="/assets/images/hero.jpg" alt="">
+              <img loading="lazy" src="/assets/images/hero.jpg"
+                srcset="
+                  /assets/hero_w_200.jpg 200w,
+                  /assets/hero_w_470.jpg 470w,
+                  /assets/hero_w_762.jpg 762w,
+                  /assets/hero_w_1020.jpg 1020w,
+                  /assets/hero_w_1136.jpg 1136w,
+                  /assets/hero_w_1200.jpg 1200w"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                alt="Discgolfscheiben in einem Rucksack"
+              >
             </div>
           </div>
         </div>

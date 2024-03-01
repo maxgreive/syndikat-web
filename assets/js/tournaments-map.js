@@ -58,7 +58,7 @@ async function initMap(consent) {
     'Metrix': metrixMarkers
   }
 
-  L.control.layers(null, overlayMaps).addTo(map);
+  if (consent) L.control.layers(null, overlayMaps).addTo(map);
 
   L.control.resetView({
     position: "topleft",

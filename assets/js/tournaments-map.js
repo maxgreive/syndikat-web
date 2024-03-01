@@ -6,9 +6,15 @@ const endpoints = {
 
 let map = null;
 
-window.addEventListener('CookiebotOnConsentReady', () => {
+window.addEventListener('CookiebotOnAccept', () => {
   const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+  console.log('consentGiven:', consentGiven)
   return initMap(consentGiven);
+});
+
+window.addEventListener('load', () => {
+  if (window.CookieConsent) return false;
+  return initMap(false);
 });
 
 function handleOpenConsent() {

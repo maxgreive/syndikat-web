@@ -208,23 +208,24 @@ document.addEventListener("DOMContentLoaded", function() {
   // Bag Tags
   ======================= */
   (async () => {
+    const $el = document.querySelector('.bag-tags-wrapper');
+    if (!$el) return;
     try {
       const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
 
       if (!consentGiven) {
-        renderRanking();
+        renderRanking(null, $el);
         throw 'No Consent given';
       }
       const ranking = await fetch('https://sheetdb.io/api/v1/ausoximblc9rv').then(response => response.json());
-      renderRanking(ranking);
+      renderRanking(ranking, $el);
     } catch (err) {
       console.error(err);
     }
   })();
 
 
-  function renderRanking(ranking) {
-    const $el = document.querySelector('.bag-tags-wrapper');
+  function renderRanking(ranking, $el) {
     if (!ranking) {
       return $el.insertAdjacentHTML('beforeend', `
         <blockquote>

@@ -9,7 +9,7 @@ async function initBagTags() {
 
     if (!consentGiven) {
       renderRanking(null, $el);
-      throw 'No Consent given';
+      throw 'No Consent given.';
     }
     const ranking = await fetch('https://sheetdb.io/api/v1/ausoximblc9rv').then(response => response.json());
     renderRanking(ranking, $el);
@@ -28,11 +28,12 @@ function renderRanking(ranking, $el) {
   };
 
   const html = ranking.map(entry => `
-      <tr>
-        <td>${entry.Rank}</td>
-        <td>${entry.Name}</td>
-      </tr>
-    `).join('');
+    <tr>
+      <td>${entry.Rank}</td>
+      <td>${entry.Name}</td>
+    </tr>
+  `).join('');
+  $el.querySelector('blockquote').remove();
   return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
 }
 

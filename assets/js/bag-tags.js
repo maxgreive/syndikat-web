@@ -33,7 +33,7 @@ function renderRanking(ranking, $el) {
       <td>${entry.Name}</td>
     </tr>
   `).join('');
-  $el.querySelector('blockquote').remove();
+  $el.querySelector('blockquote')?.remove();
   return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
 }
 

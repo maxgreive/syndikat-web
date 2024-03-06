@@ -203,4 +203,41 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+  /* =======================
+  // Bag Tags
+  ======================= */
+  (async () => {
+    try {
+      const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+
+      if (!consentGiven) {
+        renderRanking();
+        throw 'No Consent';
+      }
+      const ranking = await fetch('https://sheetdb.io/api/v1/ausoximblc9rv').then(response => response.json());
+      renderRanking(ranking);
+    } catch (err) {
+      console.error(err);
+    }
+  })();
+
+
+  function renderRanking(ranking) {
+    const $el = document.querySelector('.bag-tags-wrapper');
+    if (!ranking) {
+      $el.insertAdjacentHTML('beforeend', `
+        <blockquote>
+          <p>Error: Um das Leaderboard zu sehen, müssen Cookies akzeptiert werden.</p>
+        </blockquote>
+      `);
+    } ;
+    const html = ranking.map((entry, i) => `
+      <tr>
+        <td>${entry.Rank}</td>
+        <td>${entry.Name}</td>
+      </tr>
+    `).join('');
+    $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
+  }
 });

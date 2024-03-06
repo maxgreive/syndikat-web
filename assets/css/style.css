@@ -2437,12 +2437,12 @@ table th {
 }
 
 table tr {
-  background-color: var(--tr-color);
+  background-color: transparent;
   transition: all .3s ease
 }
 
 table tr:nth-child(even) {
-  background-color: transparent
+  background-color: var(--tr-color)
 }
 
 table td {
@@ -4466,4 +4466,14 @@ table td {
   background-color: #fef2f2;
   padding: 5px 15px;
   border-radius: 5px;
+}
+
+.bag-tags-wrapper thead td {
+  font-weight: 500;
+}
+
+.bag-tags-wrapper td:first-child,
+.bag-tags-wrapper th:first-child {
+  text-align: right;
+  width: 10%;
 }

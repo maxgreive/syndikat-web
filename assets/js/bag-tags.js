@@ -1,5 +1,3 @@
-initBagTags();
-
 async function initBagTags() {
   const $el = document.querySelector('.bag-tags-wrapper');
   if (!$el) return;
@@ -33,7 +31,6 @@ function renderRanking(ranking, $el) {
       <td>${entry.Name}</td>
     </tr>
   `).join('');
-  $el.querySelector('blockquote')?.remove();
   return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
 }
 

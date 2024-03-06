@@ -5,8 +5,8 @@ const endpoints = {
 }
 
 let map = null;
-const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-initMap(consentGiven);
+initMap();
+window.addEventListener('CookiebotOnLoad', initMap);
 
 async function getTournaments(type) {
   try {
@@ -19,7 +19,9 @@ async function getTournaments(type) {
   }
 }
 
-async function initMap(consent) {
+async function initMap() {
+  const consent = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+
   if (map) map.remove();
 
   const osmLayer = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {

@@ -3,6 +3,9 @@
   if (!$el) return;
   try {
     const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
+    console.log('window.CookieConsent.consent.marketing:', window.CookieConsent.consent.marketing)
+    console.log('window.CookieConsent.consent:', window.CookieConsent.consent)
+    console.log('window.CookieConsent:', window.CookieConsent)
 
     if (!consentGiven) {
       renderRanking(null, $el);

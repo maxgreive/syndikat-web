@@ -1,11 +1,11 @@
-(async () => {
+initBagTags();
+
+async function initBagTags() {
   const $el = document.querySelector('.bag-tags-wrapper');
   if (!$el) return;
+
   try {
     const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-    console.log('window.CookieConsent.consent.marketing:', window.CookieConsent.consent.marketing)
-    console.log('window.CookieConsent.consent:', window.CookieConsent.consent)
-    console.log('window.CookieConsent:', window.CookieConsent)
 
     if (!consentGiven) {
       renderRanking(null, $el);
@@ -16,8 +16,7 @@
   } catch (err) {
     console.error(err);
   }
-})();
-
+}
 
 function renderRanking(ranking, $el) {
   if (!ranking) {
@@ -36,3 +35,5 @@ function renderRanking(ranking, $el) {
     `).join('');
   return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
 }
+
+window.addEventListener('CookiebotOnLoad', initBagTags);

@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (!consentGiven) {
         renderRanking();
-        throw 'No Consent';
+        throw 'No Consent given';
       }
       const ranking = await fetch('https://sheetdb.io/api/v1/ausoximblc9rv').then(response => response.json());
       renderRanking(ranking);
@@ -226,18 +226,19 @@ document.addEventListener("DOMContentLoaded", function() {
   function renderRanking(ranking) {
     const $el = document.querySelector('.bag-tags-wrapper');
     if (!ranking) {
-      $el.insertAdjacentHTML('beforeend', `
+      return $el.insertAdjacentHTML('beforeend', `
         <blockquote>
           <p>Error: Um das Leaderboard zu sehen, müssen Cookies akzeptiert werden.</p>
         </blockquote>
       `);
-    } ;
+    };
+
     const html = ranking.map((entry, i) => `
       <tr>
         <td>${entry.Rank}</td>
         <td>${entry.Name}</td>
       </tr>
     `).join('');
-    $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
+    return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
   }
 });

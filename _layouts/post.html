@@ -25,22 +25,32 @@ layout: default
             {% endfor %}
           </div>
           <h1 class="post__title">{{ page.title }}</h1>
-          {%- assign author = site.data.authors[page.author] -%}
           <div class="post__meta">
-            <span class="post__author-image">
-              <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{- author.image -}}">
-            </span>
+            {% for item in page.author %}
+              {%- assign author = site.data.authors[item] -%}
+              <span class="post__author-image">
+                <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{- author.image -}}">
+              </span>
 
-            <div class="post__meta-bottom">
-              <a href="//twitter.com/{{- author.twitter -}}" class="post__author">{{- author.name -}}</a>
-              {% capture i18n_date %}
-                {{ page.date | date: "%-d" | append: "." }}
-                {% assign m = page.date | date: "%-m" | minus: 1 %}
-                {{ site.data.de.months[m] }}
-                {{ page.date | date: "%Y" }}
-              {% endcapture %}
-              <time class="post__date" datetime="{{- page.date -}}">{{- i18n_date -}}</time>
-            </div>
+              <div class="post__meta-bottom">
+                {% if author.twitter %}
+                  <a href="//twitter.com/{{- author.twitter -}}" class="post__author">{{- author.name -}}</a>
+                {% else %}
+                  <span class="post__author">{{- author.name -}}</span>
+                {% endif %}
+                {% if forloop.first %}
+                  {% capture i18n_date %}
+                    {{ page.date | date: "%-d" | append: "." }}
+                    {% assign m = page.date | date: "%-m" | minus: 1 %}
+                    {{ site.data.de.months[m] }}
+                    {{ page.date | date: "%Y" }}
+                  {% endcapture %}
+                  <time class="post__date" datetime="{{- page.date -}}">{{- i18n_date -}}</time>
+                {% else %}
+                  <span class="post__date">Co-Autor</span>
+                {% endif %}
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>

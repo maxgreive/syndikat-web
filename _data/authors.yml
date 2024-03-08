@@ -5,7 +5,7 @@ max:
 
 philipp:
   name: Philipp
-  image: /assets/images/authors/philipp_essence.jpeg
+  # image: /assets/images/authors/philipp_essence.jpeg
 
 moritz:
   name: Moritz

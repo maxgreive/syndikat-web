@@ -3931,6 +3931,10 @@ table td {
   flex-direction: column
 }
 
+.post__meta-bottom + .post__author-image {
+  margin-left: 24px
+}
+
 .post__meta .post__author {
   display: inline-block;
   margin-bottom: 7px;
@@ -3942,7 +3946,7 @@ table td {
   transition: text-decoration-color .35s
 }
 
-.post__meta .post__author:hover {
+.post__meta a.post__author:hover {
   text-decoration-color: var(--heading-font-color)
 }
 

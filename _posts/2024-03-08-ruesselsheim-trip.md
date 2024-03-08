@@ -4,7 +4,9 @@ title: "Ausflug nach Rüsselsheim"
 image: /assets/images/posts/rue_spring.jpg
 thumbnail: /assets/images/posts/thumbnails/rue_spring_thumb.jpg
 tags: events
-author: moritz
+author:
+  - moritz
+  - philipp
 ---
 
 Am 24. Februar begab sich das Discgolf Syndikat zu ein paar Runden Discgolf nach Rüsselsheim. Uns lockte der [abwechslungsreiche und anspruchsvolle Kurs im Ostpark](https://udisc.com/courses/ruesselsheim-ostpark-wYvu).

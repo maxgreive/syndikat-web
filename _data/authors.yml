@@ -1,11 +1,11 @@
 max:
   name: Max
   image: /assets/images/authors/max.jpg
-  twitter: maxgreive
+  twitter: maex2k
 
 philipp:
   name: Philipp
-  image: /assets/images/authors/philipp_essence.jpeg
+  image: /assets/images/authors/philipp.jpg
 
 moritz:
   name: Moritz

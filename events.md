@@ -3,6 +3,10 @@ title: Events
 layout: page
 ---
 
+## Season Opening
+
+> Am Sonntag, den 07. April [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56)
+
 ## Syndication Weekly
 
 Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine Runde, danach freies Spielen bis die Sonne unter geht.

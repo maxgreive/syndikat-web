@@ -3,7 +3,7 @@ layout: post
 title: "Season Opening in Dortmund"
 image: /assets/images/posts/24_driveopen_blume.jpeg
 thumbnail: /assets/images/posts/thumbnails/24_driveopen_blume.jpeg
-tags: events
+tags: turniere
 author:
   - jonas
   - philipp

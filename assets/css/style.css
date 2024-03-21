@@ -3389,14 +3389,16 @@ table td {
   transition: transform .2s
 }
 
-.article:hover {
-  transform: translateY(-3px)
-}
+@media (hover:hover) {
+  .article:hover {
+    transform: translateY(-3px)
+  }
 
-.article:hover .article__title a {
-  text-decoration: underline;
-  text-decoration-color: var(--link-color-hover);
-  text-decoration-thickness: 2px
+  .article:hover .article__title a {
+    text-decoration: underline;
+    text-decoration-color: var(--link-color-hover);
+    text-decoration-thickness: 2px
+  }
 }
 
 .article__head {
@@ -3931,7 +3933,7 @@ table td {
   flex-direction: column
 }
 
-.post__meta-bottom + .post__author-image {
+.post__meta-bottom+.post__author-image {
   margin-left: 24px
 }
 

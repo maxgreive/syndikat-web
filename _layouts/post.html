@@ -25,8 +25,12 @@ layout: default
             {% endfor %}
           </div>
           <h1 class="post__title">{{ page.title }}</h1>
+          {% assign authors = page.authors %}
+          {% if page.author %}
+            {% assign authors = page.author %}
+          {% endif %}
           <div class="post__meta">
-            {% for item in page.author %}
+            {% for item in authors %}
               {%- assign author = site.data.authors[item] -%}
               <span class="post__author-image">
                 <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{- author.image -}}">

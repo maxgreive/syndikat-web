@@ -4,7 +4,7 @@ title: "Ausflug nach Rüsselsheim"
 image: /assets/images/posts/rue_spring.jpg
 thumbnail: /assets/images/posts/thumbnails/rue_spring_thumb.jpg
 tags: events
-author:
+authors:
   - moritz
   - philipp
 ---

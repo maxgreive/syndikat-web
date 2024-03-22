@@ -35,6 +35,13 @@
       defaultState = true;
       return products.set([]);
     }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'product-search',
+      query: query
+    });
+
     defaultState = false;
 
     push(`/?q=${encodeURIComponent(query)}`);

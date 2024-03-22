@@ -1,7 +1,7 @@
-const API_URL = "https://discgolf-api-de57d65c9788.herokuapp.com/tournaments/";
+const API_URL = "https://api.syndikat.golf/tournaments";
 const endpoints = {
   official: API_URL,
-  metrix: API_URL + 'metrix'
+  metrix: API_URL + '/metrix'
 }
 
 let map = null;

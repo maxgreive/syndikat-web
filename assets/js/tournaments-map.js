@@ -6,7 +6,6 @@ const endpoints = {
 
 let map = null;
 initMap();
-window.addEventListener('CookiebotOnLoad', initMap);
 
 async function getTournaments(type) {
   try {
@@ -20,17 +19,13 @@ async function getTournaments(type) {
 }
 
 async function initMap() {
-  const consent = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-
-  if (map) map.remove();
-
   const osmLayer = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.de/copyright">OpenStreetMap</a>'
   });
 
-  const tournaments = consent ? await getTournaments('official') : [];
-  const metrix = consent ? await getTournaments('metrix') : [];
+  const tournaments = await getTournaments('official');
+  const metrix = await getTournaments('metrix');
 
   const markers = L.markerClusterGroup({
     showCoverageOnHover: false,
@@ -46,8 +41,7 @@ async function initMap() {
   tournaments.forEach(tournament => renderMarker(tournament, markers));
 
   map = L.map("tournaments-map", {
-    layers: [osmLayer, markers],
-    messagebox: !consent
+    layers: [osmLayer, markers]
   }).setView([51, 9.5], 6);
 
   if (map.messagebox) {
@@ -59,8 +53,6 @@ async function initMap() {
     'Discgolf.de': markers,
     'Metrix': metrixMarkers
   }
-
-  if (consent) L.control.layers(null, overlayMaps).addTo(map);
 
   L.control.resetView({
     position: "topleft",

@@ -1,4 +1,4 @@
-{%- capture sharing_image -%}
+ {%- capture sharing_image -%}
   {%- if page.image -%}
     {{- page.image -}}
   {%- else -%}
@@ -46,6 +46,8 @@
       }
     </script>
 
+    <script defer src="/assets/svelte-bundle.js?{{ site.time | date: '%s%N' }}"></script>
+
     {% if page.layout == 'dice-game' %}
     <script src="/assets/js/dice-game.js" defer></script>
     {% elsif page.layout == 'tournaments-map' %}
@@ -56,4 +58,5 @@
     {% endif %}
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   </head>

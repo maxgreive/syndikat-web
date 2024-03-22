@@ -6,9 +6,7 @@ items:
     link: /about/
   - label: Events
     link: /events/
-  - label: Turnierkarte
-    link: /turniere
-  - label: Disc Dice
-    link: /disc-dice/
+  - label: Tools
+    link: /tools/
   - label: Mitglied werden
     link: /membership/

@@ -46,7 +46,6 @@
       }
     </script>
 
-    <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
     <script defer src="/assets/svelte-bundle.js?{{ site.time | date: '%s%N' }}"></script>
 
     {% if page.layout == 'dice-game' %}
@@ -59,4 +58,5 @@
     {% endif %}
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   </head>

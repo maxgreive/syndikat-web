@@ -1,5 +1,5 @@
-import HelloWorld from './HelloWorld.svelte';
+import ProductSearch from './ProductSearch.svelte';
 
-new HelloWorld({
-  target: document.querySelector('#hello-world-container'),
+new ProductSearch({
+  target: document.querySelector('#product-search-app'),
 });

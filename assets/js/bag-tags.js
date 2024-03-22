@@ -3,13 +3,7 @@ async function initBagTags() {
   if (!$el) return;
 
   try {
-    const consentGiven = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-
-    if (!consentGiven) {
-      renderRanking(null, $el);
-      throw 'No Consent given.';
-    }
-    const ranking = await fetch('https://sheetdb.io/api/v1/ausoximblc9rv').then(response => response.json());
+    const ranking = await fetch('https://api.syndikat.golf/bagtag').then(response => response.json());
     renderRanking(ranking, $el);
   } catch (err) {
     console.error(err);
@@ -17,14 +11,6 @@ async function initBagTags() {
 }
 
 function renderRanking(ranking, $el) {
-  if (!ranking) {
-    return $el.insertAdjacentHTML('beforeend', `
-        <blockquote>
-          <p>Error: Um das Leaderboard zu sehen, müssen Cookies akzeptiert werden.</p>
-        </blockquote>
-      `);
-  };
-
   const html = ranking.map(entry => `
     <tr>
       <td>${entry.Rank}</td>
@@ -34,4 +20,4 @@ function renderRanking(ranking, $el) {
   return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
 }
 
-window.addEventListener('CookiebotOnLoad', initBagTags);
+initBagTags();

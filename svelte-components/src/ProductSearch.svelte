@@ -82,7 +82,7 @@
     type="text"
     class="search__text"
     bind:value={query}
-    placeholder="Suche nach Produkten"
+    placeholder="Suchen …"
   />
   <button
     type="submit"

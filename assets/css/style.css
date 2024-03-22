@@ -2853,10 +2853,6 @@ table td {
   .search__group {
     margin-bottom: 32px
   }
-
-  .search__group .search__text {
-    padding: 24px
-  }
 }
 
 .search-results-list .no-results {

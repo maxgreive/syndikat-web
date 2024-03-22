@@ -6,7 +6,5 @@ items:
     link: /about/
   - label: Events
     link: /events/
-  - label: Tools
-    link: /tools/
   - label: Mitglied werden
     link: /membership/

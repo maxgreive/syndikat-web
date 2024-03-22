@@ -1,4 +1,4 @@
-const API_URL = "https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/";
+const API_URL = "https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/tournaments/";
 const endpoints = {
   official: API_URL,
   metrix: API_URL + 'metrix'

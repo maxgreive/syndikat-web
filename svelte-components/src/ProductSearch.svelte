@@ -223,6 +223,10 @@
     color: var(--text-alt-color);
   }
 
+  .search__text {
+    border: 0!important;
+  }
+
   .products-headline {
     display: flex;
     margin-bottom: 16px;

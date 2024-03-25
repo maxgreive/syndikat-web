@@ -6,7 +6,7 @@
 
   const products = writable([]);
   const loading = writable(false);
-  let originalProducts = [];
+  let initialProducts = [];
   let defaultState = true;
 
   const endpoints = [
@@ -45,6 +45,7 @@
       query: query,
     });
 
+    initialProducts = [];
     defaultState = false;
 
     push(`/?q=${encodeURIComponent(query)}`);
@@ -60,7 +61,7 @@
       ]);
       loading.set(false);
       shopCount++;
-      originalProducts.push(...productResponse);
+      initialProducts.push(...productResponse);
       handleSort();
     }
 
@@ -69,7 +70,7 @@
   const handleSort = () => {
     if ($sort === "price-descending") return ($products = sortProducts($products));
     if ($sort === "price-ascending") return ($products = sortProducts($products, true));
-    return $products = originalProducts;
+    return $products = initialProducts;
   };
 
   function sortProducts (products, reverse) {

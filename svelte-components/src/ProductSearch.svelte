@@ -93,7 +93,7 @@
   <button
     type="submit"
     class="button button--primary"
-    on:click|preventDefault={getProducts()}
+    on:click|preventDefault={() => getProducts()}
   >
     Suchen
   </button>

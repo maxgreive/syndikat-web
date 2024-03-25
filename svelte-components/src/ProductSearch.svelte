@@ -102,7 +102,7 @@
 <div class="products-headline">
   <h2>
     Produkte
-    {#if shopCount < endpoints.length}
+    {#if $loading && shopCount < endpoints.length}
       <svg
         width="24"
         height="24"

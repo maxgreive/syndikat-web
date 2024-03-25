@@ -15,6 +15,7 @@
     "discgolfstore",
     "thrownatur",
     "insidethecircle",
+    "chooseyourdisc"
   ];
 
   const stored = localStorage.sort;
@@ -38,8 +39,8 @@
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'product-search',
-      query: query
+      event: "product-search",
+      query: query,
     });
 
     defaultState = false;
@@ -95,6 +96,7 @@
     Suchen
   </button>
 </form>
+
 <div class="products-headline">
   <h2>
     Produkte{#if $products.length}<span class="product-count"
@@ -107,67 +109,68 @@
     <option value="price-descending">Preis absteigend</option>
   </select>
 </div>
-<div class="container">
-  <div class="row animate">
-    {#if $loading}
-      {#each Array(6) as _}
-        <div class="skeleton col col-4 col-d-6 col-t-12">
-          <div class="skeleton-image"></div>
-          <div class="skeleton-text"></div>
-        </div>
-      {/each}
-    {:else}
-      {#each $products as product}
-        <div class="article col col-4 col-d-6 col-t-12">
-          <div class="article__inner">
-            <div class="article__head">
-              <a href={product.url} target="_blank" class="article__image">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  loading="lazy"
-                  width="200"
-                  height="200"
-                />
-              </a>
-            </div>
-            <div class="article__content">
-              <h2 class="article__title"><a href={product.url} target="_blank">{product.title}</a></h2>
-              <p>
-                <span class={`inventory status-${product.stockStatus}`}
-                  >{stockStatusLabels[product.stockStatus]}</span
-                >
-                <strong>{product.price} €</strong>
-                <img src={product.store} class="store-logo" alt="Store Logo" />
-              </p>
-            </div>
+
+<div class="row animate">
+  {#if $loading}
+    {#each Array(6) as _}
+      <div class="skeleton col col-4 col-d-6 col-t-12">
+        <div class="skeleton-image"></div>
+        <div class="skeleton-text"></div>
+      </div>
+    {/each}
+  {:else}
+    {#each $products as product}
+      <div class="article col col-4 col-d-6 col-t-12">
+        <div class="article__inner">
+          <div class="article__head">
+            <a href={product.url} target="_blank" class="article__image">
+              <img
+                src={product.image}
+                alt={product.title}
+                loading="lazy"
+                width="200"
+                height="200"
+              />
+            </a>
+          </div>
+          <div class="article__content">
+            <h2 class="article__title">
+              <a href={product.url} target="_blank">{product.title}</a>
+            </h2>
+            <p>
+              <span class={`inventory status-${product.stockStatus}`}
+                >{stockStatusLabels[product.stockStatus]}</span
+              >
+              <strong>{product.price} €</strong>
+              <img src={product.store} class="store-logo" alt="Store Logo" />
+            </p>
           </div>
         </div>
+      </div>
+    {:else}
+      {#if defaultState}
+        <p>
+          Suche zum Beispiel nach <a
+            href={null}
+            on:click|preventDefault={() => {
+              query = "Westside Harp";
+              getProducts();
+            }}>"Westside Harp"</a
+          >
+          oder
+          <a
+            href={null}
+            on:click|preventDefault={() => {
+              query = "Innova Destroyer";
+              getProducts();
+            }}>"Innova Destroyer"</a
+          >.
+        </p>
       {:else}
-        {#if defaultState}
-          <p>
-            Suche zum Beispiel nach <a
-              href={null}
-              on:click|preventDefault={() => {
-                query = "Westside Harp";
-                getProducts();
-              }}>"Westside Harp"</a
-            >
-            oder
-            <a
-              href={null}
-              on:click|preventDefault={() => {
-                query = "Innova Destroyer";
-                getProducts();
-              }}>"Innova Destroyer"</a
-            >.
-          </p>
-        {:else}
-          <p>Keine Produkte für {query} gefunden.</p>
-        {/if}
-      {/each}
-    {/if}
-  </div>
+        <p>Keine Produkte für {query} gefunden.</p>
+      {/if}
+    {/each}
+  {/if}
 </div>
 
 <style>
@@ -224,7 +227,7 @@
   }
 
   .search__text {
-    border: 0!important;
+    border: 0 !important;
   }
 
   .products-headline {

@@ -7,7 +7,6 @@
   const products = writable([]);
   const loading = writable(false);
   let defaultState = true;
-  let shopCount = 0;
 
   const endpoints = [
     "chooseyourdisc",
@@ -18,6 +17,7 @@
     "thrownatur",
   ];
 
+  let shopCount = endpoints.length;
   const stored = localStorage.sort;
   const sort = writable(stored || "default");
   sort.subscribe((value) => (localStorage.sort = value));
@@ -102,7 +102,7 @@
 <div class="products-headline">
   <h2>
     Produkte
-    {#if $loading && shopCount < endpoints.length}
+    {#if shopCount < endpoints.length}
       <svg
         width="24"
         height="24"

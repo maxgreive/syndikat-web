@@ -146,7 +146,7 @@
           <div class="article__head">
             <a href={product.url} target="_blank" class="article__image">
               <img
-                src={product.image}
+                src={product.image || '/assets/images/image-not-found.jpg'}
                 alt={product.title}
                 loading="lazy"
                 width="200"
@@ -170,25 +170,29 @@
       </div>
     {:else}
       {#if defaultState}
-        <p>
-          Suche zum Beispiel nach <a
-            href={null}
-            on:click|preventDefault={() => {
-              query = "Westside Harp";
-              getProducts();
-            }}>"Westside Harp"</a
-          >
-          oder
-          <a
-            href={null}
-            on:click|preventDefault={() => {
-              query = "Innova Destroyer";
-              getProducts();
-            }}>"Innova Destroyer"</a
-          >.
-        </p>
+        <div class="col">
+          <p>
+            Suche zum Beispiel nach <a
+              href={null}
+              on:click|preventDefault={() => {
+                query = "Westside Harp";
+                getProducts();
+              }}>"Westside Harp"</a
+            >
+            oder
+            <a
+              href={null}
+              on:click|preventDefault={() => {
+                query = "Innova Destroyer";
+                getProducts();
+              }}>"Innova Destroyer"</a
+            >.
+          </p>
+        </div>
       {:else}
-        <p>Keine Produkte für {query} gefunden.</p>
+        <div class="col">
+          <p>Keine Produkte für {query} gefunden.</p>
+        </div>
       {/if}
     {/each}
   {/if}

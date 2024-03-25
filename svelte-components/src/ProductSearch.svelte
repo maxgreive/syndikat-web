@@ -6,16 +6,16 @@
 
   const products = writable([]);
   const loading = writable(false);
-  let originalProducts = [];
   let defaultState = true;
+  let shopCount = 0;
 
   const endpoints = [
-    "crosslap",
+    "chooseyourdisc",
+    "insidethecircle",
     "frisbeeshop",
     "discgolfstore",
+    "crosslap",
     "thrownatur",
-    "insidethecircle",
-    "chooseyourdisc"
   ];
 
   const stored = localStorage.sort;
@@ -29,6 +29,7 @@
   };
   let query = "";
   $: query = query.toLowerCase();
+  $: progress = parseInt((shopCount / endpoints.length) * 100);
 
   const getProducts = async () => {
     if (!query) {
@@ -47,19 +48,24 @@
 
     push(`/?q=${encodeURIComponent(query)}`);
     loading.set(true);
-    const promises = endpoints.map((endpoint) =>
-      fetchProducts(query, endpoint),
-    );
-    const results = await Promise.all(promises);
+    products.set([]);
+    shopCount = 0;
 
-    products.set(results.flat());
-    loading.set(false);
-    originalProducts = results.flat();
+    for (const endpoint of endpoints) {
+      const productResponse = await fetchProducts(query, endpoint);
+      products.update((currentProducts) => [
+        ...currentProducts,
+        ...productResponse,
+      ]);
+      loading.set(false);
+      shopCount++;
+    }
+
     handleSort();
   };
 
   const handleSort = () => {
-    if ($sort === "default") return ($products = originalProducts);
+    if ($sort === "default") return $products;
     const sortedProducts = $products.sort((a, b) => {
       if (parseFloat(a.price) < parseFloat(b.price)) return 1;
       if (parseFloat(a.price) > parseFloat(b.price)) return -1;
@@ -74,7 +80,6 @@
   onMount(async () => {
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
-    handleSort();
   });
 </script>
 
@@ -88,10 +93,7 @@
   <button
     type="submit"
     class="button button--primary"
-    on:click|preventDefault={() => {
-      products.set(() => []);
-      getProducts();
-    }}
+    on:click|preventDefault={getProducts()}
   >
     Suchen
   </button>
@@ -99,10 +101,23 @@
 
 <div class="products-headline">
   <h2>
-    Produkte{#if $products.length}<span class="product-count"
-        >({$products.length})</span
-      >{/if}
+    Produkte
+    {#if shopCount < endpoints.length}
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        class="circular-progress"
+        style="--progress: {progress}"
+      >
+        <circle class="bg"></circle>
+        <circle class="fg"></circle>
+      </svg>
+    {:else if $products.length}
+      <span class="product-count">({$products.length})</span>
+    {/if}
   </h2>
+
   <select bind:value={$sort} on:change={handleSort}>
     <option value="default">Standard</option>
     <option value="price-ascending">Preis aufsteigend</option>
@@ -195,10 +210,6 @@
     border: 0;
   }
 
-  .product-count {
-    margin-left: 0.5rem;
-  }
-
   .store-logo {
     border-radius: 0;
     mix-blend-mode: multiply;
@@ -222,7 +233,7 @@
   }
 
   h2 span {
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: var(--text-alt-color);
   }
 
@@ -310,5 +321,42 @@
     color: var(--heading-font-color);
     border: none;
     font-weight: 700;
+  }
+
+  .circular-progress {
+    --size: 24px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 3px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+    animation: progress-animation 5s linear 0s 1 forwards;
+  }
+
+  .circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+  }
+
+  .circular-progress circle.bg {
+    stroke: var(--background-alt-color);
+  }
+
+  .circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: var(--button-background-hover);
+  }
+
+  @property --progress {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
   }
 </style>

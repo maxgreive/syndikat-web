@@ -7,12 +7,8 @@
   },
   "scripts": {
     "dev": "bundle exec jekyll serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build --prefix svelte-components; git add --all;"
-    }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",

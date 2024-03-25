@@ -6,6 +6,7 @@
 
   const products = writable([]);
   const loading = writable(false);
+  let originalProducts = [];
   let defaultState = true;
 
   const endpoints = [
@@ -59,23 +60,27 @@
       ]);
       loading.set(false);
       shopCount++;
+      originalProducts.push(...productResponse);
+      handleSort();
     }
 
-    handleSort();
   };
 
   const handleSort = () => {
-    if ($sort === "default") return $products;
-    const sortedProducts = $products.sort((a, b) => {
+    if ($sort === "price-descending") return ($products = sortProducts($products));
+    if ($sort === "price-ascending") return ($products = sortProducts($products, true));
+    return $products = originalProducts;
+  };
+
+  function sortProducts (products, reverse) {
+    const result = [...products].sort((a, b) => {
       if (parseFloat(a.price) < parseFloat(b.price)) return 1;
-      if (parseFloat(a.price) > parseFloat(b.price)) return -1;
+      if (parseFloat(a.price) >= parseFloat(b.price)) return -1;
       return 0;
     });
 
-    if ($sort === "price-ascending")
-      return ($products = sortedProducts.reverse());
-    return ($products = sortedProducts);
-  };
+    return reverse ? result.reverse() : result;
+  }
 
   onMount(async () => {
     query = new URLSearchParams($querystring).get("q") || "";

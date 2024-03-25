@@ -50,7 +50,6 @@
 
     push(`/?q=${encodeURIComponent(query)}`);
     loading.set(true);
-    console.log('$loading:', $loading)
     products.set([]);
     shopCount = 0;
 
@@ -65,8 +64,6 @@
       handleSort();
     }
     loading.set(false);
-    console.log('$loading:', $loading);
-    console.log('$products.length:', $products.length)
   };
 
   const handleSort = () => {

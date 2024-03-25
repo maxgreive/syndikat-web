@@ -287,7 +287,19 @@
     width: 100%;
     height: 1em;
     margin: 1rem 0;
-    background: var(--text-alt-color);
+    background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 5%, #ddd 10%);
+    background-size: 800px;
+    animation: background-shine 1.6s infinite;
+    background-position: 100%;
+  }
+
+  @keyframes background-shine {
+    0% {
+      background-position: 30%;
+    }
+    40%, 100% {
+      background-position: -200%;
+    }
   }
 
   .inventory {

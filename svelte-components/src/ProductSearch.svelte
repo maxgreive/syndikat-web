@@ -50,6 +50,7 @@
 
     push(`/?q=${encodeURIComponent(query)}`);
     loading.set(true);
+    console.log('$loading:', $loading)
     products.set([]);
     shopCount = 0;
 
@@ -64,6 +65,8 @@
       handleSort();
     }
     loading.set(false);
+    console.log('$loading:', $loading);
+    console.log('$products.length:', $products.length)
   };
 
   const handleSort = () => {
@@ -131,7 +134,7 @@
 </div>
 
 <div class="row animate">
-  {#if $loading && shopCount < endpoints.length && $products.length == 0}
+  {#if $loading && shopCount < endpoints.length && $products.length === 0}
     {#each Array(6) as _}
       <div class="skeleton col col-4 col-d-6 col-t-12">
         <div class="skeleton-image"></div>

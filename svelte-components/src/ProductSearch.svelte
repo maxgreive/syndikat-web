@@ -59,12 +59,11 @@
         ...currentProducts,
         ...productResponse,
       ]);
-      loading.set(false);
       shopCount++;
       initialProducts.push(...productResponse);
       handleSort();
     }
-
+    loading.set(false);
   };
 
   const handleSort = () => {
@@ -132,7 +131,7 @@
 </div>
 
 <div class="row animate">
-  {#if $loading}
+  {#if $loading && shopCount < endpoints.length && $products.length == 0}
     {#each Array(6) as _}
       <div class="skeleton col col-4 col-d-6 col-t-12">
         <div class="skeleton-image"></div>

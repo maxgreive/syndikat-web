@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8080/products';
+const API_URL = 'https://api.syndikat.golf/products';
 
 export async function fetchProducts(query, endpoint) {
   const data = [];

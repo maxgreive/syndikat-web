@@ -185,7 +185,7 @@
         </div>
       </div>
     {:else}
-      {#if defaultState}
+      {#if defaultState || !query}
         <div class="col">
           <p>
             Suche zum Beispiel nach <a

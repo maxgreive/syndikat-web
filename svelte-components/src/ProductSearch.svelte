@@ -17,6 +17,7 @@
     "discgolfstore",
     "crosslap",
     "thrownatur",
+    "birdieshop"
   ];
 
   let shopCount = endpoints.length;
@@ -230,11 +231,10 @@
   .store-logo {
     border-radius: 0;
     mix-blend-mode: multiply;
-    width: 75px;
-    height: auto;
-    max-width: 100%;
+    max-width: 75px;
+    max-height: 28px;
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
     right: 1rem;
   }
 

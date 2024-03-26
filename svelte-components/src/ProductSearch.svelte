@@ -66,16 +66,22 @@
     loading.set(false);
   };
 
+  const EURO = new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR'
+  })
+
   const handleSort = () => {
-    if ($sort === "price-descending") return ($products = sortProducts($products));
-    if ($sort === "price-ascending") return ($products = sortProducts($products, true));
+    if ($sort === "price-descending") return ($products = sortProducts($products, 'price'));
+    if ($sort === "price-ascending") return ($products = sortProducts($products, 'price', true));
+    if ($sort === "availability") return ($products = sortProducts($products, 'stockStatus', true));
     return $products = initialProducts;
   };
 
-  function sortProducts (products, reverse) {
+  function sortProducts (products, key, reverse) {
     const result = [...products].sort((a, b) => {
-      if (parseFloat(a.price) < parseFloat(b.price)) return 1;
-      if (parseFloat(a.price) >= parseFloat(b.price)) return -1;
+      if (a[key] < b[key]) return 1;
+      if (a[key] >= b[key]) return -1;
       return 0;
     });
 
@@ -125,6 +131,7 @@
 
   <select bind:value={$sort} on:change={handleSort}>
     <option value="default">Standard</option>
+    <option value="availability">Verfügbarkeit</option>
     <option value="price-ascending">Preis aufsteigend</option>
     <option value="price-descending">Preis absteigend</option>
   </select>
@@ -161,7 +168,7 @@
               <span class={`inventory status-${product.stockStatus}`}
                 >{stockStatusLabels[product.stockStatus]}</span
               >
-              <strong>{product.price} €</strong>
+              <strong>{EURO.format(product.price / 100)}</strong>
               <img src={product.store} class="store-logo" alt="Store Logo" />
             </p>
           </div>

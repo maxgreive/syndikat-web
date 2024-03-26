@@ -5,7 +5,7 @@
   import { push, querystring } from "svelte-spa-router";
 
   const products = writable([]);
-  const loading = writable(false);
+  const loading = writable("");
   let initialProducts = [];
   let defaultState = true;
 
@@ -17,7 +17,8 @@
     "discgolfstore",
     "crosslap",
     "thrownatur",
-    "birdieshop"
+    "birdieshop",
+    "discgolf4you",
   ];
 
   let shopCount = endpoints.length;
@@ -51,11 +52,11 @@
     defaultState = false;
 
     push(`/?q=${encodeURIComponent(query)}`);
-    loading.set(true);
     products.set([]);
     shopCount = 0;
 
     for (const endpoint of endpoints) {
+      loading.set(endpoint);
       const productResponse = await fetchProducts(query, endpoint);
       products.update((currentProducts) => [
         ...currentProducts,
@@ -65,22 +66,25 @@
       initialProducts.push(...productResponse);
       handleSort();
     }
-    loading.set(false);
+    loading.set("");
   };
 
-  const EURO = new Intl.NumberFormat('de-DE', {
-    style: 'currency',
-    currency: 'EUR'
-  })
+  const EURO = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR",
+  });
 
   const handleSort = () => {
-    if ($sort === "price-descending") return ($products = sortProducts($products, 'price'));
-    if ($sort === "price-ascending") return ($products = sortProducts($products, 'price', true));
-    if ($sort === "availability") return ($products = sortProducts($products, 'stockStatus', true));
-    return $products = initialProducts;
+    if ($sort === "price-descending")
+      return ($products = sortProducts($products, "price"));
+    if ($sort === "price-ascending")
+      return ($products = sortProducts($products, "price", true));
+    if ($sort === "availability")
+      return ($products = sortProducts($products, "stockStatus", true));
+    return ($products = initialProducts);
   };
 
-  function sortProducts (products, key, reverse) {
+  function sortProducts(products, key, reverse) {
     const result = [...products].sort((a, b) => {
       if (a[key] < b[key]) return 1;
       if (a[key] >= b[key]) return -1;
@@ -131,6 +135,10 @@
     {/if}
   </h2>
 
+  {#if $loading}
+    <div class="currently-fetching">loading {$loading} …</div>
+  {/if}
+
   <select bind:value={$sort} on:change={handleSort}>
     <option value="default">Standard</option>
     <option value="availability">Verfügbarkeit</option>
@@ -154,7 +162,7 @@
           <div class="article__head">
             <a href={product.url} target="_blank" class="article__image">
               <img
-                src={product.image || '/assets/images/image-not-found.jpg'}
+                src={product.image || "/assets/images/image-not-found.jpg"}
                 alt={product.title}
                 loading="lazy"
                 width="200"
@@ -260,6 +268,7 @@
 
   .products-headline {
     display: flex;
+    gap: 1rem;
     margin-bottom: 16px;
     align-items: center;
     justify-content: space-between;
@@ -302,7 +311,8 @@
     0% {
       background-position: 30%;
     }
-    40%, 100% {
+    40%,
+    100% {
       background-position: -200%;
     }
   }
@@ -384,5 +394,17 @@
     syntax: "<number>";
     inherits: false;
     initial-value: 0;
+  }
+
+  .currently-fetching {
+    font-size: 10px;
+    flex: 1;
+    display: none;
+  }
+
+  @media screen and (min-width: 769px) {
+    .currently-fetching {
+      display: block;
+    }
   }
 </style>

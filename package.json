@@ -2,7 +2,7 @@
   "name": "syndikat-web",
   "version": "1.0.0",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "husky": "^9.0.11"
   },
   "scripts": {

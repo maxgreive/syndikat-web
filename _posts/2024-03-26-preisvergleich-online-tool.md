@@ -25,7 +25,7 @@ Easy peasy! Einfach den Namen der Disc eingeben, die du suchst, und wir durchfor
 
 ## Welche Shops sind dabei?
 
-Wir haben sechs der angesagtesten deutschen Discgolf-Shops an Bord. Von den neuesten Underdogs bis hin zu klassischen Favoriten – bei uns findest du alles, was dein Discgolfer-Herz begehrt.
+Wir haben sieben der angesagtesten deutschen Discgolf-Shops an Bord. Von den neuesten Underdogs bis hin zu klassischen Favoriten – bei uns findest du alles, was dein Discgolfer-Herz begehrt.
 
 Du vermisst einen Shop? Schreib uns [über unser Kontaktformular](/contact)!
 

@@ -12,6 +12,7 @@
   const endpoints = [
     "chooseyourdisc",
     "insidethecircle",
+    "discwolf",
     "frisbeeshop",
     "discgolfstore",
     "crosslap",

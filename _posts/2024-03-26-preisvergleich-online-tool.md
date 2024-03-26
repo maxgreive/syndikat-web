@@ -3,7 +3,7 @@ layout: post
 title: Die besten Deals im neuen Preisvergleichstool!
 image: /assets/images/posts/preisvergleich.jpg
 thumbnail: /assets/images/posts/thumbnails/preisvergleich_thumb.jpg
-
+tags: app discs
 author: max
 ---
 

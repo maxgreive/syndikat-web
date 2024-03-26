@@ -9,8 +9,7 @@ author: max
 
 Du suchst den besten Preis für den nächsten "total gerechtfertigten Scheibenkauf"? Bereit für ein neues Level an Scheiben-Shopping? [Unser brandneues Preisvergleichstool](/preisvergleich) ist da, um dir dabei zu helfen, die heißesten Deals für eure Lieblings-Discs und -zubehör zu finden, ohne dabei die Stores einzeln abzuklappern.
 
-Zum Preisvergleich
-{:.button.button--big.button--primary}
+<a href="/preisvergleich" class="button button--big button--primary">Zum Preisvergleich</a>
 
 ## Wie funktioniert's?
 

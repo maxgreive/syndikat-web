@@ -232,7 +232,7 @@
     font-weight: inherit;
   }
 
-  .article__title a:hover {
+  .article__title a {
     border: 0;
   }
 

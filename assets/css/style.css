@@ -3967,10 +3967,12 @@ table td {
   border-bottom: 1px solid var(--border-color)
 }
 
-.post a:not(.button):not([role="button"]):hover,
-.page a:not(.button):not([role="button"]):hover {
-  color: var(--link-color);
-  border-bottom-color: var(--link-color-hover)
+@media (hover: hover) {
+  .post a:not(.button):not([role="button"]):hover,
+  .page a:not(.button):not([role="button"]):hover {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color-hover)
+  }
 }
 
 .post img,

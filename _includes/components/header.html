@@ -11,7 +11,7 @@
                         <div class="nav__title">{{ site.data.menus.main_menu.title }}</div>
                         <ul class="nav__list list-reset">
                             {% for item in site.data.menus.main_menu.items %}
-                                <li class="nav__item">
+                                <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
                                     <a href="{{ item.link }}" class="nav__link">
                                         {{ item.label }}
                                     </a>

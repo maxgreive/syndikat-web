@@ -8,3 +8,16 @@ items:
     link: /events/
   - label: Mitglied werden
     link: /membership/
+  - label: Turnierkarte
+    link: /turniere/
+    mobileOnly: true
+  - label: Preisvergleich
+    link: /preisvergleich/
+    mobileOnly: true
+  - label: Bag Tag Challenge
+    link: /bagtags/
+    mobileOnly: true
+  - label: Disc Dice
+    link: /disc-dice/
+    mobileOnly: true
+

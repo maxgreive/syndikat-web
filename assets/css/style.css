@@ -2542,6 +2542,10 @@ table td {
   margin-left: auto
 }
 
+.main-nav .nav__item.hide-desktop {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px) {
   .main-nav {
     position: fixed;
@@ -3967,10 +3971,12 @@ table td {
   border-bottom: 1px solid var(--border-color)
 }
 
-.post a:not(.button):not([role="button"]):hover,
-.page a:not(.button):not([role="button"]):hover {
-  color: var(--link-color);
-  border-bottom-color: var(--link-color-hover)
+@media (hover: hover) {
+  .post a:not(.button):not([role="button"]):hover,
+  .page a:not(.button):not([role="button"]):hover {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color-hover)
+  }
 }
 
 .post img,

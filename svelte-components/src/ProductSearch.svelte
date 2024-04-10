@@ -185,7 +185,7 @@
         </div>
       </div>
     {:else}
-      {#if defaultState}
+      {#if defaultState || !query}
         <div class="col">
           <p>
             Suche zum Beispiel nach <a
@@ -232,7 +232,7 @@
     font-weight: inherit;
   }
 
-  .article__title a:hover {
+  .article__title a {
     border: 0;
   }
 

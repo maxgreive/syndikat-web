@@ -1,4 +1,4 @@
-const API_URL = "https://api.syndikat.golf/tournaments";
+const API_URL = "http://127.0.0.1:8080/tournaments";
 const endpoints = {
   official: API_URL,
   metrix: API_URL + '/metrix'
@@ -82,12 +82,13 @@ function renderMarker(tournament, layer) {
 
   marker.bindPopup(`
       <p class="popup-title">${badgeHTML}${tournament.title}</p>
-      Ort: ${tournament.location}
+      <p>Ort: ${tournament.location}</p>
       <p>${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}</p>
       ${tournament.dates.endTournament && !isOneDay ? `<p>Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}</p>` : ""}
       ${tournament.dates.startRegistration ? `<p>Registrierung: ab ${formatDate(tournament.dates.startRegistration)}</p>` : ""}
+      ${tournament.dates.startRegistration && tournament?.spots?.overall ? `<p>Freie Startplätze: ${tournament.spots.overall - tournament.spots.used}/${tournament.spots.overall}</p>` : ''}
       ${tournament.relatedTournaments ? `<p>Verbundene Runden: ${tournament.relatedTournaments.map(t => `<a href="https://discgolfmetrix.com/${t.id}">${t.round}</a>`).join(', ')}</p>` : ''}
-      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen</a></p>
+      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen <i class="ion ion-md-exit"></i></a></p>
     `, {
     maxWidth: 250
   });

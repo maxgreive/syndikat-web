@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8080/tournaments";
+const API_URL = "https://api.syndikat.golf/tournaments";
 const endpoints = {
   official: API_URL,
   metrix: API_URL + '/metrix'

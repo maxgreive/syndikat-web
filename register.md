@@ -7,4 +7,4 @@ Wähle hier Deinen Abrechnungszeitraum aus. Die Mitgliedschaft verlängert sich 
 
 {% include components/plan_selection.html %}
 
-Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten zu ändern, kannst du [im Stripe Dashboard deinen Account verwalten](//stripe.com).
+Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten zu ändern, kannst du [im Stripe Dashboard deinen Account verwalten](https://billing.stripe.com/p/login/3cseY17778iO6Vq6oo).

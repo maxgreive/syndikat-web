@@ -4494,7 +4494,7 @@ table td {
 .plan-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 3rem 1rem;
   margin-bottom: 2rem;
 }
 
@@ -4527,8 +4527,10 @@ table td {
   transition: transform .2s;
 }
 
-.plan-card:hover {
-  transform: translateY(-3px);
+@media (hover:hover) {
+  .plan-card:hover {
+    transform: translateY(-3px);
+  }
 }
 
 .plan-card--featured {

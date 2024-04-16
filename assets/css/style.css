@@ -143,7 +143,7 @@ img {
   border-style: none
 }
 
-a.button,
+.button,
 button,
 input,
 optgroup,
@@ -2491,6 +2491,11 @@ table td {
   fill: #fff
 }
 
+.button[disabled] {
+  cursor: not-allowed;
+  color: var(--text-alt-color);
+}
+
 .lazy {
   opacity: 0;
   transition: opacity 0.3s ease-in-out
@@ -4484,4 +4489,98 @@ table td {
 .bag-tags-wrapper th:first-child {
   text-align: right;
   width: 10%;
+}
+
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.period-select {
+  margin-bottom: 4rem;
+}
+
+.period-select__button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.period-select__button-group button:first-of-type {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.period-select__button-group button:last-of-type {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.plan-card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  transition: transform .2s;
+}
+
+.plan-card:hover {
+  transform: translateY(-3px);
+}
+
+.plan-card--featured {
+  border-color: var(--brand-color);
+}
+
+.plan-card--featured::before {
+  content: "Empfehlung";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-color);
+  color: var(--white);
+  padding: 0.3rem 2.5rem;
+  font-size: 14px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.plan-card__periods {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card .tooltip {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--gray);
+}
+
+.plan-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plan-card__price-amount {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--link-color);
+}
+
+.plan-card__price-currency {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.plan-card__description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card__cta {
+  text-align: center;
 }

@@ -1,6 +1,10 @@
 ---
-title: Anmeldeformular
+title: Mitgliedschaft auswählen
 layout: membership
 ---
 
-Durch Übermittlung des folgenden Formulars beantragst du die Aufnahme in das Disc Golf Syndikat e.V. zum nächstmöglichen Zeitpunkt.
+Wähle hier Deinen Abrechnungszeitraum aus. Die Mitgliedschaft verlängert sich automatisch, wenn Du nicht kündigst. Als Zahlungsdienstleister nutzen wir [Stripe](https://stripe.com/de). Es werden keine Daten auf unseren Servern gespeichert. Bei Fragen zu Mitgliedschaft oder Zahlungsmöglichkeiten, [schreib uns über das Kontaktformular](/contact/).
+
+{% include components/plan_selection.html %}
+
+Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten zu ändern, kannst du [im Stripe Dashboard deinen Account verwalten](//stripe.com).

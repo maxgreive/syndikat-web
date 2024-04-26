@@ -1,0 +1,45 @@
+{% assign plans = site.data.plans %}
+
+<div class="period-select">
+  <div class="period-select__button-group">
+    <button class="button button--primary" data-period="yearly">Jährlich</button>
+    <button class="button" data-period="monthly">Monatlich</button>
+  </div>
+</div>
+
+<div class="plan-list">
+  {% for plan in plans %}
+    <div class="plan-card{% if plan.periods[0].featured %} plan-card--featured{% endif %}">
+      <div class="plan-card__header">
+        <h3 class="plan-card__title">{{ plan.title }}</h3>
+        {% if plan.tooltip %}
+          {% include snippets/tooltip.html content=plan.tooltip %}
+        {% endif %}
+        <p class="plan-card__description">{{ plan.description }}</p>
+      </div>
+      <div class="plan-card__content">
+        <div class="plan-card__periods" >
+          {% for period in plan.periods %}
+            <div class="plan-card__periods-item"{% if period.featured %} data-featured{% endif %} data-period="{{ period.name }}"{% unless forloop.index == 1 %} hidden{% endunless %}>
+              <p class="plan-card__price">
+                {% if period.price %}
+                  <span class="plan-card__price-amount">{{ period.price }}</span>
+                  <span class="plan-card__price-currency">€</span>
+                {% else %}
+                  <span class="plan-card__price-currency">&mdash;</span>
+                {% endif %}
+              </p>
+              <div class="plan-card__cta">
+                {% if period.link %}
+                  <a href="{{ period.link }}?locale=de" target="_blank" class="button{% if period.featured %} button--primary{% endif %}">Auswählen</a>
+                {% else %}
+                  <span class="button{% if period.featured %} button--primary{% endif %}" disabled>Auswählen</span>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

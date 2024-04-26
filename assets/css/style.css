@@ -4346,11 +4346,13 @@ table td {
 
 .footer-menu__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 16px
 }
 
 .footer-menu__item {
-  margin: 0 16px 0 0;
+  margin: 0;
   font-size: 16px
 }
 

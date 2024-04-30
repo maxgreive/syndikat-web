@@ -1,0 +1,57 @@
+<details>
+    <summary>Turnier-Packliste zum Abhaken</summary>
+
+    {% for check in site.data.checklist %}
+        <div class="form__checkbox-group"><label class="form__label form__checkbox-group">
+            <input type="checkbox" data-value="{{ check | slugify }}" class="form__input">{{ check }}</label>
+        </div>
+    {% endfor %}
+
+    <button class="button" data-clear>
+        Liste zurücksetzen
+    </button>
+</details>
+
+<style>
+    details {
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--brand-color);
+        padding: 10px 26px;
+        display: flex;
+    }
+
+    details .button {
+        margin-left: auto;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // get values from cache
+        const storedData = window.localStorage.getItem('tournament-checklist');
+        const currentList = storedData ? JSON.parse(storedData) : {};
+
+        for (const entry in currentList) {
+            document.querySelector(`[data-value=${entry}]`).checked = currentList[entry];
+        }
+
+        // cache values on click
+        document.querySelectorAll('input').forEach($inp => {
+            $inp.addEventListener('input', e => {
+                const storedData = window.localStorage.getItem('tournament-checklist');
+                const currentList = storedData ? JSON.parse(storedData) : {};
+                currentList[$inp.dataset.value] = e.target.checked;
+                window.localStorage.setItem('tournament-checklist', JSON.stringify(currentList));
+            });
+        });
+
+        // clear cache and delete values
+        document.querySelector('[data-clear]').addEventListener('click', () => {
+            window.localStorage.setItem('tournament-checklist', '');
+            document.querySelectorAll('[data-value]').forEach($inp => {
+                $inp.checked = false;
+            });
+        });
+    });
+
+</script>

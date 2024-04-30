@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- page.title -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <div class="page">
+    <div class="page__content">
+      <p>{{- content -}}</p>
+      <div style="display: flex;">
+        <button class="button button--primary" data-toggle-club>Alle zeigen</button>
+      </div>
+      <div class="table-responsive">
+        <table id="ratings">
+          <thead>
+            <tr>
+              <th>Rang</th>
+              <th>Name</th>
+              <th>Rating</th>
+              <th>Division</th>
+              <th>Rang in Division</th>
+              <th>DM-Runden</th>
+              <th>letzte Runde</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/ratings.js" defer></script>

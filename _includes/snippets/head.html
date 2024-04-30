@@ -18,6 +18,9 @@
     <meta name="twitter:image:src" content="{{- sharing_image -}}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
+    {% if page.noindex %}
+      <meta name="robots" content="noindex">
+    {% endif %}
     {% if page.excerpt %}
       <meta property="og:description" content="{{- page.excerpt | strip_html | escape -}}">
       <meta name="twitter:description" content="{{ site.description | escape }}">

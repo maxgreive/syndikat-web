@@ -231,3 +231,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function formatDate(date, weekday = true) {
+  const dateOptions = {
+    weekday: weekday ? "long" : undefined,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  };
+
+  return new Date(date).toLocaleDateString("de-DE", dateOptions);
+}

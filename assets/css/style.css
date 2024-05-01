@@ -4659,6 +4659,7 @@ table td {
 }
 
 .name-cell a {
+  display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

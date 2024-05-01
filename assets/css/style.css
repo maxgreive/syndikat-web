@@ -4721,3 +4721,8 @@ table td {
   margin-bottom: 1rem;
   margin-left: auto;
 }
+
+.percentile {
+  display: block;
+  font-size: 0.75rem;
+}

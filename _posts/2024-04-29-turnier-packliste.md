@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Turnier-Equipment das den Unterschied macht"
-image: /assets/images/posts/packliste.jpg
-thumbnail: /assets/images/posts/thumbnails/packliste_thumb.jpg
+title: "Turnier-Equipment, das den Unterschied macht"
+image: /assets/images/posts/packliste.png
+thumbnail: /assets/images/posts/packliste.png
 tags: turniere
 author: max
 ---

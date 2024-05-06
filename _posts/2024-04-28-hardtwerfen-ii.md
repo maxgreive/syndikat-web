@@ -20,7 +20,7 @@ In der Division MA1 demonstrierte Severin aus Bonn sein Können und sicherte sic
 
 In der Division MA4 waren gleich 3 Vereinsmitglieder im führenden Flight, konnten diese Führung jedoch in der zweiten Runde nicht verteidigen. Tatsächlich kam dann mit Raphael, ein weiteres Mitglied, welcher nach der ersten Runde noch 5 Würfe zurücklag, mit eine bemerkenswerte Leistung ins Stechen um den Sieg und wurde letztendlich mit einem Zweiten Platz belohnt.
 
-Bei den Damen gab es ebenfalls spannende Momente: Kerstin aus unseren Reihen trat in der Division FA4 an und zeigte großartigen Einsatz. Leider musste sie sich jedoch, ebenfalls im Stechen, knapp geschlagen geben und belegte den zweiten Platz."
+Bei den Damen gab es ebenfalls spannende Momente: Kerstin aus unseren Reihen trat in der Division FA4 an und zeigte großartigen Einsatz. Leider musste sie sich jedoch, ebenfalls im Stechen, knapp geschlagen geben und belegte den zweiten Platz.
 
 ![](/assets/images/posts/hardtwerfen-team.jpg)
 

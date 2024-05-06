@@ -2790,6 +2790,22 @@ table td {
   display: none
 }
 
+.hide-light {
+  display: none;
+}
+
+.hide-dark {
+  display: block;
+}
+
+[dark] .hide-light {
+  display: block;
+}
+
+[dark] .hide-dark {
+  display: none;
+}
+
 .search {
   position: fixed;
   top: 0;

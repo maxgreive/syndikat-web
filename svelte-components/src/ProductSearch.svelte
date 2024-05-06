@@ -175,11 +175,10 @@
               <a href={product.url} target="_blank">{product.title}</a>
             </h2>
             <p>
-              <span class={`inventory status-${product.stockStatus}`}
-                >{stockStatusLabels[product.stockStatus]}</span
-              >
+              <span class={`inventory status-${product.stockStatus}`}>{stockStatusLabels[product.stockStatus]}</span>
               <strong>{EURO.format(product.price / 100)}</strong>
-              <img src={product.store} class="store-logo" alt="Store Logo" />
+              <img src={`/assets/images/logos/${product.store}-light.png`} class="store-logo hide-dark" alt="Store Logo">
+              <img src={`/assets/images/logos/${product.store}-dark.png`} class="store-logo hide-light" alt="Store Logo">
             </p>
           </div>
         </div>

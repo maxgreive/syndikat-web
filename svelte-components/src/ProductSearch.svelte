@@ -344,21 +344,6 @@
     border-radius: 50%;
   }
 
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: calc(100% - 16px);
-    background-position-y: 50%;
-    padding: 20px 40px 20px 26px;
-    background-color: var(--background-alt-color);
-    color: var(--heading-font-color);
-    border: none;
-    font-weight: 700;
-  }
-
   .circular-progress {
     --size: 24px;
     --half-size: calc(var(--size) / 2);

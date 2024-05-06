@@ -18,7 +18,11 @@ layout: default
     <div class="page__content">
       <p>{{- content -}}</p>
       <div style="display: flex;">
-        <button class="button button--primary" data-toggle-club>Alle zeigen</button>
+        <select data-toggle-club>
+          <option value="syndikat-only" selected>Nur Syndikat</option>
+          <option value="cologne-only">Kölner Clubs</option>
+          <option value="all">Alle zeigen</option>
+        </select>
       </div>
       <div class="table-responsive">
         <table id="ratings">

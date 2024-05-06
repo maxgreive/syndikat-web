@@ -35,6 +35,12 @@
   $: query = query.toLowerCase();
   $: progress = parseInt((shopCount / endpoints.length) * 100);
 
+  const clearProducts = () => {
+    query = "";
+    push("/");
+    $products = [];
+  };
+
   const getProducts = async () => {
     if (!query) {
       push("/");
@@ -95,15 +101,23 @@
   }
 
   onMount(async () => {
+    document.querySelector('#js-product-input').focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
   });
 </script>
 
 <form class="search__group">
+  {#if query && !$loading}
+    <div class="search__close" on:click={() => clearProducts()} on:keydown={() => clearProducts()}>
+      <i class="ion ion-md-close"></i>
+    </div>
+  {/if}
+  <label for="js-product-input" class="screen-reader-text">Suche nach Produkten</label>
   <input
     type="text"
     class="search__text"
+    id="js-product-input"
     bind:value={query}
     placeholder="Suchen …"
   />
@@ -177,8 +191,8 @@
             <p>
               <span class={`inventory status-${product.stockStatus}`}>{stockStatusLabels[product.stockStatus]}</span>
               <strong>{EURO.format(product.price / 100)}</strong>
-              <img src={`/assets/images/logos/${product.store}-light.png`} class="store-logo hide-dark" alt="Store Logo">
-              <img src={`/assets/images/logos/${product.store}-dark.png`} class="store-logo hide-light" alt="Store Logo">
+              <img src={`/assets/images/logos/${product.store}-light.png`} class="store-logo hide-dark" alt="Store Logo" />
+              <img src={`/assets/images/logos/${product.store}-dark.png`} class="store-logo hide-light" alt="Store Logo" />
             </p>
           </div>
         </div>
@@ -187,21 +201,23 @@
       {#if defaultState || !query}
         <div class="col">
           <p>
-            Suche zum Beispiel nach <a
+            Suche zum Beispiel nach "<a
+              class="search-example"
               href={null}
               on:click|preventDefault={() => {
-                query = "Westside Harp";
+                query = "Harp";
                 getProducts();
-              }}>"Westside Harp"</a
-            >
+              }}>Harp</a
+            >"
             oder
-            <a
+            "<a
+              class="search-example"
               href={null}
               on:click|preventDefault={() => {
-                query = "Innova Destroyer";
+                query = "Destroyer";
                 getProducts();
-              }}>"Innova Destroyer"</a
-            >.
+              }}>Destroyer</a
+            >".
           </p>
         </div>
       {:else}
@@ -249,7 +265,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding-top: 2rem;
+    margin-top: 2rem;
   }
 
   h2 {
@@ -261,8 +277,21 @@
     color: var(--text-alt-color);
   }
 
-  .search__text {
-    border: 0 !important;
+  .search__close {
+    right: 150px;
+  }
+
+  .search-example {
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  @media (hover: hover) {
+    .search-example:hover {
+      cursor: pointer;
+      color: var(--link-color);
+      border-bottom-color: var(--link-color-hover);
+    }
   }
 
   .products-headline {

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCloseIcon = document.querySelector(".nav__icon-close"),
     menuList = document.querySelector(".main-nav"),
     searchOpenIcon = document.querySelector(".icon__search"),
-    searchCloseIcon = document.querySelector(".search__close"),
+    searchCloseIcon = document.querySelector("[data-search-close]"),
     searchInput = document.querySelector(".search__text"),
     search = document.querySelector(".search"),
     searchBox = document.querySelector(".search__box"),

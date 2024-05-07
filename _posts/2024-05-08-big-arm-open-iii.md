@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open III"
-image: /assets/images/posts/big-arm-iii.jpg
-thumbnail: /assets/images/posts/big-arm-iii.jpg
+image: /assets/images/posts/big-arm-open.jpg
+thumbnail: /assets/images/posts/thumbnails/big-arm-open.jpg
 tags: turnier
 author: max
-draft: true
 excerpt: Spannung und einige Herausforderungen bei den Big Arm Open III in Schmallenberg! Discgolf-Spieler aus ganz Deutschland messen sich in einem packenden Turnier!
 ---
 
@@ -13,9 +12,14 @@ Ursprünglich hatte ich geplant, auch ohne Startplatz nach Schmallenberg zu fahr
 
 Überraschend erhielt ich Anfang April dann doch noch einen Startplatz, nachdem ich mich auf Wartelistenplatz 1 vorgearbeitet hatte. Mein Rating war gerade ausreichend, um an diesem prestigeträchtigen Turnier teilzunehmen. Philipp bot sich als mein Caddy an, und so stand meinem dritten Antreten bei den Big Arm Open nichts mehr im Weg.
 
+![](/assets/images/posts/big_arm_jump_putt.jpg)
+
 Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1, was mich mehr als glücklich machte.
 
 Eine Runde auf dem Kurs dauert etwa 4 Stunden und führt über 7 Kilometer durch eine malerische Landschaft mit zahlreichen Höhenmetern. Die Herausforderung beginnt bereits an Bahn 1, einem 325 Meter langen Par 5, das sowohl Technik als auch Power erfordert.
+
+![](/assets/images/posts/big_arm_bahn_1.jpg)
+
 
 ## Freitag, Runde 1 — Der Wetterumschwung
 
@@ -25,7 +29,7 @@ Niedergeschlagen stellte ich im Clubhaus fest, dass es vielen anderen Spielern e
 
 Severin, der keine Proberunde spielen konnte, den Kurs aber auch vom Vorjahr kannte, erzielte mit sieben Birdies eine beeindruckende -5. Christian Plaue, der im letzten Flight des Tages spielte, brachte die Hot Round bestehend aus 15 Birdies und drei Pars nach Hause. Unfassbar!
 
-## Samstag, Runde 2 — Neuanfang
+## Samstag, Runde 2 — Alles auf Anfang
 
 Nach dem enttäuschenden ersten Tag ging ich bereits um 9 Uhr morgens in die zweite Runde, entschlossen, mich von den vorherigen Ergebnissen nicht beeinflussen zu lassen. Die Bedingungen waren ideal, und ich war optimistisch, dass es dieses Mal besser laufen würde.
 
@@ -33,11 +37,15 @@ Mein erster Wurf an Bahn 1 war allerdings erneut ein Fehlstart, und ich "shankte
 
 Ich lernte drei sympathische Discgolfer kennen und genoss einen wunderbaren Tag auf dem Kurs. Nach meiner Runde begleitete ich Severin als Caddy, der im vorletzten Flight des Tages die Lead-Card unter Druck setzen wollte. Leider reichte es für ihn "nur" für eine 5 über Par.
 
+![](/assets/images/posts/big-arm-max.jpg)
+
 ## Sonntag, Runde 3 — Das Finale
 
 Am finalen Tag der Big Arm Open III hatte ich eine ähnliche Erfahrung wie zuvor. Der Wind war stark und blies meinen Putter an Bahn 7 aus den Ketten – normalerweise sollte doch man davon ausgehen können, dass die Scheibe aus vier Metern im Korb bleibt.
 
 Letztendlich spielte ich eine unspektakuläre +5 und landete damit auf Platz 54 in der Open-Division. [Alle Ergbnisse findest du auf turniere.discgolf.de](https://turniere.discgolf.de/index.php?p=events&sp=live&id=2006). Kerstin und Raphael waren angereist, begleiteten meine Runde und fieberten mit.
+
+![](/assets/images/posts/big_arm_putt.jpg)
 
 ## Fazit — Ein unvergessliches Turnier
 

@@ -14,13 +14,13 @@ Am vergangenen Wochenende, genauer gesagt am Sonntag, den 28. April 2024, wurde 
 
 Das Disc Golf Syndikat, vertreten durch 11 Spieler, erlebte einen Tag voller sportlicher Erfolge und schöner Gespräche in der Community. Die Teilnehmer zeigten großes Engagement und beeindruckende Leistungen auf dem erweiterten 18-Bahnen-Parcours.
 
-In der Division MA1 demonstrierte Severin aus Bonn sein Können und sicherte sich souverän den ersten Platz. Seine Technik und Präzision auf den anspruchsvollen Bahnen waren beeindruckend und er setzte sich letztendlich zwei Würfe von seinen Verfolgern ab. In der Division MA2 überzeugte unser Spieler Alex mit einer starken und konstanten Leistung, die ihm den wohlverdienten Sieg einbrachte. Seine Fähigkeit, auch unter Druck ruhig zu bleiben und präzise Würfe zu zeigen, war der Schlüssel zu seinem Erfolg.
+In der Division MA1 demonstrierte Severin aus Bonn sein Können und sicherte sich souverän den ersten Platz. Seine Technik und Präzision auf den anspruchsvollen Bahnen waren beeindruckend und er setzte sich letztendlich zwei Würfe von seinen Verfolgern ab, zu denen unter anderem der Deutsche Meister in der Masters 50 zählte. In der Division MA2 überzeugte unser Spieler Alex mit einer starken und konstanten Leistung, die ihm den wohlverdienten Sieg einbrachte. Seine Fähigkeit, auch unter Druck ruhig zu bleiben und präzise Würfe zu zeigen, war der Schlüssel zu seinem Erfolg.
 
 > Alle Ergebnisse findest du hier: [Hardtwerfen II auf discgolf.de](https://turniere.discgolf.de/index.php?p=events-livescoring&p=events&sp=live&id=2171)
 
-In der Division MA4 zeigte Raphael, ein weiteres Mitglied unseres Vereins, über zwei Runden eine bemerkenswerte Leistung und errang stolz den zweiten Platz. Sein Ehrgeiz und seine Entschlossenheit waren deutlich sichtbar und wurden mit einem Podiumsplatz belohnt.
+In der Division MA4 waren gleich 3 Vereinsmitglieder im führenden Flight, konnten diese Führung jedoch in der zweiten Runde nicht verteidigen. Tatsächlich kam dann mit Raphael, ein weiteres Mitglied, welcher nach der ersten Runde noch 5 Würfe zurücklag, mit eine bemerkenswerte Leistung ins Stechen um den Sieg und wurde letztendlich mit einem Zweiten Platz belohnt.
 
-Bei den Damen gab es ebenfalls spannende Momente: Kerstin aus unseren Reihen trat in der Division FA4 an und zeigte großartigen Einsatz. Leider musste sie sich im Stechen jedoch knapp geschlagen geben und belegte den zweiten Platz.
+Bei den Damen gab es ebenfalls spannende Momente: Kerstin aus unseren Reihen trat in der Division FA4 an und zeigte großartigen Einsatz. Leider musste sie sich jedoch, ebenfalls im Stechen, knapp geschlagen geben und belegte den zweiten Platz.
 
 ![](/assets/images/posts/hardtwerfen-team.jpg)
 

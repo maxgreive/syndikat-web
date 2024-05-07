@@ -80,6 +80,18 @@
     currency: "EUR",
   });
 
+  const trackProduct = (product) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "product-click",
+      product: product.title,
+      store: product.store,
+      price: product.price / 100,
+      currency: "EUR",
+      url: product.url,
+    });
+  };
+
   const handleSort = () => {
     if ($sort === "price-descending")
       return ($products = sortProducts($products, "price"));
@@ -101,7 +113,7 @@
   }
 
   onMount(async () => {
-    document.querySelector('#js-product-input').focus();
+    document.querySelector("#js-product-input").focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
   });
@@ -109,11 +121,17 @@
 
 <form class="search__group">
   {#if query && !$loading}
-    <div class="search__close" on:click={() => clearProducts()} on:keydown={() => clearProducts()}>
+    <div
+      class="search__close"
+      on:click={() => clearProducts()}
+      on:keydown={() => clearProducts()}
+    >
       <i class="ion ion-md-close"></i>
     </div>
   {/if}
-  <label for="js-product-input" class="screen-reader-text">Suche nach Produkten</label>
+  <label for="js-product-input" class="screen-reader-text"
+    >Suche nach Produkten</label
+  >
   <input
     type="text"
     class="search__text"
@@ -174,7 +192,12 @@
       <div class="article col col-4 col-d-6 col-t-12">
         <div class="article__inner">
           <div class="article__head">
-            <a href={product.url} target="_blank" class="article__image">
+            <a
+              href={product.url}
+              target="_blank"
+              class="article__image"
+              on:click={trackProduct(product)}
+            >
               <img
                 src={product.image || "/assets/images/image-not-found.jpg"}
                 alt={product.title}
@@ -186,13 +209,27 @@
           </div>
           <div class="article__content">
             <h2 class="article__title">
-              <a href={product.url} target="_blank">{product.title}</a>
+              <a
+                href={product.url}
+                target="_blank"
+                on:click={trackProduct(product)}>{product.title}</a
+              >
             </h2>
             <p>
-              <span class={`inventory status-${product.stockStatus}`}>{stockStatusLabels[product.stockStatus]}</span>
+              <span class={`inventory status-${product.stockStatus}`}
+                >{stockStatusLabels[product.stockStatus]}</span
+              >
               <strong>{EURO.format(product.price / 100)}</strong>
-              <img src={`/assets/images/logos/${product.store}-light.png`} class="store-logo hide-dark" alt="Store Logo" />
-              <img src={`/assets/images/logos/${product.store}-dark.png`} class="store-logo hide-light" alt="Store Logo" />
+              <img
+                src={`/assets/images/logos/${product.store}-light.png`}
+                class="store-logo hide-dark"
+                alt="Store Logo"
+              />
+              <img
+                src={`/assets/images/logos/${product.store}-dark.png`}
+                class="store-logo hide-light"
+                alt="Store Logo"
+              />
             </p>
           </div>
         </div>
@@ -208,9 +245,7 @@
                 query = "Harp";
                 getProducts();
               }}>Harp</a
-            >"
-            oder
-            "<a
+            >" oder "<a
               class="search-example"
               href={null}
               on:click|preventDefault={() => {

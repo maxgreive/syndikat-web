@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open III"
+title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3"
+date: 2024-05-07 18:00
 image: /assets/images/posts/big-arm-open.jpg
 thumbnail: /assets/images/posts/thumbnails/big-arm-open.jpg
 tags: turnier
 author: max
-excerpt: Spannung und einige Herausforderungen bei den Big Arm Open III in Schmallenberg! Discgolf-Spieler aus ganz Deutschland messen sich in einem packenden Turnier!
+excerpt: Spannung und einige Herausforderungen bei den Big Arm Open 3 in Schmallenberg! Discgolf-Spieler aus ganz Deutschland messen sich an drei packenden Turniertagen!
 ---
 
 Ursprünglich hatte ich geplant, auch ohne Startplatz nach Schmallenberg zu fahren, um beim Turnier Fotos zu schießen und die atemberaubende Atmosphäre des Golfplatzes zu genießen. Philipp und ich hatten zusammen mit Severin von den [Bonnsai](https://bonnsai.org/) eine Ferienwohnung für das Wochenende gemietet. Da allerdings nur der Bonner aufgrund seines Ratings einen Startplatz sicher hatte, planten wir, zumindest den Donnerstag zu nutzen, um am Übungstag eine Runde zu spielen.
@@ -14,7 +15,7 @@ Ursprünglich hatte ich geplant, auch ohne Startplatz nach Schmallenberg zu fahr
 
 ![](/assets/images/posts/big_arm_jump_putt.jpg)
 
-Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1, was mich mehr als glücklich machte.
+Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1, was die Erwartungen für einen guten Turnierstart schürten.
 
 Eine Runde auf dem Kurs dauert etwa 4 Stunden und führt über 7 Kilometer durch eine malerische Landschaft mit zahlreichen Höhenmetern. Die Herausforderung beginnt bereits an Bahn 1, einem 325 Meter langen Par 5, das sowohl Technik als auch Power erfordert.
 
@@ -41,14 +42,14 @@ Ich lernte drei sympathische Discgolfer kennen und genoss einen wunderbaren Tag 
 
 ## Sonntag, Runde 3 — Das Finale
 
-Am finalen Tag der Big Arm Open III hatte ich eine ähnliche Erfahrung wie zuvor. Der Wind war stark und blies meinen Putter an Bahn 7 aus den Ketten – normalerweise sollte doch man davon ausgehen können, dass die Scheibe aus vier Metern im Korb bleibt.
+Am finalen Tag der Big Arm Open 3 hatte ich eine ähnliche Erfahrung wie zuvor. Der Wind war stark und blies meinen Putter an Bahn 7 aus den Ketten – normalerweise sollte doch man davon ausgehen können, dass die Scheibe aus vier Metern im Korb bleibt.
 
-Letztendlich spielte ich eine unspektakuläre +5 und landete damit auf Platz 54 in der Open-Division. [Alle Ergbnisse findest du auf turniere.discgolf.de](https://turniere.discgolf.de/index.php?p=events&sp=live&id=2006). Kerstin und Raphael waren angereist, begleiteten meine Runde und fieberten mit.
+Letztendlich spielte ich eine unspektakuläre +5 und landete damit auf Platz 54 in der Open-Division. [Alle Ergebnisse sind auf turniere.discgolf.de zu finden](https://turniere.discgolf.de/index.php?p=events&sp=live&id=2006). Kerstin und Raphael waren extra angereist, begleiteten meine Runde und fieberten mit.
 
 ![](/assets/images/posts/big_arm_putt.jpg)
 
 ## Fazit — Ein unvergessliches Turnier
 
-Ein großes Dankeschön geht an den TV Fredeburg und den Golfclub Schmallenberg für die professionelle Ausrichtung und Organisation des Turniers. Ein besonderer Dank gilt den Turnierdirektoren Sven und Dirk, die zum dritten Mal ein spektakuläres Event auf die Beine stellen. Die Big Arm Open III waren nicht nur eine Demonstration gigantischer Drives, sondern auch eine wertvolle Gelegenheit, die Gemeinschaft des Discgolf-Sports zu erleben.
+Ein großes Dankeschön geht an den TV Fredeburg und den Golfclub Schmallenberg für die professionelle Ausrichtung und Organisation des Turniers. Ein besonderer Dank gilt den Turnierdirektoren Sven und Dirk, die zum dritten Mal ein spektakuläres Event auf die Beine stellten. Die Big Arm Open 3 waren nicht nur eine Demonstration irrer Drives, sondern auch eine wertvolle Gelegenheit, die Gemeinschaft des Discgolf-Sports zu erleben. Lange Putts wurden gefeiert und nach kleinen Missgeschicken wurden die Kontrahenten vom Rest des Flights wieder aufgebaut und angefeuert.
 
 Im nächsten Jahr findet die Deutsche Meisterschaft 2025 auf dem gleichen Kurs statt. Wer noch nie dort gewesen ist, sollte sich die Gelegenheit nicht entgehen lassen und darüber nachdenken zum Zuschauen einen Tag ins Sauerland zu fahren.

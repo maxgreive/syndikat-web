@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3"
-date: 2024-05-07 18:00
+date: 2024-05-08 09:00
 image: /assets/images/posts/big-arm-open.jpg
 thumbnail: /assets/images/posts/thumbnails/big-arm-open.jpg
 tags: turnier
@@ -15,16 +15,16 @@ Ursprünglich hatte ich geplant, auch ohne Startplatz nach Schmallenberg zu fahr
 
 ![](/assets/images/posts/big_arm_jump_putt.jpg)
 
-Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1, was die Erwartungen für einen guten Turnierstart schürten.
+Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1 und setzte damit die Messlatte für die erste Turnierrunde.
 
-Eine Runde auf dem Kurs dauert etwa 4 Stunden und führt über 7 Kilometer durch eine malerische Landschaft mit zahlreichen Höhenmetern. Die Herausforderung beginnt bereits an Bahn 1, einem 325 Meter langen Par 5, das sowohl Technik als auch Power erfordert.
+Eine Runde auf dem Kurs dauert etwa 4 Stunden und führt über 7 Kilometer durch eine malerische Landschaft mit zahlreichen Höhenmetern. Die Herausforderung beginnt bereits an Bahn 1, einem 325 Meter langen Par 5, das mit seinen 40 Metern Höhenunterschied sowohl Technik als auch Power erfordert.
 
 ![](/assets/images/posts/big_arm_bahn_1.jpg)
 
 
 ## Freitag, Runde 1 — Der Wetterumschwung
 
-Am Mittag startete ich am Folgetag in die erste Runde. Den Drive an der ikonischen Bahn 1 hatte ich natürlich standesgemäß versemmelt und zusammen mit Marian und Patrick aus Köln sowie Manuel aus Recklinghausen kämpften wir uns über die 18 Bahnen. Keiner im Flight war mit seiner Leistung zufrieden; die Proberunde hatte hohe Erwartungen geweckt, die wir nicht erfüllen konnten. Dieses Mal erreichte ich nur eine +12, da ich die Scheiben zu oft out-of-bounds schmiss.
+Am Folgetag startete ich mittags in die erste Runde. Den Drive an der ikonischen Bahn 1 hatte ich natürlich standesgemäß versemmelt und zusammen mit Marian und Patrick aus Köln sowie Manuel aus Recklinghausen kämpften wir uns über die 18 Bahnen. Niemand im Flight war mit seiner Leistung zufrieden; die Proberunde hatte hohe Erwartungen geweckt, die wir leider nicht erfüllen konnten. Dieses Mal erreichte ich nur eine +12, da ich die Scheiben zu oft out-of-bounds schmiss.
 
 Niedergeschlagen stellte ich im Clubhaus fest, dass es vielen anderen Spielern ebenfalls so ergangen war. Das Wetter, der Wind und der Turnierdruck hatten dazu geführt, dass viele die Scores vom Vortag nicht wiederholen konnten.
 

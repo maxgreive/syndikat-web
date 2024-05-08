@@ -3294,6 +3294,7 @@ table td {
 .hero__subscribe {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
   margin-top: 32px
 }
 

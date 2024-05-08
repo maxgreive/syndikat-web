@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3"
-date: 2024-05-08 09:00
+date: 2024-05-08
 image: /assets/images/posts/big-arm-open.jpg
 thumbnail: /assets/images/posts/thumbnails/big-arm-open.jpg
 tags: turnier

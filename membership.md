@@ -20,8 +20,13 @@ Dann freuen wir uns über Deine Anmeldung!
 
 ### Kosten
 
-- Vollmitgliedschaft: 30 € pro Jahr oder 3 € pro Monat
-- Mitgliedschaft ermäßigt: 24 € pro Jahr oder 2 € pro Monat
+- Vollmitgliedschaft: 30 € pro Jahr
+- Mitgliedschaft ermäßigt: 24 € pro Jahr
+- Supporter: 50 € pro Jahr oder 5 € pro Monat (Fördermitgliedschaft)
+
+### Spenden
+
+Wenn du einen Betrag spenden möchtest, [findest du hier ein Zahlungsformular](https://buy.stripe.com/5kAdULfSzh02eOIdQV), mit dem du uns einen beliebigen Betrag schicken kannst.
 
 ### Wo melde ich mich an?
 

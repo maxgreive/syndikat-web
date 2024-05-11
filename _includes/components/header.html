@@ -11,10 +11,21 @@
                         <div class="nav__title">{{ site.data.menus.main_menu.title }}</div>
                         <ul class="nav__list list-reset">
                             {% for item in site.data.menus.main_menu.items %}
-                                <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
-                                    <a href="{{ item.link }}" class="nav__link">
-                                        {{ item.label }}
-                                    </a>
+                                <li class="nav__item">
+                                    {% if item.link %}
+                                        <a href="{{ item.link }}" class="nav__link">
+                                            {{ item.label }}
+                                        </a>
+                                    {% elsif item.children %}
+                                        <span class="nav__link" data-toggle="dropdown">
+                                            {{ item.label }}
+                                        </span>
+                                        <div class="dropdown-menu">
+                                            {% for child in item.children %}
+                                            <a href="{{ child.link }}" class="dropdown-item">{{ child.label }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
                                 </li>
                             {% endfor %}
                             <li class="nav__item nav__item-icon">
@@ -38,3 +49,9 @@
         </div>
     </div>
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => Popper.createPopper(document.querySelector('[data-toggle="dropdown"]'), document.querySelector('.dropdown-menu'), {
+        placement: 'bottom',
+    }));
+</script>

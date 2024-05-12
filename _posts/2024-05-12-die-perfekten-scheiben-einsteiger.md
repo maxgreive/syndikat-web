@@ -88,3 +88,10 @@ Hinweis: in Klammern ist die Plastik-Art angegeben. Die Hersteller haben verschi
 * Throwing Putter: [P2 (S-Line)](/preisvergleich/#/?q=s-line%20p2)
 * Midrange: [MD1 (C-Line)](/preisvergleich/#/?q=c-line%20md1)
 * Fairway Driver: [Essence (Neo)](/preisvergleich/#/?q=neo%20essence)
+
+### MVP/Axiom
+
+* Putter: [Pixel](/preisvergleich/#/?q=pixel)
+* Throwing Putter: [Proxy](/preisvergleich/#/?q=proxy)
+* Midrange: [Hex](/preisvergleich/#/?q=hex)
+* Fairway Driver: [Crave](/preisvergleich/#/?q=crave)

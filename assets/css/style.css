@@ -4760,3 +4760,10 @@ table td {
   display: block;
   font-size: 0.75rem;
 }
+
+@media screen and (max-width: 576px) {
+  .mobile-aspect-3-4 img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}

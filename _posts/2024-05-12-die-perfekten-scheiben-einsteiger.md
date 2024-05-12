@@ -28,10 +28,10 @@ Die orangene Scheibe in der Mitte ist der Zwischenschritt zwischen Driver und Pu
 > Putter und Midrange reichen für den Start aus. Lerne diese Discs zu beherrschen, bevor du weitere Scheiben kaufst.
 
 ![Grafik mit Flugkurven von Discgolf-Discs](/assets/images/posts/flight-numbers-dark.png)
-{: .hide-light }
+{: .hide-light.mobile-aspect-3-4 }
 
 ![Grafik mit Flugkurven von Discgolf-Discs](/assets/images/posts/flight-numbers-light.png)
-{: .hide-dark }
+{: .hide-dark.mobile-aspect-3-4 }
 
 Die Grafik oben zeigt die ungefähren Flugkurven der verschiedenen Scheiben, wenn sie als Rückhand von einem Rechtshänder geworfen werden. Der Wert unten am Start der Flugkurve gibt den Speed der Scheibe an. Wenn du nach Scheiben shopst, werden dir diese Zahlen wieder begegnen. Diese Angaben für einen Putter `2|3|0|0` oder einen Driver `7|5|0|2` zeigen dir die ungefähren Flugeigenschaften der jeweiligen Disc. Wir fokussieren uns fürs Erste auf den ersten Wert, der die Geschwindikeit der Scheibe angibt.
 

@@ -3,17 +3,17 @@ layout: post
 title: Die besten Discgolf-Scheiben für Einsteiger
 date: 2024-05-11 00:00
 image: /assets/images/posts/beginner-discs.jpg
-thumbnail:
+thumbnail: /assets/images/posts/thumbnails/beginner-discs.jpg
 tags: discs
 author: max
-excerpt: Für Neulinge im Discgolf-Sport kann es kompliziert werden, wenn man sich seine ersten Scheiben kaufen möchte. Worauf kommt es an und welcher Fehler solltest du vermeiden?
+excerpt: Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welcher Fehler sollten vermieden werden?
 ---
 
-Für Neulinge im Discgolf-Sport kann es kompliziert werden, wenn man sich seine ersten Scheiben kaufen möchte. Worauf kommt es an und welcher Fehler solltest du vermeiden? In diesem Beitrag versuchen wir Licht ins Dunkel zu bringen und stellen dir am Ende ein paar Anfängersets zusammen.
+Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welcher Fehler sollten vermieden werden? In diesem Beitrag versuchen wir Licht ins Dunkel zu bringen und stellen dir am Ende ein paar Anfängersets zusammen.
 
-## Discgolf Lingo – Driver, Putter, hä …?
+## Midrange, Understable, Overmold … bitte was?
 
-Lass uns zuallererst ein paar Begriffe klären. Im Allgemeinen gibt es drei Arten von Discs: Putter, Midranges und Driver. Natürlich ist dies nur die halbe Wahrheit und fortgeschrittene Spieler und Spielerinnen wissen, dass es noch viele Unterteilungen in den jeweiligen Kategorien gibt. Für den Anfang kann dir dies allerdings egal sein, du solltest nur verstehen, worin sich diese Scheiben unterscheiden und wo ihre Vor- und Nachteile liegen.
+Lass uns zuallererst ein paar Begriffe klären. Im Allgemeinen gibt es drei Arten von Discs: Putter, Midranges und Driver. Natürlich ist dies nur die halbe Wahrheit und fortgeschrittene Spielerinnen und Spieler wissen, dass es noch viele Unterteilungen in den jeweiligen Kategorien gibt. Für den Anfang kann dir dies allerdings egal sein, du solltest nur verstehen, worin sich diese Scheiben unterscheiden und wo ihre Vor- und Nachteile liegen.
 
 So wie es beim traditionellen Golf mit Ball verschiedene Schläger gibt, gibt es auch beim Discgolf für die verschiedenen Distanzen unterschiedliche Wurfgeräte. Einige Begriffe wie Driver und Putter wurden übernommen, andere werden exklusiv im Scheibensport genutzt.
 
@@ -57,14 +57,14 @@ Wichtig: Lerne erst diese vier Scheiben zu beherrschen, bevor du neue Scheiben k
 
 Es gibt verschiedene Möglichkeiten, Scheiben zu kaufen, und es lohnt sich, verschiedene Optionen zu vergleichen. Frage andere Spieler in deiner lokalen Discgolf-Community, ob sie gebrauchte Scheiben zum Verkauf anbieten. Oft sind erfahrene Spieler bereit, ihre alten Scheiben günstig abzugeben oder zu tauschen.
 
-> Schau [in unserem Preisvergleich](/preisvergleich) nach, um die besten Angebote für neue Scheiben zu finden und die verschiedenen Shops zu vergleichen.
+> Schau auch [in unseren Preisvergleich](/preisvergleich), um die besten Angebote für neue Scheiben zu finden und die verschiedenen Shops zu vergleichen.
 
 Online-Plattformen wie eBay Kleinanzeigen, Facebook Marketplace und Discgolf-Foren können ebenfalls gute Quellen für gebrauchte und neue Scheiben sein. Besuche lokale Discgolf-Turniere, wo oft Händler vor Ort sind und eine Vielzahl von Scheiben zum Verkauf anbieten. Dies ist eine großartige Möglichkeit, Scheiben anzufassen und zu sehen, welche am besten zu deinem Spielstil passen. Indem du diese verschiedenen Möglichkeiten erkundest, kannst du die besten Scheiben für dein Spiel finden und gleichzeitig Geld sparen.
 
 
 ## Unsere Vorschläge für Anfängersets
 
-Nun kommen wir zu unseren zusammengestellten Starter-Sets. Für welchen Hersteller du dich entscheidest, hängt davon ab, welches Scheibendesign dir am meisten zusagt und bei welchem Shop du bestellen willst. Alle unten genannten Marken haben sehr gute Discs, die wir bedenkenlos empfehlen können.
+Nun kommen wir zu unseren zusammengestellten Starter-Sets. Für welchen Hersteller du dich entscheidest, hängt davon ab, welches Scheibendesign dir optisch am meisten zusagt und bei welchem Shop du bestellen willst. Alle unten genannten Marken haben sehr gute Discs, die wir bedenkenlos empfehlen können.
 
 Hinweis: in Klammern ist die Plastik-Art angegeben. Die Hersteller haben verschiedene Arten von Premium-Plastik. Dies ist immer nur ein Vorschlag, der in den meisten Fällen lieferbar sein sollte.
 
@@ -75,7 +75,7 @@ Hinweis: in Klammern ist die Plastik-Art angegeben. Die Hersteller haben verschi
 * Midrange: [Mako3 (Star)](/preisvergleich/#/?q=star%20mako3)
 * Fairway Driver: [Leopard (Star)](/preisvergleich/#/?q=star%20leopard)
 
-### Latitude 64
+### Latitude 64°
 
 * Putter: [Pure (Zero)](/preisvergleich/#/?q=zero%20pure)
 * Throwing Putter: [Pure (Opto)](/preisvergleich/#/?q=opto%20pure)
@@ -89,7 +89,7 @@ Hinweis: in Klammern ist die Plastik-Art angegeben. Die Hersteller haben verschi
 * Midrange: [MD1 (C-Line)](/preisvergleich/#/?q=c-line%20md1)
 * Fairway Driver: [Essence (Neo)](/preisvergleich/#/?q=neo%20essence)
 
-### MVP/Axiom
+### Axiom (MVP)
 
 * Putter: [Pixel](/preisvergleich/#/?q=pixel)
 * Throwing Putter: [Proxy](/preisvergleich/#/?q=proxy)

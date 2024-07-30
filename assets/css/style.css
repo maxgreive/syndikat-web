@@ -2724,7 +2724,10 @@ table td {
 
 .nav-button .icon__menu {
   display: none;
-  margin-right: 12px
+}
+
+.nav-button .nav__icon + .nav__icon {
+  margin-left: 12px
 }
 
 .nav-button .icon__menu,
@@ -2750,27 +2753,11 @@ table td {
   }
 }
 
-.toggle-theme {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  user-select: none;
-  cursor: pointer
-}
 
-@media only screen and (max-width: 1024px) {
-  .toggle-theme {
-    padding: 20px 0
-  }
-}
 
 .toggle-sun,
 .toggle-moon {
-  position: absolute;
-  font-size: 20px;
+  font-size: 22px;
   transition: color .25s ease;
   color: var(--heading-font-color)
 }
@@ -2785,7 +2772,7 @@ table td {
 }
 
 [dark] .toggle-sun {
-  display: block
+  display: inline-block
 }
 
 [dark] .toggle-moon {
@@ -2797,7 +2784,7 @@ table td {
 }
 
 .hide-dark {
-  display: block;
+  display: inline-block;
 }
 
 [dark] .hide-light {

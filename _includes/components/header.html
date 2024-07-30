@@ -11,28 +11,26 @@
                         <div class="nav__title">{{ site.data.menus.main_menu.title }}</div>
                         <ul class="nav__list list-reset">
                             {% for item in site.data.menus.main_menu.items %}
-                                <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
-                                    <a href="{{ item.link }}" class="nav__link">
-                                        {{ item.label }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                            <li class="nav__item nav__item-icon">
-                                <div class="toggle-theme">
-                                    <div class="toggle-moon" title="Enable dark mode">
-                                        <i class="ion ion-ios-moon"></i>
-                                    </div>
-                                    <div class="toggle-sun" title="Enable light mode">
-                                        <i class="ion ion-ios-sunny"></i>
-                                    </div>
-                                </div>
+                            <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
+                                <a href="{{ item.link }}" class="nav__link">
+                                    {{ item.label }}
+                                </a>
                             </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </nav>
                 <div class="nav-button">
-                    <i class="nav__icon icon__menu ion ion-md-menu"></i>
+                    <span class="nav__icon toggle-theme">
+                        <span class="toggle-moon" title="Enable dark mode">
+                            <i class="ion ion-ios-moon"></i>
+                        </span>
+                        <span class="toggle-sun" title="Enable light mode">
+                            <i class="ion ion-ios-sunny"></i>
+                        </span>
+                    </span>
                     <i class="nav__icon icon__search ion ion-md-search"></i>
+                    <i class="nav__icon icon__menu ion ion-md-menu"></i>
                 </div>
             </div>
         </div>

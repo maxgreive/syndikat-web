@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     search = document.querySelector(".search"),
     searchBox = document.querySelector(".search__box"),
     toggleTheme = document.querySelector(".toggle-theme"),
-    btnScrollToTop = document.querySelector(".top");
+    btnScrollToTop = document.querySelector(".top"),
+    menuItems = document.querySelectorAll(".main-nav .nav__link[href^='\/#']");
 
 
   /* =======================================================
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   menuCloseIcon.addEventListener("click", () => {
     menuClose();
   });
+
+  menuItems.forEach(item => item.addEventListener('click', menuClose()));
 
   function menuOpen() {
     menuList.classList.add("is-open");

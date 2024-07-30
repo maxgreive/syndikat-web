@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuClose();
   });
 
-  menuItems.forEach(item => item.addEventListener('click', menuClose()));
+  menuItems.forEach(item => item.addEventListener('click', () => menuClose()));
 
   function menuOpen() {
     menuList.classList.add("is-open");

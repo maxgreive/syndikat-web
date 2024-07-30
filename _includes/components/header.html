@@ -3,7 +3,7 @@
         <div class="row">
             <div class="header__inner col col-12">
                 <div class="logo">
-                    <a class="logo__link" href="/">{{ site.title }}</a>
+                    <a class="logo__link" href="/">{{- site.title -}}</a>
                 </div>
                 <nav class="main-nav">
                     <div class="main-nav__box">
@@ -13,7 +13,7 @@
                             {% for item in site.data.menus.main_menu.items %}
                             <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
                                 <a href="{{ item.link }}" class="nav__link">
-                                    {{ item.label }}
+                                    {{- item.label -}}
                                 </a>
                             </li>
                             {% endfor %}

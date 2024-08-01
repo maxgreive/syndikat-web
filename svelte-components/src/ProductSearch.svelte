@@ -19,6 +19,7 @@
     "thrownatur",
     "birdieshop",
     "discgolf4you",
+    "hyzerstore"
   ];
 
   let shopCount = endpoints.length;

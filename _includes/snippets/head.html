@@ -1,4 +1,4 @@
-{%- capture sharing_image -%}
+ {%- capture sharing_image -%}
   {%- if page.image -%}
     {{- page.image -}}
   {%- else -%}
@@ -18,6 +18,9 @@
     <meta name="twitter:image:src" content="{{- sharing_image -}}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
+    {% if page.noindex %}
+      <meta name="robots" content="noindex">
+    {% endif %}
     {% if page.excerpt %}
       <meta property="og:description" content="{{- page.excerpt | strip_html | escape -}}">
       <meta name="twitter:description" content="{{ site.description | escape }}">
@@ -46,6 +49,8 @@
       }
     </script>
 
+    <script defer src="/assets/svelte-bundle.js?{{ site.time | date: '%s%N' }}"></script>
+
     {% if page.layout == 'dice-game' %}
     <script src="/assets/js/dice-game.js" defer></script>
     {% elsif page.layout == 'tournaments-map' %}
@@ -55,5 +60,7 @@
     <link href="/assets/css/vendors/leaflet.resetview.css" rel="stylesheet">
     {% endif %}
 
+    <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   </head>

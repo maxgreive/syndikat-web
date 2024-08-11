@@ -1,12 +1,11 @@
-const API_URL = "https://discgolf-tournaments-api-45d839f9ba85.herokuapp.com/";
+const API_URL = "https://api.syndikat.golf/tournaments";
 const endpoints = {
   official: API_URL,
-  metrix: API_URL + 'metrix'
+  metrix: API_URL + '/metrix'
 }
 
 let map = null;
 initMap();
-window.addEventListener('CookiebotOnLoad', initMap);
 
 async function getTournaments(type) {
   try {
@@ -20,17 +19,13 @@ async function getTournaments(type) {
 }
 
 async function initMap() {
-  const consent = window.CookieConsent && window.CookieConsent.consent && window.CookieConsent.consent.marketing;
-
-  if (map) map.remove();
-
   const osmLayer = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.de/copyright">OpenStreetMap</a>'
   });
 
-  const tournaments = consent ? await getTournaments('official') : [];
-  const metrix = consent ? await getTournaments('metrix') : [];
+  const tournaments = await getTournaments('official');
+  const metrix = await getTournaments('metrix');
 
   const markers = L.markerClusterGroup({
     showCoverageOnHover: false,
@@ -46,8 +41,7 @@ async function initMap() {
   tournaments.forEach(tournament => renderMarker(tournament, markers));
 
   map = L.map("tournaments-map", {
-    layers: [osmLayer, markers],
-    messagebox: !consent
+    layers: [osmLayer, markers]
   }).setView([51, 9.5], 6);
 
   if (map.messagebox) {
@@ -60,7 +54,7 @@ async function initMap() {
     'Metrix': metrixMarkers
   }
 
-  if (consent) L.control.layers(null, overlayMaps).addTo(map);
+  L.control.layers(overlayMaps).addTo(map);
 
   L.control.resetView({
     position: "topleft",
@@ -88,24 +82,14 @@ function renderMarker(tournament, layer) {
 
   marker.bindPopup(`
       <p class="popup-title">${badgeHTML}${tournament.title}</p>
-      Ort: ${tournament.location}
+      <p>Ort: ${tournament.location}</p>
       <p>${!isOneDay ? 'Erster ' : ''}Spieltag: ${tournament.dates.startTournament ? formatDate(tournament.dates.startTournament) : "noch unbekannt"}</p>
       ${tournament.dates.endTournament && !isOneDay ? `<p>Letzter Spieltag: ${formatDate(tournament.dates.endTournament)}</p>` : ""}
       ${tournament.dates.startRegistration ? `<p>Registrierung: ab ${formatDate(tournament.dates.startRegistration)}</p>` : ""}
+      ${tournament.dates.startRegistration && tournament?.spots?.overall ? `<p>Freie Startplätze: ${tournament.spots.overall - tournament.spots.used}/${tournament.spots.overall}</p>` : ''}
       ${tournament.relatedTournaments ? `<p>Verbundene Runden: ${tournament.relatedTournaments.map(t => `<a href="https://discgolfmetrix.com/${t.id}">${t.round}</a>`).join(', ')}</p>` : ''}
-      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen</a></p>
+      <p><a href="${tournament.link}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen <i class="ion ion-md-exit"></i></a></p>
     `, {
     maxWidth: 250
   });
-}
-
-function formatDate(date) {
-  const dateOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  };
-
-  return new Date(date).toLocaleDateString("de-DE", dateOptions);
 }

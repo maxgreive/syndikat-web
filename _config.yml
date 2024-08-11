@@ -21,11 +21,11 @@
 title: syndikat.golf
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ein Discgolfverein aus Köln und anderswo in Deutschland.
-  Tritt unserem Discord bei und werde Teil einer großartigen Community!
+  Entdecke die Discgolf-Szene Kölns.
+  Tritt unserem Discord bei, mach bei unserer wöchentlichen Liga mit und erlebe gemeinsam mit anderen Enthusiasten die Faszination dieses Sports!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://syndikat.golf" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: maxgreive
+twitter_username: maex2k
 github_username:  maxgreive
 permalink: /blog/:categories/:title/
 sharing_image: /assets/images/syndikat-sharing-image.png
@@ -59,7 +59,11 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - svelte-components
+  - node_modules
+  - package.json
+  - package-lock.json
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

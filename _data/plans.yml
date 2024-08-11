@@ -1,0 +1,29 @@
+- title: "Ermäßigt"
+  description: "Ermäßigte Mitgliedschaft als aktive/r Spieler/in"
+  tooltip: "Ermäßigte Mitgliedschaft für Schüler, Studenten unter 27, Rentner, Arbeitslose und Menschen mit Behinderung. Eine Kopie des entsprechenden Nachweises muss vorgelegt werden."
+  periods:
+    - name: yearly
+      price: "24"
+      link: "https://buy.stripe.com/fZeg2T8q71140XS6or"
+    - name: monthly
+      price: null
+- title: "Standard"
+  description: "Standardmitgliedschaft als aktive/r Spieler/in"
+  periods:
+    - name: yearly
+      price: "30"
+      featured: true
+      link: "https://buy.stripe.com/5kA7wn6hZ114cGA8wA"
+    - name: monthly
+      price: null
+- title: "Supporter"
+  description: "Fördermitgliedschaft als passive/r Unterstützer/in"
+  tooltip: "Fördermitglieder unterstützen den Verein finanziell, sind aber nicht aktiv im Verein tätig. Sie erhalten keine Stimmrechte und können nicht an Wahlen teilnehmen."
+  periods:
+    - name: yearly
+      price: "50"
+      link: "https://buy.stripe.com/dR617ZeOv1148qk146"
+    - name: monthly
+      price: "5"
+      featured: true
+      link: "https://buy.stripe.com/7sI3g7dKrbFI21W3cd"

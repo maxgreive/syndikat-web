@@ -49,10 +49,11 @@
       return products.set([]);
     }
 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "product-search",
-      query: query,
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible("product-search", {
+      props: {
+        query: query,
+      }
     });
 
     initialProducts = [];
@@ -82,14 +83,15 @@
   });
 
   const trackProduct = (product) => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "product-click",
-      product: product.title,
-      store: product.store,
-      price: product.price / 100,
-      currency: "EUR",
-      url: product.url,
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible("product-click", {
+      props:{
+        product: product.title,
+        store: product.store,
+        price: product.price / 100,
+        currency: "EUR",
+        url: product.url
+      }
     });
   };
 

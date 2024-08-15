@@ -7,11 +7,11 @@
             <h1 class="hero__title">Hey, wir sind das Syndikat</h1>
             <p class="hero__description">{{- site.description | escape -}}</p>
             <div class="hero__subscribe">
-              <button class="button button--primary button--icon" id="btn-discord" type="submit" onclick="window.dataLayer.push({'event': 'discord_click', 'btnLocation': 'hero'});window.open('\/\/discord.gg\/bus8ZcaNFT');">
+              <button class="button button--primary button--icon plausible-event-name=discord_click" id="btn-discord" type="submit" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">
                 {% include snippets/logo-discord.html %}
                 Discord beitreten
               </button>
-              <a href="/membership/" class="button" id="btn-membership" onclick="window.dataLayer.push({'event': 'member_click', 'btnLocation': 'hero'});">Mitglied werden</a>
+              <a href="/membership/" class="button plausible-event-name=member_click" id="btn-membership">Mitglied werden</a>
             </div>
           </div>
           <div class="hero__right">

@@ -32,7 +32,7 @@ Versorgung durch die [Disconauts](https://discgonauts.de/) war superb.
 Da sie neben der Anlage auch einen alten [Schulgarten](https://de.wikipedia.org/wiki/Schulgarten) hergerichtet haben, haben sie fließend Wasser, Strom und eine Küche. Wo gibt's denn sowas?
 Das Highlight war ein Lastenrad mit Eis, welches die Tees abgefahren hat.
 
-Das Wetter spielte größtenteils auch mit. Zwar hat es Samstagabend so stark gestürmt, dass noch bis spät in die Nacht heruntergefallene Bäume aus dem Weg geschafft werden mussten, konnte der Turnierbetrieb ungehindert fortgeführt werden. 
+Das Wetter spielte größtenteils auch mit. Zwar hat es Samstagabend so stark gestürmt, dass noch bis spät in die Nacht heruntergefallene Bäume aus dem Weg geschafft werden mussten, doch der Turnierbetrieb konnte ungehindert fortgeführt werden. 
 Das Wetter war sogar so gut, dass sich die Sonnencreme im Players-Pack als eine super Idee herausgestellt hat.
 
 Am Ende, haben es Ben und Raphael in ihren Divisionen auf den 5ten Platz geschafft ([Ergebnisse auf Metrix](https://discgolfmetrix.com/2825113)) und konnten sich über Preise vom Sponsor [discgolf4you](https://discgolf4you.com) freuen.

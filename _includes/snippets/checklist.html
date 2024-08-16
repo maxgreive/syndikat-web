@@ -32,6 +32,7 @@
         const currentList = storedData ? JSON.parse(storedData) : {};
 
         for (const entry in currentList) {
+            if (!document.querySelector(`[data-value=${entry}]`)) continue;
             document.querySelector(`[data-value=${entry}]`).checked = currentList[entry];
         }
 

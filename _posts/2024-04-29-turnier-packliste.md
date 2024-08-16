@@ -12,7 +12,7 @@ Steht dein nächstes Turnier vor der Tür und du bist unsicher, ob du alles Nöt
 {% include snippets/checklist.html %}
 
 ## 1. Handtuch – ja, mehrere!
-Nicht nur eines, sondern gleich ein paar Handtücher solltest du einpacken. Warum? Weil du nie weißt, wie das Wetter wird! Ein Handtuch für nasse Discs, eines gegen Schweiß und vielleicht noch ein extra für den Fall, dass du in einen Regenschauer kommst. Trockene Discs bedeuten bessere Würfe! Zusätzlich kannst du das Desinfektionsspray nutzen, um klebrige Hände nach dem Snacken zu reinigen.
+Nicht nur eines, sondern gleich ein paar Handtücher solltest du einpacken. Warum? Weil du nie weißt, wie das Wetter wird! Ein Handtuch für nasse Discs, eines gegen Schweiß und vielleicht noch eins extra für den Fall, dass du in einen Regenschauer kommst. Trockene Discs bedeuten bessere Würfe! Zusätzlich kannst du das Desinfektionsspray nutzen, um klebrige Hände nach dem Snacken zu reinigen.
 
 ## 2. Regenschirm und Regenjacke
 Egal, wie gut der Wetterbericht aussieht, die Regenjacke ist Pflicht. Besonders praktisch sind leichte, kompakte Modelle, die nicht viel Platz in deiner Tasche einnehmen. Wenn Regen angekündigt ist, macht ein Regenschirm durchaus Sinn. Im Golfshop gibt es große Modelle, die dich und deinen Bag/Cart trocken halten.
@@ -20,7 +20,7 @@ Egal, wie gut der Wetterbericht aussieht, die Regenjacke ist Pflicht. Besonders 
 ## 3. Snacks und Wasser
 Das klingt vielleicht offensichtlich, aber die Art der Snacks kann einen großen Unterschied machen. Wähle etwas, das dir Energie gibt, ohne dich zu beschweren. Nüsse, Energieriegel oder Obst wie Äpfel und Bananen sind großartig. Und beim Wasser – lieber eine Flasche mehr als eine zu wenig, gerade an heißen Tagen! Achte darauf, keine klebrigen Snacks zu essen, um deine Hände sauber zu halten.
 
-## 4. Ein extra Satz Socken
+## 4. Ein Paar Ersatzsocken
 Ja, du hast richtig gehört! Ein frischer, trockener Satz Socken kann ein wahrer Segen sein, besonders wenn dein Turnier einen ganzen Tag dauert. Nasse oder sandige Füße sind super unangenehm und können deine Konzentration stören.
 
 ## 5. Kleines Erste-Hilfe-Set

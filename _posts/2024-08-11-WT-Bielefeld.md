@@ -4,8 +4,7 @@ title: "Westfalentour Nr. 8 in Bielefeld"
 image: /assets/images/posts/24_wt8_trees.jpeg
 thumbnail: /assets/images/posts/thumbnails/24_wt8_trees.jpg
 tags: events
-author:
-  - philipp
+author: philipp
 ---
 
 Am Samstag den 10. August waren wir mit insgesamt sechs Spieler*innen auf der [Westfalentour in Bielefeld](https://frisbee-nrw.de/2024/07/21/wt-08-2024-am-obersee-in-bielefeld/) vertreten.

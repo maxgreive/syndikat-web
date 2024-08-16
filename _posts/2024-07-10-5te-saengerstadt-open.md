@@ -4,8 +4,7 @@ title: "5. Sängerstadt Open"
 image: /assets/images/posts/2407_finsterwalde_drone_mod.jpg
 thumbnail: /assets/images/posts/thumbnails/2407_finsterwalde_thumb.jpg
 tags: events
-author:
-  - philipp
+author: philipp
 ---
 
 Vom 5. bis zum 7. Juli durften wir bei der [5. Sängerstadt Open - feels like family](https://discgonauts.de/saengerstadt-open-2024-ein-rueckblick/) mitspielen.

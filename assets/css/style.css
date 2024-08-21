@@ -257,12 +257,11 @@ details {
 }
 
 summary {
-  display: block;
   font-weight: bold
 }
 
-summary::-webkit-details-marker {
-  display: none;
+.faq-questions summary {
+  display: block;
 }
 
 template {

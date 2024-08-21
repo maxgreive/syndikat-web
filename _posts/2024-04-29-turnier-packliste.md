@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Turnier-Equipment, das den Unterschied macht"
-image: /assets/images/posts/packliste.png
-thumbnail: /assets/images/posts/packliste.png
+image: /assets/images/posts/packliste.jpg
+thumbnail: /assets/images/posts/thumbnails/packliste_thumb.jpg
 tags: turniere
 author: max
 date: 2024-08-21
@@ -45,4 +45,8 @@ Eine gute Sonnenbrille ist mehr als nur ein modisches Accessoire – sie ist ess
 ## 11. Powerbank – Immer verbunden bleiben
 Ein langer Turniertag kann auch für dein Smartphone anstrengend sein, besonders wenn du Apps zur Score-Erfassung oder GPS-Funktionen für die Kursnavigation benutzt. Eine Powerbank in deiner Tasche zu haben, bedeutet, dass du nie Gefahr läufst, wegen eines leeren Akkus den Überblick über deine Scores zu verlieren oder nicht mehr erreichbar zu sein. Außerdem kann es sehr nützlich sein, wenn du während einer Pause Musik hören oder deinen Mitspielern die neusten Memes zeigen möchtest. Mit einer Powerbank bist du immer bereit, egal wie lang der Tag wird.
 
+## Fazit
+
 Mit diesen Tipps bist du nicht nur gut ausgestattet, sondern auch für so ziemlich jede Situation gewappnet, die während eines Discgolf-Turniers auf dich zukommen könnte. Also, pack deine Tasche, schnapp dir deine Discs und auf zum nächsten Turnier! Viel Erfolg und noch wichtiger: Viel Spaß!
+
+Haben wir etwas vergessen? Schreib uns über das [Kontaktformular](/contact) oder beteilige dich an der Diskussion auf [Discord](https://discord.gg/bus8ZcaNFT)!

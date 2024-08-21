@@ -5,6 +5,6 @@ items:
   - label: Events
     link: /events/
   - label: Tools
-    link: /#tools
+    link: /tools
   - label: Mitglied werden
     link: /register/

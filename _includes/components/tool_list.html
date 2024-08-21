@@ -7,6 +7,7 @@
         </div>
         <div class="row">
           {%- for item in site.data.tools reversed -%}
+            {%- if item.hide_index -%}{%- continue -%}{%- endif -%}
             {%- capture tool_image -%}
               {%- if item.thumbnail -%}
                 {{- item.thumbnail -}}

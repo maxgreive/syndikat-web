@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCloseIcon = document.querySelector(".nav__icon-close"),
     menuList = document.querySelector(".main-nav"),
     searchOpenIcon = document.querySelector(".icon__search"),
-    searchCloseIcon = document.querySelector(".search__close"),
+    searchCloseIcon = document.querySelector("[data-search-close]"),
     searchInput = document.querySelector(".search__text"),
     search = document.querySelector(".search"),
     searchBox = document.querySelector(".search__box"),
     toggleTheme = document.querySelector(".toggle-theme"),
-    btnScrollToTop = document.querySelector(".top");
+    btnScrollToTop = document.querySelector(".top"),
+    menuItems = document.querySelectorAll(".main-nav .nav__link[href^='\/#']");
 
 
   /* =======================================================
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   menuCloseIcon.addEventListener("click", () => {
     menuClose();
   });
+
+  menuItems.forEach(item => item.addEventListener('click', () => menuClose()));
 
   function menuOpen() {
     menuList.classList.add("is-open");
@@ -177,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Form Cache
   ======================= */
 
-  [...document.querySelectorAll('#register-form .form__input')].forEach(input => {
+  [...document.querySelectorAll('.form__input')].forEach(input => {
     const fieldId = input.id;
     const formId = input.form.id;
     const formContentOnLoad = JSON.parse(window.sessionStorage.getItem(formId + '-content')) || {};
@@ -231,3 +234,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function formatDate(date, weekday = true) {
+  const dateOptions = {
+    weekday: weekday ? "long" : undefined,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  };
+
+  return new Date(date).toLocaleDateString("de-DE", dateOptions);
+}

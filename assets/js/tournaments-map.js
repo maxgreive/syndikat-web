@@ -93,14 +93,3 @@ function renderMarker(tournament, layer) {
     maxWidth: 250
   });
 }
-
-function formatDate(date) {
-  const dateOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  };
-
-  return new Date(date).toLocaleDateString("de-DE", dateOptions);
-}

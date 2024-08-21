@@ -5,6 +5,7 @@ image: /assets/images/posts/packliste.png
 thumbnail: /assets/images/posts/packliste.png
 tags: turniere
 author: max
+date: 2024-08-21
 ---
 
 Steht dein nächstes Turnier vor der Tür und du bist unsicher, ob du alles Nötige eingepackt hast? Klar, die Basics wie Discs, Marker und dein Smartphone sind selbstverständlich. Aber wollen wir mit euch ein paar Geheimtipps teilen, die dein Turniererlebnis nicht nur angenehmer, sondern vielleicht sogar erfolgreicher machen können. Hier kommen sie, die kleinen Helfer, die oft übersehen werden!

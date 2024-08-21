@@ -39,6 +39,6 @@ Einer der Höhepunkte unserer Vereinsfahrt war die Stärkung unserer Gemeinschaf
 
 Unsere Vereinsfahrt nach Arnhem war ein voller Erfolg. Wir haben nicht nur aufregende Drives und Putts gesehen, sondern endlich auch internationale Discgolf-Luft geschnuppert. Diese Reise wird uns noch lange in Erinnerung bleiben, und wir freuen uns bereits auf die nächsten Abenteuer, die unser Club in Angriff nehmen wird.
 
-Discgolf verbindet nicht nur Menschen durch den Sport, sondern schafft auch Gelegenheiten für unvergessliche Erlebnisse und Abenteuer. Wenn du noch nicht Teil eines Vereins bist, [solltest du unbedingt in Erwägung ziehen, dich anzuschließen](/membership). Du wirst nicht nur deine Skills verbessern, sondern auch neue Bekanntschaften schließen und die Welt erkunden - alles im Namen der fliegenden Scheiben!
+Discgolf verbindet nicht nur Menschen durch den Sport, sondern schafft auch Gelegenheiten für unvergessliche Erlebnisse und Abenteuer. Wenn du noch nicht Teil eines Vereins bist, [solltest du unbedingt in Erwägung ziehen, dich anzuschließen](/register). Du wirst nicht nur deine Skills verbessern, sondern auch neue Bekanntschaften schließen und die Welt erkunden - alles im Namen der fliegenden Scheiben!
 
 Bist du bereit, dein eigenes Discgolf Abenteuer zu beginnen? Dann schnapp dir eine Disc und sei dabei - es wartet eine Welt voller Spaß und Möglichkeiten auf dich!

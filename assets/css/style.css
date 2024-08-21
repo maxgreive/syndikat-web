@@ -8,6 +8,7 @@
   --dark: #0c101a;
   --dark-blue: #1e2740;
   --red: #f87171;
+  --green: #22c55e;
   --background-color: var(--white);
   --background-alt-color: var(--light-blue);
   --text-color: var(--dark-blue);
@@ -16,6 +17,7 @@
   --link-color: var(--dark-blue);
   --link-color-hover: var(--dark-blue);
   --warning-color: var(--red);
+  --success-color: var(--green);
   --button-color: var(--white);
   --button-background-color: var(--brand-color);
   --button-background-hover: #4338ca;
@@ -168,7 +170,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button
+  -webkit-appearance: button;
+  appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -184,6 +187,22 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 16px);
+  background-position-y: 50%;
+  padding: 20px 40px 20px 26px;
+  font-size: 14px;
+  background-color: var(--background-alt-color);
+  color: var(--heading-font-color);
+  border: none;
+  font-weight: 700;
 }
 
 fieldset {
@@ -220,6 +239,7 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px
 }
 
@@ -283,6 +303,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0
 }
+
+.table-responsive {
+  overflow-x: auto;
+}
+
 
 h1,
 h2,
@@ -2698,7 +2723,10 @@ table td {
 
 .nav-button .icon__menu {
   display: none;
-  margin-right: 12px
+}
+
+.nav-button .nav__icon + .nav__icon {
+  margin-left: 12px
 }
 
 .nav-button .icon__menu,
@@ -2724,27 +2752,11 @@ table td {
   }
 }
 
-.toggle-theme {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  user-select: none;
-  cursor: pointer
-}
 
-@media only screen and (max-width: 1024px) {
-  .toggle-theme {
-    padding: 20px 0
-  }
-}
 
 .toggle-sun,
 .toggle-moon {
-  position: absolute;
-  font-size: 20px;
+  font-size: 22px;
   transition: color .25s ease;
   color: var(--heading-font-color)
 }
@@ -2759,11 +2771,27 @@ table td {
 }
 
 [dark] .toggle-sun {
-  display: block
+  display: inline-block
 }
 
 [dark] .toggle-moon {
   display: none
+}
+
+.hide-light {
+  display: none;
+}
+
+.hide-dark {
+  display: inline-block;
+}
+
+[dark] .hide-light {
+  display: block;
+}
+
+[dark] .hide-dark {
+  display: none;
 }
 
 .search {
@@ -3254,6 +3282,7 @@ table td {
 .hero__subscribe {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
   margin-top: 32px
 }
 
@@ -4586,4 +4615,143 @@ table td {
 
 .plan-card__cta {
   text-align: center;
+}
+
+#ratings th:first-of-type,
+#ratings td:first-of-type {
+  text-align: right;
+}
+
+#ratings tr {
+  background: transparent;
+}
+
+#ratings td {
+  padding: 30px 10px;
+  border: 0;
+}
+
+.color--green {
+  color: var(--success-color);
+}
+
+.color--red {
+  color: var(--warning-color);
+}
+
+.color--grey {
+  color: var(--text-alt-color)
+}
+
+.rating-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.rating-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.ranking-club {
+  color: var(--text-alt-color);
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  gap: 0.75rem;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.ranking-name-wrapper {
+  overflow: hidden;
+}
+
+.name-cell a {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border-bottom: 0!important;
+}
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 30px;
+}
+
+.avatar span {
+  position: absolute;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+  opacity: 0.8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pill {
+  padding: 0.1rem 0.75rem;
+  border-radius: 50px;
+  text-wrap: nowrap;
+}
+
+[data-division*="Open"] {
+  background: #ecfeff;
+  color: #155e75;
+}
+
+[data-division*="Junioren"] {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+[data-division*="Master"] {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+[data-division*="Damen"] {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+[data-division*="Damen Master"] {
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+[data-toggle-club] {
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
+
+.percentile {
+  display: block;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 576px) {
+  .mobile-aspect-3-4 img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
 }

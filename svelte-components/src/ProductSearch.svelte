@@ -19,6 +19,7 @@
     "thrownatur",
     "birdieshop",
     "discgolf4you",
+    "hyzerstore"
   ];
 
   let shopCount = endpoints.length;
@@ -35,6 +36,12 @@
   $: query = query.toLowerCase();
   $: progress = parseInt((shopCount / endpoints.length) * 100);
 
+  const clearProducts = () => {
+    query = "";
+    push("/");
+    $products = [];
+  };
+
   const getProducts = async () => {
     if (!query) {
       push("/");
@@ -42,10 +49,11 @@
       return products.set([]);
     }
 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "product-search",
-      query: query,
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible("product-search", {
+      props: {
+        query: query,
+      }
     });
 
     initialProducts = [];
@@ -74,6 +82,19 @@
     currency: "EUR",
   });
 
+  const trackProduct = (product) => {
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible("product-click", {
+      props:{
+        product: product.title,
+        store: product.store,
+        price: product.price / 100,
+        currency: "EUR",
+        url: product.url
+      }
+    });
+  };
+
   const handleSort = () => {
     if ($sort === "price-descending")
       return ($products = sortProducts($products, "price"));
@@ -95,15 +116,29 @@
   }
 
   onMount(async () => {
+    document.querySelector("#js-product-input").focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
   });
 </script>
 
 <form class="search__group">
+  {#if query && !$loading}
+    <div
+      class="search__close"
+      on:click={() => clearProducts()}
+      on:keydown={() => clearProducts()}
+    >
+      <i class="ion ion-md-close"></i>
+    </div>
+  {/if}
+  <label for="js-product-input" class="screen-reader-text"
+    >Suche nach Produkten</label
+  >
   <input
     type="text"
     class="search__text"
+    id="js-product-input"
     bind:value={query}
     placeholder="Suchen …"
   />
@@ -160,7 +195,12 @@
       <div class="article col col-4 col-d-6 col-t-12">
         <div class="article__inner">
           <div class="article__head">
-            <a href={product.url} target="_blank" class="article__image">
+            <a
+              href={product.url}
+              target="_blank"
+              class="article__image"
+              on:click={trackProduct(product)}
+            >
               <img
                 src={product.image || "/assets/images/image-not-found.jpg"}
                 alt={product.title}
@@ -172,14 +212,27 @@
           </div>
           <div class="article__content">
             <h2 class="article__title">
-              <a href={product.url} target="_blank">{product.title}</a>
+              <a
+                href={product.url}
+                target="_blank"
+                on:click={trackProduct(product)}>{product.title}</a
+              >
             </h2>
             <p>
               <span class={`inventory status-${product.stockStatus}`}
                 >{stockStatusLabels[product.stockStatus]}</span
               >
               <strong>{EURO.format(product.price / 100)}</strong>
-              <img src={product.store} class="store-logo" alt="Store Logo" />
+              <img
+                src={`/assets/images/logos/${product.store}-light.png`}
+                class="store-logo hide-dark"
+                alt="Store Logo"
+              />
+              <img
+                src={`/assets/images/logos/${product.store}-dark.png`}
+                class="store-logo hide-light"
+                alt="Store Logo"
+              />
             </p>
           </div>
         </div>
@@ -188,21 +241,21 @@
       {#if defaultState || !query}
         <div class="col">
           <p>
-            Suche zum Beispiel nach <a
+            Suche zum Beispiel nach "<a
+              class="search-example"
               href={null}
               on:click|preventDefault={() => {
-                query = "Westside Harp";
+                query = "Harp";
                 getProducts();
-              }}>"Westside Harp"</a
-            >
-            oder
-            <a
+              }}>Harp</a
+            >" oder "<a
+              class="search-example"
               href={null}
               on:click|preventDefault={() => {
-                query = "Innova Destroyer";
+                query = "Destroyer";
                 getProducts();
-              }}>"Innova Destroyer"</a
-            >.
+              }}>Destroyer</a
+            >".
           </p>
         </div>
       {:else}
@@ -250,7 +303,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding-top: 2rem;
+    margin-top: 2rem;
   }
 
   h2 {
@@ -262,8 +315,21 @@
     color: var(--text-alt-color);
   }
 
-  .search__text {
-    border: 0 !important;
+  .search__close {
+    right: 150px;
+  }
+
+  .search-example {
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  @media (hover: hover) {
+    .search-example:hover {
+      cursor: pointer;
+      color: var(--link-color);
+      border-bottom-color: var(--link-color-hover);
+    }
   }
 
   .products-headline {
@@ -342,21 +408,6 @@
     content: "";
     display: inline-block;
     border-radius: 50%;
-  }
-
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: calc(100% - 16px);
-    background-position-y: 50%;
-    padding: 20px 40px 20px 26px;
-    background-color: var(--background-alt-color);
-    color: var(--heading-font-color);
-    border: none;
-    font-weight: 700;
   }
 
   .circular-progress {

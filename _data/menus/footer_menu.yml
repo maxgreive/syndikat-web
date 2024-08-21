@@ -7,7 +7,9 @@ items:
     link: /satzung/
   - label: FAQs
     link: /faq/
-  - label: Impressum
-    link: /impressum/
+  - label: Ratings
+    link: /ratings/
   - label: Datenschutz
     link: /datenschutz/
+  - label: Impressum
+    link: /impressum/

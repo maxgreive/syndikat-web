@@ -12,6 +12,10 @@ layout: bag-tags
 * Flightübergreifende Forderungen nur nach Absprache! Bei Gleichstand gewinnt die bessere Nummer!
 * Geforderte Spieler\*innen haben 4 Wochen Zeit einen Termin zum Ausspielen der Bag Tags zu finden.
 
+## Bag Tag vergessen?
+
+Wenn die Strafgebühr nicht in bar beglichen werden kann, [kann sie hier via Stripe abgebucht werden](https://donate.stripe.com/9AQ9Evayf6lo4a48wC).
+
 ## Leaderboard
 
 Die aktuelle Rangliste der Bag Tag Challenge:

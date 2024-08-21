@@ -1,23 +1,10 @@
 title: Menu
 items:
-  - label: Home
-    link: /
   - label: Über uns
     link: /about/
   - label: Events
     link: /events/
+  - label: Tools
+    link: /tools
   - label: Mitglied werden
-    link: /membership/
-  - label: Turnierkarte
-    link: /turniere/
-    mobileOnly: true
-  - label: Preisvergleich
-    link: /preisvergleich/
-    mobileOnly: true
-  - label: Bag Tag Challenge
-    link: /bagtags/
-    mobileOnly: true
-  - label: Disc Dice
-    link: /disc-dice/
-    mobileOnly: true
-
+    link: /register/

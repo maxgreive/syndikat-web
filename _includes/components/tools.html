@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row animate">
+    {%- for item in site.data.tools reversed -%}
+      {%- capture tool_image -%}
+        {%- if item.thumbnail -%}
+          {{- item.thumbnail -}}
+        {%- else -%}
+          {{- item.image -}}
+        {%- endif -%}
+      {%- endcapture -%}
+
+      <div class="article col col-4 col-d-6 col-t-12">
+        <div class="article__inner">
+          <div class="article__head">
+            <a href="{{ item.url }}" class="article__image">
+              <img loading="lazy" src="/assets/images/{{- tool_image -}}" alt="{{- item.title -}}">
+            </a>
+          </div>
+          <div class="article__content">
+            <h2 class="article__title">
+              <a href="{{- item.url -}}">
+                {{- item.title -}}
+              </a>
+            </h2>
+            {%- if item.description -%}
+              <p class="article__excerpt">{{- item.description | strip_html -}}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>

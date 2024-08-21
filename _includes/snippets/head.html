@@ -18,6 +18,9 @@
     <meta name="twitter:image:src" content="{{- sharing_image -}}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
+    {% if page.noindex %}
+      <meta name="robots" content="noindex">
+    {% endif %}
     {% if page.excerpt %}
       <meta property="og:description" content="{{- page.excerpt | strip_html | escape -}}">
       <meta name="twitter:description" content="{{ site.description | escape }}">
@@ -33,7 +36,12 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     {% if page.layout == 'index' %}
-      <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg" as="image" type="image/jpg">
+      <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg"
+        imagesrcset="/assets/images/hero_w_200.jpg 200w, /assets/images/hero_w_470.jpg 470w, /assets/images/hero_w_762.jpg 762w, /assets/images/hero_w_1020.jpg 1020w, /assets/images/hero_w_1136.jpg 1136w, /assets/images/hero_w_1200.jpg 1200w"
+        imagesizes="(max-width: 1200px) 100vw, 1200px"
+        as="image"
+        type="image/jpg"
+      >
     {% endif %}
     <link href="/assets/fonts/Jost.css" rel="stylesheet">
     <link href="/assets/css/ionicons.min.css" rel="stylesheet">
@@ -57,6 +65,7 @@
     <link href="/assets/css/vendors/leaflet.resetview.css" rel="stylesheet">
     {% endif %}
 
+    <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   </head>

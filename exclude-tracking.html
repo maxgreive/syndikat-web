@@ -1,0 +1,37 @@
+---
+permalink: /plausible-ignore.html
+layout: default
+noindex: true
+---
+
+<div class="container">
+  <form action="" class="form" data-plausible-form>
+    <label class="form__title">Tracking by Plausible.io</label>
+    <div class="form__group form__group--radio">
+      <label class="form__label form__checkbox-group">
+        <input class="form__input no-cache" id="plausible-enable" type="radio" value="false" name="plausible">
+        Enable
+      </label>
+      <label class="form__label form__checkbox-group">
+        <input class="form__input no-cache" id="plausible-disable" type="radio" value="true" name="plausible">
+        Disable
+      </label>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('[data-plausible-form] input');
+    const storedPreference = localStorage.getItem('plausible_ignore') === 'true';
+
+    inputs.forEach(input => {
+      input.checked = (input.value === 'true') === storedPreference;
+      input.addEventListener('change', event => {
+        const isPlausibleDisabled = event.target.value === 'true';
+        if (isPlausibleDisabled) return localStorage.setItem('plausible_ignore', 'true');
+        return localStorage.removeItem('plausible_ignore');
+      });
+    });
+  });
+</script>

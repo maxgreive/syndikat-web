@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Form Cache
   ======================= */
 
-  [...document.querySelectorAll('.form__input')].forEach(input => {
+  [...document.querySelectorAll('.form__input:not(.no-cache)')].forEach(input => {
     const fieldId = input.id;
     const formId = input.form.id;
     const formContentOnLoad = JSON.parse(window.sessionStorage.getItem(formId + '-content')) || {};

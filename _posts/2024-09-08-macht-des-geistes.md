@@ -13,7 +13,7 @@ Discgolf ist ein Sport, der Beweglichkeit, Strategie und Präzision erfordert. D
 
 Es ist leicht, sich darauf zu konzentrieren, die Wurftechnik zu verbessern oder das Equipment zu optimieren, aber die Entwicklung einer starken mentalen Stärke ist mindestens genauso wichtig. Deine Einstellung beeinflusst jeden Aspekt Deiner Leistung, von Deiner Fähigkeit, den ganzen Tag über fokussiert zu bleiben, bis hin zu Deinem Umgang mit Rückschlägen wie schlechten Würfen. Wenn Du ein Anfänger oder fortgeschrittener Spieler bist, wird sich die Investition in Deine mentale Stärke lohnen und Dir helfen, konsistenter zu spielen und den Sport noch mehr zu genießen.
 
-In unserem Club kämpfen viele Spieler damit, die Konzentration zu halten, Fehler zu vergessen und eine leistungsorientierte Einstellung zu entwickeln. Diese Herausforderungen können Dich daran hindern, Dein Bestes zu geben. Mit den richtigen mentalen Strategien kannst Du sie jedoch überwinden.
+In unserem Club kämpfen viele Spieler damit, die Konzentration zu halten, Fehler zu vergessen und eine selbstbewusstes Mindset zu entwickeln. Diese Herausforderungen können Dich daran hindern, Dein Bestes zu geben. Mit den richtigen mentalen Strategien kannst Du sie jedoch überwinden.
 
 ## Häufige mentale Herausforderungen für Anfänger und fortgeschrittene Spieler
 

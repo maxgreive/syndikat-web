@@ -3,6 +3,7 @@ title: "Die Macht des Geistes: Die mentale Stärke im Discgolf"
 layout: post
 author: max
 tag: training
+date: 2024-09-12
 image: /assets/images/posts/mental-game.jpg
 thumbnail: /assets/images/posts/thumbnails/mental-game.jpg
 ---

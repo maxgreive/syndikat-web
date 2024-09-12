@@ -13,7 +13,7 @@ Discgolf ist ein Sport, der Beweglichkeit, Strategie und Präzision erfordert. D
 
 Es ist leicht, sich darauf zu konzentrieren, die Wurftechnik zu verbessern oder das Equipment zu optimieren, aber die Entwicklung einer starken mentalen Stärke ist mindestens genauso wichtig. Deine Einstellung beeinflusst jeden Aspekt Deiner Leistung, von Deiner Fähigkeit, den ganzen Tag über fokussiert zu bleiben, bis hin zu Deinem Umgang mit Rückschlägen wie schlechten Würfen. Wenn Du ein Anfänger oder fortgeschrittener Spieler bist, wird sich die Investition in Deine mentale Stärke lohnen und Dir helfen, konsistenter zu spielen und den Sport noch mehr zu genießen.
 
-In unserem Club kämpfen viele Spieler damit, die Konzentration zu halten, Fehler zu vergessen und eine selbstbewusstes Mindset zu entwickeln. Diese Herausforderungen können Dich daran hindern, Dein Bestes zu geben. Mit den richtigen mentalen Strategien kannst Du sie jedoch überwinden.
+In unserem Club kämpfen viele Spieler damit, die Konzentration zu halten, Fehler zu vergessen und eine selbstbewusstes Mindset zu entwickeln. Diese Herausforderungen können Dich daran hindern, Dein Bestes zu geben. Mit dem richtigen Discgolf-Training und guten mentalen Strategien kannst Du sie jedoch überwinden.
 
 ## Häufige mentale Herausforderungen für Anfänger und fortgeschrittene Spieler
 
@@ -24,7 +24,7 @@ Die Konzentration über eine ganze Runde oder gar einen ganzen Turniertag zu hal
 Wir alle kennen es – ein schlechter Wurf, der uns frustriert und über das Geschehene grübeln lässt. Das Problem, sich auf Fehler zu fixieren, ist, dass es nicht nur den nächsten Wurf, sondern auch Dein gesamtes Selbstvertrauen und den Spaß am Spiel beeinträchtigt. Ein einziger schlechter Wurf kann eine Kette schlechter Entscheidungen auslösen, wenn Du Deine Gedanken nicht im Griff hast.
 
 3. **Fehlende leistungsorientierte Einstellung**
-Viele Spieler konzentrieren sich zu sehr auf ihre Ergebnisse oder Platzierungen, was Druck und Frustration erzeugt, besonders wenn es gerade mal nicht nach Plan läuft. Dieser Fokus auf Ergebnisse anstatt auf den Prozess, jeden Wurf einzeln zu spielen, führt oft zu Anspannung und Unbeständigkeit.
+Viele Spieler konzentrieren sich zu sehr auf ihre Ergebnisse oder Platzierungen, was Druck und Frustration erzeugt, besonders wenn es gerade mal nicht nach Plan läuft. Dieser Fokus auf Ergebnisse anstatt auf den Prozess, jeden Wurf einzeln zu spielen, führt oft zu Anspannung und Unbeständigkeit. Natürlich kommt es sehr stark darauf an, an der Form, dem Wurf und der Wurfauswahl zu arbeiten. Nur wenn man weiß, dass man den gerade an einer Bahn benötigten Wurf "in petto" hat, kann man sich selbstbewusst darauf fokussieren diesen auch abzurufen.
 
 ## Strategien für eine starke mentale Stärke
 

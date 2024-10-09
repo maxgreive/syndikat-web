@@ -3,7 +3,7 @@ layout: post
 title: "Podiumsplätze beim \"Hardtwerfen II\" in Bonn"
 image: /assets/images/posts/hardtwerfen-flick.jpg
 thumbnail: /assets/images/posts/thumbnails/hardtwerfen-flick_thumb.jpg
-tags: turnier
+tags: turniere
 authors:
   - max
   - yannik

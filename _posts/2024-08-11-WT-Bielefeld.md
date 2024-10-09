@@ -3,7 +3,7 @@ layout: post
 title: "Westfalentour Nr. 8 in Bielefeld"
 image: /assets/images/posts/24_wt8_trees.jpeg
 thumbnail: /assets/images/posts/thumbnails/24_wt8_trees.jpg
-tags: events
+tags: turniere
 author: philipp
 ---
 

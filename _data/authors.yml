@@ -20,3 +20,6 @@ yannik:
 matthias:
   name: Matthias
   image: /assets/images/authors/matthias.jpg
+
+alex:
+  name: Alex

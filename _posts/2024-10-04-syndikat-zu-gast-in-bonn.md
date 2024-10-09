@@ -3,7 +3,7 @@ layout: post
 title: Das Syndikat zu Gast in Bonn
 image: /assets/images/posts/syndikat-bonnsai-open.jpg
 thumbnail: /assets/images/posts/thumbnails/syndikat-bonnsai-open_thumb.jpg
-tags: events
+tags: turniere
 author: matthias
 ---
 

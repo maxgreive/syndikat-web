@@ -3,7 +3,7 @@ layout: post
 title: "5. Sängerstadt Open"
 image: /assets/images/posts/2407_finsterwalde_drone_mod.jpg
 thumbnail: /assets/images/posts/thumbnails/2407_finsterwalde_thumb.jpg
-tags: events
+tags: turniere
 author: philipp
 ---
 

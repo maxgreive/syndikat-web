@@ -4,7 +4,7 @@ title: "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3"
 date: 2024-05-08
 image: /assets/images/posts/big-arm-open.jpg
 thumbnail: /assets/images/posts/thumbnails/big-arm-open.jpg
-tags: turnier
+tags: turniere
 author: max
 excerpt: Spannung und einige Herausforderungen bei den Big Arm Open 3 in Schmallenberg! Discgolf-Spieler aus ganz Deutschland messen sich an drei packenden Turniertagen!
 ---

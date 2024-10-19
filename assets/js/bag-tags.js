@@ -17,7 +17,11 @@ function renderRanking(ranking, $el) {
       <td>${entry.Name}</td>
     </tr>
   `).join('');
-  return $el.querySelector('tbody').insertAdjacentHTML('beforeend', html);
+  const tableBody = $el.querySelector('tbody');
+  if (!tableBody) return;
+  tableBody.innerHTML = '';
+
+  return tableBody.insertAdjacentHTML('beforeend', html);
 }
 
 initBagTags();

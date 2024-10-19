@@ -2725,7 +2725,7 @@ table td {
   display: none;
 }
 
-.nav-button .nav__icon + .nav__icon {
+.nav-button .nav__icon+.nav__icon {
   margin-left: 12px
 }
 
@@ -4005,6 +4005,7 @@ table td {
 }
 
 @media (hover: hover) {
+
   .post a:not(.button):not([role="button"]):hover,
   .page a:not(.button):not([role="button"]):hover {
     color: var(--link-color);
@@ -4684,7 +4685,7 @@ table td {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  border-bottom: 0!important;
+  border-bottom: 0 !important;
 }
 
 .avatar {
@@ -4753,5 +4754,23 @@ table td {
   .mobile-aspect-3-4 img {
     aspect-ratio: 3 / 4;
     object-fit: cover;
+  }
+}
+
+.row-skeleton>td {
+  animation: opacitypulse 1s ease-in infinite;
+}
+
+@keyframes opacitypulse {
+  from {
+    opacity: .7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .7;
   }
 }

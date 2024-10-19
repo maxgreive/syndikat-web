@@ -39,24 +39,28 @@ layout: default
           </thead>
           <tbody>
             {% for item in (1..7) %}
-            <tr class="row-skeleton" style="opacity: {{ 1.0 | divided_by: item }};">
-              <td>▮</td>
-              <td>
-                <div class="name-cell">
-                  <span class="avatar"
-                    style="background-color: hsl(0.{{ item | times: 2 }}turn, 10%, 50%);"><span>▮▮</span></span>
-                  <div class="ranking-name-wrapper">
-                    <a href="">▮▮▮▮▮▮▮▮▮▮▮</a>
-                    <div class="ranking-club">▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮</div>
+              <tr class="row-skeleton" style="opacity: {{ 1.0 | divided_by: item }};">
+                <td>▮</td>
+                <td>
+                  <div class="name-cell">
+                    <span class="avatar" style="background-color: hsl(0.{{ item | times: 2 }}turn, 10%, 50%);">
+                      <span>▮▮</span>
+                    </span>
+                    <div class="ranking-name-wrapper">
+                      <a href="">▮▮▮▮▮▮▮▮▮▮▮▮▮▮</a>
+                      <div class="ranking-club">▮▮▮▮▮▮▮▮▮▮▮</div>
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td>▮▮▮</td>
-              <td><span class="pill" data-division="Open">▮▮▮▮</span></td>
-              <td>▮▮▮<span class="percentile">Top ▮▮%</span></td>
-              <td>▮/▮▮</td>
-              <td>▮▮.▮▮.▮▮▮▮</td>
-            </tr>
+                </td>
+                <td>▮▮▮</td>
+                <td>
+                  <span class="pill" data-division="Open">▮▮▮▮▮</span>
+                </td>
+                <td>▮▮▮<span class="percentile">Top ▮▮%</span>
+                </td>
+                <td>▮/▮▮</td>
+                <td>▮▮.▮▮.▮▮▮▮</td>
+              </tr>
             {% endfor %}
           </tbody>
         </table>

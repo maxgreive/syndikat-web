@@ -39,12 +39,13 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     {% if page.layout == 'index' %}
-      <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg"
-        imagesrcset="/assets/images/hero_w_200.jpg 200w, /assets/images/hero_w_470.jpg 470w, /assets/images/hero_w_762.jpg 762w, /assets/images/hero_w_1020.jpg 1020w, /assets/images/hero_w_1136.jpg 1136w, /assets/images/hero_w_1200.jpg 1200w"
-        imagesizes="(max-width: 1200px) 100vw, 1200px"
-        as="image"
-        type="image/jpg"
-      >
+    <style>.hero__left{max-width:450px;margin-right:auto}@media only screen and (max-width:1140px){.hero__left{max-width:440px}}@media only screen and (max-width:1024px){.hero__left{max-width:100%}}</style>
+    <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg"
+      imagesrcset="/assets/images/hero_w_200.jpg 200w, /assets/images/hero_w_470.jpg 470w, /assets/images/hero_w_762.jpg 762w, /assets/images/hero_w_1020.jpg 1020w, /assets/images/hero_w_1136.jpg 1136w, /assets/images/hero_w_1200.jpg 1200w"
+      imagesizes="(max-width: 1200px) 100vw, 1200px"
+      as="image"
+      type="image/jpg"
+    >
     {% endif %}
     <link href="/assets/fonts/Jost.css" rel="stylesheet">
     <link href="/assets/css/ionicons.min.css" rel="stylesheet">

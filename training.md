@@ -25,5 +25,5 @@ Bitte melde dich immer zum nächsten Termin über dieses Formular an. Das sorgt 
 <form action="#" data-training-form class="search__group">
   <input class="search__text" type="text" name="name" placeholder="Birdie Bernd" required>
   <input class="search__text" type="password" name="password" placeholder="Passwort" required>
-  <button type="Submit" class="button button--primary">Anmelden</button>
+  <button type="Submit" class="button button--primary plausible-event-name=training_register">Anmelden</button>
 </form>

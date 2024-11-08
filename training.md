@@ -21,9 +21,8 @@ Bitte melde dich immer zum nächsten Termin über dieses Formular an. Das sorgt 
 
 *Achtung: Das Passwort bekommst du auf dem <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">Syndikat-Discord</a> oder von einem unserer Mitglieder.*
 
-<form action="#" data-training-form class="search__group" style="display:flex; gap: 10px;">
+<form action="#" data-training-form class="search__group">
   <input class="search__text" type="text" name="name" placeholder="Max Mustermann" required>
   <input class="search__text" type="password" name="password" placeholder="******" required>
   <button type="Submit" class="button button--primary">Anmelden</button>
 </form>
-

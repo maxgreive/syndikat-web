@@ -4774,3 +4774,17 @@ table td {
     opacity: .7;
   }
 }
+
+[data-training-form] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+[data-training-form] [type="text"] {
+  flex: 1 0 300px;
+}
+
+[data-training-form] [type="password"] {
+  flex: 1 0 200px;
+}

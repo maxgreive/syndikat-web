@@ -61,4 +61,4 @@ Das mentale Spiel im Discgolf ist oft der entscheidende Faktor zwischen einer gu
 
 Denke daran: Der nächste Wurf könnte der beste Wurf Deines Lebens werden 🙂
 
-Hast Du auf dem Platz schon einmal mentale Herausforderungen erlebt oder hast Du eine mentale Strategie, die für Dich funktioniert? Teile Deine Erfahrungen auf unserem [Discord-Server](https://discord.gg/bus8ZcaNFT).
+Hast Du auf dem Platz schon einmal mentale Herausforderungen erlebt oder hast Du eine mentale Strategie, die für Dich funktioniert? Teile Deine Erfahrungen auf unserem <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">Discord-Server</a>.

@@ -49,4 +49,4 @@ Ein langer Turniertag kann auch für dein Smartphone anstrengend sein, besonders
 
 Mit diesen Tipps bist du nicht nur gut ausgestattet, sondern auch für so ziemlich jede Situation gewappnet, die während eines Discgolf-Turniers auf dich zukommen könnte. Also, pack deine Tasche, schnapp dir deine Discs und auf zum nächsten Turnier! Viel Erfolg und noch wichtiger: Viel Spaß!
 
-Haben wir etwas vergessen? Schreib uns über das [Kontaktformular](/contact) oder beteilige dich an der Diskussion auf [Discord](https://discord.gg/bus8ZcaNFT)!
+Haben wir etwas vergessen? Schreib uns über das [Kontaktformular](/contact) oder beteilige dich an der Diskussion auf <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">Discord</a>!

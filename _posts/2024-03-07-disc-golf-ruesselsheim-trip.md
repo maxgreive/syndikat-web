@@ -43,5 +43,5 @@ Als die letzten Bahnen gespielt waren und die Sonne langsam hinter dem Horizont 
 
 ![Abfahrt nach Köln](/assets/images/posts/rue_abfahrt.jpeg)
 
-Alles in allem war es ein super Tag, um einen neuen Discgolf-Parcours zu entdecken und einfach ein bisschen Spaß auf und abseits des Parcours zu haben. Wenn ihr auch Lust habt an zukünftigen Ausflügen teilzunehmen, haltet einfach [in unserem Discord](https://discord.com/invite/bus8ZcaNFT) danach Ausschau.
+Alles in allem war es ein super Tag, um einen neuen Discgolf-Parcours zu entdecken und einfach ein bisschen Spaß auf und abseits des Parcours zu haben. Wenn ihr auch Lust habt an zukünftigen Ausflügen teilzunehmen, haltet einfach <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">auf unserem Discord</a> danach Ausschau.
 

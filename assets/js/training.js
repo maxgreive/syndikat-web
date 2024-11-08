@@ -9,9 +9,17 @@ function hash(str) {
 }
 
 function getNextDate() {
-  const nextDate = new Date();
-  nextDate.setDate(nextDate.getDate() + ((TRAINING_WEEKDAY - nextDate.getDay()) % TRAINING_WEEKDAY));
-  return nextDate.toISOString().split('T')[0];
+  const today = new Date();
+  const daysUntilDate = (7 - today.getUTCDay()) % 7;
+  const nextDateUTC = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() + daysUntilDate));
+  const berlinDateFormat = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  });
+
+  return berlinDateFormat.format(nextDateUTC);
 }
 
 async function loadParticipants() {

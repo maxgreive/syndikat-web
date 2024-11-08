@@ -7,7 +7,7 @@ tags: turniere
 author: alex
 ---
 
-Am vergangenen Sonntag dem 06.10. luden die Flugplastik Enthusiasten vom [Disc Golf Niederrhein nun zum 10. mal](https://turniere.discgolf.de/index.php&p=events&sp=view&id=2222) auf dem pittoresken Gelände des Auesees zur Scheibenflugshow über zwei Runden.
+Am vergangenen Sonntag dem 06.10. luden die Flugplastik-Enthusiasten vom [Disc Golf Niederrhein nun zum zehnten Mal](https://turniere.discgolf.de/index.php&p=events&sp=view&id=2222) auf dem pittoresken Gelände des Auesees zur Scheibenflugshow über zwei Runden.
 
 Das Gelände rund um den Auesee, welches unter anderem auch ein Strandbad umfasst, wurde erst kürzlich durch neue Discgolfbahnen erweitert. Nun können Spieler auch außerhalb vom Turnierbetrieb auf 15 Bahnen ihren geliebten Wurfsport ausüben. Aber Obacht! Das Ziel verfehlt, landet die Scheibe schon mal im Wasser. Also bringt ne Badehose mit.
 

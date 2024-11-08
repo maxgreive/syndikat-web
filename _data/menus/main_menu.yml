@@ -2,6 +2,8 @@ title: Menu
 items:
   - label: Über uns
     link: /about/
+  - label: Training
+    link: /training/
   - label: Events
     link: /events/
   - label: Tools

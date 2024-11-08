@@ -1,6 +1,7 @@
 ---
 layout: training
 title: Training
+sharing_image: /assets/images/training_header.jpg
 ---
 
 Bei unserem Vereinstraining treffen sich Spieler und Spielerinnen aller Niveaus, um gemeinsam zu trainieren, neue Techniken zu lernen und den Spaß am Discgolf zu teilen. Unser wöchentliches Training findet jeden Sonntag [nach der wöchentlichen Liga](https://udisc.com/leagues/syndication-weekly) (ca. 14:30 Uhr) auf dem [Kurs an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) statt. Unter Anleitung unserer erfahrenen Trainer arbeiten wir an Wurfpräzision, Technik und Taktik, sodass sowohl Anfänger als auch Fortgeschrittene voll auf ihre Kosten kommen.

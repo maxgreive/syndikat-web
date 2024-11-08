@@ -16,7 +16,7 @@ Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten 
 ### Benefits
 
 - DFV-Nummer (wird bei offiziellen Turnieren benötigt)
-- Vereinstraining
+- [Vereinstraining](/training)
 - Versicherung bei Turnieren
 - 15% bei [frisbeeshop.com](https://frisbeeshop.com)
 - Member-Access auf dem Discord-Server

@@ -8,7 +8,7 @@ Bei unserem Vereinstraining treffen sich Spieler und Spielerinnen aller Niveaus,
 
 Für die Teilnahme melde dich bitte über das Formular unten an, damit wir das Training optimal vorbereiten können. Wir freuen uns auf dich und viele spannende Runden auf dem Parcours!
 
-> 📅 **Nächster Termin:** Sonntag, <span data-next-date></span> gegen 14:30 Uhr
+> **Nächster Termin:** Sonntag, <span data-next-date></span> gegen 14:30 Uhr
 
 ### Für das nächste Training angemeldete Personen:
 

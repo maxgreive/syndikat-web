@@ -27,9 +27,9 @@
   <meta name="robots" content="noindex">
   {% endif %}
   {% if page.excerpt %}
-  <meta property="og:description" content="{{- page.excerpt | strip_html | escape -}}">
-  <meta name="twitter:description" content="{{ site.description | escape }}">
-  <meta name="description" content="{{ site.description | escape }}">
+  <meta property="og:description" content="{{- page.excerpt | escape -}}">
+  <meta name="twitter:description" content="{{ page.excerpt | escape }}">
+  <meta name="description" content="{{ page.excerpt | escape }}">
   {% else %}
   <meta property="og:description" content="{{- site.description | escape -}}">
   <meta name="twitter:description" content="{{ site.description | escape }}">

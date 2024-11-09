@@ -1,6 +1,7 @@
 ---
 layout: training
 title: Training
+excerpt: "Gemeinsames Discgolf-Training für alle Levels! Jeden Sonntag um 14:30 Uhr an der Scheibenstraße: Verbessere deine Technik und genieße den Sport in der Gruppe. Jetzt anmelden und mitmachen!"
 sharing_image: /assets/images/training_header.jpg
 ---
 

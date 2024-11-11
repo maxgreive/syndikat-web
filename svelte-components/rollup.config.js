@@ -74,8 +74,10 @@ export default {
 		production && terser(),
 
 		replace({
-			'process.env.API_URL': process.env.API_URL
-		})
+			'process.env.API_URL': process.env.API_URL,
+			preventAssignment: true,
+		},
+		)
 	],
 	watch: {
 		clearScreen: false

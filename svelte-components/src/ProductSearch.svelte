@@ -19,7 +19,7 @@
     "thrownatur",
     "birdieshop",
     "discgolf4you",
-    "hyzerstore"
+    "hyzerstore",
   ];
 
   let shopCount = endpoints.length;
@@ -49,11 +49,15 @@
       return products.set([]);
     }
 
-    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible =
+      window.plausible ||
+      function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
     window.plausible("product-search", {
       props: {
         query: query,
-      }
+      },
     });
 
     initialProducts = [];
@@ -83,15 +87,19 @@
   });
 
   const trackProduct = (product) => {
-    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    window.plausible =
+      window.plausible ||
+      function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
     window.plausible("product-click", {
-      props:{
+      props: {
         product: product.title,
         store: product.store,
         price: product.price / 100,
         currency: "EUR",
-        url: product.url
-      }
+        url: product.url,
+      },
     });
   };
 
@@ -201,6 +209,15 @@
               class="article__image"
               on:click={trackProduct(product)}
             >
+              {#if product.flightNumbers}
+                <ul class="article__flight-numbers">
+                  {#each Object.values(product.flightNumbers) as flightNumber}
+                    {#if flightNumber}
+                      <li>{parseInt(flightNumber)}</li>
+                    {/if}
+                  {/each}
+                </ul>
+              {/if}
               <img
                 src={product.image || "/assets/images/image-not-found.jpg"}
                 alt={product.title}
@@ -275,6 +292,49 @@
   .article__image {
     padding-bottom: 100%;
     background: none;
+  }
+
+  .article__flight-numbers {
+    position: absolute;
+    bottom: 5px;
+    opacity: 0.9;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    display: flex;
+    z-index: 1000;
+    font-family: monospace;
+    border-radius: 4px;
+    border: 1px solid var(--background-alt-color);
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    color: var(--text-color);
+    background: linear-gradient(
+      30deg,
+      var(--background-alt-color),
+      var(--background-color)
+    );
+  }
+
+  .article__flight-numbers li {
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+  }
+
+  .article__flight-numbers li:last-of-type {
+    margin-right: 15px;
+  }
+
+  .article__flight-numbers li:first-of-type {
+    margin-left: 15px;
+  }
+
+  .article__flight-numbers li + li::before {
+    content: "•";
+    opacity: 0.3;
+    margin-right: 7px;
   }
 
   a.article__image {

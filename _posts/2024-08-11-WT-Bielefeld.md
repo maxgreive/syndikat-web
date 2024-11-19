@@ -12,7 +12,7 @@ Das Turnier fand auf dem Parcours am [Obersee](https://udisc.com/courses/bielefe
 
 ## Turnierrunden und Ausgang
 
-Danke an die vielen Helfer*innen und den [TuS Ost Bielefeld](https://www.tus-ost.de/discgolf) für das Herrichten des Parcours und tolle Organisation.
+Danke an die vielen Helfer\*innen und den [TuS Ost Bielefeld](https://www.tus-ost.de/discgolf) für das Herrichten des Parcours und tolle Organisation.
 Da bei der Westfalentour stets ein 12 Bahnen-Kurs bespielt wird, wurde das normale Layout etwas verändert.
 Auch wenn ich persönlich mit den Waldbahnen so meine Probleme hatte und mehrfach gut geholzt habe, erging es den andere Mitstreiter*innen besser.
 

@@ -2730,11 +2730,13 @@ table td {
 }
 
 .nav-button .icon__menu,
+.nav-button .icon__instagram,
 .nav-button .icon__search {
   transition: color .25s ease
 }
 
 .nav-button .icon__menu:hover,
+.nav-button .icon__instagram:hover,
 .nav-button .icon__search:hover {
   color: var(--brand-color)
 }

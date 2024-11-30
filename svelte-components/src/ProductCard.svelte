@@ -1,10 +1,18 @@
 <script>
   import { shops } from "./shops";
-  import { onMount } from "svelte";
+  import tippy from "tippy.js";
 
-  onMount(() => {
-    tippy(".tooltip", {});
-  });
+  function tooltip(node, params) {
+    let tip = tippy(node, params);
+    return {
+      update: (newParams) => {
+        tip.setProps(newParams);
+      },
+      destroy: () => {
+        tip.destroy();
+      },
+    };
+  }
 
   export let product;
   const shop = shops.find((shop) => shop.handle === product.store);
@@ -61,8 +69,10 @@
       {#if shop && shop.shipping && shop.shipping.amount}
         <span
           class="tooltip"
-          data-tippy-content={`Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`}
-          ><i class="ion ion-md-information-circle-outline"></i></span
+          use:tooltip={{
+            content: `Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`,
+            placement: "top",
+          }}><i class="ion ion-md-information-circle-outline"></i></span
         >
       {/if}
     </div>

@@ -1,4 +1,4 @@
-const API_URL = process.env.API_URL || 'https://api.syndikat.golf';
+const API_URL = process.env.API_URL || '//localhost:1337';
 
 export async function fetchProducts(query, endpoint) {
   const data = [];

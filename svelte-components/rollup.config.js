@@ -74,8 +74,8 @@ export default {
 		production && terser(),
 
 		replace({
-			'process.env.API_URL': process.env.API_URL,
-			'process.env.NODE_ENV': process.env.NODE_ENV,
+			'process.env.API_URL': JSON.stringify(process.env.API_URL),
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
 			preventAssignment: true,
 		},
 		)

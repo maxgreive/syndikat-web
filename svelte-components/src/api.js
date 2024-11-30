@@ -1,3 +1,5 @@
+const API_URL = process.env.API_URL || 'https://api.syndikat.golf';
+
 export async function fetchProducts(url, query, endpoint) {
   const data = [];
   const response = await fetch(`${url}/products/${endpoint}/${query}`, {

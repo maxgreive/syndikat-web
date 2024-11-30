@@ -4607,8 +4607,9 @@ table td {
 
 .plan-card .tooltip {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 0;
+  top: 0;
+  padding: 1rem;
   color: var(--gray);
 }
 

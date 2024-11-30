@@ -71,7 +71,8 @@
           class="tooltip"
           use:tooltip={{
             content: `Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`,
-            placement: "top",
+            placement: "left",
+            offset: [0, -4],
           }}><i class="ion ion-md-information-circle-outline"></i></span
         >
       {/if}
@@ -203,8 +204,9 @@
 
   .tooltip {
     position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
+    top: 0;
+    right: 0;
     color: var(--gray);
+    padding: 1rem;
   }
 </style>

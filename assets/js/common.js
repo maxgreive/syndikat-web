@@ -179,7 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =======================
   // Tooltips
   ======================= */
-  tippy('.tooltip');
+  tippy('.plan-card .tooltip', {
+    offset: [0, -4]
+  });
 
   /* =======================
   // Form Cache

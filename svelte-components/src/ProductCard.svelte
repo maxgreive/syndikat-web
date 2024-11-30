@@ -66,7 +66,7 @@
       {#if shop && shop.shipping && shop.shipping.amount}
         <span
           class="tooltip"
-          data-tippy-content={`Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info}`}
+          data-tippy-content={`Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`}
           ><i class="ion ion-md-information-circle-outline"></i></span
         >
       {/if}

@@ -86,7 +86,6 @@ export const shops =
       "url": "https://www.discgolf4you.com/",
       "shipping": {
         "amount": 890,
-        "info": ""
       }
     },
     {
@@ -96,7 +95,6 @@ export const shops =
       "url": "https://www.hyzer-store.de/",
       "shipping": {
         "amount": 395,
-        "info": ""
       }
     },
   ]

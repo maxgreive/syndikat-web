@@ -6,6 +6,7 @@
     "husky": "^9.0.11"
   },
   "scripts": {
+    "build": "npm run build --prefix svelte-components && bundle exec jekyll build",
     "dev": "bundle exec jekyll serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"

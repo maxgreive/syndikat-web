@@ -223,7 +223,7 @@
   }
 
   .search__close {
-    right: 150px;
+    right: 100px;
   }
 
   .products-headline {

@@ -24,6 +24,8 @@
   $: query = query.toLowerCase();
   $: progress = parseInt((shopCount / shopHandles.length) * 100);
 
+  const API_URL = process.env.API_URL || "//localhost:1337";
+
   const clearProducts = () => {
     query = "";
     push("/");
@@ -57,7 +59,7 @@
 
     for (const shop of shopHandles) {
       loading.set(shop);
-      const productResponse = await fetchProducts(query, shop);
+      const productResponse = await fetchProducts(API_URL, query, shop);
       products.update((currentProducts) => [
         ...currentProducts,
         ...productResponse,

@@ -652,11 +652,9 @@
         });
     }
 
-    const API_URL = '//localhost:1337';
-
-    async function fetchProducts(query, endpoint) {
+    async function fetchProducts(url, query, endpoint) {
       const data = [];
-      const response = await fetch(`${API_URL}/products/${endpoint}/${query}`, {
+      const response = await fetch(`${url}/products/${endpoint}/${query}`, {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
@@ -5168,17 +5166,17 @@
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[29] = list[i];
+    	child_ctx[30] = list[i];
     	return child_ctx;
     }
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[26] = list[i];
+    	child_ctx[27] = list[i];
     	return child_ctx;
     }
 
-    // (100:2) {#if query && !$loading}
+    // (102:2) {#if query && !$loading}
     function create_if_block_7(ctx) {
     	let div;
     	let i;
@@ -5190,9 +5188,9 @@
     			div = element("div");
     			i = element("i");
     			attr_dev(i, "class", "ion ion-md-close");
-    			add_location(i, file, 105, 6, 2900);
+    			add_location(i, file, 107, 6, 2971);
     			attr_dev(div, "class", "search__close svelte-1cs3mz");
-    			add_location(div, file, 100, 4, 2775);
+    			add_location(div, file, 102, 4, 2846);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5219,14 +5217,14 @@
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(100:2) {#if query && !$loading}",
+    		source: "(102:2) {#if query && !$loading}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (132:4) {:else}
+    // (134:4) {:else}
     function create_else_block_3(ctx) {
     	let t;
 
@@ -5246,14 +5244,14 @@
     		block,
     		id: create_else_block_3.name,
     		type: "else",
-    		source: "(132:4) {:else}",
+    		source: "(134:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:4) {#if $loading || $products.length}
+    // (132:4) {#if $loading || $products.length}
     function create_if_block_6(ctx) {
     	let t;
 
@@ -5273,14 +5271,14 @@
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(130:4) {#if $loading || $products.length}",
+    		source: "(132:4) {#if $loading || $products.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:31) 
+    // (148:31) 
     function create_if_block_5(ctx) {
     	let span;
     	let t0;
@@ -5295,7 +5293,7 @@
     			t1 = text(t1_value);
     			t2 = text(")");
     			attr_dev(span, "class", "product-count svelte-1cs3mz");
-    			add_location(span, file, 146, 6, 3825);
+    			add_location(span, file, 148, 6, 3896);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -5315,14 +5313,14 @@
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(146:31) ",
+    		source: "(148:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:4) {#if shopCount < shopHandles.length}
+    // (137:4) {#if shopCount < shopHandles.length}
     function create_if_block_4(ctx) {
     	let svg;
     	let circle0;
@@ -5334,15 +5332,15 @@
     			circle0 = svg_element("circle");
     			circle1 = svg_element("circle");
     			attr_dev(circle0, "class", "bg svelte-1cs3mz");
-    			add_location(circle0, file, 142, 8, 3708);
+    			add_location(circle0, file, 144, 8, 3779);
     			attr_dev(circle1, "class", "fg svelte-1cs3mz");
-    			add_location(circle1, file, 143, 8, 3745);
+    			add_location(circle1, file, 145, 8, 3816);
     			attr_dev(svg, "width", "24");
     			attr_dev(svg, "height", "24");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "class", "circular-progress svelte-1cs3mz");
     			set_style(svg, "--progress", /*progress*/ ctx[3]);
-    			add_location(svg, file, 135, 6, 3547);
+    			add_location(svg, file, 137, 6, 3618);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -5363,14 +5361,14 @@
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(135:4) {#if shopCount < shopHandles.length}",
+    		source: "(137:4) {#if shopCount < shopHandles.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:2) {#if $loading}
+    // (153:2) {#if $loading}
     function create_if_block_3(ctx) {
     	let div;
     	let t0;
@@ -5384,7 +5382,7 @@
     			t1 = text(/*$loading*/ ctx[6]);
     			t2 = text(" …");
     			attr_dev(div, "class", "currently-fetching svelte-1cs3mz");
-    			add_location(div, file, 151, 4, 3921);
+    			add_location(div, file, 153, 4, 3992);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5404,14 +5402,14 @@
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(151:2) {#if $loading}",
+    		source: "(153:2) {#if $loading}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:2) {#if $products.length}
+    // (157:2) {#if $products.length}
     function create_if_block_2(ctx) {
     	let select;
     	let option0;
@@ -5434,18 +5432,18 @@
     			option3.textContent = "Preis absteigend";
     			option0.__value = "default";
     			option0.value = option0.__value;
-    			add_location(option0, file, 156, 6, 4075);
+    			add_location(option0, file, 158, 6, 4146);
     			option1.__value = "availability";
     			option1.value = option1.__value;
-    			add_location(option1, file, 157, 6, 4123);
+    			add_location(option1, file, 159, 6, 4194);
     			option2.__value = "price-ascending";
     			option2.value = option2.__value;
-    			add_location(option2, file, 158, 6, 4181);
+    			add_location(option2, file, 160, 6, 4252);
     			option3.__value = "price-descending";
     			option3.value = option3.__value;
-    			add_location(option3, file, 159, 6, 4246);
+    			add_location(option3, file, 161, 6, 4317);
     			if (/*$sort*/ ctx[5] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[19].call(select));
-    			add_location(select, file, 155, 4, 4018);
+    			add_location(select, file, 157, 4, 4089);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, select, anchor);
@@ -5480,14 +5478,14 @@
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(155:2) {#if $products.length}",
+    		source: "(157:2) {#if $products.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (173:2) {:else}
+    // (175:2) {:else}
     function create_else_block(ctx) {
     	let each_1_anchor;
     	let current;
@@ -5611,14 +5609,14 @@
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(173:2) {:else}",
+    		source: "(175:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (166:2) {#if $loading && shopCount < shopHandles.length && $products.length === 0}
+    // (168:2) {#if $loading && shopCount < shopHandles.length && $products.length === 0}
     function create_if_block(ctx) {
     	let each_1_anchor;
     	let each_value = Array(6);
@@ -5659,14 +5657,14 @@
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(166:2) {#if $loading && shopCount < shopHandles.length && $products.length === 0}",
+    		source: "(168:2) {#if $loading && shopCount < shopHandles.length && $products.length === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:4) {:else}
+    // (178:4) {:else}
     function create_else_block_1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -5739,14 +5737,14 @@
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(176:4) {:else}",
+    		source: "(178:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:6) {:else}
+    // (201:6) {:else}
     function create_else_block_2(ctx) {
     	let div;
     	let p;
@@ -5763,9 +5761,9 @@
     			t1 = text(/*query*/ ctx[1]);
     			t2 = text(" gefunden.");
     			t3 = space();
-    			add_location(p, file, 200, 10, 5528);
+    			add_location(p, file, 202, 10, 5599);
     			attr_dev(div, "class", "col");
-    			add_location(div, file, 199, 8, 5500);
+    			add_location(div, file, 201, 8, 5571);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5789,14 +5787,14 @@
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(199:6) {:else}",
+    		source: "(201:6) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:6) {#if defaultState || !query}
+    // (179:6) {#if defaultState || !query}
     function create_if_block_1(ctx) {
     	let div0;
     	let p0;
@@ -5914,17 +5912,17 @@
     			a.textContent = "Schreib uns über das Kontaktformular\n            ";
     			t10 = text(".");
     			t11 = space();
-    			add_location(p0, file, 178, 10, 4795);
+    			add_location(p0, file, 180, 10, 4866);
     			attr_dev(div0, "class", "col col-12");
-    			add_location(div0, file, 177, 8, 4760);
-    			add_location(h3, file, 186, 10, 5132);
+    			add_location(div0, file, 179, 8, 4831);
+    			add_location(h3, file, 188, 10, 5203);
     			attr_dev(div1, "class", "col col-12");
-    			add_location(div1, file, 185, 8, 5097);
+    			add_location(div1, file, 187, 8, 5168);
     			attr_dev(a, "href", "/contact");
-    			add_location(a, file, 191, 74, 5332);
-    			add_location(p1, file, 190, 10, 5254);
+    			add_location(a, file, 193, 74, 5403);
+    			add_location(p1, file, 192, 10, 5325);
     			attr_dev(div2, "class", "col col-12");
-    			add_location(div2, file, 189, 8, 5219);
+    			add_location(div2, file, 191, 8, 5290);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -6012,20 +6010,20 @@
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(177:6) {#if defaultState || !query}",
+    		source: "(179:6) {#if defaultState || !query}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:4) {#each $products as product}
+    // (176:4) {#each $products as product}
     function create_each_block_1(ctx) {
     	let productcard;
     	let current;
 
     	productcard = new ProductCard({
-    			props: { product: /*product*/ ctx[29] },
+    			props: { product: /*product*/ ctx[30] },
     			$$inline: true
     		});
 
@@ -6039,7 +6037,7 @@
     		},
     		p: function update(ctx, dirty) {
     			const productcard_changes = {};
-    			if (dirty[0] & /*$products*/ 16) productcard_changes.product = /*product*/ ctx[29];
+    			if (dirty[0] & /*$products*/ 16) productcard_changes.product = /*product*/ ctx[30];
     			productcard.$set(productcard_changes);
     		},
     		i: function intro(local) {
@@ -6060,14 +6058,14 @@
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(174:4) {#each $products as product}",
+    		source: "(176:4) {#each $products as product}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (167:4) {#each Array(6) as _}
+    // (169:4) {#each Array(6) as _}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
@@ -6083,11 +6081,11 @@
     			div1 = element("div");
     			t1 = space();
     			attr_dev(div0, "class", "skeleton-image svelte-1cs3mz");
-    			add_location(div0, file, 168, 8, 4528);
+    			add_location(div0, file, 170, 8, 4599);
     			attr_dev(div1, "class", "skeleton-text svelte-1cs3mz");
-    			add_location(div1, file, 169, 8, 4571);
+    			add_location(div1, file, 171, 8, 4642);
     			attr_dev(div2, "class", "skeleton col col-4 col-d-6 col-t-12 svelte-1cs3mz");
-    			add_location(div2, file, 167, 6, 4470);
+    			add_location(div2, file, 169, 6, 4541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -6106,7 +6104,7 @@
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(167:4) {#each Array(6) as _}",
+    		source: "(169:4) {#each Array(6) as _}",
     		ctx
     	});
 
@@ -6192,25 +6190,25 @@
     			if_block5.c();
     			attr_dev(label, "for", "js-product-input");
     			attr_dev(label, "class", "screen-reader-text");
-    			add_location(label, file, 108, 2, 2954);
+    			add_location(label, file, 110, 2, 3025);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "search__text");
     			attr_dev(input, "id", "js-product-input");
     			attr_dev(input, "placeholder", "Suche eine Scheibe …");
-    			add_location(input, file, 111, 2, 3050);
+    			add_location(input, file, 113, 2, 3121);
     			attr_dev(i, "class", "ion ion-md-search");
-    			add_location(i, file, 123, 4, 3312);
+    			add_location(i, file, 125, 4, 3383);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "button button--primary");
-    			add_location(button, file, 118, 2, 3193);
+    			add_location(button, file, 120, 2, 3264);
     			attr_dev(form, "class", "search__group svelte-1cs3mz");
-    			add_location(form, file, 98, 0, 2715);
+    			add_location(form, file, 100, 0, 2786);
     			attr_dev(h2, "class", "svelte-1cs3mz");
-    			add_location(h2, file, 128, 2, 3401);
+    			add_location(h2, file, 130, 2, 3472);
     			attr_dev(div0, "class", "products-headline svelte-1cs3mz");
-    			add_location(div0, file, 127, 0, 3367);
+    			add_location(div0, file, 129, 0, 3438);
     			attr_dev(div1, "class", "row animate");
-    			add_location(div1, file, 164, 0, 4335);
+    			add_location(div1, file, 166, 0, 4406);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6420,6 +6418,7 @@
     	component_subscribe($$self, sort, value => $$invalidate(5, $sort = value));
     	sort.subscribe(value => localStorage.sort = value);
     	let query = "";
+    	const API_URL = "//localhost:1337";
 
     	const clearProducts = () => {
     		$$invalidate(1, query = "");
@@ -6447,7 +6446,7 @@
 
     		for (const shop of shopHandles) {
     			loading.set(shop);
-    			const productResponse = await fetchProducts(query, shop);
+    			const productResponse = await fetchProducts(API_URL, query, shop);
     			products.update(currentProducts => [...currentProducts, ...productResponse]);
     			$$invalidate(0, shopCount++, shopCount);
     			initialProducts.push(...productResponse);
@@ -6526,6 +6525,7 @@
     		stored,
     		sort,
     		query,
+    		API_URL,
     		clearProducts,
     		getProducts,
     		handleSort,

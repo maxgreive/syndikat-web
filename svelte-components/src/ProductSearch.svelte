@@ -8,6 +8,8 @@
   import ProductCard from "./ProductCard.svelte";
   import { shops } from "./shops.js";
 
+  console.log(process.env);
+
   const activeShops = shops.filter((shop) => !shop.disabled);
   const shopHandles = activeShops.map((shop) => shop.handle);
   const products = writable([]);

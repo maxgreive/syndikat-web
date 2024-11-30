@@ -40,12 +40,7 @@
 <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
     <div class="article__head">
-      <a
-        href={product.url}
-        target="_blank"
-        class="article__image"
-        on:click={trackProduct(product)}
-      >
+      <div class="article__image">
         {#if product.flightNumbers}
           <ul class="article__flight-numbers">
             {#each Object.values(product.flightNumbers) as flightNumber}
@@ -62,7 +57,7 @@
           width="200"
           height="200"
         />
-      </a>
+      </div>
       {#if shop && shop.shipping && shop.shipping.amount}
         <span
           class="tooltip"
@@ -105,6 +100,7 @@
   .article__image {
     padding-bottom: 100%;
     background: none;
+    border: 0 !important;
   }
 
   .article__flight-numbers {
@@ -148,10 +144,6 @@
     content: "•";
     opacity: 0.3;
     margin-right: 7px;
-  }
-
-  a.article__image {
-    border: 0 !important;
   }
 
   .article__title a {

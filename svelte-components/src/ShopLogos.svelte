@@ -8,7 +8,13 @@
       <div class="supported-shop">
         <a href={shop.url}
           ><img
-            src={`/assets/images/logos/${shop.logo}`}
+            src={`/assets/images/logos/${shop.handle}-light.png`}
+            class="hide-dark"
+            alt={`${shop.name} Logo`}
+          />
+          <img
+            src={`/assets/images/logos/${shop.handle}-dark.png`}
+            class="hide-light"
             alt={`${shop.name} Logo`}
           /></a
         >

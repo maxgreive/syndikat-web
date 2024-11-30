@@ -2505,6 +2505,7 @@ table td {
   border: 0;
   padding: 0;
   font-weight: 500;
+  color: var(--link-color);
   cursor: pointer;
   border-bottom: 1px solid var(--border-color);
 }

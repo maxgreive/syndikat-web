@@ -209,7 +209,6 @@
   form {
     display: flex;
     gap: 1rem;
-    align-items: center;
     margin-top: 2rem;
   }
 

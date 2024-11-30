@@ -2,7 +2,7 @@
   import { shops } from "./shops";
   import { onMount } from "svelte";
 
-  onMount(async () => {
+  onMount(() => {
     tippy(".tooltip", {});
   });
 

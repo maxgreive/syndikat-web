@@ -3272,7 +3272,7 @@
 
     var visitedMessages;
 
-    if (process.env.NODE_ENV !== "production") {
+    {
       resetVisitedMessages();
     }
 
@@ -3361,7 +3361,7 @@
     var defaultKeys = Object.keys(defaultProps);
     var setDefaultProps = function setDefaultProps(partialProps) {
       /* istanbul ignore else */
-      if (process.env.NODE_ENV !== "production") {
+      {
         validateProps(partialProps, []);
       }
 
@@ -3637,7 +3637,7 @@
       /* istanbul ignore if */
 
       if (!props.render) {
-        if (process.env.NODE_ENV !== "production") {
+        {
           errorWhen(true, 'render() function has not been supplied.');
         }
 
@@ -4188,7 +4188,7 @@
         createPopperInstance();
         /* istanbul ignore else */
 
-        if (process.env.NODE_ENV !== "production") {
+        {
           // Accessibility check
           warnWhen(instance.props.interactive && appendTo === defaultProps.appendTo && node.nextElementSibling !== popper, ['Interactive tippy element may not be accessible via keyboard', 'navigation because it is not directly after the reference element', 'in the DOM source order.', '\n\n', 'Using a wrapper <div> or <span> tag around the reference element', 'solves this by creating a new parentNode context.', '\n\n', 'Specifying `appendTo: document.body` silences this warning, but it', 'assumes you are using a focus management solution to handle', 'keyboard navigation.', '\n\n', 'See: https://atomiks.github.io/tippyjs/v6/accessibility/#interactivity'].join(' '));
         }
@@ -4281,7 +4281,7 @@
 
       function setProps(partialProps) {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('setProps'));
         }
 
@@ -4343,7 +4343,7 @@
 
       function show() {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('show'));
         } // Early bail-out
 
@@ -4436,7 +4436,7 @@
 
       function hide() {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('hide'));
         } // Early bail-out
 
@@ -4494,7 +4494,7 @@
 
       function hideWithInteractivity(event) {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('hideWithInteractivity'));
         }
 
@@ -4505,7 +4505,7 @@
 
       function unmount() {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('unmount'));
         }
 
@@ -4538,7 +4538,7 @@
 
       function destroy() {
         /* istanbul ignore else */
-        if (process.env.NODE_ENV !== "production") {
+        {
           warnWhen(instance.state.isDestroyed, createMemoryLeakWarning('destroy'));
         }
 
@@ -4563,7 +4563,7 @@
       var plugins = defaultProps.plugins.concat(optionalProps.plugins || []);
       /* istanbul ignore else */
 
-      if (process.env.NODE_ENV !== "production") {
+      {
         validateTargets(targets);
         validateProps(optionalProps, plugins);
       }
@@ -4575,7 +4575,7 @@
       var elements = getArrayOfElements(targets);
       /* istanbul ignore else */
 
-      if (process.env.NODE_ENV !== "production") {
+      {
         var isSingleContentElement = isElement(passedProps.content);
         var isMoreThanOneReferenceElement = elements.length > 1;
         warnWhen(isSingleContentElement && isMoreThanOneReferenceElement, ['tippy() was passed an Element as the `content` prop, but more than', 'one tippy instance was created by this invocation. This means the', 'content element will only be appended to the last tippy instance.', '\n\n', 'Instead, pass the .innerHTML of the element, or use a function that', 'returns a cloned version of the element instead.', '\n\n', '1) content: element.innerHTML\n', '2) content: () => element.cloneNode(true)'].join(' '));

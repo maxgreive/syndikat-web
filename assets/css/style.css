@@ -4017,6 +4017,11 @@ table td {
   color: var(--text-color)
 }
 
+.post-full-width,
+.page-full-width {
+  max-width: 1149px;
+}
+
 .post a:not(.button):not([role="button"]),
 .page a:not(.button):not([role="button"]) {
   font-weight: 500;

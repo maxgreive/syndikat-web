@@ -4800,6 +4800,18 @@ table td {
   }
 }
 
+
+[data-training-list] .button--text {
+  margin-left: 1rem;
+  padding: .5rem;
+  transition: opacity 200ms ease-in-out;
+  opacity: 0;
+}
+
+[data-training-list] li:hover .button--text {
+  opacity: 1;
+}
+
 [data-training-form] {
   display: flex;
   flex-wrap: wrap;

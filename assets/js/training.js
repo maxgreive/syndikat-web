@@ -40,15 +40,45 @@ async function loadParticipants() {
 
   document.querySelector('[data-no-participants]')?.remove();
 
-  return participants.forEach(participant => {
-    list.insertAdjacentHTML('beforeend', `
-      <li>${participant.name}</li>
-    `);
+  participants.forEach(participant => {
+    const hasLocalStorage = JSON.parse(window.localStorage.getItem('training-signup'))?.name === participant.name;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = participant.name;
+
+    if (hasLocalStorage) {
+      const deleteButton = document.createElement('button');
+      deleteButton.setAttribute('class', 'button button--text')
+      deleteButton.innerHTML = '<i class="ion ion-md-trash"></i>';
+      deleteButton.addEventListener('click', async () => {
+        await handleDelete(participant.name);
+      });
+      listItem.appendChild(deleteButton);
+    }
+
+    list.appendChild(listItem);
   });
 }
 
 function updateHeadline(date) {
   document.querySelector('[data-next-date]').textContent = new Date(date).toLocaleDateString('de-DE');
+}
+
+function setRemovalToken(name, date) {
+  window.localStorage.setItem('training-signup', JSON.stringify({ name, date }))
+}
+
+async function handleDelete(name) {
+  const nextDate = getNextDate();
+  const { error } = await supabase.from('participants').delete().eq('name', name).eq('date', nextDate);
+
+  if (error) {
+    console.error(`Failed to delete participant ${name} for date ${nextDate}:`, error);
+    return;
+  }
+
+  console.log(`Successfully deleted participant ${name} for date ${nextDate}`);
+  loadParticipants();
 }
 
 async function sendData(form) {
@@ -59,14 +89,17 @@ async function sendData(form) {
   const name = formData.get('name');
   const date = getNextDate();
 
-  const { data, error } = await supabase.from("participants").insert([{ name, date }]);
+  const { error } = await supabase.from("participants").insert([{ name, date }]);
   if (error) {
     alert("Error signing up: " + error.message);
-  } else {
-    alert("Du hast dich erfolgreich angemeldet.");
-    form.reset(); // Reset form after submission
-    loadParticipants(); // Reload participant list
+    return;
   }
+
+  alert("Du hast dich erfolgreich angemeldet.");
+  form.reset(); // Reset form after submission
+  loadParticipants(); // Reload participant list
+  setRemovalToken(name, date);
+  return;
 }
 
 function initializeForm() {
@@ -82,4 +115,3 @@ function initializeForm() {
 loadParticipants();
 updateHeadline(getNextDate());
 initializeForm();
-

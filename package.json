@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "npm run build --prefix svelte-components && bundle exec jekyll build",
-    "dev": "npm run --prefix svelte-components dev &&  exec jekyll serve",
+    "dev": "bundle exec jekyll serve",
+    "dev:svelte": "npm run --prefix svelte-components dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },

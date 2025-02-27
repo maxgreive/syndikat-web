@@ -28,6 +28,10 @@ Kommt vorbei, bringt gute Laune mit und lasst uns gemeinsam die Discgolf-Saison 
 
 Wir freuen uns auf euch!
 
+## Vereinsfahrt nach Bad Fredeburg
+
+Am Sonntag, den 30.03. fahren wir gemeinsam nach Bad Fredeburg. Wir treffen uns um 11 Uhr [vor Ort auf dem Parkplatz](https://maps.app.goo.gl/Rxdu7FFoBtCpegex7). Alle Discgolfbegeisterten sind herzlich eingeladen. Hier wollen wir die 2025er Saison einläuten, entspannt ein paar Runden spielen und einen hoffentlich lauen Frühlingstag genießen.
+
 ## Weitere Events
 
 Schick uns gern eine [Email an birdie@sydikat.golf](mailto:birdie@syndikat.golf) mit einem Hinweis auf ein Event, das hier veröffentlicht werden sollte.

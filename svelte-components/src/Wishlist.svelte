@@ -24,33 +24,46 @@
       <i class="ion ion-md-close"></i>
     </button>
   </header>
-  {#if $wishlist.length === 0}
-    <p>Deine Wunschliste ist leer.</p>
-  {:else}
-    <ul>
-      {#each $wishlist as product}
-        <li>
-          <a href={product.url} target="_blank"><img src={product.image} alt={product.title} /></a>
-          <a href={product.url} target="_blank" class="product__content">
-            <h4>{product.title}</h4>
-            <img
-              src={`/assets/images/logos/${product.store}-light.png`}
-              class="store-logo hide-dark"
-              alt="Store Logo"
-            />
-            <img
-              src={`/assets/images/logos/${product.store}-dark.png`}
-              class="store-logo hide-light"
-              alt="Store Logo"
-            />
-          </a>
-        </li>
-      {/each}
-    </ul>
-  {/if}
-  <button on:click={() => ($wishlist = [])} class="button--clear">
-    <i class="ion ion-md-trash"></i> Wunschliste leeren
-  </button>
+  <section>
+    {#if $wishlist.length === 0}
+      <p>Deine Wunschliste ist leer.</p>
+    {:else}
+      <ul>
+        {#each $wishlist as product}
+          <li>
+            <a href={product.url} target="_blank"
+              ><img src={product.image} alt={product.title} /></a
+            >
+            <a href={product.url} target="_blank" class="product__content">
+              <h4>{product.title}</h4>
+              <img
+                src={`/assets/images/logos/${product.store}-light.png`}
+                class="store-logo hide-dark"
+                alt="Store Logo"
+              />
+              <img
+                src={`/assets/images/logos/${product.store}-dark.png`}
+                class="store-logo hide-light"
+                alt="Store Logo"
+              />
+            </a>
+            <button
+              on:click={() =>
+                ($wishlist = $wishlist.filter((p) => p !== product))}
+              class="button--remove"
+            >
+              <i class="ion ion-md-trash"></i>
+            </button>
+          </li>
+        {/each}
+      </ul>
+    {/if}
+  </section>
+  <footer>
+    <button on:click={() => ($wishlist = [])} class="button--clear">
+      <i class="ion ion-md-trash"></i> Wunschliste leeren
+    </button>
+  </footer>
 </aside>
 
 <style>
@@ -66,7 +79,6 @@
     background-color: var(--background-alt-color);
     transform: translateX(100%);
     z-index: 1;
-    padding: 1rem;
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2);
 
     transition: transform 0.3s ease-in-out;
@@ -76,12 +88,27 @@
     transform: translateX(0);
   }
 
+  header,
+  section,
+  footer {
+    padding: 0 1rem;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     position: relative;
+  }
+
+  section {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  footer {
+    margin: 1rem 0;
   }
 
   h3,
@@ -89,18 +116,25 @@
     margin-bottom: 0;
   }
 
+  h4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+
   ul {
     list-style: none;
     margin: 0;
-    flex: 1;
-    overflow-y: auto;
   }
 
   li {
+    position: relative;
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
     background-color: var(--background-color);
   }
 
@@ -116,7 +150,7 @@
   }
 
   a {
-    border: 0!important;
+    border: 0 !important;
   }
 
   a:hover {
@@ -133,7 +167,7 @@
 
   .search__close {
     border: 0;
-    right: 0;
+    right: 1rem;
     padding: 0;
   }
 
@@ -153,6 +187,18 @@
       top: 75vh;
       padding: 1rem;
     }
+  }
+
+  .button--remove {
+    color: var(--text-alt-color);
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    padding: 1rem;
+    top: 0;
+    right: 0;
   }
 
   .button--clear {

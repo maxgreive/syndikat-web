@@ -119,7 +119,7 @@
           content: `Zur Wunschliste hinzufügen`,
           placement: "left",
           offset: [0, 0],
-          trigger: "mouseenter"
+          zIndex: 1
         }}
       >
         <i class={`ion ion-md-heart${isWishlisted ? "" : "-empty"}`}></i>
@@ -131,6 +131,7 @@
             content: `Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`,
             placement: "left",
             offset: [0, 0],
+            zIndex: 1
           }}
         >
           <i class="ion ion-md-information-circle-outline"></i>

@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: column;
     width: 400px;
+    max-width: 100%;
     position: fixed;
     top: 0;
     right: 0;
@@ -92,6 +93,7 @@
     list-style: none;
     margin: 0;
     flex: 1;
+    overflow-y: auto;
   }
 
   li {
@@ -141,6 +143,13 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    button.wishlist {
+      top: 75%;
+      padding: 1rem;
+    }
   }
 
   .button--clear {

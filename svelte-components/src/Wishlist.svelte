@@ -1,10 +1,19 @@
 <script>
   export let wishlist;
+  const overlay = document.querySelector(".overlay");
 
   const toggleAside = () => {
     const aside = document.querySelector("aside");
     const ariaHidden = aside.getAttribute("aria-hidden") === "true";
     aside.setAttribute("aria-hidden", !ariaHidden);
+    document.body.classList.toggle("no-scroll");
+    if (ariaHidden) {
+      overlay.classList.remove("hide");
+      overlay.addEventListener("click", toggleAside);
+    } else {
+      overlay.classList.add("hide");
+      overlay.removeEventListener("click", toggleAside);
+    }
   };
 </script>
 
@@ -78,7 +87,7 @@
     bottom: 0;
     background-color: var(--background-alt-color);
     transform: translateX(100%);
-    z-index: 1;
+    z-index: 10;
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2);
 
     transition: transform 0.3s ease-in-out;
@@ -177,7 +186,7 @@
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }

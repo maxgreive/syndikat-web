@@ -4,18 +4,19 @@
 
   const toggleAside = () => {
     const aside = document.querySelector("[data-wishlist]");
-    const open = aside.getAttribute("aria-hidden") === "true";
+    const open = aside.getAttribute("aria-hidden") === "false";
     document.body.classList.toggle("no-scroll");
-    if (open) {
+
+    if (!open) {
       aside.setAttribute("aria-hidden", "false");
       overlay.classList.remove("hide");
-      overlay.addEventListener("click", toggleAside);
     } else {
       aside.setAttribute("aria-hidden", "true");
       overlay.classList.add("hide");
-      overlay.removeEventListener("click", toggleAside);
     }
   };
+
+  overlay.addEventListener("click", toggleAside);
 </script>
 
 <button

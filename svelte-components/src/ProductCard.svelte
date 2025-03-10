@@ -21,12 +21,10 @@
       wishlist.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
       overlay.classList.remove("hide");
-      overlay.addEventListener("click", () => openWishlist(false));
     } else {
       wishlist.setAttribute("aria-hidden", "true");
       document.body.classList.remove("no-scroll");
       overlay.classList.add("hide");
-      overlay.removeEventListener("click", openWishlist);
     }
   };
 

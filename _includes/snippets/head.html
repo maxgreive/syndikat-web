@@ -1,8 +1,8 @@
 {%- capture sharing_image -%}
 {%- if page.image -%}
-{{- page.image -}}
+{{- page.image | absolute_url -}}
 {%- elsif page.sharing_image -%}
-{{- page.sharing_image -}}
+{{- page.sharing_image | absolute_url -}}
 {%- else -%}
 {{- site.sharing_image | absolute_url -}}
 {%- endif -%}

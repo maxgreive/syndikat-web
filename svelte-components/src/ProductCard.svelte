@@ -14,6 +14,22 @@
     };
   }
 
+  const openWishlist = (open = true) => {
+    const wishlist = document.querySelector("[data-wishlist]");
+    const overlay = document.querySelector(".overlay");
+    if (open) {
+      wishlist.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+      overlay.classList.remove("hide");
+      overlay.addEventListener("click", () => openWishlist(false));
+    } else {
+      wishlist.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+      overlay.classList.add("hide");
+      overlay.removeEventListener("click", openWishlist);
+    }
+  };
+
   export let product;
   export let wishlist;
 
@@ -67,7 +83,8 @@
           (wishlistProduct) => !wishlistProduct.url.includes(cleanProductUrl),
         );
       } else {
-        return [...items, product];
+        openWishlist();
+        return [product, ...items];
       }
     });
   };
@@ -96,7 +113,7 @@
       </div>
 
       <button
-        class="tooltip"
+        class="tooltip tooltip--wishlist"
         on:click={toggleWishlist}
         use:tooltip={{
           content: `Zur Wunschliste hinzufügen`,
@@ -261,7 +278,11 @@
     margin: 0;
   }
 
-  .tooltip + .tooltip {
-    margin-top: 2rem;
+    .tooltip + .tooltip {
+      margin-top: 2rem;
+    }
+
+  .tooltip--wishlist {
+    cursor: pointer;
   }
 </style>

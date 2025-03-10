@@ -3,14 +3,15 @@
   const overlay = document.querySelector(".overlay");
 
   const toggleAside = () => {
-    const aside = document.querySelector("aside");
-    const ariaHidden = aside.getAttribute("aria-hidden") === "true";
-    aside.setAttribute("aria-hidden", !ariaHidden);
+    const aside = document.querySelector("[data-wishlist]");
+    const open = aside.getAttribute("aria-hidden") === "true";
     document.body.classList.toggle("no-scroll");
-    if (ariaHidden) {
+    if (open) {
+      aside.setAttribute("aria-hidden", "false");
       overlay.classList.remove("hide");
       overlay.addEventListener("click", toggleAside);
     } else {
+      aside.setAttribute("aria-hidden", "true");
       overlay.classList.add("hide");
       overlay.removeEventListener("click", toggleAside);
     }
@@ -23,10 +24,10 @@
   class="button button--primary wishlist"
 >
   <i class="ion ion-md-heart"></i>
-  <span>{$wishlist.length}</span>
+  <span>{$wishlist?.length || 0}</span>
 </button>
 
-<aside aria-hidden="true">
+<aside data-wishlist aria-hidden={true}>
   <header class="search__group">
     <h3>Wunschliste</h3>
     <button on:click={toggleAside} class="search__close">

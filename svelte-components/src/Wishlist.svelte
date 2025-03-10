@@ -138,7 +138,7 @@
 
   button.wishlist {
     position: fixed;
-    top: 50%;
+    top: 50dvh;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
@@ -147,7 +147,7 @@
 
   @media screen and (max-width: 768px) {
     button.wishlist {
-      top: 75%;
+      top: 75dvh;
       padding: 1rem;
     }
   }

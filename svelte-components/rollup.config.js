@@ -36,8 +36,12 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: '../assets/svelte-bundle.js'
+		file: '../assets/svelte-bundle.js',
+		globals: {
+			'tippy.js': 'tippy'
+		}
 	},
+	external: ['tippy.js'],
 	plugins: [
 		svelte({
 			compilerOptions: {

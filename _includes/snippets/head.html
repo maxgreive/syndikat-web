@@ -63,6 +63,20 @@
     imagesrcset="/assets/images/hero_w_200.jpg 200w, /assets/images/hero_w_470.jpg 470w, /assets/images/hero_w_762.jpg 762w, /assets/images/hero_w_1020.jpg 1020w, /assets/images/hero_w_1136.jpg 1136w, /assets/images/hero_w_1200.jpg 1200w"
     imagesizes="(max-width: 576px) 470px, (max-width: 768px) 560px, (max-width: 1024px) 740px, 600px" as="image"
     type="image/jpg">
+  {% elsif page.layout == 'product-search' %}
+  <style>
+    aside {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      bottom: 0;
+    }
+
+    .button.wishlist {
+      position: fixed;
+      right: 0;
+    }
+  </style>
   {% endif %}
   <link href="/assets/fonts/Jost.css" rel="stylesheet">
   <link href="/assets/css/ionicons.min.css" rel="stylesheet">

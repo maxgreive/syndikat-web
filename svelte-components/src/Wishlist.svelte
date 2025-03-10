@@ -1,9 +1,9 @@
 <script>
   export let wishlist;
   const overlay = document.querySelector(".overlay");
+  const aside = document.querySelector("[data-wishlist]");
 
   const toggleAside = () => {
-    const aside = document.querySelector("[data-wishlist]");
     const open = aside.getAttribute("aria-hidden") === "false";
     document.body.classList.toggle("no-scroll");
 
@@ -79,24 +79,22 @@
 
 <style>
   aside {
-    display: flex;
     flex-direction: column;
     width: 400px;
     max-width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -400px;
     bottom: 0;
     background-color: var(--background-alt-color);
-    transform: translateX(100%);
     z-index: 10;
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2);
 
-    transition: transform 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
   }
 
   aside:not([aria-hidden="true"]) {
-    transform: translateX(0);
+    right: 0;
   }
 
   header,

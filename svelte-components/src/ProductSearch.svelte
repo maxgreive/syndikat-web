@@ -6,6 +6,7 @@
   import SearchExample from "./SearchExample.svelte";
   import ShopLogos from "./ShopLogos.svelte";
   import ProductCard from "./ProductCard.svelte";
+  import Wishlist from "./Wishlist.svelte";
   import { shops } from "./shops.js";
 
   const activeShops = shops.filter((shop) => !shop.disabled);
@@ -19,6 +20,9 @@
   const stored = localStorage.sort;
   const sort = writable(stored || "default");
   sort.subscribe((value) => (localStorage.sort = value));
+
+  const wishlist = writable(JSON.parse(localStorage.wishlist || "[]"));
+  wishlist.subscribe((products) => localStorage.wishlist = JSON.stringify(products));
 
   let query = "";
   $: query = query.toLowerCase();
@@ -96,6 +100,8 @@
   });
 </script>
 
+<Wishlist {wishlist} />
+
 <form class="search__group">
   {#if query && !$loading}
     <div
@@ -172,7 +178,7 @@
     {/each}
   {:else}
     {#each $products as product}
-      <ProductCard {product} />
+      <ProductCard {product} {wishlist} />
     {:else}
       {#if defaultState || !query}
         <div class="col col-12">

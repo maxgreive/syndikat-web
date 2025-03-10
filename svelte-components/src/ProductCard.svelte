@@ -15,6 +15,18 @@
   }
 
   export let product;
+  export let wishlist;
+
+  const productUrl = new URL(product.url);
+  const cleanProductUrl = productUrl.origin + productUrl.pathname;
+  let isWishlisted = false;
+
+  wishlist.subscribe((products) => {
+    isWishlisted = products.some((wishlistProduct) =>
+      wishlistProduct.url.includes(cleanProductUrl)
+    );
+  });
+
   const shop = shops.find((shop) => shop.handle === product.store);
   const stockStatusLabels = {
     available: "Auf Lager",
@@ -43,6 +55,22 @@
       },
     });
   };
+
+  const toggleWishlist = (e) => {
+    const icon = e.target.closest(".ion");
+    icon.classList.toggle("ion-md-heart");
+    icon.classList.toggle("ion-md-heart-empty");
+
+    wishlist.update((items) => {
+      if (isWishlisted) {
+        return items.filter(
+          (wishlistProduct) => !wishlistProduct.url.includes(cleanProductUrl),
+        );
+      } else {
+        return [...items, product];
+      }
+    });
+  };
 </script>
 
 <div class="article col col-4 col-d-6 col-t-12">
@@ -66,21 +94,37 @@
           height="200"
         />
       </div>
+
+      <button
+        class="tooltip"
+        on:click={toggleWishlist}
+        use:tooltip={{
+          content: `Zur Wunschliste hinzufügen`,
+          placement: "left",
+          offset: [0, 0],
+        }}
+      >
+        <i class={`ion ion-md-heart${isWishlisted ? "" : "-empty"}`}></i>
+      </button>
       {#if shop && shop.shipping && shop.shipping.amount}
         <span
           class="tooltip"
           use:tooltip={{
             content: `Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`,
             placement: "left",
-            offset: [0, -4],
-          }}><i class="ion ion-md-information-circle-outline"></i></span
+            offset: [0, 0],
+          }}
         >
+          <i class="ion ion-md-information-circle-outline"></i>
+        </span>
       {/if}
     </div>
     <div class="article__content">
       <h2 class="article__title">
-        <a href={product.url} target="_blank" on:click={trackProduct(product)}
-          >{product.title}</a
+        <a
+          href={cleanProductUrl}
+          target="_blank"
+          on:click={trackProduct(product)}>{product.title}</a
         >
       </h2>
       <p>
@@ -135,6 +179,10 @@
       var(--background-alt-color),
       var(--background-color)
     );
+  }
+
+  .article__flight-numbers:empty {
+    display: none;
   }
 
   .article__flight-numbers li {
@@ -205,8 +253,15 @@
   .tooltip {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -1rem;
     color: var(--gray);
-    padding: 1rem;
+    padding: 0 1rem;
+    background: none;
+    border: none;
+    margin: 0;
+  }
+
+  .tooltip + .tooltip {
+    margin-top: 2rem;
   }
 </style>

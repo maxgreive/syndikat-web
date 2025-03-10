@@ -2802,7 +2802,7 @@ table td {
 }
 
 .hide-dark {
-  display: inline-block;
+  display: block;
 }
 
 [dark] .hide-light {

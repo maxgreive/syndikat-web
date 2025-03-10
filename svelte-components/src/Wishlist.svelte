@@ -1,9 +1,9 @@
 <script>
   export let wishlist;
   const overlay = document.querySelector(".overlay");
-  const aside = document.querySelector("[data-wishlist]");
 
   const toggleAside = () => {
+    const aside = document.querySelector("[data-wishlist]");
     const open = aside.getAttribute("aria-hidden") === "false";
     document.body.classList.toggle("no-scroll");
 

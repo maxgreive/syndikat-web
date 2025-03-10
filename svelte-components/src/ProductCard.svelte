@@ -119,6 +119,7 @@
           content: `Zur Wunschliste hinzufügen`,
           placement: "left",
           offset: [0, 0],
+          trigger: "mouseenter"
         }}
       >
         <i class={`ion ion-md-heart${isWishlisted ? "" : "-empty"}`}></i>

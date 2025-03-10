@@ -134,6 +134,7 @@
   .search__close {
     border: 0;
     right: 0;
+    padding: 0;
   }
 
   button.wishlist {
@@ -143,6 +144,8 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @media screen and (max-width: 768px) {

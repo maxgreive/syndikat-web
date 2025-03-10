@@ -79,6 +79,7 @@
 
 <style>
   aside {
+    display: flex;
     flex-direction: column;
     width: 400px;
     max-width: 100%;

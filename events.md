@@ -9,9 +9,24 @@ Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine Run
 
 > Jeden Sonntag, 13:00 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) – [Event auf UDisc.com](https://udisc.com/leagues/syndication-weekly)
 
-## Herbstfest 2024
+## Frühlingsfest 2025
 
-Am Samstag, den 26.10. findet das gemeinsame Herbstfest unseres Vereins ab 14 Uhr [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) statt. Alle Discgolfbegeisterten sind herzlich eingeladen. Hier wollen wir die Saison beenden, entspannt ein paar Runden spielen und den hoffentlich lauen Herbsttag genießen.
+Der Frühling steht vor der Tür, und das möchten wir mit Euch feiern! Am 6. April laden wir euch herzlich zu unserem Frühlingsfest ein. Freut euch auf einen entspannten Tag voller Discgolf, Austausch und guter Laune.
+
+### Was erwartet euch?
+
+* **Marktplatz für alte Scheiben**: Bringt eure ungenutzten Discs mit – tauscht oder verkauft sie an andere Spieler!
+* Modifizierte **Discgolf-Runde**: Lasst euch überraschen, welche neuen Herausforderungen euch erwarten.
+* **Ace Pool**: Für nur 1 € Einsatz könnt ihr am Ace Pool teilnehmen!
+* Zusätzliche **Puttingstation**: Testet eure Präzision und verbessert euer Putting-Game.
+
+### Wichtig zu wissen:
+
+So wie beim Herbstfest würden wir euch bitten etwas leckeres zu essen mitzubringen.  Getränke werden gestellt, aber wir freuen uns über eine kleine Spende in die Spendenbox.
+
+Kommt vorbei, bringt gute Laune mit und lasst uns gemeinsam die Discgolf-Saison begrüßen!
+
+Wir freuen uns auf euch!
 
 ## Weitere Events
 

@@ -29,7 +29,8 @@
   .supported-shops {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
   }
 

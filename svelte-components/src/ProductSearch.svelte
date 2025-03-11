@@ -28,10 +28,13 @@
   $: query = query.toLowerCase();
   $: progress = parseInt((shopCount / shopHandles.length) * 100);
 
+  let searchInputElement;
+
   const clearProducts = () => {
     query = "";
     push("/");
     $products = [];
+    searchInputElement.focus();
   };
 
   const getProducts = async () => {
@@ -94,7 +97,8 @@
   }
 
   onMount(async () => {
-    document.querySelector("#js-product-input").focus();
+    searchInputElement = document.querySelector("#js-product-input");
+    searchInputElement.focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
   });
@@ -131,7 +135,7 @@
   </button>
 </form>
 
-<div class="products-headline">
+<div class="products-headline animate">
   <h2>
     {#if $loading || $products.length}
       Produkte

@@ -10,11 +10,15 @@
           src={`/assets/images/logos/${shop.handle}-light.png`}
           class="hide-dark"
           alt={`${shop.name} Logo`}
+          width="100"
+          height="32"
         />
         <img
           src={`/assets/images/logos/${shop.handle}-dark.png`}
           class="hide-light"
           alt={`${shop.name} Logo`}
+          width="100"
+          height="32"
         /></a
       >
     </div>
@@ -25,9 +29,7 @@
   .supported-shops {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: nowrap;
     margin-bottom: 2rem;
   }
 
@@ -52,7 +54,8 @@
 
   .supported-shop img {
     border-radius: 0;
-    max-height: 32px;
-    max-width: 100px;
+    height: 32px;
+    width: 100px;
+    object-fit: contain;
   }
 </style>

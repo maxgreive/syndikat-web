@@ -18,33 +18,33 @@ In unserem Club kämpfen viele Spieler damit, die Konzentration zu halten, Fehle
 
 ## Häufige mentale Herausforderungen für Anfänger und fortgeschrittene Spieler
 
-1. **Fokus über die gesamte Runde halten**
+### 1. Fokus über die gesamte Runde halten
 
 Die Konzentration über eine ganze Runde oder gar einen ganzen Turniertag zu halten, ist keine leichte Aufgabe. Es gibt unzählige Ablenkungen: andere Spieler, Wetterbedingungen, Deine Gedanken über den letzten Wurf oder Sorgen über die kommenden Löcher. Selbst ein kurzer Moment der Unaufmerksamkeit kann Deine Leistung beeinträchtigen und zu inkonsistentem Spiel führen.
 
-2. **Mit schlechten Würfen umgehen**
+### 2. Mit schlechten Würfen umgehen
 
 Wir alle kennen es – ein schlechter Wurf, der uns frustriert und über das Geschehene grübeln lässt. Das Problem, sich auf Fehler zu fixieren, ist, dass es nicht nur den nächsten Wurf, sondern auch Dein gesamtes Selbstvertrauen und den Spaß am Spiel beeinträchtigt. Ein einziger schlechter Wurf kann eine Kette schlechter Entscheidungen auslösen, wenn Du Deine Gedanken nicht im Griff hast.
 
-3. **Fehlende leistungsorientierte Einstellung**
+### 3. Fehlende leistungsorientierte Einstellung
 
 Viele Spieler konzentrieren sich zu sehr auf ihre Ergebnisse oder Platzierungen, was Druck und Frustration erzeugt, besonders wenn es gerade mal nicht nach Plan läuft. Dieser Fokus auf Ergebnisse anstatt auf den Prozess, jeden Wurf einzeln zu spielen, führt oft zu Anspannung und Unbeständigkeit. Natürlich kommt es sehr stark darauf an, an der Form, dem Wurf und der Wurfauswahl zu arbeiten. Nur wenn man weiß, dass man den gerade an einer Bahn benötigten Wurf "in petto" hat, kann man sich selbstbewusst darauf fokussieren diesen auch abzurufen.
 
 ## Strategien für die mentale Stärke
 
-1. **Akzeptiere die “Es-ist-mir-egal”-Einstellung**
+### 1. Akzeptiere die “Es-ist-mir-egal”-Einstellung
 
 Ironischerweise ist einer der besten Wege, Dein Spiel zu verbessern, weniger auf das Ergebnis zu achten. Wenn Du nicht zu viel Gewicht auf jeden Wurf legst, spielst Du freier und natürlicher. Diese Einstellung hilft, den Druck zu verringern und Dir zu erlauben, ohne Angst zu spielen. Denke daran: Discgolf sollte vor allem Spaß machen – lass Dich nicht von der Angst vor Ergebnissen davon abhalten. Löse dich vom Score der Runde und sieh dir die Wertungen erst nach den beendeten 18 Bahnen an.
 
-2. **Bleib im Moment und konzentriere Dich auf jeden Wurf**
+### 2. Bleib im Moment und konzentriere Dich auf jeden Wurf
 
 Anstatt Dir Sorgen über den letzten Wurf zu machen oder fünf Löcher im Voraus zu planen, versuche, im Moment zu bleiben. Konzentriere Dich darauf, den Wurf, der direkt vor Dir liegt, bestmöglich auszuführen. Atme tief durch, bevor Du wirfst, etabliere eine konstante Pre-Shot-Routine, und sieh jeden Wurf als eigene Herausforderung an. So kannst Du Ablenkungen ausblenden und mental über die gesamte Runde hinweg engagiert bleiben.
 
-3. **Fehler als Chancen neu definieren**
+### 3. Fehler als Chancen neu definieren
 
 Jeder macht Fehler – sogar die Profis. Anstatt Dich wegen eines schlechten Wurfs selbst zu kritisieren, sieh ihn als Lernmöglichkeit. Frag Dich, was Du aus dem Fehler lernen kannst und wie Du Dich für den nächsten Wurf anpassen kannst. Diese Einstellung hilft Dir, positiv zu bleiben und Frustration zu reduzieren.
 
-4. **Entwickle einen positiven inneren Dialog**
+### 4. Entwickle einen positiven inneren Dialog
 
 Achte darauf, wie Du mit Dir selbst auf dem Platz sprichst. Negative Selbstgespräche wie „Ich verfehle diesen Wurf immer“ oder „Ich bin schlecht im Putten“ können eine sich selbst erfüllende Prophezeiung schaffen. Ersetze diese Gedanken durch konstruktive oder neutrale Beobachtungen. Konzentriere Dich zum Beispiel auf das, was Du kontrollieren kannst: „Ich werde meinen Arm entspannt halten und durchziehen.“ Diese Veränderung der Sprache kann Deine Selbstsicherheit und Leistung erheblich beeinflussen.
 

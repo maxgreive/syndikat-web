@@ -37,7 +37,7 @@
 
   wishlist.subscribe((products) => {
     isWishlisted = products.some((wishlistProduct) =>
-      wishlistProduct.url.includes(cleanProductUrl)
+      wishlistProduct.url.includes(cleanProductUrl),
     );
   });
 
@@ -91,7 +91,12 @@
 <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
     <div class="article__head">
-      <div class="article__image">
+      <a
+        href={cleanProductUrl}
+        target="_blank"
+        class="article__image"
+        on:click={trackProduct(product)}
+      >
         {#if product.flightNumbers}
           <ul class="article__flight-numbers">
             {#each Object.values(product.flightNumbers) as flightNumber}
@@ -108,7 +113,7 @@
           width="200"
           height="200"
         />
-      </div>
+      </a>
 
       <button
         class="tooltip tooltip--wishlist"
@@ -117,7 +122,7 @@
           content: `Zur Wunschliste hinzufügen`,
           placement: "left",
           offset: [0, 0],
-          zIndex: 1
+          zIndex: 1,
         }}
       >
         <i class={`ion ion-md-heart${isWishlisted ? "" : "-empty"}`}></i>
@@ -129,7 +134,7 @@
             content: `Versand ${EURO.format(shop.shipping.amount / 100)}${shop.shipping.info || ""}`,
             placement: "left",
             offset: [0, 0],
-            zIndex: 1
+            zIndex: 1,
           }}
         >
           <i class="ion ion-md-information-circle-outline"></i>
@@ -278,9 +283,9 @@
     margin: 0;
   }
 
-    .tooltip + .tooltip {
-      margin-top: 2rem;
-    }
+  .tooltip + .tooltip {
+    margin-top: 2rem;
+  }
 
   .tooltip--wishlist {
     cursor: pointer;

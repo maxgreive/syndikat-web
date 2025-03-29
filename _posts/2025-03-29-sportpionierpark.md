@@ -7,7 +7,7 @@ tags: kurse
 author: max
 ---
 
-Köln setzt ein starkes Zeichen für den Disc Golf-Sport! Mit der neuen Putting-Anlage im Sportpionierpark erhält die Stadt eine großartige neue Trainingsmöglichkeit für Anfänger und Profis gleichermaßen. Die vier Körbe, kombiniert mit je drei Abwurfpositionen und Distanzen von bis zu 22 Metern, bieten jede Menge Abwechslung. Bäume als natürliche Hindernisse und ein raffiniertes Holzelement, durch das präzise geworfen werden muss, machen die Anlage zu einer echten Herausforderung für alle Spielstärken.
+Köln setzt ein starkes Zeichen für den Disc Golf-Sport! Mit der neuen Putting-Anlage im Sportpionierpark erhält die Stadt eine großartige neue Trainingsmöglichkeit für Anfänger:innen und Profis gleichermaßen. Die vier Körbe, kombiniert mit je drei Abwurfpositionen und Distanzen von bis zu 22 Metern, bieten jede Menge Abwechslung. Bäume als natürliche Hindernisse und ein raffiniertes Holzelement, durch das präzise geworfen werden muss, machen die Anlage zu einer echten Herausforderung für Spieler:innen aller Spielstärken.
 
 ![Eingangschild zur Disc Golf Puttinganlage](/assets/images/posts/sportpionierpark_schild.jpg)
 
@@ -21,4 +21,9 @@ Der Pionierpark ist ein Schlüsselprojekt für Köln: Seit Juni 2021 laufen hier
 
 ## Komm vorbei und putte mit uns!
 
-Wir laden alle Disc Golf-Fans herzlich ein, die Anlage auszuprobieren. Egal, ob du an deiner Technik feilen oder einfach eine entspannte Runde spielen möchtest – der Sportpionierpark bietet die perfekte Kulisse. Und wer weiß? Vielleicht sehen wir uns ja schon bald zu einer kleinen Challenge am Holzhindernis!
+Wir laden alle Disc Golf-Fans herzlich ein, die Anlage auszuprobieren. Egal, ob Du an deiner Technik feilen oder einfach eine entspannte Runde spielen möchtest – der Sportpionierpark bietet die perfekte Kulisse. Und wer weiß? Vielleicht sehen wir uns ja schon bald zu einer kleinen Challenge am Holzhindernis!
+
+### Links
+
+* https://www.parkstadt-sued.de/der-sportpionierpark
+* https://www.stadt-koeln.de/leben-in-koeln/veranstaltungen/daten/37531/index.html

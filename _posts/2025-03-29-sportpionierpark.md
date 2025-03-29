@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Neue Disc Golf Putting-Anlage im Sportpionierpark: Ein Meilenstein für Köln!"
+title: "Neue Disc Golf Putting-Anlage im Sportpionierpark Köln"
 image: /assets/images/posts/sportpionierpark.jpg
 thumbnail: /assets/images/posts/thumbnails/sportpionierpark.jpg
 tags: kurse

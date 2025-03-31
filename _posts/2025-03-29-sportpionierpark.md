@@ -25,5 +25,5 @@ Wir laden alle Disc Golf-Fans herzlich ein, die Anlage auszuprobieren. Egal, ob 
 
 ### Links
 
-* https://www.parkstadt-sued.de/der-sportpionierpark
-* https://www.stadt-koeln.de/leben-in-koeln/veranstaltungen/daten/37531/index.html
+* [https://www.parkstadt-sued.de/der-sportpionierpark](https://www.parkstadt-sued.de/der-sportpionierpark)
+* [https://www.stadt-koeln.de/leben-in-koeln/veranstaltungen/daten/37531/index.html](https://www.stadt-koeln.de/leben-in-koeln/veranstaltungen/daten/37531/index.html)

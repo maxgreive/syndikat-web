@@ -2,7 +2,7 @@
 const SUPABASE_URL = 'https://zbexetusrmggirxhsavj.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpiZXhldHVzcm1nZ2lyeGhzYXZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEwNjUyMDksImV4cCI6MjA0NjY0MTIwOX0.hu-irocr2J5S2sg2Wzbt3SOb8D8ojFksf6EylWitKmQ';
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-const TRAINING_WEEKDAY = 7;
+const TRAINING_WEEKDAY = 2;
 
 function hash(str) {
   return Array.from(str).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0);
@@ -60,8 +60,8 @@ async function loadParticipants() {
   });
 }
 
-function updateHeadline(date) {
-  document.querySelector('[data-next-date]').textContent = new Date(date).toLocaleDateString('de-DE');
+function updateHeadline() {
+  document.querySelector('[data-next-date]').textContent = getNextDate();
 }
 
 function setRemovalToken(name, date) {
@@ -113,5 +113,5 @@ function initializeForm() {
 }
 
 loadParticipants();
-updateHeadline(getNextDate());
+updateHeadline();
 initializeForm();

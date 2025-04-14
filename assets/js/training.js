@@ -10,9 +10,9 @@ function hash(str) {
 
 function getNextDate() {
   const today = new Date();
-  const daysUntilDate = (7 - today.getUTCDay()) % 7;
+  const daysUntilDate = (TRAINING_WEEKDAY - today.getUTCDay() + 7) % 7;
   const nextDateUTC = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() + daysUntilDate));
-  const berlinDateFormat = new Intl.DateTimeFormat("en-CA", {
+  const berlinDateFormat = new Intl.DateTimeFormat("de-DE", {
     timeZone: "Europe/Berlin",
     year: "numeric",
     month: "2-digit",

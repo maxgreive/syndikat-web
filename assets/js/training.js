@@ -12,6 +12,17 @@ function getNextDate() {
   const today = new Date();
   const daysUntilDate = (TRAINING_WEEKDAY - today.getUTCDay() + 7) % 7;
   const nextDateUTC = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() + daysUntilDate));
+  const dateFormat = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  });
+
+  return dateFormat.format(nextDateUTC);
+}
+
+function formatDateGerman(date) {
   const berlinDateFormat = new Intl.DateTimeFormat("de-DE", {
     timeZone: "Europe/Berlin",
     year: "numeric",
@@ -19,7 +30,7 @@ function getNextDate() {
     day: "2-digit"
   });
 
-  return berlinDateFormat.format(nextDateUTC);
+  return berlinDateFormat.format(date);
 }
 
 async function loadParticipants() {
@@ -61,7 +72,7 @@ async function loadParticipants() {
 }
 
 function updateHeadline() {
-  document.querySelector('[data-next-date]').textContent = getNextDate();
+  document.querySelector('[data-next-date]').textContent = formatDateGerman(getNextDate());
 }
 
 function setRemovalToken(name, date) {

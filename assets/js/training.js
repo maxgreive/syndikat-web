@@ -30,7 +30,7 @@ function formatDateGerman(date) {
     day: "2-digit"
   });
 
-  return berlinDateFormat.format(date);
+  return berlinDateFormat.format(new Date(date));
 }
 
 async function loadParticipants() {

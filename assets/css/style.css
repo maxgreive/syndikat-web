@@ -2866,9 +2866,12 @@ table td {
   }
 }
 
+.search__box .search__group {
+  margin-bottom: 48px;
+}
+
 .search__group {
   position: relative;
-  margin-bottom: 48px
 }
 
 .search__group .search__close {
@@ -4763,6 +4766,17 @@ table td {
   text-wrap: nowrap;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toolbar [data-toggle-division] {
+  margin-left: auto;
+}
+
 [data-division*="Open"] {
   background: #ecfeff;
   color: #155e75;
@@ -4788,9 +4802,17 @@ table td {
   color: #9f1239;
 }
 
+[data-rating-search],
+[data-toggle-division],
 [data-toggle-club] {
-  margin-bottom: 1rem;
-  margin-left: auto;
+  transition: opacity 200ms ease-in-out;
+}
+
+[data-rating-search][disabled],
+[data-toggle-division][disabled],
+[data-toggle-club][disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 
 .percentile {

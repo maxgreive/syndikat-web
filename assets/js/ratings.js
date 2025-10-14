@@ -42,7 +42,7 @@ async function initRatings() {
   if (!$el) return;
 
   try {
-    const ratings = await fetch('http://localhost:8080/ratings').then(response => response.json());
+    const ratings = await fetch('https://api.syndikat.golf/ratings').then(response => response.json());
     await getDivisions(ratings);
     await renderRatings(ratings, $el);
     setupListeners($el.querySelectorAll('tr'));

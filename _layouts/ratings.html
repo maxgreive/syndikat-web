@@ -22,14 +22,16 @@ layout: default
           <span class="search__ghost"><span></span></span>
           <input type="text" name="search" data-rating-search class="search__text has-ghost" placeholder="Spieler/Verein suchen..." disabled />
         </div>
-        <select data-toggle-division disabled>
-          <option value="all" selected>Alle Divisionen</option>
-        </select>
-        <select data-toggle-club disabled>
-          <option value="syndikat-only" selected>Nur Syndikat</option>
-          <option value="cologne-only">Nur Kölner Clubs</option>
-          <option value="all">Alle zeigen</option>
-        </select>
+        <div class="rating-filters">
+          <select data-toggle-division disabled>
+            <option value="all" selected>Alle Divisionen</option>
+          </select>
+          <select data-toggle-club disabled>
+            <option value="syndikat-only" selected>Nur Syndikat</option>
+            <option value="cologne-only">Nur Kölner Clubs</option>
+            <option value="all">Alle zeigen</option>
+          </select>
+        </div>
       </div>
       <div class="table-responsive">
         <table id="ratings">

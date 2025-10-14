@@ -4774,8 +4774,12 @@ table td {
   flex-wrap: wrap;
 }
 
-[data-rating-search] {
-  text-transform: capitalize;
+.rating-filters {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-left: auto;
 }
 
 [data-rating-search].has-ghost {
@@ -4804,6 +4808,7 @@ table td {
 
 .toolbar .rating__search {
   flex: 1 0 auto;
+  max-width: 400px;
 }
 
 [data-division*="Open"] {

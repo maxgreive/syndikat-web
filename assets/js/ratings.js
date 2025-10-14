@@ -42,13 +42,31 @@ async function initRatings() {
   if (!$el) return;
 
   try {
-    const ratings = await fetch('https://api.syndikat.golf/ratings').then(response => response.json());
+    const ratings = await fetch('http://localhost:8080/ratings').then(response => response.json());
     await getDivisions(ratings);
     await renderRatings(ratings, $el);
     setupListeners($el.querySelectorAll('tr'));
   } catch (err) {
     console.error(err);
   }
+}
+
+function getAutoComplete(input, data) {
+  const query = input.value.split(/\s+/).pop().toLowerCase();
+  if (query.length < 1) return Promise.resolve(null);
+  return new Promise((resolve) => {
+    let match = null;
+    for (const item of data) {
+      const nameWords = item.name.toLowerCase().split(/\s+/);
+      const clubWords = item.club.toLowerCase().split(/\s+/);
+      const foundWord = nameWords.find(word => word.startsWith(query)) || clubWords.find(word => word.startsWith(query));
+      if (foundWord) {
+        match = foundWord;
+        break;
+      }
+    }
+    resolve(match);
+  });
 }
 
 function setupListeners($rows) {
@@ -69,9 +87,7 @@ function setupListeners($rows) {
       if (event.target.value === 'all' || division === event.target.value) {
         const isSyndikat = $row.dataset.club.includes('Syndikat');
         const isCologne = ['Köln', 'Syndikat'].some(c => $row.dataset.club.includes(c));
-        if (selectedClub === 'syndikat-only' && !isSyndikat) {
-          $row.hidden = true;
-        } else if (selectedClub === 'cologne-only' && !isCologne) {
+        if (selectedClub === 'syndikat-only' && !isSyndikat || selectedClub === 'cologne-only' && !isCologne) {
           $row.hidden = true;
         } else {
           $row.hidden = false;
@@ -124,15 +140,14 @@ function setupListeners($rows) {
   if (!searchInput) return;
 
   searchInput.disabled = false;
-  searchInput.addEventListener('input', event => {
+  searchInput.addEventListener('input', async (event) => {
     const query = event.target.value.toLowerCase();
+
     if (query.length < 3) {
       $rows.forEach(($row, i) => {
         $row.hidden = false;
         $row.querySelector('td').textContent = i + 1;
       });
-
-      return;
     }
 
     let index = 1;
@@ -149,6 +164,38 @@ function setupListeners($rows) {
         $row.hidden = true;
       }
     });
+
+    const autoComplete = await getAutoComplete(event.target, Array.from($rows).filter($row => $row.hidden === false).map($row => {
+      return {
+        name: $row.querySelector('.ranking-name-wrapper a').textContent,
+        club: $row.dataset.club
+      }
+    }));
+
+    const ghost = searchInput.parentElement.querySelector('.search__ghost');
+    ghost.innerHTML = query + `<span>${autoComplete ? autoComplete.slice(query.split(/\s+/).pop().length) : ''}</span>`;
+  });
+
+  searchInput.addEventListener('keydown', event => {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      const existingGhost = event.target.parentElement.querySelector('.search__ghost');
+      if (existingGhost) {
+        const currentText = existingGhost.textContent;
+        existingGhost.querySelector('span').textContent = '';
+        existingGhost.textContent = currentText;
+        searchInput.value = currentText;
+      }
+    }
+  });
+
+  searchInput.addEventListener('blur', event => {
+    setTimeout(() => {
+      const existingGhost = event.target.parentElement.querySelector('.search__ghost');
+      if (existingGhost) {
+        existingGhost.querySelector('span').textContent = '';
+      }
+    }, 100);
   });
 }
 

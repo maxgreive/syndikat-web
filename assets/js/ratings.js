@@ -179,11 +179,11 @@ function setupListeners($rows) {
   searchInput.addEventListener('keydown', event => {
     if (event.key === 'Tab') {
       event.preventDefault();
-      const existingGhost = event.target.parentElement.querySelector('.search__ghost');
+      const existingGhost = event.target.parentElement.querySelector('.search__ghost span');
       if (existingGhost) {
         const currentText = existingGhost.textContent;
-        existingGhost.querySelector('span').textContent = '';
-        existingGhost.textContent = currentText;
+        existingGhost.textContent = '';
+        existingGhost.parentElement.textContent = currentText;
         searchInput.value = currentText;
       }
     }
@@ -191,9 +191,9 @@ function setupListeners($rows) {
 
   searchInput.addEventListener('blur', event => {
     setTimeout(() => {
-      const existingGhost = event.target.parentElement.querySelector('.search__ghost');
+      const existingGhost = event.target.parentElement.querySelector('.search__ghost span');
       if (existingGhost) {
-        existingGhost.querySelector('span').textContent = '';
+        existingGhost.textContent = '';
       }
     }, 100);
   });

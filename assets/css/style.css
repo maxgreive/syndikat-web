@@ -2870,6 +2870,12 @@ table td {
   margin-bottom: 48px;
 }
 
+@media only screen and (max-width: 576px) {
+  .search__box .search__group {
+    margin-bottom: 32px
+  }
+}
+
 .search__group {
   position: relative;
 }
@@ -2927,12 +2933,6 @@ table td {
 
 .search__group .search__text::-ms-clear {
   display: none
-}
-
-@media only screen and (max-width: 576px) {
-  .search__group {
-    margin-bottom: 32px
-  }
 }
 
 .search-results-list .no-results {
@@ -4769,8 +4769,9 @@ table td {
 .toolbar {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1rem 0;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 [data-rating-search] {
@@ -4783,11 +4784,14 @@ table td {
 }
 
 .search__ghost {
+  pointer-events: none;
   position: absolute;
   font-weight: 700;
   font-size: 16px;
   padding: 20px 26px;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   color: var(--heading-font-color);
   border: 2px solid transparent;
@@ -4798,8 +4802,8 @@ table td {
   color: var(--text-alt-color);
 }
 
-.toolbar [data-toggle-division] {
-  margin-left: auto;
+.toolbar .rating__search {
+  flex: 1 0 auto;
 }
 
 [data-division*="Open"] {

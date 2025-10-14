@@ -14,7 +14,7 @@ function renderRatings(ratings, $el) {
               <span class="avatar" style="background-color: hsl(${Math.random().toFixed(3)}turn, 95%, 20%);"><span>${entry.firstName[0]}${entry.lastName[0]}</span></span>
             `}
             <div class="ranking-name-wrapper">
-              <a href="${entry.link}">${entry.firstName} ${entry.lastName}</a>
+              <a href="${entry.link}" target="_blank">${entry.firstName} ${entry.lastName}</a>
               <div class="ranking-club">${entry.club}</div>
             </div>
           </div>

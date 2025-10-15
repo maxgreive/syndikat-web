@@ -2301,6 +2301,7 @@ ol li {
 
 body {
   font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size-adjust: 0.46;
   font-size: 20px;
   line-height: 1.5;
   overflow-x: hidden;
@@ -2327,7 +2328,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -1px;
@@ -2596,7 +2596,6 @@ table td {
 
 .logo__link {
   padding: 4px 0;
-  font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-size: 28px;
   letter-spacing: -1px;
   line-height: 1;
@@ -2718,7 +2717,6 @@ table td {
   .main-nav__box .nav__title {
     display: inline-block;
     margin-bottom: 12px;
-    font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: -1px;
@@ -4364,7 +4362,6 @@ table td {
 }
 
 .tag__counter span {
-  font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-size: 32px;
   font-weight: 700;
   line-height: 1

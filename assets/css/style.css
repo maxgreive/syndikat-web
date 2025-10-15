@@ -330,6 +330,12 @@ table {
   overflow-x: auto;
 }
 
+@media only screen and (max-width: 576px) {
+  .table-responsive {
+    margin: 0 -16px;
+  }
+}
+
 
 h1,
 h2,
@@ -4770,8 +4776,14 @@ table td {
   display: flex;
   justify-content: space-between;
   gap: 1rem 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 576px) {
+  .toolbar {
+    margin: 0 -16px 1rem;
+  }
 }
 
 .rating-filters {
@@ -4780,6 +4792,13 @@ table td {
   justify-content: flex-end;
   gap: 1rem;
   margin-left: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .rating-filters {
+    justify-content: space-between;
+    gap: unset;
+  }
 }
 
 [data-rating-search].has-ghost {

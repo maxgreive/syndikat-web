@@ -4801,30 +4801,6 @@ table td {
   }
 }
 
-[data-rating-search].has-ghost {
-  color: transparent;
-  caret-color: var(--heading-font-color);
-}
-
-.search__ghost {
-  pointer-events: none;
-  position: absolute;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 20px 26px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: var(--heading-font-color);
-  border: 2px solid transparent;
-  text-transform: capitalize;
-}
-
-.search__ghost span {
-  color: var(--text-alt-color);
-}
-
 .toolbar .rating__search {
   flex: 1 0 auto;
   max-width: 400px;

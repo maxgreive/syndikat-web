@@ -51,24 +51,6 @@ async function initRatings() {
   }
 }
 
-function getAutoComplete(input, data) {
-  const query = input.value.split(/\s+/).pop().toLowerCase();
-  if (query.length < 1) return Promise.resolve(null);
-  return new Promise((resolve) => {
-    let match = null;
-    for (const item of data) {
-      const nameWords = item.name.toLowerCase().split(/\s+/);
-      const clubWords = item.club.toLowerCase().split(/\s+/);
-      const foundWord = nameWords.find(word => word.startsWith(query)) || clubWords.find(word => word.startsWith(query));
-      if (foundWord) {
-        match = foundWord;
-        break;
-      }
-    }
-    resolve(match);
-  });
-}
-
 function setupListeners($rows) {
   const clubSelect = document.querySelector('[data-toggle-club]');
   const divisionSelect = document.querySelector('[data-toggle-division]');
@@ -164,38 +146,6 @@ function setupListeners($rows) {
         $row.hidden = true;
       }
     });
-
-    const autoComplete = await getAutoComplete(event.target, Array.from($rows).filter($row => $row.hidden === false).map($row => {
-      return {
-        name: $row.querySelector('.ranking-name-wrapper a').textContent,
-        club: $row.dataset.club
-      }
-    }));
-
-    const ghost = searchInput.parentElement.querySelector('.search__ghost');
-    ghost.innerHTML = query + `<span>${autoComplete ? autoComplete.slice(query.split(/\s+/).pop().length) : ''}</span>`;
-  });
-
-  searchInput.addEventListener('keydown', event => {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      const existingGhost = event.target.parentElement.querySelector('.search__ghost span');
-      if (existingGhost) {
-        const currentText = existingGhost.textContent;
-        existingGhost.textContent = '';
-        existingGhost.parentElement.textContent = currentText;
-        searchInput.value = currentText;
-      }
-    }
-  });
-
-  searchInput.addEventListener('blur', event => {
-    setTimeout(() => {
-      const existingGhost = event.target.parentElement.querySelector('.search__ghost span');
-      if (existingGhost) {
-        existingGhost.textContent = '';
-      }
-    }, 100);
   });
 }
 

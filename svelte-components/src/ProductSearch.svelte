@@ -1,7 +1,7 @@
 <script>
   import { writable } from "svelte/store";
   import { onMount } from "svelte";
-  import { fetchProducts } from "./api";
+  import { fetchProducts, fetchNewestProducts } from "./api";
   import { push, querystring } from "svelte-spa-router";
   import SearchExample from "./SearchExample.svelte";
   import ShopLogos from "./ShopLogos.svelte";
@@ -12,6 +12,7 @@
   const activeShops = shops.filter((shop) => !shop.disabled);
   const shopHandles = activeShops.map((shop) => shop.handle);
   const products = writable([]);
+  const newProducts = writable([]);
   const loading = writable("");
   let initialProducts = [];
   let defaultState = true;
@@ -97,6 +98,9 @@
   }
 
   onMount(async () => {
+    const newest = (await fetchNewestProducts()).slice(0, 6);
+    newProducts.set(newest);
+
     searchInputElement = document.querySelector("#js-product-input");
     searchInputElement.focus();
     query = new URLSearchParams($querystring).get("q") || "";
@@ -206,6 +210,17 @@
             </a>.
           </p>
         </div>
+
+        {#if $newProducts.length}
+          <div class="col col-12">
+            <h3>Neuheiten und Restocks</h3>
+            <div class="row">
+              {#each $newProducts as product}
+                <ProductCard {product} {wishlist} />
+              {/each}
+            </div>
+          </div>
+        {/if}
       {:else}
         <div class="col">
           <p>Keine Produkte für {query} gefunden.</p>

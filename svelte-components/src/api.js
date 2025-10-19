@@ -12,3 +12,16 @@ export async function fetchProducts(query, endpoint) {
   data.push(...result);
   return data;
 }
+
+export async function fetchNewestProducts() {
+  const data = [];
+  const response = await fetch(`${API_URL}/product-feed`, {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
+  const result = await response.json();
+  data.push(...result);
+  return data;
+}

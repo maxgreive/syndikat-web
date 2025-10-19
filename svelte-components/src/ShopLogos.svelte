@@ -48,7 +48,7 @@
   }
 
   .supported-shop a {
-    border-bottom: 0;
+    border-bottom: 0!important;
     display: block;
     padding: 1rem;
   }

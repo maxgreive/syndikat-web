@@ -42,10 +42,17 @@
       <ul>
         {#each $wishlist as product}
           <li>
-            <a href={product.url} target="_blank"
-              ><img src={product.image} alt={product.title} /></a
+            <a href={`${product.url}?ref=syndikat.golf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <img src={product.image} alt={product.title} /></a
             >
-            <a href={product.url} target="_blank" class="product__content">
+            <a href={`${product.url}?ref=syndikat.golf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="product__content"
+              >
               <h4>{product.title}</h4>
               <img
                 src={`/assets/images/logos/${product.store}-light.png`}

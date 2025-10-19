@@ -31,17 +31,19 @@
   export let product;
   export let wishlist;
 
-  const productUrl = new URL(product.url);
-  const cleanProductUrl = productUrl.origin + productUrl.pathname;
+  $: productUrl = product?.url ? new URL(product.url) : null;
+  $: cleanProductUrl = productUrl ? productUrl.origin + productUrl.pathname : "";
   let isWishlisted = false;
+  $: {
+    wishlist.subscribe((products) => {
+      isWishlisted = products.some((wishlistProduct) =>
+        wishlistProduct.url.includes(cleanProductUrl),
+      );
+    });
+  }
 
-  wishlist.subscribe((products) => {
-    isWishlisted = products.some((wishlistProduct) =>
-      wishlistProduct.url.includes(cleanProductUrl),
-    );
-  });
 
-  const shop = shops.find((shop) => shop.handle === product.store);
+  $: shop = shops.find((shop) => shop.handle === product?.store);
   const stockStatusLabels = {
     available: "Auf Lager",
     unavailable: "Nicht auf Lager",

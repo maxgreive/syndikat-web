@@ -38,14 +38,14 @@ async function loadParticipants() {
   if (!list) return;
 
   list.innerHTML = "";
-  const { data: participants, error } = await supabase.from("participants").select("*").eq('date', getNextDate())
+  const { data: participants, error } = await supabase.from("participants").select("*").eq('date', getNextDate());
   if (error) {
     return console.error(error);
   }
 
   if (participants.length === 0) {
-    return list.insertAdjacentHTML('beforebegin', `
-      <em data-no-participants>Bisher noch keine Anmeldungen. Sei der/die erste!</em>
+    return list.insertAdjacentHTML('afterbegin', `
+      <p><em data-no-participants>Bisher noch keine Anmeldungen. Sei der/die erste!</em></p>
     `)
   }
 
@@ -76,7 +76,7 @@ function updateHeadline() {
 }
 
 function setRemovalToken(name, date) {
-  window.localStorage.setItem('training-signup', JSON.stringify({ name, date }))
+  window.localStorage.setItem('training-signup', JSON.stringify({ name, date }));
 }
 
 async function handleDelete(name) {

@@ -23,6 +23,6 @@ items:
   - original_image: /assets/images/gallery/discraft-buzzz.jpg
     image: /assets/images/gallery/discraft-buzzz_thumb.jpg
     alt: Scheibe mit Aufschrift 'Discraft'
-  - original_image: /assets/images/gallery/smugglers.jpg
-    image: /assets/images/gallery/smugglers_thumb.jpg
-    alt: Korb am Kurs 'Smugglers Notch'
+  - original_image: /assets/images/gallery/raptor-disc.jpg
+    image: /assets/images/gallery/raptor-disc_thumb.jpg
+    alt: Disc Golf-Rucksack mit Scheibe

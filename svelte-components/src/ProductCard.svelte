@@ -92,7 +92,8 @@
   <div class="article__inner">
     <div class="article__head">
       <a
-        href={cleanProductUrl}
+        href={`${cleanProductUrl}?ref=syndikat.golf`}
+        rel="noopener noreferrer"
         target="_blank"
         class="article__image"
         on:click={trackProduct(product)}
@@ -144,7 +145,8 @@
     <div class="article__content">
       <h2 class="article__title">
         <a
-          href={cleanProductUrl}
+          href={`${cleanProductUrl}?ref=syndikat.golf`}
+          rel="noopener noreferrer"
           target="_blank"
           on:click={trackProduct(product)}>{product.title}</a
         >

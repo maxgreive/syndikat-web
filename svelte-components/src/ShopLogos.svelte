@@ -5,7 +5,10 @@
 <div class="supported-shops">
   {#each activeShops as shop}
     <div class="supported-shop">
-      <a href={shop.url}
+      <a
+        href={`${shop.url}?ref=syndikat.golf`}
+        target="_blank"
+        rel="noopener noreferrer"
         ><img
           src={`/assets/images/logos/${shop.handle}-light.png`}
           class="hide-dark"
@@ -35,14 +38,18 @@
   }
 
   .supported-shop {
-    filter: grayscale(1);
+    filter: brightness(0);
     opacity: 0.7;
     transition: all 0.2s ease;
   }
 
+  :global([dark]) .supported-shop {
+    filter: brightness(0) invert(1);
+  }
+
   @media (hover: hover) {
     .supported-shop:hover {
-      filter: grayscale(0);
+      filter: invert(0);
       opacity: 1;
     }
   }

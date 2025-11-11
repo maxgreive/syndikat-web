@@ -4,6 +4,7 @@
   import { fetchProducts, fetchNewestProducts } from "./api";
   import { push, querystring } from "svelte-spa-router";
   import SearchExample from "./SearchExample.svelte";
+  import Awesomplete from "awesomplete";
   import ShopLogos from "./ShopLogos.svelte";
   import ProductCard from "./ProductCard.svelte";
   import Wishlist from "./Wishlist.svelte";
@@ -16,6 +17,13 @@
   const loading = writable("");
   let initialProducts = [];
   let defaultState = true;
+
+  let discs = [];
+
+  window.addEventListener("awesomplete-selectcomplete", (event) => {
+    query = event.text.value;
+    getProducts();
+  });
 
   let shopCount = shopHandles.length;
   const stored = localStorage.sort;
@@ -97,6 +105,23 @@
     return reverse ? result.reverse() : result;
   }
 
+  function getDiscLabel(disc) {
+    let label = `${disc.brand} ${disc.name}`;
+    if (disc.category) label += `<span class="disc-category">${disc.category}</span>`;
+    if (disc.speed && disc.glide && disc.turn && disc.fade) {
+      label += `
+        <div class="disc-flightnumbers">
+          <span class="disc-speed">${disc.speed}</span>
+          <span class="disc-glide">${disc.glide}</span>
+          <span class="disc-turn">${disc.turn}</span>
+          <span class="disc-fade">${disc.fade}</span>
+        </div>
+      `;
+    }
+
+    return label;
+  }
+
   onMount(async () => {
     const newest = (await fetchNewestProducts()).slice(0, 6);
     newProducts.set(newest);
@@ -105,6 +130,20 @@
     searchInputElement.focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
+    discs = await fetch('/assets/discs.json').then(res => res.json());
+
+    new Awesomplete(searchInputElement, {
+      list: discs.map(disc => (
+        {
+          label: getDiscLabel(disc),
+          value: `${disc.brand} ${disc.name}`
+        }
+      )),
+      minChars: 3,
+      maxItems: 20,
+      autoFirst: true,
+      tabSelect: true,
+    });
   });
 </script>
 

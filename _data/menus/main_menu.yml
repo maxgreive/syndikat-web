@@ -2,8 +2,10 @@ title: Menu
 items:
   - label: Über uns
     link: /about/
-  - label: Training
-    link: /training/
+  - label: Preisvergleich
+    link: /preisvergleich/
+  - label: Turnierkarte
+    link: /turniere/
   - label: Events
     link: /events/
   - label: Tools

@@ -17,7 +17,7 @@
         </div>
       {%- endif -%}
       <a class="article__image" href="{{- include.item.url -}}">
-        <img {% if include.lazy == "false" %}class="lazy" data-{% endif %}src="{%- if include.item.thumbnail -%}{{- include.item.thumbnail -}}{%- elsif include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}" alt="{{- include.item.title | escape -}}">
+        <img width="350" height="233"{% if include.lazy == "false" %} class="lazy" data-{% endif %}src="{%- if include.item.thumbnail -%}{{- include.item.thumbnail -}}{%- elsif include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}" alt="{{- include.item.title | escape -}}">
       </a>
     </div>
     <div class="article__content">

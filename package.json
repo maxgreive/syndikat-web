@@ -19,6 +19,7 @@
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-terser": "^0.4.0",
     "awesomplete": "^1.1.7",
+    "critical": "^7.2.1",
     "husky": "^9.0.11",
     "rollup": "^3.15.0",
     "rollup-plugin-css-only": "^4.3.0",
@@ -31,8 +32,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "critical": "^7.2.1"
-  }
+  "license": "ISC"
 }
+

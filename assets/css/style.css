@@ -3512,7 +3512,8 @@ table td {
   padding-bottom: 62%;
   border-radius: 8px;
   overflow: hidden;
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
+  transition: none
 }
 
 .article__image img {

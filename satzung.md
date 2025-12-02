@@ -6,7 +6,7 @@ layout: page
 # § 1 Name, Sitz und Geschäftsjahr
 
 1. Der Verein führt den Namen: "Disc Golf Syndikat"
-1. Er hat seinen Sitz im Stadtwaldgürtel 63, 50935 Köln und soll in das Vereinsregister beim Amtsgericht Köln eingetragen werden. Nach der Eintragung führt er zu seinem Namen den Zusatz e.V.
+1. Er hat seinen Sitz in Köln und soll in das Vereinsregister beim Amtsgericht Köln eingetragen werden. Nach der Eintragung führt er zu seinem Namen den Zusatz e.V. Die Vereinsanschrift wird vom Vorstand bestimmt.
 1. Das Geschäftsjahr des Vereins ist das Kalenderjahr.
 
 # § 2 Vereinszweck und Gemeinnützigkeit
@@ -110,4 +110,4 @@ Eine Prüfung der Kassengeschäfte des Vereins ist mindestens einmal jährlich n
 1. Diese Satzung tritt mit Eintragung in das Vereinsregister in Kraft.
 1. Alle bisherigen Satzungen treten zu diesem Zeitpunkt damit außer Kraft.
 
-*Zuletzt aktualisiert: 11. Januar 2022*
+*Zuletzt aktualisiert: 02. Dezember 2025*

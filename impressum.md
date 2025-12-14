@@ -4,7 +4,7 @@ layout: page
 ---
 
 **Disc Golf Syndikat e.V.**<br>
-Stadtwaldgürtel 63<br>
+Neuhöfferstraße 3<br>
 50935 Köln
 
 E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)

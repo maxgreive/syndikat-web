@@ -37,6 +37,8 @@
   $: query = query.toLowerCase();
   $: progress = parseInt((shopCount / shopHandles.length) * 100);
 
+  let searchedQuery = "";
+
   let searchInputElement;
 
   const clearProducts = () => {
@@ -66,6 +68,7 @@
 
     initialProducts = [];
     defaultState = false;
+    searchedQuery = query;
 
     push(`/?q=${encodeURIComponent(query)}`);
     products.set([]);
@@ -262,7 +265,7 @@
         {/if}
       {:else}
         <div class="col">
-          <p>Keine Produkte für {query} gefunden.</p>
+          <p>Keine Produkte für { searchedQuery } gefunden.</p>
         </div>
       {/if}
     {/each}
@@ -287,6 +290,7 @@
 
   .search__close {
     right: 100px;
+    z-index: 1;
   }
 
   .products-headline {

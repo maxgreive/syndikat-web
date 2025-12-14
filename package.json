@@ -8,7 +8,8 @@
     "build:jekyll": "bundle exec jekyll build",
     "build:critical": "node critical.js",
     "build": "npm run build:svelte && npm run build:jekyll && npm run build:critical",
-    "dev": "bundle exec jekyll serve",
+    "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",
+    "dev:jekyll": "bundle exec jekyll serve",
     "dev:svelte": "npm run --prefix svelte-components dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
@@ -19,6 +20,7 @@
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-terser": "^0.4.0",
     "awesomplete": "^1.1.7",
+    "concurrently": "^9.2.1",
     "critical": "^7.2.1",
     "husky": "^9.0.11",
     "rollup": "^3.15.0",
@@ -34,4 +36,3 @@
   "author": "",
   "license": "ISC"
 }
-

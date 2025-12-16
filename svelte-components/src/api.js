@@ -25,7 +25,7 @@ export async function fetchProducts(query, endpoint) {
 export async function fetchNewestProducts() {
   const data = [];
   try {
-    const response = await fetch(`${API_URL}/product-feed`, {
+    const response = await fetch(`${API_URL}/products/feed`, {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",

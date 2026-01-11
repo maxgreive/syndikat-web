@@ -9,7 +9,7 @@ Neuhöfferstraße 3<br>
 
 ## Kontakt
 
-E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)
+E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)<br>
 Webseite: [https://syndikat.golf/](https://syndikat.golf/)
 
 ## Vertretung
@@ -17,19 +17,20 @@ Webseite: [https://syndikat.golf/](https://syndikat.golf/)
 Der Verein wird gerichtlich und außergerichtlich durch den 1. Vorsitzenden und den 2. Vorsitzenden gemeinschaftlich vertreten:
 
 * **Max Greive**, 1. Vorsitzender
-* **Kerstin Esterle**, 2. Vorsitzender
+* **Kerstin Esterle**, 2. Vorsitzende
 
 ## Registereintrag
 
-Registergericht: Amtsgericht Köln
+Registergericht: Amtsgericht Köln<br>
 Registernummer: VR 21064
 
 ## Verantwortlich für redaktionelle Inhalte
 
 Gemäß § 18 Abs. 2 MStV:
-Max Greive
-Neuhöfferstr. 3
-50679 Köln
+
+Max Greive<br>
+Neuhöfferstr. 3<br>
+50679 Köln<br>
 
 ## EU-Streitbeilegung
 

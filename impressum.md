@@ -7,33 +7,36 @@ layout: page
 Neuhöfferstraße 3<br>
 50935 Köln
 
+## Kontakt
+
 E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)
+Webseite: [https://syndikat.golf/](https://syndikat.golf/)
 
-## Gemeinschaftlich vertretungsbefugt:
+## Vertretung
 
-### 1. Vorsitzender:
+Der Verein wird gerichtlich und außergerichtlich durch den 1. Vorsitzenden und den 2. Vorsitzenden gemeinschaftlich vertreten:
 
-Max Greive<br>
-50679 Köln<br>
-E-Mail: [max@syndikat.golf](mailto:max@syndikat.golf)
+* **Max Greive**, 1. Vorsitzender
+* **Kerstin Esterle**, 2. Vorsitzender
 
-### 2. Vorsitzender:
+## Registereintrag
 
-Philipp Böttcher<br>
-50823 Köln<br>
-E-Mail: [birdie@syndikat.golf](mailto:birdie@syndikat.golf)
-
-Das Impressum gilt für: [https://syndikat.golf/](https://syndikat.golf/)
-
-Registergericht: Amtsgericht Köln<br>
+Registergericht: Amtsgericht Köln
 Registernummer: VR 21064
 
-### Verantwortliche i.S.d. § 55 Abs. 2 RStV:
+## Verantwortlich für redaktionelle Inhalte
 
-Johannes Eisentraut, Stadtwaldgürtel 63, 50935 Köln
+Gemäß § 18 Abs. 2 MStV:
+Max Greive
+Neuhöfferstr. 3
+50679 Köln
 
-Link auf die Plattform der EU-Kommission zur Online-Streitbeilegung: [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr)
+## EU-Streitbeilegung
 
-Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und grundsätzlich nicht bereit.
+Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr)
 
-Weitere Informationen unter: [https://www.abmahnung.de/os-plattform/](https://www.abmahnung.de/os-plattform/)
+Unsere E-Mail-Adresse befindet sich oben im Impressum.
+
+## Verbraucherstreitbeilegung/Universalschlichtungsstelle
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

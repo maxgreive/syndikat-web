@@ -7,7 +7,7 @@
     "build:svelte": "npm run build -C svelte-components",
     "build:jekyll": "bundle exec jekyll build",
     "build:critical": "node critical.js",
-    "build": "run-s build:*",
+    "build": "npm run build:svelte && npm run build:jekyll && npm run build:critical",
     "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",
     "dev:jekyll": "bundle exec jekyll serve",
     "dev:svelte": "npm run --prefix svelte-components dev",
@@ -35,8 +35,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "npm-run-all": "^4.1.5"
-  }
+  "license": "ISC"
 }

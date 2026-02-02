@@ -33,7 +33,7 @@ sharing_image: /assets/images/syndikat-sharing-image.png
 # Build settings
 theme: minima
 paginate: 6
-paginate_path: "/blog/page/:num/"
+paginate_path: "/blog/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

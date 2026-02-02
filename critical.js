@@ -2,10 +2,11 @@ import { generate } from 'critical';
 import fs from 'fs';
 import path from 'path';
 
-const siteDir = '_site';
+const siteDir = path.resolve('_site');
 
 function getHtmlFiles(dir) {
   let results = [];
+  if (!fs.existsSync(dir)) return results;
   const list = fs.readdirSync(dir);
   list.forEach((file) => {
     const filePath = path.join(dir, file);
@@ -23,17 +24,23 @@ async function inlineCriticalCss() {
   const htmlFiles = getHtmlFiles(siteDir);
 
   for (const file of htmlFiles) {
-    const relativeFile = path.relative(siteDir, file);
-    await generate({
-      base: siteDir,
-      src: relativeFile,
-      target: { html: relativeFile },
-      inline: true,
-      width: 375,
-      height: 667,
-    });
-    console.log(`Inlined Critical CSS for ${relativeFile}`);
+    try {
+      await generate({
+        base: siteDir,
+        src: file, 
+        target: file, 
+        inline: true,
+        dimensions: [
+          { width: 375, height: 667 },
+          { width: 1366, height: 768 }
+        ],
+        rebase: ({ url }) => url,
+      });
+      console.log(`✅ Properly Inlined: ${file}`);
+    } catch (err) {
+      console.error(`❌ Failed: ${file}`, err.message);
+    }
   }
 }
 
-inlineCriticalCss().catch(console.error);
+inlineCriticalCss();

@@ -4,13 +4,14 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build:svelte": "npm run build --prefix svelte-components",
+    "build:svelte": "npm run build -C svelte-components",
     "build:jekyll": "bundle exec jekyll build",
     "build:critical": "node critical.js",
-    "build": "npm run build:svelte && npm run build:jekyll && npm run build:critical",
+    "build": "run-s build:*",
     "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",
     "dev:jekyll": "bundle exec jekyll serve",
     "dev:svelte": "npm run --prefix svelte-components dev",
+    "clean": "bundle exec jekyll clean",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
@@ -34,5 +35,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

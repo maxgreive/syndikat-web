@@ -30,18 +30,11 @@ async function inlineCriticalCss() {
         src: file,
         target: file,
         inline: true,
+        assetPaths: [path.join(siteDir, 'assets/fonts')],
         dimensions: [
           { width: 375, height: 667 },
           { width: 1366, height: 768 }
         ],
-        rebase: (asset) => {
-          if (asset.url.includes('../fonts/')) {
-            return asset.url.replace('../fonts/', '/assets/fonts/');
-          }
-          return asset.url;
-        },
-        penthouse: { timeout: 30000 },
-        extract: false,
       });
       console.log(`✅ Fixed & Inlined: ${path.relative(siteDir, file)}`);
     } catch (err) {

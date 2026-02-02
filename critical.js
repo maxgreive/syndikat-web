@@ -27,20 +27,27 @@ async function inlineCriticalCss() {
     try {
       await generate({
         base: siteDir,
-        src: file, 
-        target: file, 
+        src: file,
+        target: file,
         inline: true,
         dimensions: [
           { width: 375, height: 667 },
           { width: 1366, height: 768 }
         ],
-        rebase: ({ url }) => url,
+        rebase: (asset) => {
+          if (asset.url.includes('../fonts/')) {
+            return asset.url.replace('../fonts/', '/assets/fonts/');
+          }
+          return asset.url;
+        },
+        penthouse: { timeout: 30000 },
+        extract: false,
       });
-      console.log(`✅ Properly Inlined: ${file}`);
+      console.log(`✅ Fixed & Inlined: ${path.relative(siteDir, file)}`);
     } catch (err) {
       console.error(`❌ Failed: ${file}`, err.message);
     }
   }
 }
 
-inlineCriticalCss();
+inlineCriticalCss().catch(console.error);

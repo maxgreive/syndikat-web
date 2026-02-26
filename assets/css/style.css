@@ -2768,8 +2768,8 @@ table td {
   display: none;
 }
 
-.nav-button .nav__icon+.nav__icon {
-  margin-left: 12px
+.nav-button .nav__icon {
+  padding: 6px;
 }
 
 .nav-button .icon__menu,
@@ -2797,11 +2797,13 @@ table td {
   }
 }
 
-
+.nav__icon.toggle-theme {
+  line-height: 1;
+}
 
 .toggle-sun,
 .toggle-moon {
-  font-size: 22px;
+  font-size: 21px;
   transition: color .25s ease;
   color: var(--heading-font-color)
 }
@@ -2809,6 +2811,13 @@ table td {
 .toggle-sun:hover,
 .toggle-moon:hover {
   color: var(--brand-color)
+}
+
+@media only screen and (max-width: 1024px) {
+  .toggle-sun,
+  .toggle-moon {
+    font-size: 24px;
+  }
 }
 
 .toggle-sun {

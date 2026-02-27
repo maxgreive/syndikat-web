@@ -7,9 +7,10 @@ layout: default
     <div class="row">
       {% if page.image %}
         {%- capture page_image_cdn -%}{% include snippets/netlify_image_url.html src=page.image w=1200 %}{%- endcapture -%}
+        {%- capture page_image_srcset -%}{% include snippets/netlify_srcset.html src=page.image widths="480,720,960,1200,1600" %}{%- endcapture -%}
         <div class="col col-12">
           <div class="page-image">
-            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ page_image_cdn | strip }}" data-original-src="{{- page.image -}}" alt="{{ page.title | escape }}" class="lazy">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ page_image_cdn | strip }}" data-srcset="{{ page_image_srcset | strip }}" data-sizes="(min-width: 792px) 760px, calc(100vw - 40px)" data-original-src="{{- page.image -}}" alt="{{ page.title | escape }}" class="lazy">
           </div>
         </div>
       {% endif %}

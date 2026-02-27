@@ -6,6 +6,8 @@ module NetlifyImageCdn
   module_function
 
   IMAGE_EXTENSIONS = %w[jpg jpeg png webp avif].freeze
+  ARTICLE_WIDTHS = [480, 760, 960, 1200, 1600].freeze
+  ARTICLE_SIZES = "(min-width: 792px) 760px, calc(100vw - 40px)"
 
   def enabled?
     ENV["JEKYLL_ENV"] == "production"
@@ -23,6 +25,18 @@ module NetlifyImageCdn
     "/.netlify/images?url=#{CGI.escape(src)}&q=70"
   end
 
+  def transformed_srcset(src)
+    ARTICLE_WIDTHS.map do |width|
+      "#{transformed_url(src)}&w=#{width} #{width}w"
+    end.join(", ")
+  end
+
+  def ensure_attribute(tag, name, value)
+    return tag if tag.match?(/\b#{Regexp.escape(name)}=/i)
+
+    tag.sub("<img", %(<img #{name}="#{value}"))
+  end
+
   def rewrite_images(html)
     return html unless enabled?
 
@@ -35,9 +49,11 @@ module NetlifyImageCdn
 
       new_src = transformed_url(src)
       updated = tag.sub(src_match[0], %(src="#{new_src}"))
-      unless updated.match?(/\bdata-original-src=/i)
-        updated = updated.sub("<img", %(<img data-original-src="#{src}"))
-      end
+      updated = ensure_attribute(updated, "data-original-src", src)
+      updated = ensure_attribute(updated, "srcset", transformed_srcset(src))
+      updated = ensure_attribute(updated, "sizes", ARTICLE_SIZES)
+      updated = ensure_attribute(updated, "loading", "lazy")
+      updated = ensure_attribute(updated, "decoding", "async")
       updated
     end
   end

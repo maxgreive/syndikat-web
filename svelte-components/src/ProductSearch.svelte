@@ -133,6 +133,7 @@
     searchInputElement.focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
+    // discs are pulled from https://discit-api.fly.dev/disc
     discs = await fetch('/assets/discs.json').then(res => res.json());
 
     new Awesomplete(searchInputElement, {

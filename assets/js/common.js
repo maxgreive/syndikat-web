@@ -203,9 +203,11 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =======================
   // Tooltips
   ======================= */
-  tippy('.plan-card .tooltip', {
-    offset: [0, -4]
-  });
+  if (window.tippy) {
+    window.tippy('.plan-card .tooltip', {
+      offset: [0, -4]
+    });
+  }
 
   /* =======================
   // Form Cache

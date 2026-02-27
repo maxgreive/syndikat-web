@@ -16,8 +16,10 @@
           </div>
         </div>
       {%- endif -%}
+      {%- capture card_original_image -%}{%- if include.item.thumbnail -%}{{- include.item.thumbnail -}}{%- elsif include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}{%- endcapture -%}
+      {%- capture card_cdn_image -%}{% include snippets/netlify_image_url.html src=card_original_image w=700 %}{%- endcapture -%}
       <a class="article__image" href="{{- include.item.url -}}">
-        <img width="350" height="233"{% if include.lazy == "false" %} class="lazy" data-{% endif %}src="{%- if include.item.thumbnail -%}{{- include.item.thumbnail -}}{%- elsif include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}" alt="{{- include.item.title | escape -}}">
+        <img width="350" height="233"{% if include.lazy == "false" %} class="lazy" data-{% endif %}src="{{ card_cdn_image | strip }}" data-original-src="{{ card_original_image | strip }}" alt="{{- include.item.title | escape -}}">
       </a>
     </div>
     <div class="article__content">

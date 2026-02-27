@@ -1,0 +1,18 @@
+{%- assign src_value = include.src | to_s | strip -%}
+{%- assign width_value = include.w | default: include.width -%}
+{%- assign height_value = include.h | default: include.height -%}
+{%- assign quality_value = include.q | default: 70 -%}
+{%- assign fit_value = include.fit -%}
+{%- assign format_value = include.fm -%}
+{%- assign is_local_asset = src_value | slice: 0, 15 -%}
+{%- assign file_ext = src_value | split: '.' | last | downcase -%}
+{%- assign can_transform = false -%}
+{%- if jekyll.environment == "production" and is_local_asset == "/assets/images/" and file_ext != "svg" -%}
+  {%- assign can_transform = true -%}
+{%- endif -%}
+{%- if can_transform -%}
+  {%- capture image_url -%}/.netlify/images?url={{ src_value | uri_escape }}{%- if width_value -%}&w={{ width_value }}{%- endif -%}{%- if height_value -%}&h={{ height_value }}{%- endif -%}{%- if fit_value -%}&fit={{ fit_value }}{%- endif -%}{%- if quality_value -%}&q={{ quality_value }}{%- endif -%}{%- if format_value -%}&fm={{ format_value }}{%- endif -%}{%- endcapture -%}
+  {{- image_url | strip -}}
+{%- else -%}
+  {{- src_value -}}
+{%- endif -%}

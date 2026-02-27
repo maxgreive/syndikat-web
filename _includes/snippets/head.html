@@ -41,8 +41,10 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
   {% if page.layout == 'index' %}
-  <link rel="preload" fetchpriority="high" href="/assets/images/hero.jpg"
-    imagesrcset="/assets/images/hero_w_200.jpg 200w, /assets/images/hero_w_470.jpg 470w, /assets/images/hero_w_762.jpg 762w, /assets/images/hero_w_1020.jpg 1020w, /assets/images/hero_w_1136.jpg 1136w, /assets/images/hero_w_1200.jpg 1200w"
+  {%- capture hero_preload_href -%}{% include snippets/netlify_image_url.html src="/assets/images/hero.jpg" w=1200 %}{%- endcapture -%}
+  {%- capture hero_preload_srcset -%}{% include snippets/netlify_srcset.html src="/assets/images/hero.jpg" widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
+  <link rel="preload" fetchpriority="high" href="{{ hero_preload_href | strip }}"
+    imagesrcset="{{ hero_preload_srcset | strip }}"
     imagesizes="(max-width: 576px) 470px, (max-width: 768px) 560px, (max-width: 1024px) 740px, 600px" as="image"
     type="image/jpg">
   {% endif %}

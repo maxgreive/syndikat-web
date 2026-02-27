@@ -12,8 +12,9 @@ layout: default
             </div>
           </div>
         {% else %}
+          {%- capture post_image_cdn -%}{% include snippets/netlify_image_url.html src=page.image w=1200 %}{%- endcapture -%}
           <div class="post-image">
-            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ page.image }}" alt="{{ page.title | escape }}" class="lazy">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ post_image_cdn | strip }}" data-original-src="{{ page.image }}" alt="{{ page.title | escape }}" class="lazy">
           </div>
         {% endif %}
       </div>
@@ -32,8 +33,9 @@ layout: default
           <div class="post__meta">
             {% for item in authors %}
               {%- assign author = site.data.authors[item] -%}
+              {%- capture author_image_cdn -%}{% include snippets/netlify_image_url.html src=author.image w=120 %}{%- endcapture -%}
               <span class="post__author-image">
-                <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{- author.image -}}">
+                <img src="{%- include snippets/transparent_pixel.html -%}" class="lazy" alt="{{- author.name -}}" data-src="{{ author_image_cdn | strip }}" data-original-src="{{- author.image -}}">
               </span>
 
               <div class="post__meta-bottom">

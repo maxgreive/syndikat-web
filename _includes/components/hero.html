@@ -1,3 +1,5 @@
+{%- capture hero_src -%}{% include snippets/netlify_image_url.html src="/assets/images/hero.jpg" w=1200 %}{%- endcapture -%}
+{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src="/assets/images/hero.jpg" widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
 <section class="hero">
   <div class="container">
     <div class="row">
@@ -16,16 +18,10 @@
           </div>
           <div class="hero__right">
             <div class="hero__image">
-              <img src="/assets/images/hero.jpg"
+              <img src="{{ hero_src | strip }}"
                 width="534"
                 height="400"
-                srcset="
-                  /assets/images/hero_w_200.jpg 200w,
-                  /assets/images/hero_w_470.jpg 470w,
-                  /assets/images/hero_w_762.jpg 762w,
-                  /assets/images/hero_w_1020.jpg 1020w,
-                  /assets/images/hero_w_1136.jpg 1136w,
-                  /assets/images/hero_w_1200.jpg 1200w"
+                srcset="{{ hero_srcset | strip }}"
                 sizes="(max-width: 576px) 470px, (max-width: 768px) 560px, (max-width: 1024px) 740px, 600px"
                 alt="Discgolfscheiben in einem Rucksack"
               >

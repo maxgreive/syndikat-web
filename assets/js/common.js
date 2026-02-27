@@ -113,7 +113,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // LazyLoad Images
   ======================= */
   var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
+    elements_selector: ".lazy",
+    callback_error: (element) => {
+      if (!element.dataset.originalSrc) return;
+      if (element.dataset.originalSrcset) {
+        element.setAttribute("srcset", element.dataset.originalSrcset);
+      } else {
+        element.removeAttribute("srcset");
+      }
+      element.src = element.dataset.originalSrc;
+    }
   })
 
 

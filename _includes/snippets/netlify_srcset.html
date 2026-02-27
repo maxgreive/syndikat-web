@@ -1,0 +1,6 @@
+{%- assign widths = include.widths | split: "," -%}
+{%- for width in widths -%}
+  {%- assign width_value = width | strip -%}
+  {%- capture candidate_url -%}{% include snippets/netlify_image_url.html src=include.src w=width_value q=include.q fm=include.fm fit=include.fit %}{%- endcapture -%}
+  {{- candidate_url | strip }} {{ width_value }}w{%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

@@ -13,8 +13,9 @@ layout: default
           </div>
         {% else %}
           {%- capture post_image_cdn -%}{% include snippets/netlify_image_url.html src=page.image w=1200 %}{%- endcapture -%}
+          {%- capture post_image_srcset -%}{% include snippets/netlify_srcset.html src=page.image widths="480,720,960,1200" %}{%- endcapture -%}
           <div class="post-image">
-            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ post_image_cdn | strip }}" data-original-src="{{ page.image }}" alt="{{ page.title | escape }}" class="lazy">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ post_image_cdn | strip }}" data-srcset="{{ post_image_srcset | strip }}" data-sizes="(min-width: 1140px) 538px, (min-width: 1025px) calc(50vw - 32px), (min-width: 769px) 708px, calc(100vw - 40px)" data-original-src="{{ page.image }}" alt="{{ page.title | escape }}" class="lazy">
           </div>
         {% endif %}
       </div>

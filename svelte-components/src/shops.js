@@ -91,7 +91,7 @@ export const shops =
     {
       "handle": "hyzerstore",
       "name": "Hyzerstore",
-      "disabled": false,
+      "disabled": true,
       "url": "https://www.hyzer-store.de/",
       "shipping": {
         "amount": 395,

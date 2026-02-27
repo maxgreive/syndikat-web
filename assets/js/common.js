@@ -94,13 +94,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // =====================
   // Simple Jekyll Search
   // =====================
-  SimpleJekyllSearch({
-    searchInput: document.getElementById("js-search-input"),
-    resultsContainer: document.getElementById("js-results-container"),
-    json: "/search.json",
-    searchResultTemplate: '{article}',
-    noResultsText: '<h3 class="no-results">No results found</h3>'
-  });
+  const searchInputEl = document.getElementById("js-search-input");
+  const searchResultsEl = document.getElementById("js-results-container");
+  let hasSearchInit = false;
+
+  function initSearch() {
+    if (hasSearchInit || !searchInputEl || !searchResultsEl) return;
+    hasSearchInit = true;
+    SimpleJekyllSearch({
+      searchInput: searchInputEl,
+      resultsContainer: searchResultsEl,
+      json: "/search.json",
+      searchResultTemplate: '{article}',
+      noResultsText: '<h3 class="no-results">No results found</h3>'
+    });
+  }
+
+  if (searchOpenIcon) {
+    searchOpenIcon.addEventListener("click", initSearch, { once: true });
+  }
+  if (searchInputEl) {
+    searchInputEl.addEventListener("focus", initSearch, { once: true });
+  }
 
 
   /* =======================

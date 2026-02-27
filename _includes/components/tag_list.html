@@ -18,10 +18,11 @@
               {%- endfor -%}
             {%- endcapture -%}
             {%- capture tag_image_cdn -%}{% include snippets/netlify_image_url.html src=tag_image w=480 %}{%- endcapture -%}
+            {%- capture tag_image_srcset -%}{% include snippets/netlify_srcset.html src=tag_image widths="240,360,480,640" %}{%- endcapture -%}
             <div class="col col-3 col-d-6 col-m-12">
               <a href="/tags#{{- tag[0] | downcase -}}" class="tag-image">
                 <span class="tag-name">{{- tag[0] -}}</span>
-                <img class="lazy" data-src="{{ tag_image_cdn | strip }}" data-original-src="{{- tag_image | strip -}}" alt="{{- tag[0] -}}">
+                <img class="lazy" data-src="{{ tag_image_cdn | strip }}" data-srcset="{{ tag_image_srcset | strip }}" data-sizes="(min-width: 1141px) 253px, (min-width: 1025px) 217px, (min-width: 769px) 258px, (min-width: 577px) 264px, calc(100vw - 40px)" data-original-src="{{- tag_image | strip -}}" alt="{{- tag[0] -}}">
               </a>
             </div>
           {%- endfor -%}

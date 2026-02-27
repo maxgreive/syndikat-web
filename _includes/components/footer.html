@@ -37,8 +37,10 @@
             <div class="gallery-footer">
               <div class="gallery" style="grid-template-columns: repeat(3, auto);">
                 {% for item in gallery.items %}
+                  {%- capture footer_thumb_cdn -%}{% include snippets/netlify_image_url.html src=item.image w=172 h=130 fit="cover" %}{%- endcapture -%}
+                  {%- capture footer_full_cdn -%}{% include snippets/netlify_image_url.html src=item.original_image w=1600 %}{%- endcapture -%}
                   <div class="gallery__image">
-                    <img src="{{ item.image }}" data-src="{{ item.original_image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
+                    <img src="{{ footer_thumb_cdn | strip }}" data-src="{{ footer_full_cdn | strip }}" data-original-src="{{ item.original_image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
                   </div>
                 {% endfor %}
               </div>

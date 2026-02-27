@@ -6,9 +6,10 @@ layout: default
   <div class="container">
     <div class="row">
       {% if page.image %}
+        {%- capture page_image_cdn -%}{% include snippets/netlify_image_url.html src=page.image w=1200 %}{%- endcapture -%}
         <div class="col col-12">
           <div class="page-image">
-            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{- page.image -}}" alt="{{ page.title | escape }}" class="lazy">
+            <img src="{% include snippets/transparent_pixel.html %}" data-src="{{ page_image_cdn | strip }}" data-original-src="{{- page.image -}}" alt="{{ page.title | escape }}" class="lazy">
           </div>
         </div>
       {% endif %}

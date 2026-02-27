@@ -17,10 +17,11 @@
                 {%- endif -%}
               {%- endfor -%}
             {%- endcapture -%}
+            {%- capture tag_image_cdn -%}{% include snippets/netlify_image_url.html src=tag_image w=480 %}{%- endcapture -%}
             <div class="col col-3 col-d-6 col-m-12">
               <a href="/tags#{{- tag[0] | downcase -}}" class="tag-image">
                 <span class="tag-name">{{- tag[0] -}}</span>
-                <img class="lazy" data-src="{{- tag_image -}}" alt="{{- tag[0] -}}">
+                <img class="lazy" data-src="{{ tag_image_cdn | strip }}" data-original-src="{{- tag_image | strip -}}" alt="{{- tag[0] -}}">
               </a>
             </div>
           {%- endfor -%}

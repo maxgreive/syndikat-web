@@ -143,6 +143,7 @@
           value: `${disc.brand} ${disc.name}`
         }
       )),
+      filter: (suggestion, input) => Awesomplete.FILTER_CONTAINS(suggestion.value, input),
       minChars: 3,
       maxItems: 20,
       autoFirst: true,

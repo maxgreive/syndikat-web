@@ -1,5 +1,7 @@
-{%- capture hero_src -%}{% include snippets/netlify_image_url.html src="/assets/images/hero.jpg" w=1200 %}{%- endcapture -%}
-{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src="/assets/images/hero.jpg" widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
+{%- capture hero_src -%}{% include snippets/netlify_image_url.html src="/assets/images/hero.jpg" w=1200 %}{%- endcapture
+-%}
+{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src="/assets/images/hero.jpg"
+widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
 <section class="hero">
   <div class="container">
     <div class="row">
@@ -9,22 +11,20 @@
             <h1 class="hero__title">Hey, wir sind das Syndikat</h1>
             <p class="hero__description">{{- site.description | escape -}}</p>
             <div class="hero__subscribe">
-              <button class="button button--primary button--icon plausible-event-name=discord_click" id="btn-discord" type="submit" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">
+              <button class="button button--primary button--icon plausible-event-name=discord_click" id="btn-discord"
+                type="submit" onclick="window.open('\/\/community.syndikat.golf');">
                 {% include snippets/logo-discord.html %}
                 Discord beitreten
               </button>
-              <a href="/register/" class="button plausible-event-name=member_click" id="btn-membership">Mitglied werden</a>
+              <a href="/register/" class="button plausible-event-name=member_click" id="btn-membership">Mitglied
+                werden</a>
             </div>
           </div>
           <div class="hero__right">
             <div class="hero__image">
-              <img src="{{ hero_src | strip }}"
-                width="534"
-                height="400"
-                srcset="{{ hero_srcset | strip }}"
+              <img src="{{ hero_src | strip }}" width="534" height="400" srcset="{{ hero_srcset | strip }}"
                 sizes="(max-width: 576px) 470px, (max-width: 768px) 560px, (max-width: 1024px) 740px, 600px"
-                alt="Discgolfscheiben in einem Rucksack"
-              >
+                alt="Discgolfscheiben in einem Rucksack">
             </div>
           </div>
         </div>

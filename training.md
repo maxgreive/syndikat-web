@@ -21,7 +21,7 @@ Für die Teilnahme melde dich bitte über das Formular unten an, damit wir das T
 
 Bitte melde dich immer zum nächsten Termin über dieses Formular an. Das sorgt für eine bessere Planbarkeit unserer Trainings. Die Anmeldung zum nächsten Termin ist immer ab Montag möglich.
 
-*Hinweise: Es reicht wenn du deinen Vor- oder Spitznamen einträgst. Das Passwort bekommst du auf dem <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">Syndikat-Discord</a> oder von einem unserer Mitglieder.*
+*Hinweise: Es reicht wenn du deinen Vor- oder Spitznamen einträgst. Das Passwort bekommst du auf dem <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Syndikat-Discord</a> oder von einem unserer Mitglieder.*
 
 <form action="#" data-training-form class="search__group">
   <input class="search__text" type="text" name="name" placeholder="Birdie Bernd" required>

@@ -11,7 +11,7 @@ Der Frühling ist da, und wir starten in die neue Saison mit einem besonderen Ev
 
 Ob erfahren oder ganz neu im Sport – alle sind willkommen! Pack Deine Scheiben ein und erlebe mit uns einen sportlichen und geselligen Tag.
 
-👉 Anmeldung: Wenn Du dabei sein möchtest, melde Dich einfach auf unserem <a href="#" onclick="window.open('\/\/discord.gg\/bus8ZcaNFT');">Syndikat-Discord</a> an! Fragen können dort beantwortet werden.
+👉 Anmeldung: Wenn Du dabei sein möchtest, melde Dich einfach auf unserem <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Syndikat-Discord</a> an! Fragen können dort beantwortet werden.
 
 Stay tuned und save the date! 🚀
 

@@ -3,6 +3,18 @@ from = "/membership"
 to = "/register"
 status = 301
 
+[[redirects]]
+from = "https://community.syndikat.golf/*"
+to = "https://discord.gg/bus8ZcaNFT"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://community.syndikat.golf/*"
+to = "https://discord.gg/bus8ZcaNFT"
+status = 301
+force = true
+
 [[headers]]
 for = "/assets/images/*"
 [headers.values]

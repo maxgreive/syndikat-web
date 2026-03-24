@@ -4594,6 +4594,202 @@ table td {
   margin-top: 0.75rem;
 }
 
+.tournaments-overview {
+  margin: 2rem 0;
+}
+
+.tournaments-overview__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.tournaments-overview__title {
+  margin-bottom: 0.5rem;
+}
+
+.tournaments-overview__copy {
+  margin-bottom: 1rem;
+  max-width: 62ch;
+}
+
+.tournaments-overview__status {
+  margin-bottom: 1rem;
+  color: var(--text-alt-color);
+}
+
+.tournaments-overview__table-wrapper {
+  margin-bottom: 0;
+}
+
+.tournaments-table {
+  margin-bottom: 0;
+}
+
+.tournaments-table thead th,
+.tournaments-table td {
+  border: 0;
+}
+
+.tournaments-table thead th:first-child,
+.tournaments-table td:first-child {
+  width: 28px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+}
+
+.tournaments-table thead th {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tournaments-table tbody tr {
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tournaments-table tbody td {
+  padding: 30px 10px;
+  vertical-align: middle;
+}
+
+.tournaments-table tbody tr:hover {
+  background: rgba(12, 16, 26, 0.03);
+}
+
+.tournaments-table tbody tr:focus-visible {
+  outline: 2px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+.tournaments-table__heading {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.tournaments-table__name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.tournaments-table__title {
+  display: block;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.tournaments-table__date {
+  display: block;
+  white-space: nowrap;
+}
+
+.tournaments-table__date--range {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.tournaments-table td[data-label="Plätze"] {
+  white-space: nowrap;
+}
+
+.tournaments-table__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.tournaments-table__indicator {
+  display: inline-block;
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.tournaments-table__indicator.is-active[data-registration-status="registration open"] {
+  background: #16a34a;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.3);
+  animation: tournaments-indicator-pulse 1.6s infinite;
+}
+
+.tournaments-table__indicator.is-active[data-registration-status="registration soon"] {
+  background: #d97706;
+  box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.28);
+  animation: tournaments-indicator-pulse 2.8s infinite;
+}
+
+.tournaments-table__indicator.is-active[data-registration-status="already full"] {
+  background: #dc2626;
+  box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.26);
+  animation: tournaments-indicator-pulse 2.8s infinite;
+}
+
+@keyframes tournaments-indicator-pulse {
+  100% {
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
+  }
+}
+
+[data-tournament-badge*="vorläufig"] {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+[data-tournament-badge*="bestätigt"] {
+  background: #dcfce7;
+  color: #166534;
+}
+
+[data-tournament-badge*="abgesagt"],
+[data-tournament-badge*="cancel"] {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+[data-tournament-badge*="ausgebucht"],
+[data-tournament-badge*="warteliste"] {
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+[data-tournament-badge] {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.tournaments-table__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.tournaments-table__select-button {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.tournaments-table tr.is-selected {
+  box-shadow: inset 3px 0 0 var(--brand-color);
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
 @media screen and (min-width: 720px) {
   .tournament-route-form {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -4601,8 +4797,31 @@ table td {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .tournaments-table thead th {
+    font-size: 14px;
+  }
+
+  .tournaments-table tbody td {
+    padding: 22px 10px;
+    font-size: 14px;
+  }
+}
+
 [dark] .tournament-route-planner {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(8, 11, 18, 0.85));
+}
+
+[dark] .tournaments-table thead th {
+  background: transparent;
+}
+
+[dark] .tournaments-table tbody tr:nth-child(odd) {
+  background: transparent;
+}
+
+[dark] .tournaments-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 [dark] .tournament-route-form__input {

@@ -42,7 +42,10 @@ const ui = {
   distance: document.querySelector("[data-route-distance]"),
   duration: document.querySelector("[data-route-duration]"),
   originConfirmation: document.querySelector("[data-route-origin-confirmation]"),
-  trainLink: document.querySelector("[data-route-train]")
+  trainLink: document.querySelector("[data-route-train]"),
+  upcomingStatus: document.querySelector("[data-upcoming-status]"),
+  upcomingTableWrapper: document.querySelector("[data-upcoming-table-wrapper]"),
+  upcomingBody: document.querySelector("[data-upcoming-body]")
 };
 
 initMap();
@@ -83,6 +86,7 @@ async function initMap() {
 
   const tournaments = await getTournaments("official");
   const metrix = await getTournaments("metrix");
+  renderUpcomingTournaments(tournaments);
 
   const markers = L.markerClusterGroup({
     showCoverageOnHover: false,
@@ -131,7 +135,10 @@ function renderMarker(tournament, layer) {
     className: "icon"
   });
 
-  const marker = L.marker([tournament.coords.lat, tournament.coords.lng], { icon });
+  const marker = L.marker([tournament.coords.lat, tournament.coords.lng], {
+    icon,
+    tournamentData: tournament
+  });
   marker.on("click", () => selectTournament(tournament, marker));
 
   const popup = createPopupContent(tournament, marker);
@@ -196,6 +203,7 @@ function selectTournament(tournament, marker) {
 
   updateSelectionMessage();
   updateSubmitState();
+  syncUpcomingTableSelection();
 }
 
 function updateSelectionMessage() {
@@ -435,6 +443,240 @@ function formatDate(dateString) {
     month: "2-digit",
     year: "numeric"
   });
+}
+
+function renderUpcomingTournaments(tournaments) {
+  if (!ui.upcomingStatus || !ui.upcomingTableWrapper || !ui.upcomingBody) return;
+
+  ui.upcomingBody.innerHTML = "";
+
+  const upcomingTournaments = Array.isArray(tournaments)
+    ? tournaments
+      .filter(isUpcomingTournament)
+      .sort(sortByTournamentDate)
+    : [];
+
+  if (!upcomingTournaments.length) {
+    ui.upcomingStatus.textContent = "Zurzeit konnten keine anstehenden offiziellen Turniere geladen werden.";
+    ui.upcomingTableWrapper.hidden = true;
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  upcomingTournaments.forEach((tournament) => {
+    const row = document.createElement("tr");
+    row.dataset.eventId = String(tournament.event_id || "");
+    row.dataset.href = tournament.link || "";
+    row.tabIndex = tournament.link ? 0 : -1;
+    row.setAttribute("role", tournament.link ? "link" : "row");
+    row.setAttribute("aria-label", tournament.link ? `${tournament.title || "Turnier"} öffnen` : tournament.title || "Turnier");
+
+    const badgeMarkup = tournament.badge
+      ? `<span class="pill tournaments-table__badge" data-tournament-badge="${escapeAttribute(tournament.badge)}">${escapeHtml(tournament.badge)}</span>`
+      : "";
+    const freeSpots = getFreeSpots(tournament);
+    const spotsLabel = tournament?.spots?.overall
+      ? `${freeSpots} / ${tournament.spots.overall}`
+      : "k. A.";
+    const registrationStatus = getTournamentRegistrationStatus(tournament, freeSpots);
+    const avatarColor = createTournamentAvatarColor(tournament);
+    const initials = getTournamentInitials(tournament.title);
+
+    row.innerHTML = [
+      `<td data-label="Status"><span class="tournaments-table__indicator${registrationStatus ? " is-active" : ""}" data-registration-status="${escapeAttribute(registrationStatus)}" aria-label="${escapeAttribute(registrationStatus || "n/a")}"></span></td>`,
+      `<td data-label="Turnier"><div class="tournaments-table__name-cell"><span class="avatar tournaments-table__avatar" style="background-color: ${escapeAttribute(avatarColor)};"><span>${escapeHtml(initials)}</span></span><div class="tournaments-table__heading">${badgeMarkup}<div class="tournaments-table__title">${escapeHtml(tournament.title || "Unbenanntes Turnier")}</div></div></div></td>`,
+      `<td data-label="Datum">${formatDateCell(tournament)}</td>`,
+      `<td data-label="Ort">${escapeHtml(tournament.location || "Unbekannt")}</td>`,
+      `<td data-label="Plätze">${escapeHtml(spotsLabel)}</td>`,
+      `<td data-label="Aktion"><div class="tournaments-table__actions"><button type="button" class="button button--text tournaments-table__select-button" data-select-event="${escapeAttribute(tournament.event_id || "")}">Route</button></div></td>`
+    ].join("");
+
+    if (tournament.link) {
+      row.addEventListener("click", handleUpcomingRowClick);
+      row.addEventListener("keydown", handleUpcomingRowKeydown);
+    }
+
+    fragment.append(row);
+  });
+
+  ui.upcomingBody.append(fragment);
+  ui.upcomingTableWrapper.hidden = false;
+  ui.upcomingStatus.textContent = `${upcomingTournaments.length} Turniere gefunden.`;
+  ui.upcomingBody.querySelectorAll("[data-select-event]").forEach((button) => {
+    button.addEventListener("click", handleUpcomingSelection);
+  });
+  syncUpcomingTableSelection();
+}
+
+function handleUpcomingSelection(event) {
+  event.stopPropagation();
+
+  const eventId = Number(event.currentTarget.dataset.selectEvent);
+
+  if (!Number.isFinite(eventId) || !state.map) return;
+
+  const markerMatch = findMarkerByEventId(eventId);
+  if (!markerMatch) return;
+
+  const { marker, tournament } = markerMatch;
+  selectTournament(tournament, marker);
+
+  if (marker.getLatLng) {
+    state.map.flyTo(marker.getLatLng(), Math.max(state.map.getZoom(), 8), {
+      duration: 0.5
+    });
+    marker.openPopup();
+  }
+
+  ui.originInput?.focus();
+}
+
+function handleUpcomingRowClick(event) {
+  const interactiveElement = event.target.closest("button, a, input, select, textarea");
+  if (interactiveElement) return;
+
+  const href = event.currentTarget.dataset.href;
+  if (!href) return;
+
+  window.open(href, "_blank", "noopener");
+}
+
+function handleUpcomingRowKeydown(event) {
+  if (event.key !== "Enter" && event.key !== " ") return;
+
+  event.preventDefault();
+  handleUpcomingRowClick(event);
+}
+
+function findMarkerByEventId(eventId) {
+  if (!state.map || !Number.isFinite(eventId)) return null;
+
+  let markerMatch = null;
+
+  state.map.eachLayer((layer) => {
+    if (markerMatch || !layer?.eachLayer) return;
+
+    layer.eachLayer((candidate) => {
+      if (markerMatch) return;
+
+      const tournament = candidate?.options?.tournamentData;
+      if (tournament?.event_id === eventId) {
+        markerMatch = {
+          marker: candidate,
+          tournament
+        };
+      }
+    });
+  });
+
+  return markerMatch;
+}
+
+function syncUpcomingTableSelection() {
+  if (!ui.upcomingBody) return;
+
+  ui.upcomingBody.querySelectorAll("tr").forEach((row) => {
+    row.classList.toggle("is-selected", row.dataset.eventId === String(state.selectedTournament?.event_id || ""));
+  });
+}
+
+function isUpcomingTournament(tournament) {
+  const endDate = tournament?.dates?.endTournament || tournament?.dates?.startTournament;
+  if (!endDate) return false;
+
+  const startOfToday = new Date();
+  startOfToday.setHours(0, 0, 0, 0);
+
+  return new Date(endDate) >= startOfToday;
+}
+
+function sortByTournamentDate(a, b) {
+  const aDate = new Date(a?.dates?.startTournament || a?.dates?.endTournament || 0).getTime();
+  const bDate = new Date(b?.dates?.startTournament || b?.dates?.endTournament || 0).getTime();
+
+  return aDate - bDate;
+}
+
+function formatDateRange(tournament) {
+  const start = tournament?.dates?.startTournament;
+  const end = tournament?.dates?.endTournament;
+
+  if (!start) return "noch unbekannt";
+  if (!end || start === end) return formatDate(start);
+
+  return `${formatDate(start)} - ${formatDate(end)}`;
+}
+
+function formatDateCell(tournament) {
+  const start = tournament?.dates?.startTournament;
+  const end = tournament?.dates?.endTournament;
+
+  if (!start) {
+    return `<span class="tournaments-table__date">noch unbekannt</span>`;
+  }
+
+  if (!end || start === end) {
+    return `<span class="tournaments-table__date">${escapeHtml(formatDate(start))}</span>`;
+  }
+
+  return `<div class="tournaments-table__date tournaments-table__date--range"><span>${escapeHtml(formatDate(start))}</span><span>${escapeHtml(formatDate(end))}</span></div>`;
+}
+
+function formatRegistrationStatus(tournament) {
+  const registrationDate = tournament?.dates?.startRegistration;
+  if (!registrationDate) return "noch nicht bekannt";
+
+  const now = new Date();
+  const registrationStartsAt = new Date(registrationDate);
+  const prefix = registrationStartsAt > now ? "ab" : "seit";
+  return `${prefix} ${formatDate(registrationDate)}`;
+}
+
+function getTournamentRegistrationStatus(tournament, freeSpots = getFreeSpots(tournament)) {
+  if (freeSpots <= 0) return "already full";
+
+  const registrationDate = tournament?.dates?.startRegistration;
+  if (!registrationDate) return "";
+
+  const registrationStartsAt = new Date(registrationDate);
+  if (Number.isNaN(registrationStartsAt.getTime())) return "";
+
+  return registrationStartsAt > new Date() ? "registration soon" : "registration open";
+}
+
+function getFreeSpots(tournament) {
+  const overall = Number(tournament?.spots?.overall);
+  const used = Number(tournament?.spots?.used);
+
+  if (!Number.isFinite(overall) || overall <= 0) return 0;
+  if (!Number.isFinite(used) || used < 0) return overall;
+
+  return Math.max(overall - used, 0);
+}
+
+function getTournamentInitials(title = "") {
+  const words = String(title)
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2);
+
+  if (!words.length) return "TT";
+  return words.map((word) => word.charAt(0).toUpperCase()).join("");
+}
+
+function createTournamentAvatarColor(tournament) {
+  const source = String(tournament?.event_id || tournament?.title || "0");
+  let hash = 0;
+
+  for (let index = 0; index < source.length; index += 1) {
+    hash = (hash << 5) - hash + source.charCodeAt(index);
+    hash |= 0;
+  }
+
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue}deg 70% 34%)`;
 }
 
 function escapeHtml(value) {

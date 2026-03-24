@@ -1,3 +1,7 @@
+const DEFAULT_DEV_API_URL = 'http://localhost:8080';
+const DEFAULT_PROD_API_URL = 'https://api.syndikat.golf';
+const API_URL = resolveApiBaseUrl();
+
 function renderRatings(ratings, $el) {
   let index = 0;
   $el.innerHTML = ratings.map(entry => {
@@ -42,13 +46,22 @@ async function initRatings() {
   if (!$el) return;
 
   try {
-    const ratings = await fetch('https://api.syndikat.golf/ratings').then(response => response.json());
+    const ratings = await fetch(`${API_URL}/ratings`).then(response => response.json());
     await getDivisions(ratings);
     await renderRatings(ratings, $el);
     setupListeners($el.querySelectorAll('tr'));
   } catch (err) {
     console.error(err);
   }
+}
+
+function resolveApiBaseUrl() {
+  if (typeof window !== 'undefined') {
+    const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    return isLocalhost ? DEFAULT_DEV_API_URL : DEFAULT_PROD_API_URL;
+  }
+
+  return DEFAULT_PROD_API_URL;
 }
 
 function setupListeners($rows) {

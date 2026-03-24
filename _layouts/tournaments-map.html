@@ -66,6 +66,36 @@ layout: default
 
 <div id="tournaments-map">&nbsp;</div>
 
+<div class="container animate">
+  <section class="tournaments-overview" aria-labelledby="upcoming-tournaments-title">
+    <div class="tournaments-overview__intro">
+      <p class="tournaments-overview__eyebrow">Offizielle Turniere</p>
+      <h2 id="upcoming-tournaments-title" class="tournaments-overview__title">Alle anstehenden Turniere</h2>
+      <p class="tournaments-overview__copy">Die Liste zeigt die anstehenden Turniere von turniere.discgolf.de, mit Datum, Ort, Status und aktueller Auslastung.</p>
+    </div>
+
+    <div class="tournaments-overview__status" data-upcoming-status aria-live="polite">
+      Lade Turniere …
+    </div>
+
+    <div class="table-responsive tournaments-overview__table-wrapper" data-upcoming-table-wrapper hidden>
+      <table class="tournaments-table">
+        <thead>
+          <tr>
+            <th scope="col" aria-label="Status"></th>
+            <th scope="col">Turnier</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Ort</th>
+            <th scope="col">Plätze</th>
+            <th scope="col">Aktion</th>
+          </tr>
+        </thead>
+        <tbody data-upcoming-body></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
 <script src="/assets/js/vendors/leaflet.js" defer></script>
 <script src="/assets/js/vendors/leaflet.markercluster.js" defer></script>
 <script src="/assets/js/vendors/leaflet.resetview.js" defer></script>

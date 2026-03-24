@@ -21,6 +21,40 @@ layout: default
         {{ content }}
       </div>
 
+      <section class="tournament-route-planner" aria-labelledby="route-planner-title">
+        <div class="tournament-route-planner__intro">
+          <p class="tournament-route-planner__eyebrow">Anfahrt zum Turnier</p>
+          <h2 id="route-planner-title" class="tournament-route-planner__title">Route mit dem Auto berechnen</h2>
+          <p class="tournament-route-planner__copy">Wähle zuerst ein Turnier auf der Karte aus und gib dann eine vollständige Startadresse ein. Für das MVP funktionieren Straße, Hausnummer, Postleitzahl und Ort am verlässlichsten.</p>
+        </div>
+
+        <form class="tournament-route-form" data-route-form>
+          <label class="screen-reader-text" for="route-origin">Startadresse</label>
+          <input
+            id="route-origin"
+            name="origin"
+            type="text"
+            class="tournament-route-form__input"
+            placeholder="Street, house number, postcode, city"
+            autocomplete="street-address"
+            data-route-origin
+            required>
+          <button type="submit" class="button tournament-route-form__button" data-route-submit disabled>Route berechnen</button>
+        </form>
+
+        <div class="tournament-route-feedback" data-route-feedback>
+          <p class="tournament-route-feedback__message" data-route-message>Wähle ein Turnier auf der Karte, um die Route zu planen.</p>
+          <div class="tournament-route-summary" data-route-summary hidden>
+            <p class="tournament-route-summary__tournament" data-route-selected></p>
+            <p class="tournament-route-summary__meta"><span data-route-distance></span><span data-route-duration></span></p>
+            <p class="tournament-route-summary__origin" data-route-origin-confirmation></p>
+            <p class="tournament-route-summary__actions">
+              <a href="#" target="_blank" rel="noopener" class="popup-link" data-route-train hidden>Mit der Bahn suchen <i class="ion ion-md-exit"></i></a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       <template data-icon>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.2 347.64" height="100%">
           <path d="M167.59 188.88c5.3-12.31 10.37-25.67 14.95-40.05a440.7 440.7 0 0 0 20.33-116.42V4.14c-30.78-3-61.75-3.83-92.67-3.55-7.48.06-88.79 1-88.79 3.55v28.3A440.29 440.29 0 0 0 41.7 148.86c4.58 14.38 9.65 27.74 15 40.05H.54l5.34 71a525 525 0 0 0 54.82 9.08c12.6 1.41 24.61 2.29 36 2.77v75.38h31.1v-75.4c11.29-.49 23.22-1.36 35.72-2.76a525.2 525.2 0 0 0 54.83-9.08l5.34-71z"></path>

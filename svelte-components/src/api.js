@@ -1,4 +1,20 @@
-const API_URL = process.env.API_URL || 'https://api.syndikat.golf';
+const DEFAULT_DEV_API_URL = 'http://localhost:8080';
+const DEFAULT_PROD_API_URL = 'https://api.syndikat.golf';
+
+function resolveApiUrl() {
+  if (process.env.API_URL) {
+    return process.env.API_URL;
+  }
+
+  if (typeof window !== 'undefined') {
+    const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    return isLocalhost ? DEFAULT_DEV_API_URL : DEFAULT_PROD_API_URL;
+  }
+
+  return DEFAULT_PROD_API_URL;
+}
+
+const API_URL = resolveApiUrl();
 
 export async function fetchProducts(query, endpoint) {
   const data = [];

@@ -254,10 +254,7 @@ async function handleRouteSubmit(event) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        origin,
-        destination: buildDestinationPayload(state.selectedTournament)
-      })
+      body: JSON.stringify(buildRoutePayload(origin, state.selectedTournament))
     });
 
     const payload = await parseJsonResponse(response);
@@ -274,6 +271,14 @@ async function handleRouteSubmit(event) {
   } finally {
     updateSubmitState(false);
   }
+}
+
+function buildRoutePayload(origin, tournament) {
+  return {
+    origin,
+    date: tournament?.dates?.startTournament,
+    destination: buildDestinationPayload(tournament)
+  };
 }
 
 function buildDestinationPayload(tournament) {

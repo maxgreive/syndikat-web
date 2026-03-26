@@ -2300,7 +2300,7 @@ ol li {
 }
 
 body {
-  font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size-adjust: 0.46;
   font-size: 20px;
   line-height: 1.5;
@@ -2814,6 +2814,7 @@ table td {
 }
 
 @media only screen and (max-width: 1024px) {
+
   .toggle-sun,
   .toggle-moon {
     font-size: 24px;
@@ -4548,9 +4549,13 @@ table td {
   color: var(--text-alt-color);
 }
 
-.tournament-route-form__button,
-.popup-route-button {
+.tournament-route-form__button {
   justify-self: start;
+}
+
+.tournament-route-form__button.button--text {
+  padding: 20px 26px;
+  font-weight: 700;
 }
 
 .tournament-route-feedback {
@@ -4588,10 +4593,6 @@ table td {
   flex-wrap: wrap;
   gap: 1rem;
   font-weight: 500;
-}
-
-.popup-route-button {
-  margin-top: 0.75rem;
 }
 
 .tournaments-overview {
@@ -4852,11 +4853,11 @@ table td {
 }
 
 .leaflet-container {
-  font-family: "Jost",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 .leaflet-popup-content p {
-  margin: 0;
+  margin: 0.3em 0;
 }
 
 .leaflet-container .popup-title {
@@ -4873,6 +4874,10 @@ table td {
 }
 
 .leaflet-container .popup-link {
+  margin-top: 0.5rem;
+}
+
+.leaflet-container .popup-route-button {
   margin-top: 0.5rem;
 }
 
@@ -5306,6 +5311,7 @@ table td {
 }
 
 @media screen and (max-width:600px) {
+
   .awesomplete .disc-category,
   .awesomplete .disc-flightnumbers {
     display: none;

@@ -178,8 +178,8 @@ function createPopupContent(tournament, marker) {
 
   const routeButton = document.createElement("button");
   routeButton.type = "button";
-  routeButton.className = "button popup-route-button";
-  routeButton.textContent = "Dieses Turnier auswählen";
+  routeButton.className = "button button--text popup-route-button";
+  routeButton.textContent = "Route anzeigen";
   routeButton.addEventListener("click", () => {
     selectTournament(tournament, marker);
     marker.closePopup();
@@ -220,6 +220,8 @@ function updateSubmitState(isLoading = false) {
   const canSubmit = Boolean(state.selectedTournament && hasOrigin && !isLoading);
 
   ui.submitButton.disabled = !canSubmit;
+  ui.submitButton.classList.toggle("button--primary", hasOrigin);
+  ui.submitButton.classList.toggle("button--text", !hasOrigin);
   ui.submitButton.textContent = isLoading ? "Route wird geladen..." : "Route berechnen";
 }
 

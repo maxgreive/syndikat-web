@@ -2534,8 +2534,14 @@ table td {
   padding: 0;
   font-weight: 500;
   color: var(--link-color);
+  -webkit-text-fill-color: currentColor;
   cursor: pointer;
   border-bottom: 1px solid var(--border-color);
+}
+
+button.button--text {
+  color: var(--link-color);
+  -webkit-text-fill-color: currentColor;
 }
 
 @media (hover: hover) {
@@ -4879,10 +4885,18 @@ table td {
 
 .leaflet-container .popup-route-button {
   margin-top: 0.5rem;
+  font-size: 13px;
+  color: #1e2740;
+  border-bottom-color: var(--border-color);
+  -webkit-text-fill-color: currentColor;
 }
 
 .leaflet-container .leaflet-popup-content a:hover {
   color: #1e2740 !important;
+}
+
+.leaflet-container .popup-route-button:hover {
+  color: #1e2740;
 }
 
 .popup-badge {

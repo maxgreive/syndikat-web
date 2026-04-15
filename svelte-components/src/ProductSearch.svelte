@@ -231,7 +231,7 @@
       list: discs.map(disc => (
         {
           label: getDiscLabel(disc),
-          value: `${disc.brand} ${disc.name}`
+          value: `${disc.name}`
         }
       )),
       filter: (suggestion, input) => Awesomplete.FILTER_CONTAINS(suggestion.value, input),

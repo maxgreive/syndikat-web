@@ -40,8 +40,10 @@ layout: default
               </span>
 
               <div class="post__meta-bottom">
-                {% if author.twitter %}
-                  <a href="//twitter.com/{{- author.twitter -}}" class="post__author">{{- author.name -}}</a>
+                {% if author.url %}
+                  <a href="{{ author.url }}" rel="author" class="post__author">{{- author.name -}}</a>
+                {% elsif author.twitter %}
+                  <a href="//twitter.com/{{- author.twitter -}}" rel="author" class="post__author">{{- author.name -}}</a>
                 {% else %}
                   <span class="post__author">{{- author.name -}}</span>
                 {% endif %}

@@ -1,25 +1,43 @@
 max:
   name: Max
+  url: /authors/max/
   image: /assets/images/authors/max.jpg
   twitter: maex2k
+  same_as:
+    - https://twitter.com/maex2k
+    - https://www.pdga.com/player/269738
+    - https://rating.discgolf.de/detail.php?gtn=2791
+  bio: Autor bei syndikat.golf und Mitgründer des Disc Golf Syndikat Koeln.
 
 philipp:
   name: Philipp
+  url: /authors/philipp/
   image: /assets/images/authors/philipp.jpg
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.
 
 moritz:
   name: Moritz
+  url: /authors/moritz/
   image: /assets/images/authors/moritz.jpg
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.
 
 jonas:
   name: Jonas
+  url: /authors/jonas/
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.
 
 yannik:
   name: Yannik
+  url: /authors/yannik/
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.
 
 matthias:
   name: Matthias
+  url: /authors/matthias/
   image: /assets/images/authors/matthias.jpg
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.
 
 alex:
   name: Alex
+  url: /authors/alex/
+  bio: Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln.

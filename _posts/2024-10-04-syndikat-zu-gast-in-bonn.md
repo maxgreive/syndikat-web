@@ -13,7 +13,7 @@ Neben den neun dauerhaft aufgebauten Bahnen des Derletals hatten die Bonnsais ei
 
 Für die 11 Teilnehmer und Teilnehmerinnen des Syndikats wurde es pünktlich um 09:05 Uhr ernst. Schnell zeigte sich, dass die Konkurrenz an diesem Tag eine echte Herausforderung sein würde. Nach den ersten 18 Bahnen schnitt Alexander Kraft noch mit einem Score von -4 auf 18 Bahnen und einem geteilten 4. Platz am besten ab und erkämpfte sich eine gute Ausgangslage für den zweiten Durchgang. Hier zeigte sich jedoch das ganze Können der Top 3, sodass es am Ende nur knapp nicht für das Podium reicht.
 
-![](/assets/images/posts/podium-bonnsai-open.jpg)
+![Siegerehrung der Bonnsai Open mit dem Podium](/assets/images/posts/podium-bonnsai-open.jpg)
 
 Mit einem überragenden Score von -11 sicherte sich Severin Hövel den ersten Platz und sorgte ein ums andere Mal mit seiner Präzision für Erstaunen. Ebenso Klaus Kattwinkel, der die Division Masters 50 mit einem Gesamtergebnis von -16 über zwei Runden für sich entscheiden konnte und in Summe die besten zwei Runden des Turniers spielte. Für das Highlight des Tages sorgte Claus Erkenrath, der sich in der Division Masters 40 mit einem Ass verewigen konnte.
 

@@ -5,6 +5,7 @@ image: /assets/images/posts/syndication-weekly-header.png
 thumbnail: /assets/images/posts/thumbnails/syndication-weekly-header.jpg
 tags: turniere league
 author: max
+description: Ab August startet unsere wöchentliche Disc Golf Liga an der Scheibenstraße in Köln. Alle Levels sind willkommen, Anmeldung und Scoring laufen über UDisc.
 ---
 
 > **Update:** Seit dem 30. Oktober treffen wir uns nun immer sonntags am Disc Golf-Kurs! Tee-Off um 13 Uhr.

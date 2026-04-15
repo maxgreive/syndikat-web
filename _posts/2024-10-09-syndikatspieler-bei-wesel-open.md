@@ -15,11 +15,11 @@ Trotz herrlichem Sonnenschein an diesem Sonntag im Oktober besuchten gleich mehr
 
 Nach der ersten Runde setze sich Benedikt Pöpsel mit einem Score von &ndash;3 auf einen geteilten 4 Platz an die Spitze seiner Vereinskollegen. Ohne den Kurs vorher bespielt zuhaben oder im Fachjargon „blind zu spielen“ konnte er ein Topergebnis auf anspruchsvollen Bahnen erzielen.
 
-![](/assets/images/posts/wesel-ring-of-fire.jpg)
+![Teilnehmer beim Ring of Fire der Wesel Open](/assets/images/posts/wesel-ring-of-fire.jpg)
 
 In der Mittagspause dann ein Highlight des Turniers, als zum sognannten „Ring of Fire“ gerufen wurde – ein Putting Wettbewerb, bei dem alle Teilnehmer in 10 Metern Entfernung um denselben Korb stehen und zeitgleich auf Signal die Scheibe in den Korb werfen. Wer trifft, der bleibt. Wer verfehlt, der geht. Nach vier Runden ging der Syndikatspieler Alexander Kraft siegreich aus dem Kräftemessen hervor. Dabei gelang es ihm sogar über den amtierenden deutschen Puttingmeister Severin Hövel vom Bonnsai e.V. zu triumphieren.
 
-![](/assets/images/posts/wesel-ring-of-fire-gewinner.jpg)
+![Alexander Kraft gewinnt den Ring of Fire bei den Wesel Open](/assets/images/posts/wesel-ring-of-fire-gewinner.jpg)
 
 Beflügelt von diesem Erfolg ging es in die zweite Runde des Turniers, in der das Teilnehmerfeld den stärker werdenden Windverhältnissen trotzen muss. Sei es durch Wind oder andere Faktoren (man selbst ist im Discgolf bekanntlich nie Schuld) konnte Benedikt Pöpsel nicht nochmal ein gleiches Ergebnis erzielen und belegte am Ende mit einer +3 aus der zweiten Runde den 11 Platz. Alexander Kraft, dem die im Namen enthaltene Kraft noch nicht ausgegangen war, konnte hingegen in der zweiten Runde das gleiche Ergebnis wie in Runde 1. Erzielen und belegte mit einem Gesamtergebnis von &ndash;4 über zwei Runden den 7. Platz.
 

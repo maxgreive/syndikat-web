@@ -1,5 +1,6 @@
 ---
-title: Dice Game
+title: Disc Dice Würfelspiel
+description: Das Disc Dice Würfelspiel für Disc Golf mit Zufallswürfen, Scheiben-Challenges und schnellen Ideen für abwechslungsreiche Trainingsrunden.
 layout: dice-game
 ---
 

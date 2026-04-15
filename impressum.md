@@ -1,5 +1,6 @@
 ---
-title: Impressum
+title: Impressum Disc Golf Syndikat
+description: Rechtliche Angaben, Vereinsdaten und Kontaktinformationen des Disc Golf Syndikat e.V. aus Köln.
 layout: page
 ---
 

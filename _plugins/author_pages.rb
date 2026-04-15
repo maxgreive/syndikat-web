@@ -7,7 +7,7 @@ module Jekyll
       super(site, base, dir, "index.html")
 
       data["layout"] = "author"
-      data["title"] = author_data["name"]
+      data["title"] = "#{author_data["name"]} beim Disc Golf Syndikat"
       data["author_id"] = author_id
       data["permalink"] = permalink
     end

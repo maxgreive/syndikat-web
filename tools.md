@@ -1,5 +1,6 @@
 ---
-title: Tools
+title: Disc Golf Tools & Apps
+description: Nützliche Tools und Web-Apps des Disc Golf Syndikat für Training, Bag Tags, Turniere, Preisvergleich und Scheibenkauf.
 layout: default
 ---
 

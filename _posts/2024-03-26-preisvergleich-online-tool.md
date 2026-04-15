@@ -7,9 +7,9 @@ tags: app discs
 author: max
 ---
 
-Du suchst den besten Preis für den nächsten "total gerechtfertigten Scheibenkauf"? Bereit für ein neues Level an Scheiben-Shopping? [Unser brandneues Preisvergleichstool](/preisvergleich) ist da, um dir dabei zu helfen, die heißesten Deals für eure Lieblings-Discs und -zubehör zu finden, ohne dabei die Stores einzeln abzuklappern.
+Du suchst den besten Preis für den nächsten "total gerechtfertigten Scheibenkauf"? Bereit für ein neues Level an Scheiben-Shopping? [Unser brandneues Preisvergleichstool](/preisvergleich/) ist da, um dir dabei zu helfen, die heißesten Deals für eure Lieblings-Discs und -zubehör zu finden, ohne dabei die Stores einzeln abzuklappern.
 
-<a href="/preisvergleich" class="button button--big button--primary">Zum Preisvergleich</a>
+<a href="/preisvergleich/" class="button button--big button--primary">Zum Preisvergleich</a>
 
 ## Wie funktioniert's?
 
@@ -27,11 +27,11 @@ Easy peasy! Einfach den Namen der Disc eingeben, die du suchst, und wir durchfor
 
 Wir haben acht der angesagtesten deutschen Discgolf-Shops an Bord. Von den neuesten Underdogs bis hin zu klassischen Favoriten – bei uns findest du alles, was dein Discgolfer-Herz begehrt.
 
-Du vermisst einen Shop? Schreib uns [über unser Kontaktformular](/contact)!
+Du vermisst einen Shop? Schreib uns [über unser Kontaktformular](/contact/)!
 
 ## Fazit:
 
-Ready, set, throw! [Unser Preisvergleichstool](/preisvergleich) ist dein neuer bester Freund, wenn es darum geht, die besten Discgolf-Deals zu finden. Egal, ob du ein Profi bist oder gerade erst anfängst – mit uns hast du immer die Nase vorn.
+Ready, set, throw! [Unser Preisvergleichstool](/preisvergleich/) ist dein neuer bester Freund, wenn es darum geht, die besten Discgolf-Deals zu finden. Egal, ob du ein Profi bist oder gerade erst anfängst – mit uns hast du immer die Nase vorn.
 
 Probier's gleich mal aus und schlag bei den Osterangeboten zu! Die Sommersaison beginnt, da kann man vermutlich den ein oder anderen Spontankauf rechtfertigen 😉
 

@@ -1,5 +1,6 @@
 ---
-title: Turniere
+title: Disc Golf Turnierkarte
+description: Interaktive Karte mit aktuellen Disc Golf Turnieren in Deutschland inklusive Orten, Terminen, Auslastung und Anreiseplanung.
 layout: tournaments-map
 image: /assets/images/turnierkarte-sharing-image.png
 excerpt: Interaktive Karte von alle aktuellen Disc Golf-Turnieren in Deutschland. Egal Ob du ein erfahrener Spieler, ein neuer Enthusiast oder einfach nur auf der Suche nach dem nächsten Turnier in deiner Nähe bist, hier findest du Events!

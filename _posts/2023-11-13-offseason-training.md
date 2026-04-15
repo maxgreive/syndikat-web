@@ -45,7 +45,7 @@ Die Offseason ist auch eine großartige Zeit, um den Teamgeist zu stärken. Verb
 
 ![Syndication Weekly im November 2023](/assets/images/posts/syndication-november.jpg)
 
-[Unsere wöchentliche Liga findet natürlich auch in der Offseason weiter statt!](/events)
+[Unsere wöchentliche Liga findet natürlich auch in der Offseason weiter statt!](/events/)
 
 ## 8. Reise in wärmere Gefilde:
 

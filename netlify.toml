@@ -4,6 +4,96 @@ to = "/register"
 status = 301
 
 [[redirects]]
+from = "/about"
+to = "/about/"
+status = 301
+
+[[redirects]]
+from = "/bagtags"
+to = "/bagtags/"
+status = 301
+
+[[redirects]]
+from = "/blog"
+to = "/blog/"
+status = 301
+
+[[redirects]]
+from = "/contact"
+to = "/contact/"
+status = 301
+
+[[redirects]]
+from = "/datenschutz"
+to = "/datenschutz/"
+status = 301
+
+[[redirects]]
+from = "/disc-dice"
+to = "/disc-dice/"
+status = 301
+
+[[redirects]]
+from = "/events"
+to = "/events/"
+status = 301
+
+[[redirects]]
+from = "/faq"
+to = "/faq/"
+status = 301
+
+[[redirects]]
+from = "/impressum"
+to = "/impressum/"
+status = 301
+
+[[redirects]]
+from = "/preisvergleich"
+to = "/preisvergleich/"
+status = 301
+
+[[redirects]]
+from = "/ratings"
+to = "/ratings/"
+status = 301
+
+[[redirects]]
+from = "/register"
+to = "/register/"
+status = 301
+
+[[redirects]]
+from = "/satzung"
+to = "/satzung/"
+status = 301
+
+[[redirects]]
+from = "/success"
+to = "/success/"
+status = 301
+
+[[redirects]]
+from = "/tags"
+to = "/tags/"
+status = 301
+
+[[redirects]]
+from = "/tools"
+to = "/tools/"
+status = 301
+
+[[redirects]]
+from = "/training"
+to = "/training/"
+status = 301
+
+[[redirects]]
+from = "/turniere"
+to = "/turniere/"
+status = 301
+
+[[redirects]]
 from = "https://community.syndikat.golf/*"
 to = "https://discord.gg/bus8ZcaNFT"
 status = 301

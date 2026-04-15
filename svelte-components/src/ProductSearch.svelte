@@ -248,7 +248,7 @@
         <div class="col col-12">
           <p>
             Ein Store fehlt in der Liste? Du hast Fragen oder Anregungen? <a
-              href="/contact"
+              href="/contact/"
             >
               Schreib uns über das Kontaktformular
             </a>.

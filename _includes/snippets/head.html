@@ -8,7 +8,7 @@
 {%- endif -%}
 {%- endcapture -%}
 
-{%- capture meta_description -%}
+{%- capture meta_description_raw -%}
 {%- if page.description -%}
 {{- page.description | strip_html | strip_newlines | strip -}}
 {%- elsif page.layout == "author" and site.data.authors[page.author_id].bio -%}
@@ -19,6 +19,7 @@
 {{- site.description | strip_html | strip_newlines | strip -}}
 {%- endif -%}
 {%- endcapture -%}
+{%- assign meta_description = meta_description_raw | strip | truncate: 157, "..." -%}
 
 {%- capture author_names -%}
 {%- if page.author -%}

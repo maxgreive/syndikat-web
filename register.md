@@ -1,5 +1,6 @@
 ---
-title: Mitglied werden
+title: Mitglied im Syndikat werden
+description: Werde Mitglied beim Disc Golf Syndikat und sichere dir Training, Turnierteilnahme, Community-Zugang und weitere Vorteile im Verein.
 layout: membership
 ---
 
@@ -16,7 +17,7 @@ Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten 
 ### Benefits
 
 - DFV-Nummer (wird bei offiziellen Turnieren benötigt)
-- [Vereinstraining](/training)
+- [Vereinstraining](/training/)
 - Versicherung bei Turnieren
 - 15% bei [frisbeeshop.com](https://frisbeeshop.com)
 - Member-Access auf dem Discord-Server

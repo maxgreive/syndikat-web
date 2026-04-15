@@ -1,7 +1,8 @@
 ---
 layout: page
 sitemap: false
-title: Success
+title: Nachricht erfolgreich gesendet
+description: Bestätigung, dass deine Nachricht erfolgreich an das Disc Golf Syndikat übermittelt wurde.
 hide_title: true
 ---
 

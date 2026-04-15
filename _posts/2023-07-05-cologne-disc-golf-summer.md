@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Ankündigung: Cologne Disc Golf Summer 2023"
+title: "Cologne Disc Golf Summer 2023"
 image: /assets/images/posts/cdgs.jpg
 thumbnail: /assets/images/posts/thumbnails/cdgs.jpg
 tags: events
 author: max
+description: Einladung zum Cologne Disc Golf Summer 2023 an der Scheibenstraße in Köln mit Disc Golf, Spielen, Tauschbörse und Sommerfest.
 ---
 
 Liebe Mitglieder und Freunde des Syndikats,

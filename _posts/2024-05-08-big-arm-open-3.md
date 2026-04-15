@@ -13,13 +13,13 @@ Ursprünglich hatte ich geplant, auch ohne Startplatz nach Schmallenberg zu fahr
 
 Überraschend erhielt ich Anfang April dann doch noch einen Startplatz, nachdem ich mich auf Wartelistenplatz 1 vorgearbeitet hatte. Mein Rating war gerade ausreichend, um an diesem prestigeträchtigen Turnier teilzunehmen. Philipp bot sich als mein Caddy an, und so stand meinem dritten Antreten bei den Big Arm Open nichts mehr im Weg.
 
-![](/assets/images/posts/big_arm_jump_putt.jpg)
+![Max beim Jump Putt auf der Big Arm Open 3](/assets/images/posts/big_arm_jump_putt.jpg)
 
 Am Donnerstagmorgen machten wir uns mit einem voll beladenen Smart – gepackt mit Discgolf-Scheiben sowie Regen- und Sommerkleidung, da das Wetter als wechselhaft vorhergesagt war – auf den Weg ins idyllische Sauerland. Im Golfclub Schmallenberg angekommen, taten wir uns am Tee der ersten Bahn mit Björn und Lukas zusammen, die ebenfalls nur für die Proberunde angereist waren. Die Sonne strahlte und die Bedingungen waren perfekt. Ich spielte eine +1 und setzte damit die Messlatte für die erste Turnierrunde.
 
 Eine Runde auf dem Kurs dauert etwa 4 Stunden und führt über 7 Kilometer durch eine malerische Landschaft mit zahlreichen Höhenmetern. Die Herausforderung beginnt bereits an Bahn 1, einem 325 Meter langen Par 5, das mit seinen 40 Metern Höhenunterschied sowohl Technik als auch Power erfordert.
 
-![](/assets/images/posts/big_arm_bahn_1.jpg)
+![Blick auf Bahn 1 der Big Arm Open 3 in Schmallenberg](/assets/images/posts/big_arm_bahn_1.jpg)
 
 
 ## Freitag, Runde 1 — Der Wetterumschwung
@@ -38,7 +38,7 @@ Mein erster Wurf an Bahn 1 war allerdings erneut ein Fehlstart, und ich "shankte
 
 Ich lernte drei sympathische Discgolfer kennen und genoss einen wunderbaren Tag auf dem Kurs. Nach meiner Runde begleitete ich Severin als Caddy, der im vorletzten Flight des Tages die Lead-Card unter Druck setzen wollte. Leider reichte es für ihn "nur" für eine 5 über Par.
 
-![](/assets/images/posts/big-arm-max.jpg)
+![Max auf der Big Arm Open 3 in Schmallenberg](/assets/images/posts/big-arm-max.jpg)
 
 ## Sonntag, Runde 3 — Das Finale
 
@@ -46,7 +46,7 @@ Am finalen Tag der Big Arm Open 3 hatte ich eine ähnliche Erfahrung wie zuvor. 
 
 Letztendlich spielte ich eine unspektakuläre +5 und landete damit auf Platz 54 in der Open-Division. [Alle Ergebnisse sind auf turniere.discgolf.de zu finden](https://turniere.discgolf.de/index.php?p=events&sp=live&id=2006). Kerstin und Raphael waren extra angereist, begleiteten meine Runde und fieberten mit.
 
-![](/assets/images/posts/big_arm_putt.jpg)
+![Putt auf dem Golfclub-Kurs bei der Big Arm Open 3](/assets/images/posts/big_arm_putt.jpg)
 
 ## Fazit — Ein unvergessliches Turnier
 

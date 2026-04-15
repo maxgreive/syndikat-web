@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: Disc Golf Verein in Köln
+description: "Lerne das Disc Golf Syndikat kennen: unseren Verein, unsere Community, Trainings und Events rund um Disc Golf in Köln und Umgebung."
 image: /assets/images/about-title.jpg
 permalink: /about/
 ---

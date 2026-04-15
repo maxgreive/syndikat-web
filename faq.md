@@ -1,5 +1,6 @@
 ---
 title: Häufig gestellte Fragen
+description: Antworten auf häufige Fragen zu Disc Golf, Training, Mitgliedschaft und Vereinsleben beim Disc Golf Syndikat in Köln.
 layout: faq
 ---
 

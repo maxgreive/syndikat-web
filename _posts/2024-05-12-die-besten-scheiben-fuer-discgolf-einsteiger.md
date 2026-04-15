@@ -57,7 +57,7 @@ Wichtig: Lerne erst diese vier Scheiben zu beherrschen, bevor du neue Scheiben k
 
 Es gibt verschiedene Möglichkeiten, Scheiben zu kaufen, und es lohnt sich, verschiedene Optionen zu vergleichen. Frage andere Spieler in deiner lokalen Discgolf-Community, ob sie gebrauchte Scheiben zum Verkauf anbieten. Oft sind erfahrene Spieler bereit, ihre alten Scheiben günstig abzugeben oder zu tauschen.
 
-> Schau auch [in unseren Preisvergleich](/preisvergleich), um die besten Angebote für neue Scheiben zu finden und die verschiedenen Shops zu vergleichen.
+> Schau auch [in unseren Preisvergleich](/preisvergleich/), um die besten Angebote für neue Scheiben zu finden und die verschiedenen Shops zu vergleichen.
 
 Online-Plattformen wie eBay Kleinanzeigen, Facebook Marketplace und Discgolf-Foren können ebenfalls gute Quellen für gebrauchte und neue Scheiben sein. Besuche lokale Discgolf-Turniere, wo oft Händler vor Ort sind und eine Vielzahl von Scheiben zum Verkauf anbieten. Dies ist eine großartige Möglichkeit, Scheiben anzufassen und zu sehen, welche am besten zu deinem Spielstil passen. Indem du diese verschiedenen Möglichkeiten erkundest, kannst du die besten Scheiben für dein Spiel finden und gleichzeitig Geld sparen.
 

@@ -1,5 +1,6 @@
 ---
-title: Bag Tags
+title: Bag Tags Challenge Köln
+description: Regeln, Rangliste und Strafgebühr für die Bag Tags Challenge des Disc Golf Syndikat in Köln inklusive aktueller Platzierungen.
 layout: bag-tags
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Datenschutzerklärung
+title: Datenschutz Disc Golf Syndikat
+description: Informationen zur Verarbeitung personenbezogener Daten auf syndikat.golf und bei Formularen des Disc Golf Syndikat.
 layout: page
 ---
 

@@ -5,6 +5,7 @@ image: /assets/images/posts/sommerzeit.jpg
 thumbnail: /assets/images/posts/thumbnails/sommerzeit.jpg
 tags: league
 author: max
+description: Mit der Sommerzeit startet unsere wöchentliche Disc Golf Liga in Köln wieder dienstags am Abend. Alle Levels sind willkommen.
 ---
 
 > **Update:** Die Liga startet ab dem 18. April um 19 Uhr!

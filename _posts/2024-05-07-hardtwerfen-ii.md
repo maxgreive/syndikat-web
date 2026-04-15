@@ -12,7 +12,7 @@ excerpt: Rückblick auf die zweite Ausgabe des Hardtwerfen im Derletal in Bonn, 
 
 Am vergangenen Wochenende, genauer gesagt am Sonntag, den 28. April 2024, wurde im idyllischen Derletal in Bonn das Discgolf-Turnier „Hardtwerfen II“ ausgerichtet. Für dieses besondere Ereignis hatten die Organisatoren des [Vereins Bonnsai](https://bonnsai.org) neben den ständig installierten 9 Bahnen noch zusätzliche 9 Bahnen geschaffen, die sich kreativ durch das angrenzende Freibad und die umgebende Landschaft zogen. Dies verlieh dem Turnier einen einzigartigen Charakter und stellte die Teilnehmenden vor spannende neue Herausforderungen.
 
-![](/assets/images/posts/hardtwerfen-severin.jpg)
+![Severin beim Putt auf dem Hardtwerfen II in Bonn](/assets/images/posts/hardtwerfen-severin.jpg)
 
 Das Disc Golf Syndikat, vertreten durch 11 Spieler, erlebte einen Tag voller sportlicher Erfolge und schöner Gespräche in der Community. Die Teilnehmer zeigten großes Engagement und beeindruckende Leistungen auf dem erweiterten 18-Bahnen-Parcours.
 
@@ -24,7 +24,7 @@ In der Division MA4 waren gleich 3 Vereinsmitglieder im führenden Flight, konnt
 
 Bei den Damen gab es ebenfalls spannende Momente: Kerstin aus unseren Reihen trat in der Division FA4 an und zeigte großartigen Einsatz. Leider musste sie sich jedoch, ebenfalls im Stechen, knapp geschlagen geben und belegte den zweiten Platz.
 
-![](/assets/images/posts/hardtwerfen-team.jpg)
+![Teile des Disc Golf Syndikats beim Hardtwerfen II in Bonn](/assets/images/posts/hardtwerfen-team.jpg)
 
 Der Parcours selbst war eine echte Herausforderung, besonders die Bahnen, die rund um das Freibad gestaltet wurden. Die Spieler und Spielerinnen mussten die Scheiben über die teils sehr schmalen Fairways manövrieren und dem OB fern bleiben.
 

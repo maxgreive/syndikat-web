@@ -45,7 +45,7 @@ layout: default
                 {% elsif author.twitter %}
                   <a href="//twitter.com/{{- author.twitter -}}" rel="author" class="post__author">{{- author.name -}}</a>
                 {% else %}
-                  <span class="post__author">{{- author.name -}}</span>
+                  <span class="post__author author">{{- author.name -}}</span>
                 {% endif %}
                 {% if forloop.first %}
                   {% capture i18n_date %}

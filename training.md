@@ -2,17 +2,17 @@
 layout: training
 title: Discgolf Training in Köln
 description: Gemeinsames Discgolf-Training in Köln für alle Levels mit Anmeldung, Terminen, Trainingsinfos und Hinweisen zum Vereinsangebot.
-excerpt: "Gemeinsames Discgolf-Training für alle Levels! Jeden Dienstag um 19:30 Uhr an der Scheibenstraße: Verbessere deine Technik und genieße den Sport in der Gruppe. Jetzt anmelden und mitmachen!"
+excerpt: "Gemeinsames Discgolf-Training für alle Levels! Jeden Freitag um 16:00 Uhr an der Scheibenstraße: Verbessere deine Technik und genieße den Sport in der Gruppe. Jetzt anmelden und mitmachen!"
 sharing_image: /assets/images/training_header.jpg
 ---
 
-Bei unserem Vereinstraining treffen sich Spieler und Spielerinnen aller Niveaus, um gemeinsam zu trainieren, neue Techniken zu lernen und den Spaß am Discgolf zu teilen. Unser wöchentliches Training findet jeden Sonntag [nach der wöchentlichen Liga](https://udisc.com/leagues/syndication-weekly) (ca. 14:00 Uhr) auf dem [Kurs an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) statt. Unter Anleitung unserer erfahrenen Trainer arbeiten wir an Wurfpräzision, Technik und Taktik, sodass sowohl Anfänger als auch Fortgeschrittene voll auf ihre Kosten kommen.
+Bei unserem Vereinstraining treffen sich Spieler und Spielerinnen aller Niveaus, um gemeinsam zu trainieren, neue Techniken zu lernen und den Spaß am Discgolf zu teilen. Unser wöchentliches Training findet jeden Freitag um 16:00 Uhr auf dem [Kurs an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) statt. Unter Anleitung unserer erfahrenen Trainer arbeiten wir an Wurfpräzision, Technik und Taktik, sodass sowohl Anfänger als auch Fortgeschrittene voll auf ihre Kosten kommen.
 
 Wenn du neu im Sport oder neu in der Stadt bist, gibt dir unsere Seite [Disc Golf in Köln](/disc-golf-koeln/) den schnellsten Überblick zu Kurs, Liga, Training und Verein.
 
 Für die Teilnahme melde dich bitte über das Formular unten an, damit wir das Training optimal vorbereiten können. Wir freuen uns auf dich und viele spannende Runden auf dem Parcours!
 
-> **Nächster Termin:** Sonntag, <span data-next-date></span> gegen 14:00 Uhr
+> **Nächster Termin:** Freitag, <span data-next-date></span> um 16:00 Uhr
 
 ### Für das nächste Training angemeldete Personen:
 

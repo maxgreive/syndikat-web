@@ -2,16 +2,71 @@
 const SUPABASE_URL = 'https://zbexetusrmggirxhsavj.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpiZXhldHVzcm1nZ2lyeGhzYXZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEwNjUyMDksImV4cCI6MjA0NjY0MTIwOX0.hu-irocr2J5S2sg2Wzbt3SOb8D8ojFksf6EylWitKmQ';
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-const TRAINING_WEEKDAY = 0;
+const TRAINING_WEEKDAY = 5;
+const TRAINING_HOUR = 16;
 
 function hash(str) {
   return Array.from(str).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0);
 }
 
+function getBerlinNowParts() {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
+
+  const parts = Object.fromEntries(
+    formatter
+      .formatToParts(new Date())
+      .filter(part => part.type !== "literal")
+      .map(part => [part.type, part.value])
+  );
+
+  const weekdayMap = {
+    Sun: 0,
+    Mon: 1,
+    Tue: 2,
+    Wed: 3,
+    Thu: 4,
+    Fri: 5,
+    Sat: 6,
+  };
+
+  return {
+    year: Number(parts.year),
+    month: Number(parts.month),
+    day: Number(parts.day),
+    weekday: weekdayMap[parts.weekday],
+    hour: Number(parts.hour),
+    minute: Number(parts.minute),
+  };
+}
+
 function getNextDate() {
-  const today = new Date();
-  const daysUntilDate = (TRAINING_WEEKDAY - today.getUTCDay() + 7) % 7;
-  const nextDateUTC = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() + daysUntilDate));
+  const berlinNow = getBerlinNowParts();
+  let daysUntilDate = (TRAINING_WEEKDAY - berlinNow.weekday + 7) % 7;
+
+  if (daysUntilDate === 0) {
+    const trainingAlreadyStarted =
+      berlinNow.hour > TRAINING_HOUR ||
+      (berlinNow.hour === TRAINING_HOUR && berlinNow.minute > 0);
+
+    if (trainingAlreadyStarted) {
+      daysUntilDate = 7;
+    }
+  }
+
+  const nextDateUTC = new Date(Date.UTC(
+    berlinNow.year,
+    berlinNow.month - 1,
+    berlinNow.day + daysUntilDate
+  ));
   const dateFormat = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Europe/Berlin",
     year: "numeric",

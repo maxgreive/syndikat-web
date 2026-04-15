@@ -11,13 +11,13 @@ Wenn du Disc Golf in Köln spielen willst, landest du früher oder später bei d
 
 Für viele führt der erste sinnvolle Weg über die Scheibenstraße in Weidenpesch. Dort trifft sich ein großer Teil der lokalen Community und dort läuft auch unsere wöchentliche Liga. Wenn du neu bist, musst du nicht erst Mitglied sein oder perfekt werfen können. Der beste Einstieg ist meistens: einmal zum Weekly kommen und parallel auf unseren Discord-Server gehen.
 
-> Der einfachste Einstieg: [am Weekly teilnehmen](/events/) und in die <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Community auf Discord</a> kommen.
+> Der einfachste Einstieg: <a href="/events/" class="plausible-event-name=koeln_weekly_click">am Weekly teilnehmen</a> und in die <a href="#" class="plausible-event-name=koeln_discord_click" onclick="window.open('\/\/community.syndikat.golf');">Community auf Discord</a> kommen.
 
 ## Wo kann man in Köln Disc Golf spielen?
 
 Der wichtigste Anlaufpunkt für viele Spieler in Köln ist der Kurs an der Scheibenstraße in Weidenpesch. Dort finden nicht nur freie Runden statt, sondern auch viele der regelmäßigen Vereinsaktivitäten des Disc Golf Syndikats. Wenn du nicht nur allein ein paar Würfe machen, sondern auch andere Spieler treffen willst, ist das meist der beste Startpunkt.
 
-Über unsere [Events](/events/) findest du den direktesten Einstieg in die wöchentliche Liga. Genau dort solltest du anfangen, wenn du in Köln schnell Leute kennenlernen und eine erste Runde mitnehmen willst.
+Über unsere <a href="/events/" class="plausible-event-name=koeln_weekly_click">Events</a> findest du den direktesten Einstieg in die wöchentliche Liga. Genau dort solltest du anfangen, wenn du in Köln schnell Leute kennenlernen und eine erste Runde mitnehmen willst.
 
 Neben dem Kurs gibt es in Köln inzwischen auch die [Putting-Anlage im Sportpionierpark](/blog/neue-putting-anlage-im-sportpionierpark-koeln/). Sie ist keine komplette Runde wie an der Scheibenstraße, aber eine spannende Ergänzung für kurze Sessions, Technikarbeit und lockeres Putten.
 
@@ -31,7 +31,7 @@ Wenn du schon länger spielst, findest du in Köln trotzdem genug Anknüpfungspu
 
 ## Warum ist das Weekly der beste Einstieg?
 
-Unsere wöchentliche Liga heißt **Syndication Weekly**. Laut [Event-Seite](/events/) treffen wir uns aktuell sonntags um 13:00 Uhr an der Scheibenstraße. Spieler:innen jedes Niveaus sind willkommen. Gespielt wird eine gewertete Runde, danach wird oft noch frei weitergespielt.
+Unsere wöchentliche Liga heißt **Syndication Weekly**. Laut <a href="/events/" class="plausible-event-name=koeln_weekly_click">Event-Seite</a> treffen wir uns aktuell sonntags um 13:00 Uhr an der Scheibenstraße. Spieler:innen jedes Niveaus sind willkommen. Gespielt wird eine gewertete Runde, danach wird oft noch frei weitergespielt.
 
 Gerade für Leute aus Köln, die schnell Anschluss suchen, ist das Weekly der beste Einstieg. Du siehst direkt, wie andere spielen, lernst den Kurs kennen und kommst leichter mit der lokalen Szene ins Gespräch. Wenn du erst einmal nur zuschauen, mitlaufen oder eine entspannte Runde mitmachen willst, ist auch das völlig okay.
 
@@ -47,7 +47,7 @@ Wenn du unsicher bist, ob du einfach so beim Weekly auftauchen kannst, ist Disco
 
 Wenn du einfach erst einmal verstehen willst, wie das Syndikat aufgestellt ist, schau auf unsere [Über-uns-Seite](/about/). Dort findest du den Vereinskontext und einen Überblick darüber, wie sich die Community in Köln entwickelt hat.
 
-Wenn du direkt mit Leuten auf den Kurs willst, sind [Events](/events/) und der <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Discord-Server</a> die praktischsten Einstiegspunkte. Wenn du dauerhaft dabeibleiben, Turniere spielen oder den Verein mittragen willst, findest du auf [Mitglied werden](/register/) die nächsten Schritte zur Mitgliedschaft.
+Wenn du direkt mit Leuten auf den Kurs willst, sind <a href="/events/" class="plausible-event-name=koeln_weekly_click">Events</a> und der <a href="#" class="plausible-event-name=koeln_discord_click" onclick="window.open('\/\/community.syndikat.golf');">Discord-Server</a> die praktischsten Einstiegspunkte. Wenn du dauerhaft dabeibleiben, Turniere spielen oder den Verein mittragen willst, findest du auf [Mitglied werden](/register/) die nächsten Schritte zur Mitgliedschaft.
 
 Wichtig ist vor allem: Du musst nicht alles sofort wissen. In Köln kommst du am schnellsten rein, wenn du einmal auftauchst, ein paar Würfe machst und mit Leuten ins Gespräch kommst, die ohnehin schon regelmäßig an der Scheibenstraße unterwegs sind.
 
@@ -55,4 +55,4 @@ Wichtig ist vor allem: Du musst nicht alles sofort wissen. In Köln kommst du am
 
 Wenn du in Köln mit Disc Golf anfangen oder wieder regelmäßiger spielen willst, ist der naheliegendste Einstieg klar: erst über das Weekly an der Scheibenstraße reinschauen und parallel auf Discord in die Community kommen.
 
-Für den ersten Schritt musst du nicht perfekt vorbereitet sein. Du musst nur wissen, wo du auftauchen kannst. Genau dafür sind unsere [Events](/events/), die [Vereinsseite](/about/), der <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Discord-Server</a> und die [Mitgliedschaft](/register/) da.
+Für den ersten Schritt musst du nicht perfekt vorbereitet sein. Du musst nur wissen, wo du auftauchen kannst. Genau dafür sind unsere <a href="/events/" class="plausible-event-name=koeln_weekly_click">Events</a>, die [Vereinsseite](/about/), der <a href="#" class="plausible-event-name=koeln_discord_click" onclick="window.open('\/\/community.syndikat.golf');">Discord-Server</a> und die [Mitgliedschaft](/register/) da.

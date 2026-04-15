@@ -8,6 +8,8 @@ Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen 
 
 Dann freuen wir uns über Deine Anmeldung!
 
+Wenn du vorab erst einmal verstehen willst, wie der Einstieg über Kurs, Liga und Training in Köln läuft, schau auf [Disc Golf in Köln](/disc-golf-koeln/).
+
 Wähle hier Deinen Abrechnungszeitraum aus. Die Mitgliedschaft verlängert sich automatisch, wenn Du nicht kündigst. Als Zahlungsdienstleister nutzen wir [Stripe](https://stripe.com/de). Es werden keine Daten auf unseren Servern gespeichert. Bei Fragen zu Mitgliedschaft oder Zahlungsmöglichkeiten, [schreib uns über das Kontaktformular](/contact/).
 
 {% include components/plan_selection.html %}

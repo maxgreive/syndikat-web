@@ -22,4 +22,6 @@ Wir glauben, dass Disc Golf nicht nur körperliche Fitness fördert, sondern auc
 
 Wir hoffen, Dich bald bei uns begrüßen zu dürfen!
 
+Wenn Du erst einmal einen kompakten Überblick suchst, findest Du ihn auf unserer Seite [Disc Golf in Köln](/disc-golf-koeln/).
+
 Das Disc Golf Syndikat aus Köln

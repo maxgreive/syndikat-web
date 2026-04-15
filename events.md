@@ -10,6 +10,8 @@ Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine gew
 
 > Jeden Sonntag, 13:00 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) – [Event auf UDisc.com](https://udisc.com/leagues/syndication-weekly)
 
+Wenn du einen breiteren Einstieg suchst, findest du auf [Disc Golf in Köln](/disc-golf-koeln/) auch den Überblick zu Kurs, Training und Verein.
+
 ## Weitere Events
 
 Schick uns gern eine [Email an birdie@sydikat.golf](mailto:birdie@syndikat.golf) mit einem Hinweis auf ein Event, das hier veröffentlicht werden sollte.

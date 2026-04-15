@@ -1,7 +1,7 @@
 <script>
   import { writable } from "svelte/store";
-  import { onMount } from "svelte";
-  import { fetchProducts, fetchNewestProducts } from "./api";
+  import { onDestroy, onMount } from "svelte";
+  import { fetchNewestProducts, streamProducts } from "./api";
   import { push, querystring } from "svelte-spa-router";
   import SearchExample from "./SearchExample.svelte";
   import Awesomplete from "awesomplete";
@@ -14,9 +14,14 @@
   const shopHandles = activeShops.map((shop) => shop.handle);
   const products = writable([]);
   const newProducts = writable([]);
-  const loading = writable("");
+  const loading = writable(false);
+  const loadingText = writable("");
   let initialProducts = [];
   let defaultState = true;
+  let totalStores = shopHandles.length;
+  let activeSource;
+  let searchRun = 0;
+  let completedStores = new Set();
 
   let discs = [];
 
@@ -35,25 +40,86 @@
 
   let query = "";
   $: query = query.toLowerCase();
-  $: progress = parseInt((shopCount / shopHandles.length) * 100);
+  $: progress = totalStores ? parseInt((shopCount / totalStores) * 100) : 0;
 
   let searchedQuery = "";
 
   let searchInputElement;
 
+  const closeActiveSource = () => {
+    if (activeSource) {
+      activeSource.close();
+      activeSource = null;
+    }
+  };
+
+  const resetSearchProgress = () => {
+    completedStores = new Set();
+    totalStores = shopHandles.length;
+    shopCount = 0;
+    loadingText.set("");
+  };
+
+  const finishSearch = () => {
+    closeActiveSource();
+    loading.set(false);
+    loadingText.set("");
+  };
+
+  const updateLoadingText = () => {
+    if (!totalStores || shopCount >= totalStores) {
+      loadingText.set("");
+      return;
+    }
+
+    loadingText.set(`${shopCount}/${totalStores} Shops gescannt`);
+  };
+
+  const addProducts = (items) => {
+    if (!items?.length) {
+      handleSort();
+      return;
+    }
+
+    initialProducts.push(...items);
+    products.update((currentProducts) => [...currentProducts, ...items]);
+    handleSort();
+  };
+
+  const markStoreCompleted = (store) => {
+    if (!store || completedStores.has(store)) return;
+    completedStores.add(store);
+    shopCount = completedStores.size;
+    updateLoadingText();
+  };
+
   const clearProducts = () => {
+    closeActiveSource();
     query = "";
+    searchedQuery = "";
     push("/");
-    $products = [];
+    initialProducts = [];
+    defaultState = true;
+    resetSearchProgress();
+    loading.set(false);
+    products.set([]);
     searchInputElement.focus();
   };
 
   const getProducts = async () => {
-    if (!query) {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) {
+      closeActiveSource();
+      query = "";
       push("/");
       defaultState = true;
+      resetSearchProgress();
+      loading.set(false);
       return products.set([]);
     }
+
+    closeActiveSource();
+    const currentRun = ++searchRun;
 
     window.plausible =
       window.plausible ||
@@ -62,30 +128,55 @@
       };
     window.plausible("product-search", {
       props: {
-        query: query,
+        query: normalizedQuery,
       },
     });
 
     initialProducts = [];
     defaultState = false;
-    searchedQuery = query;
+    searchedQuery = normalizedQuery;
 
-    push(`/?q=${encodeURIComponent(query)}`);
+    push(`/?q=${encodeURIComponent(normalizedQuery)}`);
     products.set([]);
-    shopCount = 0;
+    resetSearchProgress();
+    loading.set(true);
+    updateLoadingText();
 
-    for (const shop of shopHandles) {
-      loading.set(shop);
-      const productResponse = await fetchProducts(query, shop);
-      products.update((currentProducts) => [
-        ...currentProducts,
-        ...productResponse,
-      ]);
-      shopCount++;
-      initialProducts.push(...productResponse);
-      handleSort();
+    activeSource = streamProducts(normalizedQuery, {
+      onStart: ({ stores = [] }) => {
+        if (currentRun !== searchRun) return;
+        totalStores = stores.length || shopHandles.length;
+        shopCount = 0;
+        updateLoadingText();
+      },
+      onStore: ({ store, products: streamedProducts = [] }) => {
+        if (currentRun !== searchRun) return;
+        markStoreCompleted(store);
+        addProducts(streamedProducts);
+      },
+      onStoreError: ({ store }) => {
+        if (currentRun !== searchRun) return;
+        markStoreCompleted(store);
+      },
+      onEnd: () => {
+        if (currentRun !== searchRun) return;
+        shopCount = totalStores;
+        finishSearch();
+      },
+      onServerError: () => {
+        if (currentRun !== searchRun) return;
+        finishSearch();
+      },
+      onStreamError: () => {
+        if (currentRun !== searchRun) return;
+        finishSearch();
+      },
+    });
+
+    if (!activeSource) {
+      console.error("Streaming search is not supported in this browser.");
+      finishSearch();
     }
-    loading.set("");
   };
 
   const handleSort = () => {
@@ -146,15 +237,19 @@
       filter: (suggestion, input) => Awesomplete.FILTER_CONTAINS(suggestion.value, input),
       minChars: 3,
       maxItems: 20,
-      autoFirst: true,
+      autoFirst: false,
       tabSelect: true,
     });
+  });
+
+  onDestroy(() => {
+    closeActiveSource();
   });
 </script>
 
 <Wishlist {wishlist} />
 
-<form class="search__group">
+<form class="search__group" on:submit|preventDefault={() => getProducts()}>
   {#if query && !$loading}
     <div
       class="search__close"
@@ -177,7 +272,6 @@
   <button
     type="submit"
     class="button button--primary"
-    on:click|preventDefault={() => getProducts()}
   >
     <i class="ion ion-md-search"></i>
   </button>
@@ -190,7 +284,7 @@
     {:else}
       Los geht's!
     {/if}
-    {#if shopCount < shopHandles.length}
+    {#if $loading && shopCount < totalStores}
       <svg
         width="24"
         height="24"
@@ -206,8 +300,8 @@
     {/if}
   </h2>
 
-  {#if $loading}
-    <div class="currently-fetching">loading {$loading} …</div>
+  {#if $loadingText}
+    <div class="currently-fetching">{$loadingText}</div>
   {/if}
 
   {#if $products.length}
@@ -221,7 +315,7 @@
 </div>
 
 <div class="row animate">
-  {#if $loading && shopCount < shopHandles.length && $products.length === 0}
+  {#if $loading && shopCount < totalStores && $products.length === 0}
     {#each Array(6) as _}
       <div class="skeleton col col-4 col-d-6 col-t-12">
         <div class="skeleton-image"></div>

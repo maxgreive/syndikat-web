@@ -46,6 +46,10 @@
 
   let searchInputElement;
 
+  const focusSearchInput = () => {
+    searchInputElement?.focus();
+  };
+
   const closeActiveSource = () => {
     if (activeSource) {
       activeSource.close();
@@ -103,7 +107,7 @@
     resetSearchProgress();
     loading.set(false);
     products.set([]);
-    searchInputElement.focus();
+    focusSearchInput();
   };
 
   const getProducts = async () => {
@@ -220,8 +224,6 @@
     const newest = (await fetchNewestProducts()).slice(0, 6);
     newProducts.set(newest);
 
-    searchInputElement = document.querySelector("#js-product-input");
-    searchInputElement.focus();
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
     // discs are pulled from https://discit-api.fly.dev/disc
@@ -240,6 +242,8 @@
       autoFirst: false,
       tabSelect: true,
     });
+
+    focusSearchInput();
   });
 
   onDestroy(() => {
@@ -266,6 +270,7 @@
     type="text"
     class="search__text"
     id="js-product-input"
+    bind:this={searchInputElement}
     bind:value={query}
     placeholder="Suche eine Scheibe …"
   />

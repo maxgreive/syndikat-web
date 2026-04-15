@@ -2,14 +2,17 @@
 layout: post
 title: Die besten Discgolf-Scheiben für Einsteiger
 date: 2024-05-11 00:00
+description: Welche Discgolf-Scheiben eignen sich für Einsteiger? Ein praktischer Leitfaden zu Putter, Midrange, Plastik und sinnvollen Starter-Sets.
 image: /assets/images/posts/beginner-discs.jpg
 thumbnail: /assets/images/posts/thumbnails/beginner-discs.jpg
 tags: discs
 author: max
-excerpt: Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welcher Fehler sollten vermieden werden?
+excerpt: Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welche Fehler sollten vermieden werden?
 ---
 
-Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welcher Fehler sollten vermieden werden? In diesem Beitrag versuchen wir Licht ins Dunkel zu bringen und stellen dir am Ende ein paar Anfängersets zusammen.
+Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welche Fehler sollten vermieden werden? In diesem Beitrag versuchen wir Licht ins Dunkel zu bringen und stellen dir am Ende ein paar Anfängersets zusammen.
+
+Wenn du grundsätzlich erst einmal ins Spiel finden willst, passt ergänzend auch unser [Leitfaden für Discgolf-Einsteiger](/blog/leitfaden-fuer-einsteiger/).
 
 ## Midrange, Understable, Overmold … bitte was?
 
@@ -41,9 +44,9 @@ Grundsätzlich gilt, dass "unterstabile" Scheiben für Beginner eher geeignet si
 
 ## Plastik ist nicht gleich Plastik
 
-Günstige Scheiben werden aus Plastiksorten produziert, die keine allzu hohe Haltbarkeit aufweisen. Daher lohnt es sich auch als Einsteiger ein paar Euro mehr auszugeben und auf "Premium-Plastik" zu setzen.
-
 ![Zwei Discgolf-Discs mit Abnutzungsspuren](/assets/images/posts/premium-plastic.jpg)
+
+Günstige Scheiben werden aus Plastiksorten produziert, die keine allzu hohe Haltbarkeit aufweisen. Daher lohnt es sich auch als Einsteiger ein paar Euro mehr auszugeben und auf "Premium-Plastik" zu setzen.
 
 Wie sich Treffer von Bäumen oder Steinen auf die Scheiben auswirken, ist auf diesem Bild zu erkennen. Die rote Scheibe besteht aus VIP-Plastik der Marke Westside Discs und hat nahezu keine Gebrauchsspuren, wohingegen der blaue Putter aus D-Line-Plastik (Discmania) produziert wurde und inzwischen sehr lädiert ist. Es gibt auch Anwendungsfälle für günstiges Plastik bei Scheiben, Anfängern raten wir aber bei Scheiben mit einem Speedwert von größer drei zu Premiumplastik.
 
@@ -53,6 +56,8 @@ Je nachdem wie hoch dein Budget für das neue Hobby ist, empfehlen wir mit zwei 
 
 Wichtig: Lerne erst diese vier Scheiben zu beherrschen, bevor du neue Scheiben kaufst. Die meisten Kurse in NRW können schon mit diesem überschaubaren Set sehr gut gespielt werden.
 
+Wenn du verschiedene Modelle einmal in die Hand nehmen willst, ist das oft einfacher als reines Lesen. Frag beim [Training](/training/) ruhig nach, viele Spieler lassen dich gern ein paar Scheiben testen.
+
 ## Wo bekomme ich nun Scheiben her?
 
 Es gibt verschiedene Möglichkeiten, Scheiben zu kaufen, und es lohnt sich, verschiedene Optionen zu vergleichen. Frage andere Spieler in deiner lokalen Discgolf-Community, ob sie gebrauchte Scheiben zum Verkauf anbieten. Oft sind erfahrene Spieler bereit, ihre alten Scheiben günstig abzugeben oder zu tauschen.
@@ -60,7 +65,6 @@ Es gibt verschiedene Möglichkeiten, Scheiben zu kaufen, und es lohnt sich, vers
 > Schau auch [in unseren Preisvergleich](/preisvergleich/), um die besten Angebote für neue Scheiben zu finden und die verschiedenen Shops zu vergleichen.
 
 Online-Plattformen wie eBay Kleinanzeigen, Facebook Marketplace und Discgolf-Foren können ebenfalls gute Quellen für gebrauchte und neue Scheiben sein. Besuche lokale Discgolf-Turniere, wo oft Händler vor Ort sind und eine Vielzahl von Scheiben zum Verkauf anbieten. Dies ist eine großartige Möglichkeit, Scheiben anzufassen und zu sehen, welche am besten zu deinem Spielstil passen. Indem du diese verschiedenen Möglichkeiten erkundest, kannst du die besten Scheiben für dein Spiel finden und gleichzeitig Geld sparen.
-
 
 ## Unsere Vorschläge für Anfängersets
 
@@ -95,3 +99,9 @@ Hinweis: in Klammern ist die Plastik-Art angegeben. Die Hersteller haben verschi
 * Throwing Putter: [Proxy](/preisvergleich/#/?q=proxy)
 * Midrange: [Hex](/preisvergleich/#/?q=hex)
 * Fairway Driver: [Crave](/preisvergleich/#/?q=crave)
+
+## Fazit
+
+Die besten Discgolf-Scheiben für Einsteiger sind selten die spektakulärsten. Meistens helfen dir langsame, kontrollierbare Modelle am meisten, weil du mit ihnen die Grundlagen sauber lernst und Frust vermeidest.
+
+Wenn du direkt nach passenden Angeboten schauen willst, geh weiter zum [Preisvergleich](/preisvergleich/). Und wenn du vor dem Kauf lieber ein Gefühl für verschiedene Scheiben bekommen willst, ist eine Runde mit anderen Spielern oder ein Besuch beim [Training](/training/) oft die bessere Abkürzung.

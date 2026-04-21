@@ -14,67 +14,69 @@ layout: default
 </div>
 
 <div class="container animate">
-  <div class="row">
-    <div class="col col-12">
-      <p>{{- content -}}</p>
-      <div class="toolbar">
-        <div class="search__group rating__search">
-          <input type="text" name="search" data-rating-search class="search__text" placeholder="Spieler/Verein suchen..." disabled />
+  <article class="page page-full-width">
+    <div class="row">
+      <div class="col col-12">
+        <p>{{- content -}}</p>
+        <div class="toolbar">
+          <div class="search__group rating__search">
+            <input type="text" name="search" data-rating-search class="search__text" placeholder="Spieler/Verein suchen..." disabled />
+          </div>
+          <div class="rating-filters">
+            <select data-toggle-division disabled>
+              <option value="all" selected>Alle Divisionen</option>
+            </select>
+            <select data-toggle-club disabled>
+              <option value="syndikat-only" selected>Nur Syndikat</option>
+              <option value="cologne-only">Nur Kölner Clubs</option>
+              <option value="all">Alle zeigen</option>
+            </select>
+          </div>
         </div>
-        <div class="rating-filters">
-          <select data-toggle-division disabled>
-            <option value="all" selected>Alle Divisionen</option>
-          </select>
-          <select data-toggle-club disabled>
-            <option value="syndikat-only" selected>Nur Syndikat</option>
-            <option value="cologne-only">Nur Kölner Clubs</option>
-            <option value="all">Alle zeigen</option>
-          </select>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table id="ratings">
-          <thead>
-            <tr>
-              <th>Rang</th>
-              <th>Name</th>
-              <th>Rating</th>
-              <th>Division</th>
-              <th>Rang in Division</th>
-              <th>DM-Runden</th>
-              <th>letzte Runde</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for item in (1..7) %}
-              <tr class="row-skeleton" style="opacity: {{ 1.0 | divided_by: item }};">
-                <td>▮</td>
-                <td>
-                  <div class="name-cell">
-                    <span class="avatar" style="background-color: hsl(0.{{ item | times: 2 }}turn, 10%, 50%);">
-                      <span>▮▮</span>
-                    </span>
-                    <div class="ranking-name-wrapper">
-                      <a href="">▮▮▮▮▮▮▮▮▮▮▮▮▮▮</a>
-                      <div class="ranking-club">▮▮▮▮▮▮▮▮▮▮▮</div>
-                    </div>
-                  </div>
-                </td>
-                <td>▮▮▮</td>
-                <td>
-                  <span class="pill" data-division="Open">▮▮▮▮▮</span>
-                </td>
-                <td>▮▮▮<span class="percentile">Top ▮▮%</span>
-                </td>
-                <td>▮/▮▮</td>
-                <td>▮▮.▮▮.▮▮▮▮</td>
+        <div class="table-responsive">
+          <table id="ratings">
+            <thead>
+              <tr>
+                <th>Rang</th>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Division</th>
+                <th>Rang in Division</th>
+                <th>DM-Runden</th>
+                <th>letzte Runde</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {% for item in (1..7) %}
+                <tr class="row-skeleton" style="opacity: {{ 1.0 | divided_by: item }};">
+                  <td>▮</td>
+                  <td>
+                    <div class="name-cell">
+                      <span class="avatar" style="background-color: hsl(0.{{ item | times: 2 }}turn, 10%, 50%);">
+                        <span>▮▮</span>
+                      </span>
+                      <div class="ranking-name-wrapper">
+                        <a href="">▮▮▮▮▮▮▮▮▮▮▮▮▮▮</a>
+                        <div class="ranking-club">▮▮▮▮▮▮▮▮▮▮▮</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>▮▮▮</td>
+                  <td>
+                    <span class="pill" data-division="Open">▮▮▮▮▮</span>
+                  </td>
+                  <td>▮▮▮<span class="percentile">Top ▮▮%</span>
+                  </td>
+                  <td>▮/▮▮</td>
+                  <td>▮▮.▮▮.▮▮▮▮</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 </div>
 
 <script src="/assets/js/ratings.js" defer></script>

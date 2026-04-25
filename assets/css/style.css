@@ -5344,3 +5344,250 @@ button.button--text {
   background-color: var(--background-alt-color);
   color: var(--text-alt-color);
 }
+
+.section-project-proposal {
+  padding: 72px 0 128px;
+}
+
+.project-proposal__intro,
+.project-proposal__cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.project-proposal__kicker,
+.project-proposal__small-head,
+.project-proposal__card-label {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.project-proposal__intro-title {
+  max-width: 14ch;
+  margin: 0 0 28px;
+  font-size: 46px;
+  line-height: 1.15;
+}
+
+.project-proposal__intro-text,
+.project-proposal__card-body p,
+.project-proposal__cta-copy p {
+  max-width: 66ch;
+  margin: 0;
+  color: var(--text-alt-color);
+}
+
+.project-proposal__card-body .project-proposal__source,
+.project-proposal__card-body .project-proposal__examples {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-proposal__intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.project-proposal__evidence,
+.project-proposal__card,
+.project-proposal__cta-form {
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--background-color);
+  box-shadow: 0 10px 30px rgba(12, 16, 26, 0.04);
+}
+
+.project-proposal__metrics {
+  display: grid;
+  gap: 24px;
+}
+
+.project-proposal__metrics li {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.project-proposal__metrics strong {
+  font-size: 36px;
+  line-height: 1;
+  color: var(--heading-font-color);
+}
+
+.project-proposal__metrics span {
+  color: var(--text-alt-color);
+}
+
+.project-proposal__image {
+  position: relative;
+  height: 0;
+  margin: 64px 0 88px;
+  padding-bottom: 46%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--background-alt-color);
+}
+
+.project-proposal__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-proposal__stack {
+  display: grid;
+  gap: 44px;
+}
+
+.project-proposal__card {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.32fr) minmax(0, 1fr);
+  gap: 40px;
+}
+
+.project-proposal__card-label {
+  margin: 12px 0 0;
+}
+
+.project-proposal__card-body h2 {
+  margin: 0 0 24px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.project-proposal__list {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.project-proposal__list li {
+  position: relative;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--heading-font-color);
+}
+
+.project-proposal__list li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-color);
+}
+
+.project-proposal__roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.project-proposal__role {
+  padding: 28px;
+  border-radius: 12px;
+  background: var(--background-alt-color);
+}
+
+.project-proposal__role h4 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.project-proposal__cta {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-proposal__cta-copy {
+  padding-top: 16px;
+}
+
+.project-proposal__cta-copy h2 {
+  margin: 0 0 24px;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.project-proposal__cta-form .form__input {
+  background: var(--background-alt-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-proposal__intro,
+  .project-proposal__card,
+  .project-proposal__cta {
+    grid-template-columns: 1fr;
+  }
+
+  .project-proposal__intro-title {
+    max-width: 18ch;
+    font-size: 40px;
+  }
+
+  .project-proposal__image {
+    margin: 56px 0 72px;
+    padding-bottom: 58%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-project-proposal {
+    padding: 40px 0 88px;
+  }
+
+  .project-proposal__evidence,
+  .project-proposal__card,
+  .project-proposal__cta-form {
+    padding: 28px;
+  }
+
+  .project-proposal__stack {
+    gap: 32px;
+  }
+
+  .project-proposal__card-body h2,
+  .project-proposal__cta-copy h2 {
+    font-size: 28px;
+  }
+
+  .project-proposal__roles {
+    grid-template-columns: 1fr;
+  }
+
+  .project-proposal__cta {
+    margin-top: 56px;
+    padding-top: 56px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .project-proposal__intro-title {
+    font-size: 32px;
+  }
+
+  .project-proposal__metrics strong {
+    font-size: 30px;
+  }
+
+  .project-proposal__image {
+    margin: 40px 0 56px;
+    padding-bottom: 68%;
+  }
+}

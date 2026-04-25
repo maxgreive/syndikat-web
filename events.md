@@ -8,7 +8,7 @@ layout: page
 
 Unsere wöchentliche Liga. Spieler:innen jedes Niveaus sind willkommen. Eine gewertete Runde, danach freies Spielen bis die Sonne unter geht.
 
-> Jeden Sonntag, 13:00 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) – [Event auf UDisc.com](https://udisc.com/leagues/syndication-weekly)
+> Jeden Dienstag, 18:00 Uhr, [an der Scheibenstraße](https://goo.gl/maps/yqyVDEoEs8Qd5LD56) – [Event auf UDisc.com](https://udisc.com/leagues/syndication-weekly)
 
 Wenn du einen breiteren Einstieg suchst, findest du auf [Disc Golf in Köln](/disc-golf-koeln/) auch den Überblick zu Kurs, Training und Verein.
 

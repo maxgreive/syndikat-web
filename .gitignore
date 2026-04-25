@@ -5,4 +5,4 @@ _site/
 .DS_Store
 node_modules/
 assets/svelte-bundle*
-editorial/
+editorial/*

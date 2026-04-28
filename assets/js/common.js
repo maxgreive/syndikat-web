@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuOpenIcon = document.querySelector(".icon__menu"),
     menuCloseIcon = document.querySelector(".nav__icon-close"),
     menuList = document.querySelector(".main-nav"),
+    menuPanel = document.querySelector(".main-nav__box"),
     searchOpenIcon = document.querySelector(".icon__search"),
     searchCloseIcon = document.querySelector("[data-search-close]"),
     searchInput = document.querySelector(".search__text"),
@@ -31,10 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function menuOpen() {
     menuList.classList.add("is-open");
+    menuList.setAttribute("aria-hidden", "false");
+    menuPanel.setAttribute("data-open", "true");
   }
 
   function menuClose() {
     menuList.classList.remove("is-open");
+    menuList.setAttribute("aria-hidden", "true");
+    menuPanel.setAttribute("data-open", "false");
   }
 
   searchOpenIcon.addEventListener("click", () => {
@@ -63,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (toggleTheme) {
+    syncThemeToggle();
     toggleTheme.addEventListener("click", () => {
       darkMode();
     });
@@ -88,9 +94,19 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("theme", isDark ? "dark" : "light");
 
     if (isDark) {
-      return document.documentElement.setAttribute("dark", "");
+      document.documentElement.setAttribute("dark", "");
+      return syncThemeToggle();
     }
-    return document.documentElement.removeAttribute("dark");
+    document.documentElement.removeAttribute("dark");
+    return syncThemeToggle();
+  }
+
+  function syncThemeToggle() {
+    if (!toggleTheme) return;
+
+    const isDark = document.documentElement.hasAttribute('dark');
+    toggleTheme.setAttribute("data-state", isDark ? "b" : "a");
+    toggleTheme.setAttribute("aria-label", isDark ? "Enable light mode" : "Enable dark mode");
   }
 
 

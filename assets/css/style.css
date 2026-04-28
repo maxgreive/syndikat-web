@@ -2636,6 +2636,11 @@ button.button--text {
 
 @media only screen and (max-width: 1024px) {
   .main-nav {
+    --panel-open-dur: 400ms;
+    --panel-close-dur: 350ms;
+    --panel-translate-y: 80px;
+    --panel-blur: 2px;
+    --panel-ease: cubic-bezier(0.22, 1, 0.36, 1);
     position: fixed;
     top: 0;
     left: 0;
@@ -2644,13 +2649,21 @@ button.button--text {
     z-index: 2000;
     opacity: 0;
     visibility: hidden;
-    background-color: var(--background-color)
+    pointer-events: none;
+    background-color: var(--background-color);
+    overflow: hidden;
+    transition:
+      opacity var(--panel-close-dur) var(--panel-ease),
+      visibility 0s linear var(--panel-close-dur)
   }
 
   .main-nav.is-open {
     opacity: 1;
     visibility: visible;
-    transition: all .25s ease
+    pointer-events: auto;
+    transition:
+      opacity var(--panel-open-dur) var(--panel-ease),
+      visibility 0s linear 0s
   }
 
   .main-nav .nav__list {
@@ -2711,6 +2724,29 @@ button.button--text {
 }
 
 @media only screen and (max-width: 1024px) {
+  .main-nav .t-panel-slide {
+    transform: translateY(var(--panel-translate-y));
+    opacity: 0;
+    filter: blur(var(--panel-blur));
+    pointer-events: none;
+    transition:
+      transform var(--panel-close-dur) var(--panel-ease),
+      opacity var(--panel-close-dur) var(--panel-ease),
+      filter var(--panel-close-dur) var(--panel-ease);
+    will-change: transform, opacity, filter
+  }
+
+  .main-nav .t-panel-slide[data-open="true"] {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    pointer-events: auto;
+    transition:
+      transform var(--panel-open-dur) var(--panel-ease),
+      opacity var(--panel-open-dur) var(--panel-ease),
+      filter var(--panel-open-dur) var(--panel-ease)
+  }
+
   .main-nav__box {
     display: block;
     align-items: center;
@@ -2742,6 +2778,14 @@ button.button--text {
 @media only screen and (max-width: 768px) {
   .main-nav__box {
     padding-top: 100px
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav,
+  .main-nav .t-panel-slide,
+  .t-icon-swap .t-icon {
+    transition: none !important
   }
 }
 
@@ -2820,42 +2864,51 @@ button.button--text {
 }
 
 .nav__icon.toggle-theme {
-  display: inline-flex;
+  --icon-swap-dur: 200ms;
+  --icon-swap-blur: 2px;
+  --icon-swap-start-scale: 0.25;
+  --icon-swap-ease: ease-in-out;
+  position: relative;
+  display: inline-grid;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  line-height: 1
 }
 
-.toggle-sun,
-.toggle-moon {
+.nav__icon.toggle-theme .t-icon {
+  grid-area: 1 / 1;
   font-size: 21px;
-  transition: color .25s ease;
-  color: var(--heading-font-color)
+  color: var(--heading-font-color);
+  transition:
+    opacity var(--icon-swap-dur) var(--icon-swap-ease),
+    filter var(--icon-swap-dur) var(--icon-swap-ease),
+    transform var(--icon-swap-dur) var(--icon-swap-ease),
+    color .25s ease;
+  will-change: opacity, filter, transform
 }
 
-.toggle-sun:hover,
-.toggle-moon:hover {
+.nav__icon.toggle-theme:hover .t-icon {
   color: var(--brand-color)
 }
 
 @media only screen and (max-width: 1024px) {
-
-  .toggle-sun,
-  .toggle-moon {
+  .nav__icon.toggle-theme .t-icon {
     font-size: 24px;
   }
 }
 
-.toggle-sun {
-  display: none
+.t-icon-swap[data-state="a"] .t-icon[data-icon="a"],
+.t-icon-swap[data-state="b"] .t-icon[data-icon="b"] {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1)
 }
 
-[dark] .toggle-sun {
-  display: inline-block
-}
-
-[dark] .toggle-moon {
-  display: none
+.t-icon-swap[data-state="a"] .t-icon[data-icon="b"],
+.t-icon-swap[data-state="b"] .t-icon[data-icon="a"] {
+  opacity: 0;
+  filter: blur(var(--icon-swap-blur));
+  transform: scale(var(--icon-swap-start-scale))
 }
 
 .hide-light {

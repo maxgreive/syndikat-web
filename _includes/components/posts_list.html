@@ -2,7 +2,7 @@
   <div class="row animate">
 
     {% for post in include.posts limit: 9 %}
-      {% include components/post_card.html item=post %}
+      {% include components/post_card.html item=post eager=forloop.first %}
     {% endfor %}
   </div>
 </div>

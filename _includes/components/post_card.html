@@ -1,6 +1,10 @@
 <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
     <div class="article__head">
+      {%- assign is_eager = false -%}
+      {%- if include.eager == true or include.eager == "true" -%}
+        {%- assign is_eager = true -%}
+      {%- endif -%}
       {%- if include.item.date -%}
         <time class="article__date" datetime="{{- include.item.date -}}">
           {{- include.item.date | date_to_string -}}
@@ -20,7 +24,12 @@
       {%- capture card_cdn_image -%}{% include snippets/netlify_image_url.html src=card_original_image w=700 %}{%- endcapture -%}
       {%- capture card_srcset -%}{% include snippets/netlify_srcset.html src=card_original_image widths="240,320,480,640,800" %}{%- endcapture -%}
       <a class="article__image" href="{{- include.item.url -}}">
-        <img width="350" height="233"{% if include.lazy == "false" %} class="lazy" data-{% endif %}src="{{ card_cdn_image | strip }}" {% if include.lazy == "false" %}data-{% endif %}srcset="{{ card_srcset | strip }}" {% if include.lazy == "false" %}data-{% endif %}sizes="(min-width: 1141px) 348px, (min-width: 1025px) 301px, (min-width: 769px) 338px, (min-width: 577px) 528px, calc(100vw - 40px)" data-original-src="{{ card_original_image | strip }}" alt="{{- include.item.title | escape -}}">
+        <img width="350" height="233"{% unless is_eager %} class="lazy"{% endunless %}
+          {% if is_eager %}src{% else %}data-src{% endif %}="{{ card_cdn_image | strip }}"
+          {% if is_eager %}srcset{% else %}data-srcset{% endif %}="{{ card_srcset | strip }}"
+          {% if is_eager %}sizes{% else %}data-sizes{% endif %}="(min-width: 1141px) 348px, (min-width: 1025px) 301px, (min-width: 769px) 338px, (min-width: 577px) 528px, calc(100vw - 40px)"
+          {% unless is_eager %}loading="lazy" decoding="async"{% endunless %}
+          data-original-src="{{ card_original_image | strip }}" alt="{{- include.item.title | escape -}}">
       </a>
     </div>
     <div class="article__content">

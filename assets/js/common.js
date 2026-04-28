@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput = document.querySelector(".search__text"),
     search = document.querySelector(".search"),
     searchBox = document.querySelector(".search__box"),
+    socialLinks = document.querySelectorAll(".social__link[data-social-name]"),
     toggleTheme = document.querySelector(".toggle-theme"),
     btnScrollToTop = document.querySelector(".top"),
     menuItems = document.querySelectorAll(".main-nav .nav__link[href^='\/#']");
@@ -66,6 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
       darkMode();
     });
   };
+
+  socialLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const socialName = link.dataset.socialName;
+      if (!socialName || !window.plausible) return;
+      window.plausible(`${socialName}-click`);
+    });
+  });
 
   // Theme Switcher
   function darkMode() {

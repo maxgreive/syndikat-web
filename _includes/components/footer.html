@@ -20,7 +20,7 @@
                 <ul class="social__list list-reset">
                   {% for item in site.socials %}
                     <li class="social__item">
-                      <a class="social__link" href="{{- item.url -}}" target="_blank" rel="noopener" aria-label="link">
+                      <a class="social__link" href="{{- item.url -}}" target="_blank" rel="noopener" aria-label="{{ item.name }}" data-social-name="{{ item.name }}">
                         {% include snippets/lucide/icon.html name=item.name class="lucide" %}
                       </a>
                     </li>

@@ -1,7 +1,6 @@
-{%- capture hero_src -%}{% include snippets/netlify_image_url.html src="/assets/images/hero.jpg" w=1200 %}{%- endcapture
--%}
-{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src="/assets/images/hero.jpg"
-widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
+{%- assign hero_image = site.hero_image | default: "/assets/images/hero.jpg" -%}
+{%- capture hero_src -%}{% include snippets/netlify_image_url.html src=hero_image w=1200 %}{%- endcapture -%}
+{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src=hero_image widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
 <section class="hero">
   <div class="container">
     <div class="row">

@@ -32,7 +32,9 @@
   export let wishlist;
 
   $: productUrl = product?.url ? new URL(product.url) : null;
-  $: cleanProductUrl = productUrl ? productUrl.origin + productUrl.pathname : "";
+  $: cleanProductUrl = productUrl
+    ? productUrl.origin + productUrl.pathname
+    : "";
   let isWishlisted = false;
   $: {
     wishlist.subscribe((products) => {

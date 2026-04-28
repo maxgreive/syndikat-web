@@ -21,9 +21,12 @@
           </div>
           <div class="hero__right">
             <div class="hero__image">
-              <img src="{{ hero_src | strip }}" width="534" height="400" srcset="{{ hero_srcset | strip }}"
-                sizes="(max-width: 576px) 470px, (max-width: 768px) 560px, (max-width: 1024px) 740px, 600px"
-                alt="Discgolfscheiben in einem Rucksack">
+              <picture>
+                <source media="(min-width: 577px)" srcset="{{ hero_srcset | strip }}"
+                  sizes="(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" width="534" height="400"
+                  alt="Discgolfscheiben in einem Rucksack">
+              </picture>
             </div>
           </div>
         </div>

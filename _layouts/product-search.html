@@ -17,11 +17,36 @@ layout: default
 <div class="container page page-full-width">
   <div class="row">
     <div class="col col-12">
+      <script>
+        globalThis.productSearchShops = {{ site.data.product_search_shops | jsonify }};
+      </script>
+
       <div>
         {{ content }}
       </div>
 
       <div id="product-search-app"></div>
+
+      <h2>Unterstützte Shops</h2>
+
+      <div class="supported-shops">
+        {% for shop in site.data.product_search_shops %}
+          {% unless shop.disabled %}
+            <div class="supported-shop">
+              <a href="{{ shop.url }}?ref=syndikat.golf" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/images/logos/{{ shop.handle }}-light.png" class="hide-dark" alt="{{ shop.name }} Logo" width="100" height="32" />
+                <img src="/assets/images/logos/{{ shop.handle }}-dark.png" class="hide-light" alt="{{ shop.name }} Logo" width="100" height="32" />
+              </a>
+            </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+
+      <p>Ein Shop fehlt noch in der Liste oder du hast Feedback zum Tool? <a href="/contact/">Schreib uns über das Kontaktformular</a>.</p>
+
+      <noscript>
+        <p>Für die Live-Suche im Preisvergleich muss JavaScript aktiviert sein. Die Informationen auf dieser Seite helfen dir trotzdem dabei, das Tool und die unterstützten Shops einzuordnen.</p>
+      </noscript>
     </div>
   </div>
 </div>

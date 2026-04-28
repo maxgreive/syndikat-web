@@ -2955,6 +2955,44 @@ button.button--text {
   display: none
 }
 
+.supported-shops {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem
+}
+
+.supported-shop {
+  filter: brightness(0);
+  opacity: .7;
+  transition: all .2s ease
+}
+
+[dark] .supported-shop {
+  filter: brightness(0) invert(1)
+}
+
+@media (hover: hover) {
+  .supported-shop:hover {
+    filter: invert(0);
+    opacity: 1
+  }
+}
+
+.supported-shop a {
+  border-bottom: 0 !important;
+  display: block;
+  padding: 1rem
+}
+
+.supported-shop img {
+  border-radius: 0;
+  height: 32px;
+  width: 100px;
+  object-fit: contain
+}
+
 .search-results-list .no-results {
   width: 100%;
   margin: 0;

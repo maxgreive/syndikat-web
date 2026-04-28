@@ -149,6 +149,7 @@ function renderMarker(tournament, layer) {
 
 function createPopupContent(tournament, marker) {
   const wrapper = document.createElement("div");
+  const EXTERNAL_LINK_ICON = '<svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
   const isOneDay = tournament?.dates?.endTournament && tournament?.dates?.startTournament === tournament?.dates?.endTournament;
   const badgeHTML = tournament.badge ? `<span class="popup-badge">${escapeHtml(tournament.badge)}</span>` : "";
   const details = [
@@ -173,7 +174,7 @@ function createPopupContent(tournament, marker) {
     details.push(`<p>Verbundene Runden: ${tournament.relatedTournaments.map((item) => `<a href="https://discgolfmetrix.com/${item.id}">${escapeHtml(item.round)}</a>`).join(", ")}</p>`);
   }
 
-  details.push(`<p><a href="${escapeAttribute(tournament.link || "#")}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen <i class="ion ion-md-exit"></i></a></p>`);
+  details.push(`<p><a href="${escapeAttribute(tournament.link || "#")}" target="_blank" rel="noopener" class="popup-link">Turnierausschreibung ansehen ${EXTERNAL_LINK_ICON}</a></p>`);
   wrapper.innerHTML = details.join("");
 
   const routeButton = document.createElement("button");

@@ -1,4 +1,6 @@
 <script>
+  import Icon from "./Icon.svelte";
+
   export let wishlist;
   const overlay = document.querySelector(".overlay");
 
@@ -24,7 +26,7 @@
   aria-label="Wunschliste öffnen"
   class="button button--primary wishlist"
 >
-  <i class="ion ion-md-heart"></i>
+  <Icon name="heart" filled={true} />
   <span>{$wishlist?.length || 0}</span>
 </button>
 
@@ -32,7 +34,7 @@
   <header class="search__group">
     <h3>Wunschliste</h3>
     <button on:click={toggleAside} class="search__close">
-      <i class="ion ion-md-close"></i>
+      <Icon name="x" />
     </button>
   </header>
   <section>
@@ -70,7 +72,7 @@
                 ($wishlist = $wishlist.filter((p) => p !== product))}
               class="button--remove"
             >
-              <i class="ion ion-md-trash"></i>
+              <Icon name="trash" />
             </button>
           </li>
         {/each}
@@ -79,7 +81,7 @@
   </section>
   <footer>
     <button on:click={() => ($wishlist = [])} class="button--clear">
-      <i class="ion ion-md-trash"></i> Wunschliste leeren
+      <Icon name="trash" /> Wunschliste leeren
     </button>
   </footer>
 </aside>

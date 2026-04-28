@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     menuList = document.querySelector(".main-nav"),
     searchOpenIcon = document.querySelector(".icon__search"),
     searchCloseIcon = document.querySelector("[data-search-close]"),
-    instagramIcon = document.querySelector(".icon__instagram"),
     searchInput = document.querySelector(".search__text"),
     search = document.querySelector(".search"),
     searchBox = document.querySelector(".search__box"),
@@ -67,11 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       darkMode();
     });
   };
-
-  instagramIcon.addEventListener("click", () => {
-    window.open("https://instagram.com/syndikat.golf", "_blank");
-    window.plausible && window.plausible("instagram-click");
-  });
 
   // Theme Switcher
   function darkMode() {

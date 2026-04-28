@@ -4,6 +4,7 @@
   import { fetchNewestProducts, streamProducts } from "./api";
   import { push, querystring } from "svelte-spa-router";
   import Awesomplete from "awesomplete";
+  import Icon from "./Icon.svelte";
   import ProductCard from "./ProductCard.svelte";
   import Wishlist from "./Wishlist.svelte";
   import { shops } from "./shopData.js";
@@ -260,7 +261,7 @@
       on:click={() => clearProducts()}
       on:keydown={() => clearProducts()}
     >
-      <i class="ion ion-md-close"></i>
+      <Icon name="x" />
     </div>
   {/if}
   <label for="js-product-input" class="screen-reader-text"
@@ -275,7 +276,7 @@
     placeholder="Suche eine Scheibe …"
   />
   <button type="submit" class="button button--primary">
-    <i class="ion ion-md-search"></i>
+    <Icon name="search" />
   </button>
 </form>
 

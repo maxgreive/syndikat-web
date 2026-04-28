@@ -1,6 +1,8 @@
 const DEFAULT_DEV_API_URL = 'http://localhost:8080';
 const DEFAULT_PROD_API_URL = 'https://api.syndikat.golf';
 const API_URL = resolveApiBaseUrl();
+const TRENDING_UP_ICON = '<svg class="lucide color--green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 7h5v5"/><path d="m21 7-7 7-4-4-7 7"/></svg>';
+const TRENDING_DOWN_ICON = '<svg class="lucide color--red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 17h5v-5"/><path d="m21 17-7-7-4 4-7-7"/></svg>';
 
 function renderRatings(ratings, $el) {
   let index = 0;
@@ -23,7 +25,7 @@ function renderRatings(ratings, $el) {
             </div>
           </div>
         </td>
-        <td>${entry.rating} ${entry.ratingChange > 0 ? '<i class="ion ion-ios-trending-up color--green"></i>' : entry.ratingChange < 0 ? '<i class="ion ion-ios-trending-down color--red"></i>' : ''}</td>
+        <td>${entry.rating} ${entry.ratingChange > 0 ? TRENDING_UP_ICON : entry.ratingChange < 0 ? TRENDING_DOWN_ICON : ''}</td>
         <td><span class="pill" data-division="${entry.division}">${entry.division}</span></td>
         <td>${entry.divisionRank}<span class="percentile">Top ${Math.ceil(entry.divisionRank / entry.divisionCount * 100)}%</span></td>
         <td>${entry.dmRounds}/${entry.roundCount}</td>

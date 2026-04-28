@@ -2617,6 +2617,15 @@ button.button--text {
   max-height: 50px
 }
 
+.lucide {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke-width: var(--lucide-stroke-width, 2);
+}
+
 .main-nav {
   margin-left: auto
 }
@@ -2689,11 +2698,11 @@ button.button--text {
   cursor: pointer
 }
 
-.main-nav__box .nav__icon-close:hover .ion-md-close {
+.main-nav__box .nav__icon-close:hover svg {
   transform: rotate(90deg)
 }
 
-.main-nav__box .nav__icon-close .ion-md-close {
+.main-nav__box .nav__icon-close svg {
   transition: all 0.35s
 }
 
@@ -2765,45 +2774,55 @@ button.button--text {
 }
 
 .nav-button {
+  display: flex;
+  align-items: center;
   font-size: 21px;
   color: var(--link-color);
   cursor: pointer
 }
 
-.nav-button .icon__menu {
+.nav-button .nav__icon.icon__menu {
   display: none;
 }
 
 .nav-button .nav__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 6px;
 }
 
+.nav-button .nav__icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
 .nav-button .icon__menu,
-.nav-button .icon__instagram,
 .nav-button .icon__search {
   transition: color .25s ease
 }
 
 .nav-button .icon__menu:hover,
-.nav-button .icon__instagram:hover,
 .nav-button .icon__search:hover {
   color: var(--brand-color)
 }
 
 @media only screen and (max-width: 1024px) {
   .nav-button {
-    display: flex;
-    align-items: center;
     margin-left: auto;
     font-size: 24px
   }
 
-  .nav-button .icon__menu {
-    display: block
+  .nav-button .nav__icon.icon__menu {
+    display: inline-flex
   }
 }
 
 .nav__icon.toggle-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
 }
 
@@ -2924,8 +2943,8 @@ button.button--text {
   transform: translateY(-50%) rotate(90deg)
 }
 
-.search__group .search__close .ion-md-close {
-  vertical-align: middle
+.search__group .search__close .lucide {
+  display: block
 }
 
 .search__group .search__text {
@@ -3215,9 +3234,15 @@ button.button--text {
 .social .social__link {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 4px;
   font-size: 20px;
   color: var(--heading-font-color)
+}
+
+.social .social__link .lucide {
+  color: currentColor;
+  stroke: currentColor;
 }
 
 .social .social__link:hover {
@@ -3271,11 +3296,13 @@ button.button--text {
 }
 
 .top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 36px;
   height: 36px;
   font-size: 20px;
-  line-height: 36px;
-  text-align: center;
+  line-height: 1;
   border-radius: 8px;
   color: var(--heading-font-color);
   background-color: var(--background-alt-color);
@@ -4185,7 +4212,8 @@ button.button--text {
   background: var(--background-alt-color)
 }
 
-.post__share .share__link i {
+.post__share .share__link i,
+.post__share .share__link .lucide {
   transition: transform .25s;
   will-change: transform
 }
@@ -4194,7 +4222,8 @@ button.button--text {
   color: var(--heading-font-color)
 }
 
-.post__share .share__link:hover i {
+.post__share .share__link:hover i,
+.post__share .share__link:hover .lucide {
   transform: scale(1.1)
 }
 

@@ -7,7 +7,7 @@
                 </div>
                 <nav class="main-nav">
                     <div class="main-nav__box">
-                        <div class="nav__icon-close"> <i class="ion ion-md-close"></i> </div>
+                        <div class="nav__icon-close">{% include snippets/lucide/icon.html name="x" class="lucide lucide-x" %}</div>
                         <div class="nav__title">{{ site.data.menus.main_menu.title }}</div>
                         <ul class="nav__list list-reset">
                             {% for item in site.data.menus.main_menu.items %}
@@ -21,17 +21,16 @@
                     </div>
                 </nav>
                 <div class="nav-button">
-                    <i class="nav__icon icon__instagram ion ion-logo-instagram"></i>
                     <span class="nav__icon toggle-theme">
                         <span class="toggle-moon" title="Enable dark mode">
-                            <i class="ion ion-ios-moon"></i>
+                            {% include snippets/lucide/icon.html name="moon" class="lucide lucide-moon" %}
                         </span>
                         <span class="toggle-sun" title="Enable light mode">
-                            <i class="ion ion-ios-sunny"></i>
+                            {% include snippets/lucide/icon.html name="sun" class="lucide lucide-sun" %}
                         </span>
                     </span>
-                    <i class="nav__icon icon__search ion ion-md-search"></i>
-                    <i class="nav__icon icon__menu ion ion-md-menu"></i>
+                    <span class="nav__icon icon__search">{% include snippets/lucide/icon.html name="search" class="lucide lucide-search" %}</span>
+                    <span class="nav__icon icon__menu">{% include snippets/lucide/icon.html name="menu" class="lucide lucide-menu" %}</span>
                 </div>
             </div>
         </div>

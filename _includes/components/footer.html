@@ -21,7 +21,7 @@
                   {% for item in site.socials %}
                     <li class="social__item">
                       <a class="social__link" href="{{- item.url -}}" target="_blank" rel="noopener" aria-label="link">
-                        <i class="ion ion-logo-{{- item.name -}}"></i>
+                        {% include snippets/lucide/icon.html name=item.name class="lucide" %}
                       </a>
                     </li>
                   {% endfor %}
@@ -56,7 +56,7 @@
         <div class="col col-12">
           <div class="footer__info-box">
             <div class="copyright">{{ 'now' | date: "%Y" }} &copy; <a href="/">{{ site.title }}</a>. Crafted in <a href="https://x.com/maex2k">Cologne</a>.</div>
-            <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+            <div class="top" title="Top">{% include snippets/lucide/icon.html name="chevron-up" class="lucide" %}</div>
           </div>
         </div>
       </div>

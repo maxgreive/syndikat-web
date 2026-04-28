@@ -4,6 +4,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const TRAINING_WEEKDAY = 5;
 const TRAINING_HOUR = 16;
+const TRASH_ICON = '<svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18"/><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>';
 
 function hash(str) {
   return Array.from(str).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0);
@@ -115,7 +116,7 @@ async function loadParticipants() {
     if (hasLocalStorage) {
       const deleteButton = document.createElement('button');
       deleteButton.setAttribute('class', 'button button--text')
-      deleteButton.innerHTML = '<i class="ion ion-md-trash"></i>';
+      deleteButton.innerHTML = TRASH_ICON;
       deleteButton.addEventListener('click', async () => {
         await handleDelete(participant.name);
       });

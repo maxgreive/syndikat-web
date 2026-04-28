@@ -1,4 +1,5 @@
 <script>
+  import Icon from "./Icon.svelte";
   import { shops } from "./shopData.js";
   import tippy from "tippy.js";
 
@@ -73,11 +74,7 @@
     });
   };
 
-  const toggleWishlist = (e) => {
-    const icon = e.target.closest(".ion");
-    icon.classList.toggle("ion-md-heart");
-    icon.classList.toggle("ion-md-heart-empty");
-
+  const toggleWishlist = () => {
     wishlist.update((items) => {
       if (isWishlisted) {
         return items.filter(
@@ -129,7 +126,7 @@
           zIndex: 1,
         }}
       >
-        <i class={`ion ion-md-heart${isWishlisted ? "" : "-empty"}`}></i>
+        <Icon name="heart" filled={isWishlisted} />
       </button>
       {#if shop && shop.shipping && shop.shipping.amount}
         <span
@@ -141,7 +138,7 @@
             zIndex: 1,
           }}
         >
-          <i class="ion ion-md-information-circle-outline"></i>
+          <Icon name="info" />
         </span>
       {/if}
     </div>

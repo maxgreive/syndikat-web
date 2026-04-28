@@ -40,13 +40,13 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# socials:
+socials:
   #- name: twitter
   #  url: https://twitter.com
   #- name: facebook
   #  url: https://facebook.com
-  #- name: instagram
-  #  url: https://instagram.com
+  - name: instagram
+    url: https://instagram.com/syndikat.golf
   #- name: pinterest
   #  url: https://pinterest.com
   #- name: youtube

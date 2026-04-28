@@ -3,12 +3,10 @@
   import { onDestroy, onMount } from "svelte";
   import { fetchNewestProducts, streamProducts } from "./api";
   import { push, querystring } from "svelte-spa-router";
-  import SearchExample from "./SearchExample.svelte";
   import Awesomplete from "awesomplete";
-  import ShopLogos from "./ShopLogos.svelte";
   import ProductCard from "./ProductCard.svelte";
   import Wishlist from "./Wishlist.svelte";
-  import { shops } from "./shops.js";
+  import { shops } from "./shopData.js";
 
   const activeShops = shops.filter((shop) => !shop.disabled);
   const shopHandles = activeShops.map((shop) => shop.handle);
@@ -36,7 +34,9 @@
   sort.subscribe((value) => (localStorage.sort = value));
 
   const wishlist = writable(JSON.parse(localStorage.wishlist || "[]"));
-  wishlist.subscribe((products) => localStorage.wishlist = JSON.stringify(products));
+  wishlist.subscribe(
+    (products) => (localStorage.wishlist = JSON.stringify(products)),
+  );
 
   let query = "";
   $: query = query.toLowerCase();
@@ -205,7 +205,8 @@
 
   function getDiscLabel(disc) {
     let label = `${disc.brand} ${disc.name}`;
-    if (disc.category) label += `<span class="disc-category">${disc.category}</span>`;
+    if (disc.category)
+      label += `<span class="disc-category">${disc.category}</span>`;
     if (disc.speed && disc.glide && disc.turn && disc.fade) {
       label += `
         <div class="disc-flightnumbers">
@@ -227,16 +228,15 @@
     query = new URLSearchParams($querystring).get("q") || "";
     await getProducts();
     // discs are pulled from https://discit-api.fly.dev/disc
-    discs = await fetch('/assets/discs.json').then(res => res.json());
+    discs = await fetch("/assets/discs.json").then((res) => res.json());
 
     new Awesomplete(searchInputElement, {
-      list: discs.map(disc => (
-        {
-          label: getDiscLabel(disc),
-          value: `${disc.name}`
-        }
-      )),
-      filter: (suggestion, input) => Awesomplete.FILTER_CONTAINS(suggestion.value, input),
+      list: discs.map((disc) => ({
+        label: getDiscLabel(disc),
+        value: `${disc.name}`,
+      })),
+      filter: (suggestion, input) =>
+        Awesomplete.FILTER_CONTAINS(suggestion.value, input),
       minChars: 3,
       maxItems: 20,
       autoFirst: false,
@@ -274,10 +274,7 @@
     bind:value={query}
     placeholder="Suche eine Scheibe …"
   />
-  <button
-    type="submit"
-    class="button button--primary"
-  >
+  <button type="submit" class="button button--primary">
     <i class="ion ion-md-search"></i>
   </button>
 </form>
@@ -320,57 +317,30 @@
 </div>
 
 <div class="row animate">
-  {#if $loading && shopCount < totalStores && $products.length === 0}
-    {#each Array(6) as _}
-      <div class="skeleton col col-4 col-d-6 col-t-12">
-        <div class="skeleton-image"></div>
-        <div class="skeleton-text"></div>
-      </div>
-    {/each}
+  {#each $products as product}
+    <ProductCard {product} {wishlist} />
   {:else}
-    {#each $products as product}
-      <ProductCard {product} {wishlist} />
-    {:else}
-      {#if defaultState || !query}
-        <div class="col col-12">
-          <p>
-            Suche zum Beispiel nach
-            <SearchExample bind:query text="Harp" cb={getProducts} />,
-            <SearchExample bind:query text="Raider" cb={getProducts} /> oder
-            <SearchExample bind:query text="Destroyer" cb={getProducts} />.
-          </p>
-        </div>
-        <div class="col col-12">
-          <h3>Unterstützte Shops</h3>
-        </div>
-        <ShopLogos {activeShops} />
-        <div class="col col-12">
-          <p>
-            Ein Store fehlt in der Liste? Du hast Fragen oder Anregungen? <a
-              href="/contact/"
-            >
-              Schreib uns über das Kontaktformular
-            </a>.
-          </p>
-        </div>
+    {#if defaultState || !query}
+      <div class="col col-12">
+        <p>Nutze die Suche oben, um Preise und Verfügbarkeiten zu vergleichen.</p>
+      </div>
 
-        {#if $newProducts.length}
-          <div class="col col-12">
-            <h3>Neuheiten und Restocks</h3>
-            <div class="row">
-              {#each $newProducts as product}
-                <ProductCard {product} {wishlist} />
-              {/each}
-            </div>
+      {#if $newProducts.length}
+        <div class="col col-12">
+          <h3>Neuheiten und Restocks</h3>
+          <div class="row">
+            {#each $newProducts as product}
+              <ProductCard {product} {wishlist} />
+            {/each}
           </div>
-        {/if}
-      {:else}
-        <div class="col">
-          <p>Keine Produkte für { searchedQuery } gefunden.</p>
         </div>
       {/if}
-    {/each}
-  {/if}
+    {:else}
+      <div class="col">
+        <p>Keine Produkte für {searchedQuery} gefunden.</p>
+      </div>
+    {/if}
+  {/each}
 </div>
 
 <style>
@@ -400,49 +370,6 @@
     margin-bottom: 16px;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .skeleton {
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .skeleton-image {
-    width: 100%;
-    height: 200px;
-    background-color: #ccd0d3;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    animation: loading 4s infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      background-color: #ccd0d3;
-    }
-    50% {
-      background-color: #e2e6e8;
-    }
-    100% {
-      background-color: #ccd0d3;
-    }
-  }
-
-  .skeleton-text {
-    width: 100%;
-    height: 1em;
-    margin: 1rem 0;
-    background: var(--text-alt-color);
-  }
-
-  @keyframes background-shine {
-    0% {
-      background-position: 30%;
-    }
-    40%,
-    100% {
-      background-position: -200%;
-    }
   }
 
   .circular-progress {

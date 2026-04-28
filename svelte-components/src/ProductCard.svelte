@@ -1,5 +1,5 @@
 <script>
-  import { shops } from "./shops";
+  import { shops } from "./shopData.js";
   import tippy from "tippy.js";
 
   function tooltip(node, params) {
@@ -41,7 +41,6 @@
       );
     });
   }
-
 
   $: shop = shops.find((shop) => shop.handle === product?.store);
   const stockStatusLabels = {

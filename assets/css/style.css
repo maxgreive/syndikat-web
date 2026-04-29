@@ -3646,7 +3646,7 @@ button.button--text {
   padding-bottom: 62%;
   border-radius: 8px;
   overflow: hidden;
-  background: var(--background-alt-color);
+  background: transparent;
   transition: none
 }
 
@@ -3952,7 +3952,7 @@ button.button--text {
   min-height: 280px;
   border-radius: 8px;
   overflow: hidden;
-  background: var(--background-alt-color)
+  background: transparent
 }
 
 .post-image img,

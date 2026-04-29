@@ -51,9 +51,9 @@
   </script>
   <style>
     :root {
-      color-scheme: light;
-      background-color: #fff;
-      color: #1e2740;
+      color-scheme: light dark;
+      background-color: Canvas;
+      color: CanvasText;
     }
 
     :root[dark] {
@@ -67,6 +67,24 @@
       background-color: inherit;
       color: inherit;
     }
+
+    {% if page.layout == 'index' %}
+    .hero {
+      background-color: #f3f7ff;
+    }
+
+    .hero__image {
+      background-color: #fff;
+    }
+
+    :root[dark] .hero {
+      background-color: #1a1a1f;
+    }
+
+    :root[dark] .hero__image {
+      background-color: #111016;
+    }
+    {% endif %}
   </style>
   <title>{{ page.title }} &ndash; {{ site.title }}</title>
   <link rel="preload" href="/assets/fonts/Jost-900-Black.woff2" as="font" type="font/woff2" crossorigin>

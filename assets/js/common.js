@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setDarkTheme(isDark) {
     sessionStorage.setItem("theme", isDark ? "dark" : "light");
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
 
     if (isDark) {
       document.documentElement.setAttribute("dark", "");

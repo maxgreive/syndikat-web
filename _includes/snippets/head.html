@@ -38,6 +38,36 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (() => {
+      const storedTheme = sessionStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = storedTheme ? storedTheme === "dark" : systemPrefersDark;
+
+      document.documentElement.toggleAttribute("dark", isDark);
+      document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      background-color: #fff;
+      color: #1e2740;
+    }
+
+    :root[dark] {
+      color-scheme: dark;
+      background-color: #111016;
+      color: #9e9e9e;
+    }
+
+    html,
+    body {
+      background-color: inherit;
+      color: inherit;
+    }
+  </style>
   <title>{{ page.title }} &ndash; {{ site.title }}</title>
   <link rel="preload" href="/assets/fonts/Jost-900-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Jost-400-Book.woff2" as="font" type="font/woff2" crossorigin>
@@ -124,14 +154,6 @@
     type="image/jpeg">
   {% endif %}
   <link href="/assets/fonts/Jost.css" rel="stylesheet">
-  <script>
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const sessionTheme = sessionStorage.getItem("theme");
-
-    if (!sessionTheme && prefersDark || sessionTheme === 'dark') {
-      document.documentElement.setAttribute("dark", "");
-    }
-  </script>
 
   {% if page.layout == 'product-search' %}
   <script defer src="/assets/svelte-bundle.js?{{ site.time | date: '%s%N' }}"></script>

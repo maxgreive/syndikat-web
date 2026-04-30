@@ -126,7 +126,7 @@ async function initMap() {
 function renderMarker(tournament, layer) {
   if (!tournament?.coords?.lat || !tournament?.coords?.lng) return;
 
-  const iconElement = document.querySelector("[data-icon]").content.firstElementChild.cloneNode(true);
+  const iconElement = document.querySelector("template[data-icon]").content.firstElementChild.cloneNode(true);
   iconElement.style.fill = `hsl(220deg 50% ${Math.floor(Math.random() * (70 - 50 + 1) + 50)}%)`;
   const sizeMultiplier = Math.random() * 0.3 + 1;
   const icon = L.divIcon({

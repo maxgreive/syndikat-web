@@ -34,12 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
     menuList.classList.add("is-open");
     menuList.setAttribute("aria-hidden", "false");
     menuPanel.setAttribute("data-open", "true");
+    menuOpenIcon.setAttribute("aria-expanded", "true");
   }
 
   function menuClose() {
     menuList.classList.remove("is-open");
     menuList.setAttribute("aria-hidden", "true");
     menuPanel.setAttribute("data-open", "false");
+    menuOpenIcon.setAttribute("aria-expanded", "false");
   }
 
   searchOpenIcon.addEventListener("click", () => {
@@ -52,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function searchOpen() {
     search.classList.add("is-visible");
+    search.setAttribute("aria-hidden", "false");
+    searchOpenIcon.setAttribute("aria-expanded", "true");
     setTimeout(function () {
       searchInput.focus();
     }, 250);
@@ -59,11 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function searchClose() {
     search.classList.remove("is-visible");
+    search.setAttribute("aria-hidden", "true");
+    searchOpenIcon.setAttribute("aria-expanded", "false");
   }
 
   searchBox.addEventListener("keydown", function (event) {
     if (event.target == this || event.keyCode == 27) {
-      search.classList.remove('is-visible');
+      searchClose();
     }
   });
 

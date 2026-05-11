@@ -2705,8 +2705,10 @@ button.button--text {
   height: 36px;
   font-size: 24px;
   line-height: 1;
+  border: 0;
   border-radius: 50%;
   color: var(--heading-font-color);
+  font-family: inherit;
   background: var(--background-alt-color);
   cursor: pointer
 }
@@ -2834,6 +2836,11 @@ button.button--text {
   align-items: center;
   justify-content: center;
   padding: 6px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 
 .nav-button .nav__icon svg {
@@ -2872,6 +2879,9 @@ button.button--text {
   display: inline-grid;
   align-items: center;
   justify-content: center;
+  border: 0;
+  background: none;
+  cursor: pointer;
   line-height: 1
 }
 
@@ -2984,8 +2994,11 @@ button.button--text {
   height: 32px;
   font-size: 24px;
   line-height: 1;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   color: var(--heading-font-color);
+  font-family: inherit;
   cursor: pointer;
   will-change: transform;
   transition: all .25s;

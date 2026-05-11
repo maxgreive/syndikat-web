@@ -1,12 +1,12 @@
-<div class="search">
+<div class="search" id="site-search" aria-hidden="true">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="search__box">
           <div class="search__group">
-            <div class="search__close" data-search-close>
+            <button class="search__close" type="button" data-search-close aria-label="Close search">
               {% include snippets/lucide/icon.html name="x" class="lucide" %}
-            </div>
+            </button>
             <label for="js-search-input" class="screen-reader-text">Durchsuche die Website</label>
             <input type="text" id="js-search-input" class="search__text" autocomplete="off" placeholder="Suchen …">
           </div>

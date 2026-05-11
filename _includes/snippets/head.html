@@ -41,48 +41,58 @@
   <meta name="color-scheme" content="light dark">
   <script>
     (() => {
-      const storedTheme = sessionStorage.getItem("theme");
+      const root = document.documentElement;
+      let storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem("theme");
+      } catch (_) {}
       const systemPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = storedTheme ? storedTheme === "dark" : systemPrefersDark;
+      const isDark = storedTheme === "light" || storedTheme === "dark"
+        ? storedTheme === "dark"
+        : systemPrefersDark;
 
-      document.documentElement.toggleAttribute("dark", isDark);
-      document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+      root.toggleAttribute("dark", isDark);
+      root.style.colorScheme = isDark ? "dark" : "light";
     })();
   </script>
   <style>
     :root {
       color-scheme: light dark;
-      background-color: Canvas;
-      color: CanvasText;
+      --background-color: #fff;
+      --background-alt-color: #f3f7ff;
+      --text-color: #1e2740;
+      --text-alt-color: #716f8a;
+      --heading-font-color: #1e2740;
+      --link-color: #1e2740;
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
 
     :root[dark] {
       color-scheme: dark;
-      background-color: #111016;
-      color: #9e9e9e;
+      --background-color: #111016;
+      --background-alt-color: #1a1a1f;
+      --text-color: #9e9e9e;
+      --text-alt-color: #9e9e9e;
+      --heading-font-color: #f0f0f0;
+      --link-color: #f0f0f0;
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
 
     html,
     body {
-      background-color: inherit;
-      color: inherit;
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
 
     {% if page.layout == 'index' %}
     .hero {
-      background-color: #f3f7ff;
+      background-color: var(--background-alt-color);
     }
 
     .hero__image {
-      background-color: #fff;
-    }
-
-    :root[dark] .hero {
-      background-color: #1a1a1f;
-    }
-
-    :root[dark] .hero__image {
-      background-color: #111016;
+      background-color: var(--background-color);
     }
     {% endif %}
   </style>

@@ -34,11 +34,12 @@
 {%- endcapture -%}
 
 <head>
-  {% include snippets/tagmanager.html %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://plausible.io">
+  <script defer data-domain="syndikat.golf" data-api="https://plausible.io/api/event" src="https://plausible.io/js/script.outbound-links.pageview-props.tagged-events.js"></script>
   <script>
     (() => {
       const root = document.documentElement;

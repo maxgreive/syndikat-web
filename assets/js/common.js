@@ -74,6 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  syncThemeMode();
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", function (event) {
+      if (getStoredTheme()) return;
+      applyTheme(event.matches ? "dark" : "light", false);
+    });
+  }
+
+  window.addEventListener("storage", function (event) {
+    if (event.key !== "theme") return;
+    syncThemeMode();
+  });
+
   socialLinks.forEach((link) => {
     link.addEventListener("click", () => {
       const socialName = link.dataset.socialName;
@@ -84,28 +98,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Theme Switcher
   function darkMode() {
-    if (document.documentElement.hasAttribute('dark')) {
-      return setDarkTheme();
-    }
-    return setDarkTheme(true);
+    return applyTheme(getResolvedTheme() === "dark" ? "light" : "dark");
   }
 
-  function setDarkTheme(isDark) {
-    sessionStorage.setItem("theme", isDark ? "dark" : "light");
-    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+  function getStoredTheme() {
+    try {
+      var storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "light" || storedTheme === "dark") return storedTheme;
+    } catch (_) {}
+    return null;
+  }
 
-    if (isDark) {
-      document.documentElement.setAttribute("dark", "");
-      return syncThemeToggle();
+  function getSystemTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+  }
+
+  function getResolvedTheme() {
+    return html.hasAttribute('dark') ? "dark" : (getStoredTheme() || getSystemTheme());
+  }
+
+  function applyTheme(theme, persist) {
+    if (persist === undefined) persist = true;
+
+    html.toggleAttribute("dark", theme === "dark");
+    html.style.colorScheme = theme;
+
+    if (persist) {
+      try {
+        localStorage.setItem("theme", theme);
+      } catch (_) {}
     }
-    document.documentElement.removeAttribute("dark");
-    return syncThemeToggle();
+
+    syncThemeToggle();
+    return theme;
+  }
+
+  function syncThemeMode() {
+    return applyTheme(getStoredTheme() || getSystemTheme(), false);
   }
 
   function syncThemeToggle() {
     if (!toggleTheme) return;
 
-    const isDark = document.documentElement.hasAttribute('dark');
+    const isDark = getResolvedTheme() === "dark";
     toggleTheme.setAttribute("data-state", isDark ? "b" : "a");
     toggleTheme.setAttribute("aria-label", isDark ? "Enable light mode" : "Enable dark mode");
   }

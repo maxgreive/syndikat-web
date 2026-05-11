@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!toggleTheme) return;
 
     const isDark = getResolvedTheme() === "dark";
-    toggleTheme.setAttribute("data-state", isDark ? "b" : "a");
     toggleTheme.setAttribute("aria-label", isDark ? "Enable light mode" : "Enable dark mode");
   }
 

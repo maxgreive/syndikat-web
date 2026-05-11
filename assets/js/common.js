@@ -77,10 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
   syncThemeMode();
 
   if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", function (event) {
+    var colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    var onColorSchemeChange = function (event) {
       if (getStoredTheme()) return;
       applyTheme(event.matches ? "dark" : "light", false);
-    });
+    };
+
+    if (colorSchemeQuery.addEventListener) {
+      colorSchemeQuery.addEventListener("change", onColorSchemeChange);
+    } else if (colorSchemeQuery.addListener) {
+      colorSchemeQuery.addListener(onColorSchemeChange);
+    }
   }
 
   window.addEventListener("storage", function (event) {

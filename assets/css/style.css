@@ -2764,7 +2764,7 @@ button.button--text {
     display: flex;
     position: absolute;
     top: 40px;
-    right: 40px
+    right: 0
   }
 
   .main-nav__box .nav__title {

@@ -23,11 +23,13 @@
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-terser": "^0.4.0",
     "awesomplete": "^1.1.7",
+    "clean-css": "^5.3.3",
     "concurrently": "^9.2.1",
     "critical": "^7.2.1",
     "husky": "^9.0.11",
     "lucide-static": "^1.12.0",
     "lucide-svelte": "^1.0.1",
+    "npm-run-all": "^4.1.5",
     "rollup": "^3.15.0",
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -39,9 +41,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "clean-css": "^5.3.3",
-    "npm-run-all": "^4.1.5"
-  }
+  "license": "ISC"
 }

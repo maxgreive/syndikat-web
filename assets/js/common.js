@@ -104,10 +104,28 @@ document.addEventListener("DOMContentLoaded", function () {
   socialLinks.forEach((link) => {
     link.addEventListener("click", () => {
       const socialName = link.dataset.socialName;
-      if (!socialName || !window.plausible) return;
-      window.plausible(`${socialName}-click`);
+      if (!socialName) return;
+      trackUmamiEvent(`${socialName}-click`);
+      if (window.plausible) window.plausible(`${socialName}-click`);
     });
   });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest) return;
+
+    const target = event.target.closest("[class*='plausible-event-name=']");
+    if (!target) return;
+
+    const eventClass = Array.from(target.classList).find((className) => className.startsWith("plausible-event-name="));
+    if (!eventClass) return;
+
+    trackUmamiEvent(eventClass.replace("plausible-event-name=", ""));
+  });
+
+  function trackUmamiEvent(eventName, props) {
+    if (!eventName || !window.umami) return;
+    window.umami.track(eventName, props);
+  }
 
   // Theme Switcher
   function darkMode() {

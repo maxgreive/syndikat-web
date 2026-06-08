@@ -57,20 +57,26 @@
     currency: "EUR",
   });
 
-  const trackProduct = (product) => {
+  const trackEvent = (eventName, props) => {
     window.plausible =
       window.plausible ||
       function () {
         (window.plausible.q = window.plausible.q || []).push(arguments);
       };
-    window.plausible("product-click", {
-      props: {
-        product: product.title,
-        store: product.store,
-        price: product.price / 100,
-        currency: "EUR",
-        url: product.url,
-      },
+    window.plausible(eventName, {
+      props,
+    });
+
+    if (window.umami) window.umami.track(eventName, props);
+  };
+
+  const trackProduct = (product) => {
+    trackEvent("product-click", {
+      product: product.title,
+      store: product.store,
+      price: product.price / 100,
+      currency: "EUR",
+      url: product.url,
     });
   };
 

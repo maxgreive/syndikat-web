@@ -5,24 +5,26 @@ title: "Scheiben der Syndikat-Spieler: Matthias und Dustin zeigen ihr Bag"
 description: "Welche Disc-Golf-Scheiben spielen Leute aus dem Syndikat wirklich? Matthias und Dustin stellen ihre Lieblingsscheiben vor und erklären, wann sie sie einsetzen."
 image: /assets/images/posts/beginner-discs.jpg
 thumbnail: /assets/images/posts/thumbnails/beginner-discs.jpg
-tags: discs
+tags: discs spieler-bags
 author: max
 excerpt: Welche Scheiben landen bei erfahrenen Spielern wirklich im Bag? Matthias und Dustin stellen ihre wichtigsten Discs vor und erklären, wofür sie sie auf dem Kurs nutzen.
 ---
 
-Welche Scheibe soll ich kaufen? Diese Frage kommt beim Disc Golf fast automatisch auf. Flight Numbers, Plastiksorten, Marken und Empfehlungen gibt es ohne Ende. Wirklich hilfreich wird es aber oft erst dann, wenn jemand aus der eigenen Runde sagt: "Die Scheibe werfe ich ständig, und genau dafür benutze ich sie."
+Welche Scheibe soll ich kaufen? Diese Frage kommt beim Disc Golf fast automatisch auf. Flight Numbers, Plastiksorten, Marken und Empfehlungen gibt es ohne Ende. Wirklich hilfreich wird es aber oft erst dann, wenn jemand aus der eigenen Runde sagt: "Diese Scheibe werfe ich ständig, und genau dafür benutze ich sie."
 
 Deshalb starten wir mit einem kleinen Blick in die Bags von Syndikat-Spielern. Den Anfang machen Matthias und Dustin. Beide haben ein paar Scheiben herausgesucht, die bei ihnen regelmäßig auf den Kurs kommen. Das ist keine objektive Bestenliste, sondern bewusst persönlich: Welche Discs funktionieren für wen, auf welchen Linien und in welchen Situationen?
 
-Wenn du einzelne Modelle direkt suchen willst, findest du viele davon auch in unserem [Discgolf Preisvergleich](/preisvergleich/).
+Wir setzen die Reihe fort und schauen in weitere Bags aus dem Syndikat.
+
+Wenn du einzelne Modelle direkt suchen willst, findest du viele davon auch in unserem [Discgolf-Preisvergleich](/preisvergleich/).
 
 ## Matthias: kontrollierte Linien mit Discmania-Fokus
 
-Matthias beschreibt sich selbst als großen Discmania-Fan. Seine Auswahl ist entsprechend markengeprägt, aber nicht beliebig: Es geht vor allem um kontrollierbare Fairway-Driver, verlässliche Approach-Scheiben und Midranges für gerade Linien.
+Matthias beschreibt sich selbst als großen Discmania-Fan. Seine Auswahl ist entsprechend markengeprägt, aber nicht beliebig: Es geht vor allem um kontrollierbare Fairway-Driver, verlässliche Approach-Scheiben und Midrange-Scheiben für gerade Linien.
 
 ### Discmania MD5
 
-Die [MD5](/preisvergleich/#/?q=md5) ist für Matthias die Go-to-Approach-Disc. Sie kommt vor allem innerhalb von etwa 50 Metern vor dem Korb zum Einsatz, sowohl für Vorhand als auch für Rückhand.
+Die [MD5](/preisvergleich/#/?q=md5) ist für Matthias die Approach-Disc, zu der er besonders häufig greift. Sie kommt vor allem innerhalb von etwa 50 Metern vor dem Korb zum Einsatz, sowohl für Vorhand als auch für Rückhand.
 
 Gerade bei kurzen Annäherungen ist Verlässlichkeit wichtiger als maximale Distanz. Eine stabile Approach-Scheibe hilft, den Wurf klein zu halten und trotzdem sicher zum Korb zu kommen. Matthias sieht die MD5 genau in dieser Rolle: nicht spektakulär, aber ständig nützlich.
 
@@ -34,7 +36,7 @@ Matthias beschreibt sie als unverzichtbar für Waldgolf. Für ihn fliegt sie dab
 
 ### Discmania FD2, Sky Walker
 
-Die [FD2](/preisvergleich/#/?q=fd2%20sky%20walker) ist bei Matthias der schnurgerade Fairway-Driver. Sie lässt sich gut kontrollieren und hält den Winkel, den man ihr mitgibt.
+Die [FD2](/preisvergleich/#/?q=fd2%20sky%20walker) ist bei Matthias der Fairway-Driver für schnurgerade Linien. Sie lässt sich gut kontrollieren und hält den Winkel, den man ihr mitgibt.
 
 Das macht sie besonders interessant für Spieler, die nicht immer maximale Stabilität brauchen, sondern eine Scheibe suchen, die planbar auf Linie bleibt. Gerade auf engen Fairways ist so eine Disc oft wertvoller als ein schneller Driver.
 
@@ -52,19 +54,19 @@ Damit deckt sie einen anderen Teil des Midrange-Spektrums ab: weniger Hyzerflip-
 
 ### Matthias' Empfehlung
 
-Von Matthias' Auswahl sind besonders Origin, Hex und FD2 Scheiben, die man aus seiner Sicht einmal ausprobieren sollte, egal ob als Einsteiger oder fortgeschrittener Spieler. Vanguard und MD5 sind stärker Geschmackssache, funktionieren für ihn aber sehr gut, auch weil sie angenehm in seiner Hand liegen.
+Aus Matthias' Auswahl sind besonders Origin, Hex und FD2 Scheiben, die man aus seiner Sicht einmal ausprobieren sollte, egal ob als Einsteiger oder fortgeschrittener Spieler. Vanguard und MD5 sind stärker Geschmackssache, funktionieren für ihn aber sehr gut, auch weil sie angenehm in seiner Hand liegen.
 
 ## Dustin: neutrale Fairways und verlässliche Approaches
 
-Dustin hat drei Scheiben ausgewählt, die jeweils eine klare Aufgabe haben: ein neutraler Fairway-Driver, ein Wurf-Putter und eine überstabile Approach-Scheibe.
+Dustin hat drei Scheiben ausgewählt, die jeweils eine klare Aufgabe haben: einen neutralen Fairway-Driver, einen Wurf-Putter und eine überstabile Approach-Scheibe.
 
 ### Kastaplast Idog, K1 Line
 
-Die [Idog in K1](/preisvergleich/#/?q=idog%20k1) ist Dustins Stock-Fairway-Driver für gerade Linien und Anhyzer. Mit den Flight Numbers `7 | 5 | -0.5 | 2` liegt sie in einem Bereich, der für kontrollierte Fairway-Würfe sehr spannend ist.
+Die [Idog in K1](/preisvergleich/#/?q=idog%20k1) ist Dustins Standard-Fairway-Driver für gerade Linien und Anhyzer. Mit den Flight Numbers `7 | 5 | -0.5 | 2` liegt sie in einem Bereich, der für kontrollierte Fairway-Würfe sehr spannend ist.
 
-Bis etwa 90 Meter hält sie für Dustin einfach den Winkel, auf den sie geworfen wird. Genau deshalb funktioniert sie gut auf engen Fairways, wo eine Scheibe nicht unkontrolliert ausbrechen darf.
+Bis etwa 90 Meter hält sie für Dustin zuverlässig den Abwurfwinkel. Genau deshalb funktioniert sie gut auf engen Fairways, wo eine Scheibe nicht unkontrolliert ausbrechen darf.
 
-Für komplette Anfänger ist sie nicht unbedingt die erste Scheibe im Bag. Dustin sieht sie eher als Disc, in die man gut hineinwachsen kann.
+Für absolute Anfänger ist sie nicht unbedingt die erste Scheibe im Bag. Dustin sieht sie eher als Disc, in die man gut hineinwachsen kann.
 
 ### Streamline Pilot, Neutron
 
@@ -91,8 +93,8 @@ Die spannendste Gemeinsamkeit ist nicht eine bestimmte Marke, sondern die Rollen
 - ein neutraler Fairway-Driver für enge Bahnen
 - eine stabilere Option für Wind, Vorhand oder harte Finishes
 
-Genau so wird ein Bag sinnvoller: nicht durch möglichst viele Scheiben, sondern durch Scheiben, deren Aufgabe klar ist.
+Genau so wird ein Bag sinnvoller: nicht durch möglichst viele Scheiben, sondern durch Scheiben mit klarer Aufgabe.
 
-Wenn du noch am Anfang stehst, musst du diese Bags nicht kopieren. Viel besser ist es, einzelne Rollen zu verstehen und dann herauszufinden, welche Scheibe zu deiner Hand, deinem Wurf und deinen Kursen passt. Beim [Training](/training/) oder in einer gemeinsamen Runde ist das oft einfacher als beim reinen Lesen, weil du Scheiben direkt werfen und vergleichen kannst.
+Wenn du noch am Anfang stehst, musst du diese Bags nicht kopieren. Viel besser ist es, einzelne Rollen zu verstehen und dann herauszufinden, welche Scheibe zu deiner Hand, deinem Wurf und deinen Kursen passt. Eine gute Basis findest du in unserem [Guide zu Discgolf-Scheiben für Einsteiger](/blog/die-besten-scheiben-fuer-discgolf-einsteiger/). Beim [Training](/training/) oder in einer gemeinsamen Runde ist das oft einfacher als beim reinen Lesen, weil du Scheiben direkt werfen und vergleichen kannst.
 
 Und falls du nach einem Modell suchen willst: Unser [Preisvergleich](/preisvergleich/) hilft dir, Verfügbarkeit und Preise schneller zu checken.

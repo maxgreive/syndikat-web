@@ -10,12 +10,12 @@
             <h1 class="hero__title">Hey, wir sind das Syndikat</h1>
             <p class="hero__description">{{- site.description | escape -}}</p>
             <div class="hero__subscribe">
-              <button class="button button--primary button--icon plausible-event-name=discord_click" id="btn-discord"
+              <button class="button button--primary button--icon" id="btn-discord" data-umami-event="discord_click"
                 type="submit" onclick="window.open('\/\/community.syndikat.golf');">
                 {% include snippets/logo-discord.html %}
                 Discord beitreten
               </button>
-              <a href="/register/" class="button plausible-event-name=member_click" id="btn-membership">Mitglied
+              <a href="/register/" class="button" id="btn-membership" data-umami-event="member_click">Mitglied
                 werden</a>
             </div>
           </div>

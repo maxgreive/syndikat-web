@@ -105,26 +105,17 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", () => {
       const socialName = link.dataset.socialName;
       if (!socialName) return;
-      trackUmamiEvent(`${socialName}-click`);
-      if (window.plausible) window.plausible(`${socialName}-click`);
+      trackUmamiEvent(`${toSnakeCase(socialName)}_click`);
     });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest) return;
-
-    const target = event.target.closest("[class*='plausible-event-name=']");
-    if (!target) return;
-
-    const eventClass = Array.from(target.classList).find((className) => className.startsWith("plausible-event-name="));
-    if (!eventClass) return;
-
-    trackUmamiEvent(eventClass.replace("plausible-event-name=", ""));
   });
 
   function trackUmamiEvent(eventName, props) {
     if (!eventName || !window.umami) return;
     window.umami.track(eventName, props);
+  }
+
+  function toSnakeCase(value) {
+    return value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
   }
 
   // Theme Switcher

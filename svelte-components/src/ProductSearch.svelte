@@ -52,15 +52,6 @@
   };
 
   const trackEvent = (eventName, props) => {
-    window.plausible =
-      window.plausible ||
-      function () {
-        (window.plausible.q = window.plausible.q || []).push(arguments);
-      };
-    window.plausible(eventName, {
-      props,
-    });
-
     if (window.umami) window.umami.track(eventName, props);
   };
 
@@ -139,7 +130,7 @@
     closeActiveSource();
     const currentRun = ++searchRun;
 
-    trackEvent("product-search", {
+    trackEvent("product_search", {
       query: normalizedQuery,
     });
 

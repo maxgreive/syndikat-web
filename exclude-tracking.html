@@ -29,8 +29,14 @@ noindex: true
       input.checked = (input.value === 'true') === storedPreference;
       input.addEventListener('change', event => {
         const isPlausibleDisabled = event.target.value === 'true';
-        if (isPlausibleDisabled) return localStorage.setItem('plausible_ignore', 'true');
-        return localStorage.removeItem('plausible_ignore');
+        if (isPlausibleDisabled) {
+          localStorage.setItem('plausible_ignore', 'true');
+          localStorage.setItem('umami.disabled', '1');
+          return;
+        }
+
+        localStorage.removeItem('plausible_ignore');
+        localStorage.removeItem('umami.disabled');
       });
     });
   });

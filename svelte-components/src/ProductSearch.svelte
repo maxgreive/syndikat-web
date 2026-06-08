@@ -51,6 +51,19 @@
     searchInputElement?.focus();
   };
 
+  const trackEvent = (eventName, props) => {
+    window.plausible =
+      window.plausible ||
+      function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+    window.plausible(eventName, {
+      props,
+    });
+
+    if (window.umami) window.umami.track(eventName, props);
+  };
+
   const closeActiveSource = () => {
     if (activeSource) {
       activeSource.close();
@@ -126,15 +139,8 @@
     closeActiveSource();
     const currentRun = ++searchRun;
 
-    window.plausible =
-      window.plausible ||
-      function () {
-        (window.plausible.q = window.plausible.q || []).push(arguments);
-      };
-    window.plausible("product-search", {
-      props: {
-        query: normalizedQuery,
-      },
+    trackEvent("product-search", {
+      query: normalizedQuery,
     });
 
     initialProducts = [];

@@ -163,6 +163,16 @@
       onEnd: () => {
         if (currentRun !== searchRun) return;
         shopCount = totalStores;
+        const productCount = initialProducts.length;
+        trackEvent("product_search_completed", {
+          query: normalizedQuery,
+          product_count: productCount,
+        });
+        if (productCount === 0) {
+          trackEvent("product_search_no_results", {
+            query: normalizedQuery,
+          });
+        }
         finishSearch();
       },
       onServerError: () => {

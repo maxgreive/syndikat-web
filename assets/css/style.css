@@ -2423,7 +2423,7 @@ img+em,
 img+em a,
 .lightense-wrap+em a,
 .gallery+em a {
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: 1px solid var(--border-color);
   transition: all 0.35s
 }
@@ -2532,7 +2532,7 @@ table td {
   background: transparent;
   border: 0;
   padding: 0;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--link-color);
   -webkit-text-fill-color: currentColor;
   cursor: pointer;
@@ -3346,7 +3346,7 @@ button.button--text {
 .copyright {
   margin-right: 20px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-alt-color)
 }
 
@@ -3643,7 +3643,7 @@ button.button--text {
   padding: 8px 12px;
   font-size: 12px;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 4px;
   color: var(--heading-font-color);
   background: var(--background-color);
@@ -3845,7 +3845,7 @@ button.button--text {
 .section__link {
   padding-left: 20px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: transparent;
   color: var(--link-color);
@@ -4091,7 +4091,7 @@ button.button--text {
   margin: 4px 8px 4px 0;
   font-size: 14px;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
   border: none;
   border-radius: 8px;
@@ -4171,7 +4171,7 @@ button.button--text {
   display: inline-block;
   margin-bottom: 7px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: transparent;
   color: var(--heading-font-color);
@@ -4200,9 +4200,13 @@ button.button--text {
   max-width: 1149px;
 }
 
-.post a:not(.button):not([role="button"]),
+.post a:not(.button):not([role="button"]) {
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-color)
+}
+
 .page a:not(.button):not([role="button"]) {
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: 1px solid var(--border-color)
 }
 
@@ -4445,7 +4449,7 @@ button.button--text {
   display: block;
   padding: 12px 16px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
   border-radius: 8px;
   transition: none;
@@ -4519,7 +4523,7 @@ button.button--text {
 
 .tag__counter small {
   font-size: 16px;
-  font-weight: 400
+  font-weight: 500
 }
 
 @media only screen and (max-width: 576px) {
@@ -4557,7 +4561,7 @@ button.button--text {
 .top__link {
   padding-left: 20px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: transparent;
   color: var(--link-color);
@@ -4732,7 +4736,7 @@ button.button--text {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .tournaments-overview {
@@ -5008,7 +5012,7 @@ button.button--text {
 }
 
 .leaflet-container .leaflet-popup-content a {
-  font-weight: 400;
+  font-weight: 500;
   color: #1e2740;
   display: inline-block;
 }
@@ -5066,7 +5070,7 @@ button.button--text {
 }
 
 .bag-tags-wrapper thead td {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .bag-tags-wrapper td:first-child,

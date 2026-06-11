@@ -38,10 +38,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+
+  {% if site.analytics_enabled %}
   <script defer src="https://stats.syndikat.golf/script.js"
     data-website-id="20901b1f-9346-4191-8c70-445a09059c4f"
     data-performance="true"
   ></script>
+  {% endif %}
+
   <script>
     (() => {
       const root = document.documentElement;

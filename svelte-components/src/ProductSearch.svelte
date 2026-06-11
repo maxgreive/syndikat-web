@@ -52,15 +52,6 @@
   };
 
   const trackEvent = (eventName, props) => {
-    window.plausible =
-      window.plausible ||
-      function () {
-        (window.plausible.q = window.plausible.q || []).push(arguments);
-      };
-    window.plausible(eventName, {
-      props,
-    });
-
     if (window.umami) window.umami.track(eventName, props);
   };
 
@@ -139,7 +130,7 @@
     closeActiveSource();
     const currentRun = ++searchRun;
 
-    trackEvent("product-search", {
+    trackEvent("product_search", {
       query: normalizedQuery,
     });
 
@@ -172,6 +163,16 @@
       onEnd: () => {
         if (currentRun !== searchRun) return;
         shopCount = totalStores;
+        const productCount = initialProducts.length;
+        trackEvent("product_search_completed", {
+          query: normalizedQuery,
+          product_count: productCount,
+        });
+        if (productCount === 0) {
+          trackEvent("product_search_no_results", {
+            query: normalizedQuery,
+          });
+        }
         finishSearch();
       },
       onServerError: () => {

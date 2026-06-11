@@ -58,20 +58,11 @@
   });
 
   const trackEvent = (eventName, props) => {
-    window.plausible =
-      window.plausible ||
-      function () {
-        (window.plausible.q = window.plausible.q || []).push(arguments);
-      };
-    window.plausible(eventName, {
-      props,
-    });
-
     if (window.umami) window.umami.track(eventName, props);
   };
 
   const trackProduct = (product) => {
-    trackEvent("product-click", {
+    trackEvent("product_click", {
       product: product.title,
       store: product.store,
       price: product.price / 100,

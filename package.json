@@ -7,7 +7,7 @@
     "build:svelte": "npm run build -C svelte-components",
     "build:css": "node scripts/minify-css.mjs",
     "build:assets": "run-p build:svelte build:css",
-    "build:jekyll": "bundle exec jekyll build",
+    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:critical": "node critical.js",
     "build": "run-s build:assets build:jekyll build:critical",
     "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",

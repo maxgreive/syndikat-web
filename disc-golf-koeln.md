@@ -31,7 +31,7 @@ Wenn du schon länger spielst, findest du in Köln trotzdem genug Anknüpfungspu
 
 ## Warum ist das Weekly der beste Einstieg?
 
-Unsere wöchentliche Liga heißt **Syndication Weekly**. Laut <a href="/events/" data-umami-event="koeln_weekly_click">Event-Seite</a> treffen wir uns aktuell sonntags um 13:00 Uhr an der Scheibenstraße. Spieler:innen jedes Niveaus sind willkommen. Gespielt wird eine gewertete Runde, danach wird oft noch frei weitergespielt.
+Unsere wöchentliche Liga heißt **Syndication Weekly**. Laut <a href="/events/" data-umami-event="koeln_weekly_click">Event-Seite</a> treffen wir uns aktuell dienstags um 18:30 Uhr an der Scheibenstraße. Spieler:innen jedes Niveaus sind willkommen. Gespielt wird eine gewertete Runde, danach wird oft noch frei weitergespielt.
 
 Gerade für Leute aus Köln, die schnell Anschluss suchen, ist das Weekly der beste Einstieg. Du siehst direkt, wie andere spielen, lernst den Kurs kennen und kommst leichter mit der lokalen Szene ins Gespräch. Wenn du erst einmal nur zuschauen, mitlaufen oder eine entspannte Runde mitmachen willst, ist auch das völlig okay.
 

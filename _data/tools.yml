@@ -9,6 +9,11 @@
   url: /disc-dice/
   thumbnail: discdice_thumb.jpg
   alt: Disc Dice Würfel App
+- title: Chain Chaos
+  description: Bilinguales Disc-Golf-Kartenspiel für 2-4 Spieler*innen oder Teams
+  url: /disc-golf-card-game/
+  thumbnail: discdice_thumb.jpg
+  alt: Chain Chaos Kartenspiel
 - title: Bag Tag Challenge
   description: Aktuelle Übersicht über unsere Bag Tags
   url: /bagtags/

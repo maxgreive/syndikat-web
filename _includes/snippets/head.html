@@ -206,11 +206,11 @@
   <link href="/assets/fonts/Jost.css" rel="stylesheet">
 
   {% if page.layout == 'product-search' %}
-  <script defer src="/assets/svelte-bundle.js?{{ site.time | date: '%s%N' }}"></script>
-  <link href="/assets/svelte-bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
+  <script defer src="/assets/product-search/bundle.js?{{ site.time | date: '%s%N' }}"></script>
+  <link href="/assets/product-search/bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   {% elsif page.layout == 'disc-golf-card-game' %}
-  <script defer src="/assets/disc-golf-card-game.js?{{ site.time | date: '%s%N' }}"></script>
-  <link href="/assets/disc-golf-card-game.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
+  <script defer src="/assets/chain-chaos/bundle.js?{{ site.time | date: '%s%N' }}"></script>
+  <link href="/assets/chain-chaos/bundle.css?{{ site.time | date: '%s%N' }}" rel="stylesheet" />
   {% endif %}
   {% if page.layout == 'dice-game' %}
   <script src="/assets/js/dice-game.js" defer></script>

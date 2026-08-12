@@ -4,6 +4,9 @@ _site/
 .jekyll-metadata
 .DS_Store
 node_modules/
-assets/svelte-bundle*
+assets/product-search/
+assets/chain-chaos/
+# Legacy generated bundle paths, kept ignored while local build artifacts exist.
+assets/disc-golf-card-game*
 assets/css/style.min.css
 editorial/*

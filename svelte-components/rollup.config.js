@@ -94,15 +94,15 @@ function createConfig({ input, file, cssFile, name, serveOnWrite = false }) {
 export default [
 	createConfig({
 		input: 'src/main.js',
-		file: '../assets/svelte-bundle.js',
-		cssFile: 'svelte-bundle.css',
+		file: '../assets/product-search/bundle.js',
+		cssFile: 'bundle.css',
 		name: 'app',
 		serveOnWrite: true,
 	}),
 	createConfig({
 		input: 'src/card-game-main.js',
-		file: '../assets/disc-golf-card-game.js',
-		cssFile: 'disc-golf-card-game.css',
+		file: '../assets/chain-chaos/bundle.js',
+		cssFile: 'bundle.css',
 		name: 'discGolfCardGame',
 	}),
 ];

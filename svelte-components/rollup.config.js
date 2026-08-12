@@ -30,13 +30,14 @@ function serve() {
 	};
 }
 
-export default {
-	input: 'src/main.js',
+function createConfig({ input, file, cssFile, name, serveOnWrite = false }) {
+	return {
+	input,
 	output: {
 		sourcemap: true,
 		format: 'iife',
-		name: 'app',
-		file: '../assets/svelte-bundle.js',
+		name,
+		file,
 		globals: {
 			'tippy.js': 'tippy'
 		}
@@ -51,7 +52,7 @@ export default {
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
-		css({ output: 'svelte-bundle.css' }),
+		css({ output: cssFile }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
@@ -67,7 +68,7 @@ export default {
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
-		!production && serve(),
+		!production && serveOnWrite && serve(),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
@@ -88,3 +89,20 @@ export default {
 		clearScreen: false
 	}
 };
+}
+
+export default [
+	createConfig({
+		input: 'src/main.js',
+		file: '../assets/product-search/bundle.js',
+		cssFile: 'bundle.css',
+		name: 'app',
+		serveOnWrite: true,
+	}),
+	createConfig({
+		input: 'src/card-game-main.js',
+		file: '../assets/chain-chaos/bundle.js',
+		cssFile: 'bundle.css',
+		name: 'discGolfCardGame',
+	}),
+];

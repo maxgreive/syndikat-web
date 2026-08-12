@@ -4,6 +4,8 @@ _site/
 .jekyll-metadata
 .DS_Store
 node_modules/
-assets/svelte-bundle*
+assets/product-search/
+assets/chain-chaos/
+assets/disc-golf-card-game*
 assets/css/style.min.css
 editorial/*

@@ -6,7 +6,6 @@ _site/
 node_modules/
 assets/product-search/
 assets/chain-chaos/
-# Legacy generated bundle paths, kept ignored while local build artifacts exist.
 assets/disc-golf-card-game*
 assets/css/style.min.css
 editorial/*

@@ -1,4 +1,4 @@
-const baseUrl = (process.env.PA11Y_BASE_URL || "https://syndikat.golf").replace(/\/$/, "");
+const baseUrl = (process.env.PA11Y_BASE_URL || "http://127.0.0.1:4000").replace(/\/$/, "");
 const { executablePath } = require("puppeteer");
 
 /**
@@ -7,7 +7,7 @@ const { executablePath } = require("puppeteer");
  */
 module.exports = {
   defaults: {
-    concurrency: 2,
+    concurrency: 1,
     reporters: [
       "cli",
       ["json", { fileName: "./reports/pa11y.json" }],

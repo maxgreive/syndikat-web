@@ -10,7 +10,7 @@ module NetlifyImageCdn
   ARTICLE_SIZES = "(min-width: 792px) 760px, calc(100vw - 40px)"
 
   def enabled?
-    ENV["JEKYLL_ENV"] == "production"
+    ENV["NETLIFY"] == "true"
   end
 
   def transformable_src?(src)
@@ -57,6 +57,10 @@ module NetlifyImageCdn
       updated
     end
   end
+end
+
+Jekyll::Hooks.register :site, :after_init do |site|
+  site.config["netlify_image_cdn_enabled"] = NetlifyImageCdn.enabled?
 end
 
 Jekyll::Hooks.register :documents, :post_render do |document|

@@ -1,25 +1,31 @@
-# Get Started
+# syndikat-web
 
-## Requirements
+The Jekyll-based public website for Syndikat Disc Golf Cologne. It combines Markdown content and Liquid layouts with small browser JavaScript tools and a Svelte product-search bundle.
 
-* [Ruby version 2.5.0 or higher](https://www.ruby-lang.org/en/downloads/), including all development headers (check your Ruby version using `ruby -v`)
-* [RubyGems](https://rubygems.org/pages/download) (check your Gems version using `gem -v`)
-* Jekyll & Bundler gems: `gem install jekyll bundler`
+## Architecture
 
-## Run site locally
+Jekyll renders pages, posts, layouts, includes, and `_data` into the static site. JavaScript powers interactive pages such as ratings, bag tags, training signups, and the tournament map. Svelte is reserved for the product search. See [architecture](docs/architecture.md) and [development](docs/development.md).
 
-Clone this repository and `cd` into the root folder.
+## Prerequisites
 
-From the root directory, install the dependencies:
+- Node.js and npm
+- Ruby and Bundler (versions locked by `Gemfile.lock`)
 
-```
+## Setup and commands
+
+```sh
+npm install
 bundle install
+npm run dev
 ```
 
-Start Jekyll.
+`npm run dev` starts Jekyll and the Svelte development build. For a production-equivalent build:
 
-```
-bundle exec jekyll serve
+```sh
+npm run build:assets
+npm run build
 ```
 
-The site is now running at http://localhost:4000 in your browser.
+The full build runs Svelte and CSS asset builds, Jekyll production rendering, and critical-CSS generation. Netlify runs `npm run build` and publishes `_site`.
+
+When changing a website API call, coordinate the implementation and [API contract](https://github.com/maxgreive/syndikat-api/blob/master/docs/openapi.yaml) in `maxgreive/syndikat-api`.

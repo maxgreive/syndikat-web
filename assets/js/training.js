@@ -15,12 +15,20 @@ async function loadStatus() {
 
 async function loadParticipants() {
   const list = document.querySelector('[data-training-list]');
+  const noParticipants = document.querySelector('[data-no-participants]');
   if (!list) return;
-  list.innerHTML = '';
   const response = await fetch(`${API_URL}/training/participants?date=${encodeURIComponent(trainingStatus.date)}`);
   if (!response.ok) return console.error('Failed to load training participants');
   const { participants } = await response.json();
-  if (!participants.length) return list.insertAdjacentHTML('afterbegin', '<p><em data-no-participants>Bisher noch keine Anmeldungen. Sei der/die erste!</em></p>');
+  if (!participants.length) {
+    list.hidden = true;
+    if (noParticipants) noParticipants.hidden = false;
+    return;
+  }
+
+  list.innerHTML = '';
+  list.hidden = false;
+  if (noParticipants) noParticipants.hidden = true;
   participants.forEach((participant) => {
     const signup = JSON.parse(window.localStorage.getItem('training-signup'));
     const listItem = document.createElement('li');

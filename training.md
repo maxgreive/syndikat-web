@@ -16,9 +16,8 @@ Für die Teilnahme melde dich bitte über das Formular unten an, damit wir das T
 
 ### Für das nächste Training angemeldete Personen:
 
-<ol data-training-list>
-  <p><em data-no-participants>Bisher noch keine Anmeldungen. Sei der/die erste!</em></p>
-</ol>
+<p data-no-participants><em>Bisher noch keine Anmeldungen. Sei der/die erste!</em></p>
+<ol data-training-list hidden></ol>
 
 ## Jetzt anmelden
 

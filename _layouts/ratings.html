@@ -20,13 +20,16 @@ layout: default
         <p>{{- content -}}</p>
         <div class="toolbar">
           <div class="search__group rating__search">
-            <input type="text" name="search" data-rating-search class="search__text" placeholder="Spieler/Verein suchen..." disabled />
+            <label class="screen-reader-text" for="rating-search">Spieler oder Verein suchen</label>
+            <input type="text" id="rating-search" name="search" data-rating-search class="search__text" placeholder="Spieler/Verein suchen..." disabled />
           </div>
           <div class="rating-filters">
-            <select data-toggle-division disabled>
+            <label class="screen-reader-text" for="rating-division">Division filtern</label>
+            <select id="rating-division" data-toggle-division disabled>
               <option value="all" selected>Alle Divisionen</option>
             </select>
-            <select data-toggle-club disabled>
+            <label class="screen-reader-text" for="rating-club">Verein filtern</label>
+            <select id="rating-club" data-toggle-club disabled>
               <option value="syndikat-only" selected>Nur Syndikat</option>
               <option value="cologne-only">Nur Kölner Clubs</option>
               <option value="all">Alle zeigen</option>

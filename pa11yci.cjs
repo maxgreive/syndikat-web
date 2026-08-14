@@ -8,6 +8,10 @@ const { executablePath } = require("puppeteer");
 module.exports = {
   defaults: {
     concurrency: 2,
+    reporters: [
+      "cli",
+      ["json", { fileName: "./reports/pa11y.json" }],
+    ],
     runners: ["axe"],
     standard: "WCAG2AA",
     timeout: 30000,

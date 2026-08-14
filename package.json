@@ -7,7 +7,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "audit:a11y": "npm run install:chrome && pa11y-ci --config pa11yci.cjs",
+    "audit:a11y": "mkdir -p reports && npm run install:chrome && pa11y-ci --config pa11yci.cjs",
     "build:assets": "run-p build:svelte build:css",
     "build:critical": "npm run install:chrome && node critical.js",
     "build:css": "node scripts/minify-css.mjs",

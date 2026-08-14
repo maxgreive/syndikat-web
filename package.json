@@ -7,6 +7,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "audit:a11y": "npm run install:chrome && pa11y-ci --config pa11yci.cjs",
     "build:assets": "run-p build:svelte build:css",
     "build:critical": "npm run install:chrome && node critical.js",
     "build:css": "node scripts/minify-css.mjs",
@@ -45,6 +46,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "penthouse-esm": "^3.0.0"
+    "pa11y-ci": "^4.1.1",
+    "penthouse-esm": "^3.0.0",
+    "puppeteer": "^24.43.1"
   }
 }

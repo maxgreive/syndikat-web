@@ -18,6 +18,7 @@ Start both development processes with `npm run dev`. Use `npm run dev:jekyll` or
 - `npm run build:assets` runs both asset tasks in parallel.
 - `npm run build:jekyll` renders the production static site.
 - `npm run build` runs assets, Jekyll, and critical-CSS generation in sequence. This is Netlify's build command.
+- `npm run audit:a11y` checks representative live pages against WCAG 2.0 AA using Pa11y. Set `PA11Y_BASE_URL` to test a deployed preview, for example `PA11Y_BASE_URL=https://deploy-preview-123--syndikat.netlify.app npm run audit:a11y`.
 
 ## Content authoring
 

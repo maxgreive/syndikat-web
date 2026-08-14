@@ -35,6 +35,10 @@ function renderRatings(ratings, $el) {
   }).join('');
 }
 
+function renderRatingsError($el) {
+  $el.innerHTML = '<tr><td class="ratings-error" colspan="7">Ratings konnten gerade nicht geladen werden. Bitte versuche es später erneut.</td></tr>';
+}
+
 async function getDivisions(ratings) {
   const $select = document.querySelector('[data-toggle-division]');
   const divisions = Array.from(new Set(ratings.map(r => r.division))).sort((a, b) => a.localeCompare(b, 'de', { numeric: true }));
@@ -48,12 +52,16 @@ async function initRatings() {
   if (!$el) return;
 
   try {
-    const ratings = await fetch(`${API_URL}/ratings`).then(response => response.json());
+    const response = await fetch(`${API_URL}/ratings`);
+    if (!response.ok) throw new Error(`Failed to load ratings: ${response.status}`);
+    const ratings = await response.json();
+    if (!Array.isArray(ratings)) throw new Error('Ratings response is not an array');
     await getDivisions(ratings);
     await renderRatings(ratings, $el);
     setupListeners($el.querySelectorAll('tr'));
   } catch (err) {
     console.error(err);
+    renderRatingsError($el);
   }
 }
 

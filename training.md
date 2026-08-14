@@ -22,7 +22,7 @@ Für die Teilnahme melde dich bitte über das Formular unten an, damit wir das T
 
 ## Jetzt anmelden
 
-Bitte melde dich immer zum nächsten Termin über dieses Formular an. Das sorgt für eine bessere Planbarkeit unserer Trainings. Die Anmeldung zum nächsten Termin ist immer ab Montag möglich.
+Bitte melde dich immer zum nächsten Termin über dieses Formular an. Das sorgt für eine bessere Planbarkeit unserer Trainings. Die Anmeldung zum nächsten Termin ist immer ab Samstag möglich.
 
 *Hinweise: Es reicht wenn du deinen Vor- oder Spitznamen einträgst. Das Passwort bekommst du auf dem <a href="#" onclick="window.open('\/\/community.syndikat.golf');">Syndikat-Discord</a> oder von einem unserer Mitglieder.*
 

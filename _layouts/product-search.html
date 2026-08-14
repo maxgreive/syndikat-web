@@ -17,8 +17,8 @@ layout: default
 <div class="container page page-full-width">
   <div class="row">
     <div class="col col-12">
-      <script>
-        globalThis.productSearchShops = {{ site.data.product_search_shops | jsonify }};
+      <script id="product-search-shops" type="application/json">
+        {{ site.data.product_search_shops | jsonify }}
       </script>
 
       <div>

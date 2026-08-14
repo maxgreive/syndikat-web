@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
     "build:svelte": "npm run build -C svelte-components",
     "build:css": "node scripts/minify-css.mjs",
@@ -25,21 +28,21 @@
     "awesomplete": "^1.1.7",
     "clean-css": "^5.3.3",
     "concurrently": "^9.2.1",
-    "critical": "^7.2.1",
     "husky": "^9.0.11",
     "lucide-static": "^1.12.0",
     "lucide-svelte": "^1.0.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^3.15.0",
     "rollup-plugin-css-only": "^4.3.0",
-    "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.1.2",
-    "sirv-cli": "^2.0.0",
     "svelte": "^3.55.0",
     "svelte-spa-router": "^4.0.1",
     "tippy.js": "^6.3.7"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "penthouse-esm": "^3.0.0"
+  }
 }

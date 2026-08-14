@@ -1,6 +1,7 @@
-import { generate } from 'critical';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+import penthouse from 'penthouse-esm';
 
 const siteDir = path.resolve('_site');
 const directCriticalRoutes = new Set([
@@ -26,15 +27,14 @@ const sharedCriticalGroups = [
     matchesRoute: (route) => route.startsWith('/blog/') && !/^\/blog\/(?:page\d+\/)?$/.test(route),
   },
 ];
-const criticalOptions = {
-  base: siteDir,
-  assetPaths: [path.join(siteDir, 'assets/fonts')],
-  dimensions: [
-    { width: 375, height: 667 },
-    { width: 1366, height: 768 },
-    { width: 1920, height: 1080 }
-  ],
-};
+const criticalViewports = [
+  { width: 375, height: 667 },
+  { width: 1366, height: 768 },
+  { width: 1920, height: 1080 },
+];
+const stylesheet = ['normalize.css', 'style.min.css']
+  .map((file) => fs.readFileSync(path.join(siteDir, 'assets/css', file), 'utf8'))
+  .join('\n');
 
 function getHtmlFiles(dir) {
   let results = [];
@@ -85,17 +85,32 @@ function inlineCssIntoFile(file, css, label) {
   fs.writeFileSync(file, nextHtml);
 }
 
+/**
+ * Penthouse generates a stylesheet per viewport. Combining the three preserves
+ * the previous mobile, desktop, and wide-screen coverage from `critical`.
+ */
+async function generateCriticalCss(file) {
+  const url = pathToFileURL(file).href;
+  const stylesheets = await Promise.all(
+    criticalViewports.map(({ width, height }) =>
+      penthouse({
+        url,
+        cssString: stylesheet,
+        width,
+        height,
+      }),
+    ),
+  );
+  return stylesheets.join('\n');
+}
+
 async function inlineDirectCriticalCss(htmlFiles) {
   const directFiles = htmlFiles.filter((file) => directCriticalRoutes.has(filePathToRoute(file)));
 
   for (const file of directFiles) {
     try {
-      await generate({
-        ...criticalOptions,
-        src: file,
-        target: file,
-        inline: true,
-      });
+      const css = await generateCriticalCss(file);
+      inlineCssIntoFile(file, css, 'page');
       console.log(`✅ Fixed & Inlined: ${path.relative(siteDir, file)}`);
     } catch (err) {
       console.error(`❌ Failed: ${file}`, err.message);
@@ -115,10 +130,7 @@ async function inlineSharedCriticalCss(htmlFiles) {
     }
 
     try {
-      const { css } = await generate({
-        ...criticalOptions,
-        src: sourceFile,
-      });
+      const css = await generateCriticalCss(sourceFile);
 
       const targetFiles = htmlFiles.filter((file) => group.matchesRoute(filePathToRoute(file)));
 

@@ -2,7 +2,7 @@
 
 ## Setup
 
-Install the Node and Ruby dependencies:
+Use Node.js 22.18 or newer (the critical-CSS generator requires it), then install the Node and Ruby dependencies:
 
 ```sh
 npm install

@@ -8,7 +8,7 @@ Jekyll renders pages, posts, layouts, includes, and `_data` into the static site
 
 ## Prerequisites
 
-- Node.js and npm
+- Node.js 22.18 or newer and npm
 - Ruby and Bundler (versions locked by `Gemfile.lock`)
 
 ## Setup and commands

@@ -277,11 +277,17 @@ async function handleRouteSubmit(event) {
 }
 
 function buildRoutePayload(origin, tournament) {
-  return {
+  const payload = {
     origin,
-    date: tournament?.dates?.startTournament,
     destination: buildDestinationPayload(tournament)
   };
+
+  const date = tournament?.dates?.startTournament;
+  if (typeof date === "string" && date.trim()) {
+    payload.date = date;
+  }
+
+  return payload;
 }
 
 function buildDestinationPayload(tournament) {

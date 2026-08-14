@@ -5181,6 +5181,10 @@ button.button--text {
   text-align: right;
 }
 
+#ratings td.ratings-error {
+  text-align: left;
+}
+
 #ratings tr {
   background: transparent;
 }

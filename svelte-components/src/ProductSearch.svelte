@@ -282,7 +282,7 @@
     bind:value={query}
     placeholder="Suche eine Scheibe …"
   />
-  <button type="submit" class="button button--primary">
+  <button type="submit" class="button button--primary" aria-label="Produkte suchen">
     <Icon name="search" />
   </button>
 </form>

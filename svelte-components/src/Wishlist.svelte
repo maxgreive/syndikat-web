@@ -11,9 +11,11 @@
 
     if (!open) {
       aside.setAttribute("aria-hidden", "false");
+      aside.removeAttribute("inert");
       overlay.classList.remove("hide");
     } else {
       aside.setAttribute("aria-hidden", "true");
+      aside.setAttribute("inert", "");
       overlay.classList.add("hide");
     }
   };
@@ -30,10 +32,10 @@
   <span>{$wishlist?.length || 0}</span>
 </button>
 
-<aside data-wishlist aria-hidden={true}>
+<aside data-wishlist aria-hidden={true} inert>
   <header class="search__group">
     <h3>Wunschliste</h3>
-    <button on:click={toggleAside} class="search__close">
+    <button on:click={toggleAside} class="search__close" aria-label="Wunschliste schließen">
       <Icon name="x" />
     </button>
   </header>
@@ -71,6 +73,7 @@
               on:click={() =>
                 ($wishlist = $wishlist.filter((p) => p !== product))}
               class="button--remove"
+              aria-label={`${product.title} aus der Wunschliste entfernen`}
             >
               <Icon name="trash" />
             </button>

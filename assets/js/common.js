@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     socialLinks = document.querySelectorAll(".social__link[data-social-name]"),
     toggleTheme = document.querySelector(".toggle-theme"),
     btnScrollToTop = document.querySelector(".top"),
-    menuItems = document.querySelectorAll(".main-nav .nav__link[href^='\/#']");
+    menuItems = document.querySelectorAll(".main-nav .nav__link[href^='\/#']"),
+    mobileNavigation = window.matchMedia("(max-width: 1024px)");
 
 
   /* =======================================================
@@ -42,19 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuItems.forEach(item => item.addEventListener('click', () => menuClose()));
 
+  function syncMenuAccessibility() {
+    menuList.toggleAttribute("inert", mobileNavigation.matches && !menuList.classList.contains("is-open"));
+  }
+
   function menuOpen() {
     menuList.classList.add("is-open");
-    menuList.setAttribute("aria-hidden", "false");
     menuPanel.setAttribute("data-open", "true");
     menuOpenIcon.setAttribute("aria-expanded", "true");
+    syncMenuAccessibility();
   }
 
   function menuClose() {
     menuList.classList.remove("is-open");
-    menuList.setAttribute("aria-hidden", "true");
     menuPanel.setAttribute("data-open", "false");
     menuOpenIcon.setAttribute("aria-expanded", "false");
+    syncMenuAccessibility();
   }
+
+  syncMenuAccessibility();
+  mobileNavigation.addEventListener("change", syncMenuAccessibility);
 
   searchOpenIcon.addEventListener("click", () => {
     searchOpen();
@@ -67,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function searchOpen() {
     search.classList.add("is-visible");
     search.setAttribute("aria-hidden", "false");
+    search.removeAttribute("inert");
     searchOpenIcon.setAttribute("aria-expanded", "true");
     setTimeout(function () {
       searchInput.focus();
@@ -76,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function searchClose() {
     search.classList.remove("is-visible");
     search.setAttribute("aria-hidden", "true");
+    search.setAttribute("inert", "");
     searchOpenIcon.setAttribute("aria-expanded", "false");
   }
 

@@ -71,7 +71,7 @@
   {
     "handle": "birdieshop",
     "name": "Birdie Shop",
-    "disabled": false,
+    "disabled": true,
     "url": "https://www.birdie-shop.com/",
     "shipping": {
       "amount": 595,

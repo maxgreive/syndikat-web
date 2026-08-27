@@ -7,19 +7,20 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "build:svelte": "npm run build -C svelte-components",
-    "build:css": "node scripts/minify-css.mjs",
     "build:assets": "run-p build:svelte build:css",
-    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
-    "install:chrome": "puppeteer browsers install chrome",
     "build:critical": "npm run install:chrome && node critical.js",
+    "build:css": "node scripts/minify-css.mjs",
+    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
+    "build:svelte": "npm run build -C svelte-components",
     "build": "run-s build:assets build:jekyll build:critical",
-    "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",
+    "clean": "bundle exec jekyll clean",
     "dev:jekyll": "bundle exec jekyll serve",
     "dev:svelte": "npm run --prefix svelte-components dev",
-    "clean": "bundle exec jekyll clean",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "dev": "concurrently \"npm run dev:svelte\" \"npm run dev:jekyll\"",
+    "install:chrome": "puppeteer browsers install chrome",
+    "prepare": "husky",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",

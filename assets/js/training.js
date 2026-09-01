@@ -2,12 +2,6 @@ const API_URL = resolveApiBaseUrl();
 const TRASH_ICON = '<svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18"/><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>';
 let trainingStatus;
 
-function resolveApiBaseUrl() {
-  return ['localhost', '127.0.0.1'].includes(window.location.hostname)
-    ? 'http://localhost:8080'
-    : 'https://api.syndikat.golf';
-}
-
 function formatDateGerman(date) {
   return new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(`${date}T12:00:00Z`));
 }

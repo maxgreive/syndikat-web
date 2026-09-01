@@ -1,5 +1,3 @@
-const DEFAULT_DEV_API_URL = "http://localhost:8080";
-const DEFAULT_PROD_API_URL = "https://api.syndikat.golf";
 const API_URL = `${resolveApiBaseUrl()}/tournaments`;
 const endpoints = {
   official: API_URL,
@@ -56,15 +54,6 @@ if (ui.form) {
 
 if (ui.originInput) {
   ui.originInput.addEventListener("input", () => updateSubmitState());
-}
-
-function resolveApiBaseUrl() {
-  if (typeof window !== "undefined") {
-    const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-    return isLocalhost ? DEFAULT_DEV_API_URL : DEFAULT_PROD_API_URL;
-  }
-
-  return DEFAULT_PROD_API_URL;
 }
 
 async function getTournaments(type) {
@@ -645,63 +634,4 @@ function formatRegistrationStatus(tournament) {
   const registrationStartsAt = new Date(registrationDate);
   const prefix = registrationStartsAt > now ? "ab" : "seit";
   return `${prefix} ${formatDate(registrationDate)}`;
-}
-
-function getTournamentRegistrationStatus(tournament, freeSpots = getFreeSpots(tournament)) {
-  if (freeSpots <= 0) return "already full";
-
-  const registrationDate = tournament?.dates?.startRegistration;
-  if (!registrationDate) return "";
-
-  const registrationStartsAt = new Date(registrationDate);
-  if (Number.isNaN(registrationStartsAt.getTime())) return "";
-
-  return registrationStartsAt > new Date() ? "registration soon" : "registration open";
-}
-
-function getFreeSpots(tournament) {
-  const overall = Number(tournament?.spots?.overall);
-  const used = Number(tournament?.spots?.used);
-
-  if (!Number.isFinite(overall) || overall <= 0) return 0;
-  if (!Number.isFinite(used) || used < 0) return overall;
-
-  return Math.max(overall - used, 0);
-}
-
-function getTournamentInitials(title = "") {
-  const words = String(title)
-    .trim()
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2);
-
-  if (!words.length) return "TT";
-  return words.map((word) => word.charAt(0).toUpperCase()).join("");
-}
-
-function createTournamentAvatarColor(tournament) {
-  const source = String(tournament?.event_id || tournament?.title || "0");
-  let hash = 0;
-
-  for (let index = 0; index < source.length; index += 1) {
-    hash = (hash << 5) - hash + source.charCodeAt(index);
-    hash |= 0;
-  }
-
-  const hue = Math.abs(hash) % 360;
-  return `hsl(${hue}deg 70% 34%)`;
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value);
 }

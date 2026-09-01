@@ -1,5 +1,3 @@
-const DEFAULT_DEV_API_URL = 'http://localhost:8080';
-const DEFAULT_PROD_API_URL = 'https://api.syndikat.golf';
 const API_URL = resolveApiBaseUrl();
 const TRENDING_UP_ICON = '<svg class="lucide color--green" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 7h5v5"/><path d="m21 7-7 7-4-4-7 7"/></svg>';
 const TRENDING_DOWN_ICON = '<svg class="lucide color--red" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 17h5v-5"/><path d="m21 17-7-7-4 4-7-7"/></svg>';
@@ -63,15 +61,6 @@ async function initRatings() {
     console.error(err);
     renderRatingsError($el);
   }
-}
-
-function resolveApiBaseUrl() {
-  if (typeof window !== 'undefined') {
-    const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-    return isLocalhost ? DEFAULT_DEV_API_URL : DEFAULT_PROD_API_URL;
-  }
-
-  return DEFAULT_PROD_API_URL;
 }
 
 function setupListeners($rows) {
@@ -170,6 +159,17 @@ function setupListeners($rows) {
       }
     });
   });
+}
+
+function formatDate(date, weekday = true) {
+  const dateOptions = {
+    weekday: weekday ? "long" : undefined,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  };
+
+  return new Date(date).toLocaleDateString("de-DE", dateOptions);
 }
 
 initRatings();

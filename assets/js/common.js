@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleTheme.setAttribute("aria-label", isDark ? "Enable light mode" : "Enable dark mode");
   }
 
-
   // =====================
   // Simple Jekyll Search
   // =====================
@@ -354,15 +353,157 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  /* =======================
+  // Fill On Tour Data
+  ======================= */
+
+  initOnTourTable();
+
+  function initOnTourTable() {
+    const onTourTable = document.querySelector('table.on-tour');
+    const onTourBody = onTourTable?.querySelector('tbody');
+    const onTourStatus = document.querySelector('[data-on-tour-status]');
+    const onTourTableWrapper = document.querySelector('[data-on-tour-table-wrapper]');
+    if (!onTourBody || !onTourStatus || !onTourTableWrapper) return;
+
+    fetch(`${resolveApiBaseUrl()}/tournaments/on-tour`)
+      .then(async response => {
+        if (!response.ok) throw new Error(`On-tour request failed with ${response.status}`);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new Error('On-tour response is not an array');
+        return data;
+      })
+      .then(data => {
+        if (!data.length) {
+          onTourStatus.textContent = 'Derzeit sind keine Spieler*innen des Syndikats auf Tour.';
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        data.forEach(tournament => {
+          const registrationStatus = getTournamentRegistrationStatus(tournament);
+          const avatarColor = createTournamentAvatarColor(tournament);
+          const initials = getTournamentInitials(tournament.title);
+          const players = Array.isArray(tournament.our_players) ? tournament.our_players : [];
+
+          const row = document.createElement('tr');
+          row.dataset.href = tournament.link || '';
+          if (row.dataset.href) {
+            row.tabIndex = 0;
+            row.setAttribute('role', 'link');
+          }
+          row.innerHTML = `
+            <td data-label="Status"><span class="tournaments-table__indicator${registrationStatus ? " is-active" : ""}" data-registration-status="${escapeAttribute(registrationStatus)}" aria-label="${escapeAttribute(registrationStatus || "n/a")}"></span></td>
+            <td data-label="Turnier"><div class="tournaments-table__name-cell"><span class="avatar tournaments-table__avatar" style="background-color: ${escapeAttribute(avatarColor)};"><span>${escapeHtml(initials)}</span></span><div class="tournaments-table__heading"><div class="tournaments-table__title">${escapeHtml(tournament.title || "Unbenanntes Turnier")}</div></div></div></td>
+            <td data-label="Datum">${formatTournamentDateCell(tournament)}</td>
+            <td data-label="Spieler*innen">${players.map(player => escapeHtml(String(player.name || '').split(', ').reverse().join(' '))).join(', ')}</td>
+          `;
+
+          row.addEventListener('click', () => {
+            if (!row.dataset.href) return;
+            window.open(row.dataset.href, '_blank', 'noopener');
+          });
+
+          row.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            if (!row.dataset.href) return;
+            event.preventDefault();
+            window.open(row.dataset.href, '_blank', 'noopener');
+          });
+          fragment.appendChild(row);
+        });
+        onTourBody.replaceChildren(fragment);
+        onTourTableWrapper.hidden = false;
+        onTourStatus.textContent = '';
+      })
+      .catch(error => {
+        console.error('Error fetching on-tour data:', error);
+        onTourStatus.textContent = 'Die Turnierdaten sind zurzeit nicht verfügbar. Bitte versuche es später erneut.';
+      });
+  }
+
+
 });
 
-function formatDate(date, weekday = true) {
+function formatDate(date, weekday = true, year = true) {
   const dateOptions = {
     weekday: weekday ? "long" : undefined,
-    year: "numeric",
+    year: year ? "numeric" : undefined,
     month: "2-digit",
     day: "2-digit"
   };
 
   return new Date(date).toLocaleDateString("de-DE", dateOptions);
+}
+
+function formatTournamentDateCell(tournament) {
+  const start = tournament?.dates?.startTournament;
+  const end = tournament?.dates?.endTournament;
+
+  if (!start) return '<span class="tournaments-table__date">noch unbekannt</span>';
+  if (!end || start === end) {
+    return `<span class="tournaments-table__date">${escapeHtml(formatDate(start, false))}</span>`;
+  }
+
+  return `<div class="tournaments-table__date tournaments-table__date--range"><span>${escapeHtml(formatDate(start, false))}</span><span>${escapeHtml(formatDate(end, false))}</span></div>`;
+}
+
+function getTournamentRegistrationStatus(tournament, freeSpots = getFreeSpots(tournament)) {
+  if (freeSpots <= 0) return "already full";
+
+  const registrationDate = tournament?.dates?.startRegistration;
+  if (!registrationDate) return "";
+
+  const registrationStartsAt = new Date(registrationDate);
+  if (Number.isNaN(registrationStartsAt.getTime())) return "";
+
+  return registrationStartsAt > new Date() ? "registration soon" : "registration open";
+}
+
+function getFreeSpots(tournament) {
+  const overall = Number(tournament?.spots?.overall);
+  const used = Number(tournament?.spots?.used);
+
+  if (!Number.isFinite(overall) || overall <= 0) return 0;
+  if (!Number.isFinite(used) || used < 0) return overall;
+
+  return Math.max(overall - used, 0);
+}
+
+function getTournamentInitials(title = "") {
+  const words = String(title)
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2);
+
+  if (!words.length) return "TT";
+  return words.map((word) => word.charAt(0).toUpperCase()).join("");
+}
+
+function createTournamentAvatarColor(tournament) {
+  const source = String(tournament?.event_id || tournament?.title || "0");
+  let hash = 0;
+
+  for (let index = 0; index < source.length; index += 1) {
+    hash = (hash << 5) - hash + source.charCodeAt(index);
+    hash |= 0;
+  }
+
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue}deg 70% 34%)`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
 }

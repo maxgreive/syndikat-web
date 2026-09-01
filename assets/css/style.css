@@ -5485,3 +5485,15 @@ button.button--text {
   background-color: var(--background-alt-color);
   color: var(--text-alt-color);
 }
+
+table.on-tour td:nth-child(3) {
+  white-space: nowrap;
+}
+
+.on-tour-wrapper {
+  margin-bottom: 32px;
+}
+
+.on-tour-status {
+  margin-bottom: 16px;
+}

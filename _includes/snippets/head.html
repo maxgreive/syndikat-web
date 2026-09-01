@@ -106,7 +106,6 @@
       color: var(--text-color);
     }
 
-    {% if page.layout == 'index' %}
     .hero {
       background-color: var(--background-alt-color);
     }
@@ -114,7 +113,6 @@
     .hero__image {
       background-color: var(--background-color);
     }
-    {% endif %}
   </style>
   <title>{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}</title>
   <link rel="preload" href="{{ '/assets/fonts/Jost-900-Black.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>

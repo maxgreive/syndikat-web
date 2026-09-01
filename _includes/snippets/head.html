@@ -198,6 +198,8 @@
   {% endif %}
   <link href="{{ '/assets/fonts/Jost.css' | relative_url }}" rel="stylesheet">
 
+  <script src="{{ '/assets/js/scripts.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/common.js' | relative_url }}" defer></script>
   {% if page.layout == 'product-search' %}
   <script defer src="{{ '/assets/svelte-bundle.js' | relative_url }}"></script>
   <link href="{{ '/assets/svelte-bundle.css' | relative_url }}" rel="stylesheet">
@@ -209,8 +211,17 @@
   <link href="{{ '/assets/css/vendors/MarkerCluster.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/assets/css/vendors/MarkerCluster.Default.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/assets/css/vendors/leaflet.resetview.css' | relative_url }}" rel="stylesheet">
+  <script src="{{ '/assets/js/vendors/leaflet.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.markercluster.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.resetview.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.messagebox.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/tournaments-map.js' | relative_url }}" defer></script>
   {% elsif page.layout == 'training' %}
   <script src="{{ '/assets/js/training.js' | relative_url }}" defer></script>
+  {% elsif page.layout == 'ratings' %}
+  <script src="{{ '/assets/js/ratings.js' | relative_url }}" defer></script>
+  {% elsif page.layout == 'bag-tags' %}
+  <script src="{{ '/assets/js/bag-tags.js' | relative_url }}" defer></script>
   {% endif %}
 
   <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}">

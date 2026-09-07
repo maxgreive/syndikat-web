@@ -1,11 +1,10 @@
 ---
-layout: post
 date: 2026-04-15
 title: "Leitfaden für Discgolf-Einsteiger"
 description: Ein kompakter Leitfaden für Discgolf-Einsteiger mit den wichtigsten Grundlagen zu Ausrüstung, Würfen und den ersten Runden.
 image: /assets/images/posts/beginner.jpg
 thumbnail: /assets/images/posts/thumbnails/beginner.jpg
-tags: einsteiger
+tags: [einsteiger]
 author: max
 ---
 

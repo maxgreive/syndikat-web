@@ -1,9 +1,6 @@
 ---
-layout: default
+layout: default.html
 ---
-{%- assign author = site.data.authors[page.author_id] -%}
-{%- assign author_posts = site.posts | where_exp: "post", "post.author == page.author_id or post.authors contains page.author_id" -%}
-
 <div class="page-head">
   <div class="container">
     <div class="row">
@@ -20,9 +17,8 @@ layout: default
   <article class="page">
     <div class="page__content">
       {% if author.image %}
-        {%- capture author_image_cdn -%}{% include snippets/netlify_image_url.html src=author.image w=320 %}{%- endcapture -%}
       <p>
-        <img src="{{ author_image_cdn | strip }}" alt="{{ author.name | escape }}" width="160" height="160" data-original-src="{{ author.image }}">
+        {% responsiveImage author.image, author.name, "160px", "160,320" %}
       </p>
       {% endif %}
       <p>{{ author.bio | default: "Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln." }}</p>
@@ -37,7 +33,7 @@ layout: default
   </article>
 </div>
 
-{% if author_posts.size > 0 %}
+{% if postsByAuthor.size > 0 %}
 <div class="container">
   <div class="row animate">
     <div class="col col-12">
@@ -46,8 +42,8 @@ layout: default
       </div>
 
       <div class="row animate">
-        {% for post in author_posts %}
-          {% include components/post_card.html item=post %}
+        {% for post in postsByAuthor %}
+          {% include 'components/post_card.html', item: post %}
         {% endfor %}
       </div>
     </div>

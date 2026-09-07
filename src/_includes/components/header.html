@@ -3,14 +3,14 @@
         <div class="row">
             <div class="header__inner col col-12">
                 <div class="logo">
-                    <a class="logo__link" href="/">{{- site.title -}}</a>
+                    <a class="logo__link" href="/">{{- settings.title -}}</a>
                 </div>
                 <nav class="main-nav" id="main-navigation" aria-hidden="true">
                     <div class="main-nav__box t-panel-slide" data-open="false">
-                        <button class="nav__icon-close" type="button" aria-label="Close navigation">{% include snippets/lucide/icon.html name="x" class="lucide lucide-x" %}</button>
-                        <div class="nav__title">{{ site.data.menus.main_menu.title }}</div>
+                        <button class="nav__icon-close" type="button" aria-label="Close navigation">{% include 'snippets/lucide/icon.html', name: "x", class: "lucide lucide-x" %}</button>
+                        <div class="nav__title">{{ menus.main_menu.title }}</div>
                         <ul class="nav__list list-reset">
-                            {% for item in site.data.menus.main_menu.items %}
+                            {% for item in menus.main_menu.items %}
                             <li class="nav__item{% if item.mobileOnly %} hide-desktop{% endif %}">
                                 <a href="{{ item.link }}" class="nav__link">
                                     {{- item.label -}}
@@ -23,14 +23,14 @@
                 <div class="nav-button">
                     <button class="nav__icon toggle-theme" type="button" aria-label="Enable dark mode">
                         <span class="toggle-moon t-icon" title="Enable dark mode">
-                            {% include snippets/lucide/icon.html name="moon" class="lucide lucide-moon" %}
+                            {% include 'snippets/lucide/icon.html', name: "moon", class: "lucide lucide-moon" %}
                         </span>
                         <span class="toggle-sun t-icon" title="Enable light mode">
-                            {% include snippets/lucide/icon.html name="sun" class="lucide lucide-sun" %}
+                            {% include 'snippets/lucide/icon.html', name: "sun", class: "lucide lucide-sun" %}
                         </span>
                     </button>
-                    <button class="nav__icon icon__search" type="button" aria-label="Open search" aria-controls="site-search" aria-expanded="false">{% include snippets/lucide/icon.html name="search" class="lucide lucide-search" %}</button>
-                    <button class="nav__icon icon__menu" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">{% include snippets/lucide/icon.html name="menu" class="lucide lucide-menu" %}</button>
+                    <button class="nav__icon icon__search" type="button" aria-label="Open search" aria-controls="site-search" aria-expanded="false">{% include 'snippets/lucide/icon.html', name: "search", class: "lucide lucide-search" %}</button>
+                    <button class="nav__icon icon__menu" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">{% include 'snippets/lucide/icon.html', name: "menu", class: "lucide lucide-menu" %}</button>
                 </div>
             </div>
         </div>

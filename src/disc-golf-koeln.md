@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page.html
 title: Disc Golf in Köln
 description: "Disc Golf in Köln: So findest du über die wöchentliche Liga und den Discord-Server den einfachsten Einstieg beim Disc Golf Syndikat."
 excerpt: "Du willst Disc Golf in Köln spielen? Hier findest du den einfachsten Einstieg über Weekly, Discord und Community an der Scheibenstraße."

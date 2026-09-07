@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Syndikatspieler bei den 10. Wesel Open
 image: /assets/images/posts/auesee-wesel.jpg
 thumbnail: /assets/images/posts/thumbnails/auesee-wesel_thumb.jpg
-tags: turniere
+tags: [turniere]
 author: alex
 ---
 

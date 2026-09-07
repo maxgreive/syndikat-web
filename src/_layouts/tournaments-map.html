@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 ---
 
 <div class="page-head">
@@ -7,7 +7,7 @@ layout: default
     <div class="row">
       <div class="col col-12">
         <div class="page__info">
-          <h1 class="page__title">{{- page.title -}}</h1>
+          <h1 class="page__title">{{- title -}}</h1>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@ layout: default
             <p class="tournament-route-summary__meta"><span data-route-distance></span><span data-route-duration></span></p>
             <p class="tournament-route-summary__origin" data-route-origin-confirmation></p>
             <p class="tournament-route-summary__actions">
-              <a href="#" target="_blank" rel="noopener" class="popup-link" data-route-train hidden>Mit der Bahn suchen {% include snippets/lucide/icon.html name="external-link" class="lucide" %}</a>
+              <a href="#" target="_blank" rel="noopener" class="popup-link" data-route-train hidden>Mit der Bahn suchen {% include 'snippets/lucide/icon.html', name: "external-link", class: "lucide" %}</a>
             </p>
           </div>
         </div>

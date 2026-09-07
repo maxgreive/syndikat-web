@@ -1,6 +1,4 @@
-{%- assign hero_image = site.hero_image | default: "/assets/images/hero.jpg" -%}
-{%- capture hero_src -%}{% include snippets/netlify_image_url.html src=hero_image w=1200 %}{%- endcapture -%}
-{%- capture hero_srcset -%}{% include snippets/netlify_srcset.html src=hero_image widths="200,470,762,1020,1136,1200" %}{%- endcapture -%}
+{%- assign hero_image = settings.hero_image | default: "/assets/images/hero.jpg" -%}
 <section class="hero">
   <div class="container">
     <div class="row">
@@ -8,11 +6,11 @@
         <div class="hero__inner">
           <div class="hero__left">
             <h1 class="hero__title">Hey, wir sind das Syndikat</h1>
-            <p class="hero__description">{{- site.description | escape -}}</p>
+            <p class="hero__description">{{- settings.description | escape -}}</p>
             <div class="hero__subscribe">
               <button class="button button--primary button--icon" id="btn-discord" data-umami-event="discord_click"
                 type="submit" onclick="window.open('\/\/community.syndikat.golf');">
-                {% include snippets/logo-discord.html %}
+                {% include 'snippets/logo-discord.html' %}
                 Discord beitreten
               </button>
               <a href="/register/" class="button" id="btn-membership" data-umami-event="member_click">Mitglied
@@ -21,12 +19,7 @@
           </div>
           <div class="hero__right">
             <div class="hero__image">
-              <picture>
-                <source media="(min-width: 577px)" srcset="{{ hero_srcset | strip }}"
-                  sizes="(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" width="534" height="400"
-                  alt="Discgolfscheiben in einem Rucksack">
-              </picture>
+              {% responsiveImage hero_image, "Discgolfscheiben in einem Rucksack", "(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px", "200,470,762,1020,1200", true %}
             </div>
           </div>
         </div>

@@ -1,34 +1,32 @@
 {%- capture sharing_image -%}
-{%- if page.image -%}
-{{- page.image | absolute_url -}}
-{%- elsif page.sharing_image -%}
-{{- page.sharing_image | absolute_url -}}
+{%- if image -%}
+{{- image | absoluteUrl -}}
+{%- elsif sharing_image -%}
+{{- sharing_image | absoluteUrl -}}
 {%- else -%}
-{{- site.sharing_image | absolute_url -}}
+{{- settings.sharing_image | absoluteUrl -}}
 {%- endif -%}
 {%- endcapture -%}
 
 {%- capture meta_description_raw -%}
-  {%- if page.description -%}
-    {{- page.description | strip_html | strip_newlines | strip -}}
-  {%- elsif page.layout == "author" and site.data.authors[page.author_id].bio -%}
-    {{- site.data.authors[page.author_id].bio | strip_html | strip_newlines | strip -}}
-  {%- elsif page.excerpt -%}
-    {{- page.excerpt | strip_html | strip_newlines | strip -}}
+  {%- if description != blank -%}
+    {{- description | strip_html | strip_newlines | strip -}}
+  {%- elsif layout == "author.html" and author.bio -%}
+    {{- author.bio | strip_html | strip_newlines | strip -}}
+  {%- elsif excerpt != blank -%}
+    {{- excerpt | strip_html | strip_newlines | strip -}}
   {%- else -%}
-    {{- site.description | strip_html | strip_newlines | strip -}}
+    {{- settings.description | strip_html | strip_newlines | strip -}}
   {%- endif -%}
 {%- endcapture -%}
 {%- assign meta_description = meta_description_raw | strip | truncate: 157, "..." -%}
 
 {%- capture author_names -%}
-  {%- if page.author -%}
-    {%- assign author = site.data.authors[page.author] -%}
-    {{- author.name -}}
-  {%- elsif page.authors -%}
-    {%- for author_id in page.authors -%}
-      {%- assign author = site.data.authors[author_id] -%}
-      {{- author.name -}}{%- unless forloop.last -%}, {% endunless %}
+  {%- if author -%}
+    {{- authorData.name -}}
+  {%- elsif authorsData -%}
+    {%- for post_author in authorsData -%}
+      {{- post_author.name -}}{%- unless forloop.last -%}, {% endunless %}
     {%- endfor -%}
   {%- endif -%}
 {%- endcapture -%}
@@ -38,7 +36,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
 
-  {% if site.analytics_enabled %}
+  {% if analytics_enabled %}
   <script defer src="https://stats.syndikat.golf/script.js"
     data-website-id="20901b1f-9346-4191-8c70-445a09059c4f"
     data-performance="true"
@@ -114,19 +112,19 @@
       background-color: var(--background-color);
     }
   </style>
-  <title>{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}</title>
-  <link rel="preload" href="{{ '/assets/fonts/Jost-900-Black.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/assets/fonts/Jost-400-Book.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  <title>{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}</title>
+  <link rel="preload" href="{{ '/assets/fonts/Jost-900-Black.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/Jost-400-Book.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="canonical" href="{{ page.url | absoluteUrl }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ settings.title | escape }}" href="{{ '/feed.xml' | url }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{- sharing_image -}}">
-  <meta name="twitter:image:alt" content="{{ page.title | default: site.title | escape }}">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} &ndash; {% endif %}{{ site.title }}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  {% if page.noindex %}
+  <meta name="twitter:image:alt" content="{{ title | default: settings.title | escape }}">
+  <meta name="twitter:title" content="{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}">
+  <meta property="og:type" content="{% if layout == 'post.html' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+  {% if noindex %}
   <meta name="robots" content="noindex">
   {% endif %}
   <meta property="og:description" content="{{ meta_description | escape }}">
@@ -137,95 +135,83 @@
   {% if author_names != "" %}
   <meta name="author" content="{{ author_names | escape }}">
   {% endif %}
-  {% if page.layout == "post" %}
-    {% if page.author %}
-      {% assign post_author = site.data.authors[page.author] %}
-      <meta property="article:author" content="{{ post_author.url | absolute_url }}">
+  {% if layout == "post.html" %}
+    {% if author %}
+      {% assign post_author = authorData %}
+      <meta property="article:author" content="{{ post_author.url | absoluteUrl }}">
       {% if post_author.twitter %}
         <meta name="twitter:creator" content="@{{ post_author.twitter }}">
       {% endif %}
-    {% elsif page.authors %}
-      {% for author_id in page.authors %}
-        {% assign post_author = site.data.authors[author_id] %}
-        <meta property="article:author" content="{{ post_author.url | absolute_url }}">
+    {% elsif authorsData %}
+      {% for post_author in authorsData %}
+        <meta property="article:author" content="{{ post_author.url | absoluteUrl }}">
       {% endfor %}
-      {% assign first_author_id = page.authors | first %}
-      {% assign first_author = site.data.authors[first_author_id] %}
+      {% assign first_author = authorsData | first %}
       {% if first_author.twitter %}
         <meta name="twitter:creator" content="@{{ first_author.twitter }}">
       {% endif %}
     {% endif %}
-    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
-    {% if page.tags %}
-      {% for tag in page.tags %}
+    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S%:z" }}">
+    <meta property="article:modified_time" content="{{ last_modified_at | default: page.date | date: "%Y-%m-%dT%H:%M:%S%:z" }}">
+    {% if tags %}
+      {% for tag in tags %}
         <meta property="article:tag" content="{{ tag | escape }}">
       {% endfor %}
     {% endif %}
   {% endif %}
-  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="32x32">
-  <link rel="icon" href="{{ '/assets/icon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
-  {% include snippets/structured_data.html %}
-  {% if page.layout == 'index' %}
-  {%- assign hero_image = site.hero_image | default: "/assets/images/hero.jpg" -%}
-  {%- assign first_post = site.posts | first -%}
+  <link rel="icon" href="{{ '/assets/favicon.ico' | url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/assets/icon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | url }}">
+  <link rel="manifest" href="{{ '/manifest.json' | url }}">
+  {% include 'snippets/structured_data.html' %}
+  {% if layout == 'index.html' %}
+  {%- assign hero_image = settings.hero_image | default: "/assets/images/hero.jpg" -%}
+  {%- assign first_post = collections.posts | first -%}
   {%- capture first_post_image -%}
-    {%- if first_post.thumbnail -%}
-      {{- first_post.thumbnail -}}
-    {%- elsif first_post.image -%}
-      {{- first_post.image -}}
+    {%- if first_post.data.thumbnail -%}
+      {{- first_post.data.thumbnail -}}
+    {%- elsif first_post.data.image -%}
+      {{- first_post.data.image -}}
     {%- endif -%}
   {%- endcapture -%}
-  {%- capture hero_preload_href -%}
-    {% include snippets/netlify_image_url.html src=hero_image w=1200 %}
-  {%- endcapture -%}
-  {%- capture hero_preload_srcset -%}
-    {% include snippets/netlify_srcset.html src=hero_image widths="200,470,762,1020,1136,1200" %}
-  {%- endcapture -%}
   {%- if first_post_image != "" -%}
-    {%- capture first_post_preload_href -%}{% include snippets/netlify_image_url.html src=first_post_image w=700 %}{%- endcapture -%}
-    {%- capture first_post_preload_srcset -%}{% include snippets/netlify_srcset.html src=first_post_image widths="240,320,480,640,800" %}{%- endcapture -%}
-    <link rel="preload" fetchpriority="high" media="(max-width: 576px)" href="{{ first_post_preload_href | strip }}" imagesrcset="{{ first_post_preload_srcset | strip }}" imagesizes="calc(100vw - 40px)" as="image" type="image/jpeg">
+    {% responsiveImagePreload first_post_image, "calc(100vw - 40px)", "240,320,480,640,800", "(max-width: 576px)" %}
   {%- endif -%}
-  <link rel="preload" fetchpriority="high" media="(min-width: 577px)" href="{{ hero_preload_href | strip }}"
-    imagesrcset="{{ hero_preload_srcset | strip }}"
-    imagesizes="(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px" as="image"
-    type="image/jpeg">
+  {% responsiveImagePreload hero_image, "(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px", "200,470,762,1020,1200", "(min-width: 577px)" %}
   {% endif %}
-  <link href="{{ '/assets/fonts/Jost.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/assets/fonts/Jost.css' | url }}" rel="stylesheet">
 
-  <script src="{{ '/assets/js/scripts.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/common.js' | relative_url }}" defer></script>
-  {% if page.layout == 'product-search' %}
-  <script defer src="{{ '/assets/svelte-bundle.js' | relative_url }}"></script>
-  <link href="{{ '/assets/svelte-bundle.css' | relative_url }}" rel="stylesheet">
+  <script src="{{ '/assets/js/scripts.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/search.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/common.js' | url }}" defer></script>
+  {% if layout == 'product-search.html' %}
+  <script defer src="{{ '/assets/svelte-bundle.js' | url }}"></script>
+  <link href="{{ '/assets/svelte-bundle.css' | url }}" rel="stylesheet">
   {% endif %}
-  {% if page.layout == 'dice-game' %}
-  <script src="{{ '/assets/js/dice-game.js' | relative_url }}" defer></script>
-  {% elsif page.layout == 'tournaments-map' %}
-  <link href="{{ '/assets/css/vendors/leaflet.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/assets/css/vendors/MarkerCluster.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/assets/css/vendors/MarkerCluster.Default.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/assets/css/vendors/leaflet.resetview.css' | relative_url }}" rel="stylesheet">
-  <script src="{{ '/assets/js/vendors/leaflet.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/vendors/leaflet.markercluster.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/vendors/leaflet.resetview.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/vendors/leaflet.messagebox.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/tournaments-map.js' | relative_url }}" defer></script>
-  {% elsif page.layout == 'training' %}
-  <script src="{{ '/assets/js/training.js' | relative_url }}" defer></script>
-  {% elsif page.layout == 'ratings' %}
-  <script src="{{ '/assets/js/ratings.js' | relative_url }}" defer></script>
-  {% elsif page.layout == 'bag-tags' %}
-  <script src="{{ '/assets/js/bag-tags.js' | relative_url }}" defer></script>
+  {% if layout == 'dice-game.html' %}
+  <script src="{{ '/assets/js/dice-game.js' | url }}" defer></script>
+  {% elsif layout == 'tournaments-map.html' %}
+  <link href="{{ '/assets/css/vendors/leaflet.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/MarkerCluster.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/MarkerCluster.Default.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/leaflet.resetview.css' | url }}" rel="stylesheet">
+  <script src="{{ '/assets/js/vendors/leaflet.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.markercluster.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.resetview.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.messagebox.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/tournaments-map.js' | url }}" defer></script>
+  {% elsif layout == 'training.html' %}
+  <script src="{{ '/assets/js/training.js' | url }}" defer></script>
+  {% elsif layout == 'ratings.html' %}
+  <script src="{{ '/assets/js/ratings.js' | url }}" defer></script>
+  {% elsif layout == 'bag-tags.html' %}
+  <script src="{{ '/assets/js/bag-tags.js' | url }}" defer></script>
   {% endif %}
 
-  <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}">
-  {%- if jekyll.environment == "production" -%}
-  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | url }}">
+  {%- if production -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | url }}">
   {%- else -%}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
   {%- endif -%}
 </head>

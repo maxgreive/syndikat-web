@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Season Opening in Dortmund
 image: /assets/images/posts/24_driveopen_blume.jpg
 thumbnail: /assets/images/posts/thumbnails/24_driveopen_blume.jpg
-tags: turniere
+tags: [turniere]
 authors:
   - jonas
   - philipp

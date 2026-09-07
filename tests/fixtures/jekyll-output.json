@@ -1,0 +1,1791 @@
+{
+  "404.html": {
+    "title": "Seite nicht gefunden – syndikat.golf",
+    "canonical": "https://syndikat.golf/404.html",
+    "description": "Entdecke die Discgolf-Szene Kölns. Tritt unserem Discord bei, mach bei unserer wöchentlichen Liga mit und erlebe gemeinsam mit anderen Enthusiasten die Fa...",
+    "robots": "noindex",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Ups, diese Seite gibt es nicht."
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "about/index.html": {
+    "title": "Disc Golf Verein in Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/about/",
+    "description": "Lerne das Disc Golf Syndikat kennen: unseren Verein, unsere Community, Trainings und Events rund um Disc Golf in Köln und Umgebung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "AboutPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Verein in Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/alex/index.html": {
+    "title": "Alex beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/alex/",
+    "description": "Alex schreibt für syndikat.golf über Turniere, Vereinsleben und Disc Golf Erlebnisse beim Disc Golf Syndikat in Köln und Umgebung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Alex"
+    ],
+    "cards": [
+      "/blog/syndikatspieler-bei-wesel-open/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/jonas/index.html": {
+    "title": "Jonas beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/jonas/",
+    "description": "Jonas schreibt für syndikat.golf über Turniere, Vereinsleben und Disc Golf Erfahrungen beim Disc Golf Syndikat in Köln.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Jonas"
+    ],
+    "cards": [
+      "/blog/dortmund-season-opening/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/matthias/index.html": {
+    "title": "Matthias beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/matthias/",
+    "description": "Matthias schreibt für syndikat.golf über Turniere, Community und Vereinsleben beim Disc Golf Syndikat in Köln und Umgebung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Matthias"
+    ],
+    "cards": [
+      "/blog/syndikat-zu-gast-in-bonn/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/max/index.html": {
+    "title": "Max beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/max/",
+    "description": "Max schreibt für syndikat.golf über Turniere, Training und Vereinsleben beim Disc Golf Syndikat in Köln und ist Mitgründer des Vereins.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Max"
+    ],
+    "cards": [
+      "/blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/",
+      "/blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/",
+      "/blog/leitfaden-fuer-einsteiger/",
+      "/blog/fsme-impfung-fuer-discgolfer/",
+      "/blog/sportpionierpark/",
+      "/blog/fruehlings-ausflug-nach-fredeburg/",
+      "/blog/ein-entspannter-saisonausklang/",
+      "/blog/macht-des-geistes/",
+      "/blog/turnier-packliste/",
+      "/blog/die-besten-scheiben-fuer-discgolf-einsteiger/",
+      "/blog/big-arm-open-3/",
+      "/blog/hardtwerfen-ii/",
+      "/blog/preisvergleich-online-tool/",
+      "/blog/turnierkarte-2024/",
+      "/blog/offseason-training/",
+      "/blog/syndikat-arnhem-adventure/",
+      "/blog/cologne-disc-golf-summer/",
+      "/blog/sommerzeit/",
+      "/blog/die-saison-2023-steht-in-den-startloechern/",
+      "/blog/rueck-und-ausblick-syndication/",
+      "/blog/discgolf-spiel-wuerfel/",
+      "/blog/syndication-weekly-tournament/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/moritz/index.html": {
+    "title": "Moritz beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/moritz/",
+    "description": "Moritz schreibt für syndikat.golf über Vereinsleben, Ausflüge und besondere Disc Golf Momente beim Disc Golf Syndikat in Köln.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Moritz"
+    ],
+    "cards": [
+      "/blog/disc-golf-ruesselsheim-trip/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/philipp/index.html": {
+    "title": "Philipp beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/philipp/",
+    "description": "Philipp schreibt für syndikat.golf über Turniere, Ausflüge und Vereinsleben beim Disc Golf Syndikat in Köln und Umgebung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Philipp"
+    ],
+    "cards": [
+      "/blog/WT-Bielefeld/",
+      "/blog/5te-saengerstadt-open/",
+      "/blog/dortmund-season-opening/",
+      "/blog/disc-golf-ruesselsheim-trip/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "authors/yannik/index.html": {
+    "title": "Yannik beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/authors/yannik/",
+    "description": "Yannik schreibt für syndikat.golf über Turniere, Vereinsleben und Disc Golf Erlebnisse beim Disc Golf Syndikat in Köln.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ProfilePage",
+      "Person"
+    ],
+    "authors": [],
+    "headings": [
+      "Yannik"
+    ],
+    "cards": [
+      "/blog/hardtwerfen-ii/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "bagtags/index.html": {
+    "title": "Bag Tags Challenge Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/bagtags/",
+    "description": "Regeln, Rangliste und Strafgebühr für die Bag Tags Challenge des Disc Golf Syndikat in Köln inklusive aktueller Platzierungen.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Bag Tags Challenge Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/js/bag-tags.js"
+    ]
+  },
+  "blog/5te-saengerstadt-open/index.html": {
+    "title": "5. Sängerstadt Open – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/5te-saengerstadt-open/",
+    "description": "Rückblick auf die 5. Sängerstadt Open in Finsterwalde mit Bahnanreise, Players Pack und Turnierwochenende für das Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/philipp/#person",
+        "name": "Philipp",
+        "url": "https://syndikat.golf/authors/philipp/",
+        "image": "https://syndikat.golf/assets/images/authors/philipp.jpg"
+      }
+    ],
+    "headings": [
+      "5. Sängerstadt Open"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/WT-Bielefeld/index.html": {
+    "title": "Westfalentour Nr. 8 in Bielefeld – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/WT-Bielefeld/",
+    "description": "Am Samstag den 10. August waren wir mit insgesamt sechs Spieler*innen auf der Westfalentour in Bielefeld vertreten.Das Turnier fand auf dem Parcours am Ob...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/philipp/#person",
+        "name": "Philipp",
+        "url": "https://syndikat.golf/authors/philipp/",
+        "image": "https://syndikat.golf/assets/images/authors/philipp.jpg"
+      }
+    ],
+    "headings": [
+      "Westfalentour Nr. 8 in Bielefeld"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/big-arm-open-3/index.html": {
+    "title": "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3 – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/big-arm-open-3/",
+    "description": "Spannung und einige Herausforderungen bei den Big Arm Open 3 in Schmallenberg! Discgolf-Spieler aus ganz Deutschland messen sich an drei packenden Turnier...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Schwerstarbeit im Sauerland: Ein Blick auf die Big Arm Open 3"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/cologne-disc-golf-summer/index.html": {
+    "title": "Cologne Disc Golf Summer 2023 – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/cologne-disc-golf-summer/",
+    "description": "Einladung zum Cologne Disc Golf Summer 2023 an der Scheibenstraße in Köln mit Disc Golf, Spielen, Tauschbörse und Sommerfest.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Cologne Disc Golf Summer 2023"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/die-besten-scheiben-fuer-discgolf-einsteiger/index.html": {
+    "title": "Die besten Discgolf-Scheiben für Einsteiger – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/die-besten-scheiben-fuer-discgolf-einsteiger/",
+    "description": "Welche Discgolf-Scheiben eignen sich für Einsteiger? Ein praktischer Leitfaden zu Putter, Midrange, Plastik und sinnvollen Starter-Sets.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Die besten Discgolf-Scheiben für Einsteiger"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/die-saison-2023-steht-in-den-startloechern/index.html": {
+    "title": "Die Saison 2023 steht in den Startlöchern – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/die-saison-2023-steht-in-den-startloechern/",
+    "description": "Der Frühling steht vor der Tür und mit ihm eine neue Saison voller Events für das Disc Golf Syndikat aus Köln. Die Tage werden schon bald wieder länger un...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Die Saison 2023 steht in den Startlöchern"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/disc-golf-ruesselsheim-trip/index.html": {
+    "title": "Ausflug nach Rüsselsheim – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/disc-golf-ruesselsheim-trip/",
+    "description": "Am 24. Februar begab sich das Discgolf Syndikat zu ein paar Runden Discgolf nach Rüsselsheim. Uns lockte der abwechslungsreiche und anspruchsvolle Kurs im...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/moritz/#person",
+        "name": "Moritz",
+        "url": "https://syndikat.golf/authors/moritz/",
+        "image": "https://syndikat.golf/assets/images/authors/moritz.jpg"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/philipp/#person",
+        "name": "Philipp",
+        "url": "https://syndikat.golf/authors/philipp/",
+        "image": "https://syndikat.golf/assets/images/authors/philipp.jpg"
+      }
+    ],
+    "headings": [
+      "Ausflug nach Rüsselsheim"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/discgolf-spiel-wuerfel/index.html": {
+    "title": "Abwechslung durch Würfel App – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/discgolf-spiel-wuerfel/",
+    "description": "Der Kurs an der Scheibenstraße wird auf Dauer etwas eintönig. Auf YouTube und in den sozialen Netzwerken läuft man zwangsläufig dem Discgolf-Würfel-Spiel ...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Abwechslung durch Würfel App"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/dortmund-season-opening/index.html": {
+    "title": "Season Opening in Dortmund – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/dortmund-season-opening/",
+    "description": "Am Samstag den 16.3. waren wir auf dem Drive Season Opening-Turnier in Dortmund, welches von Drive Discgolf veranstaltet wurde.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/jonas/#person",
+        "name": "Jonas",
+        "url": "https://syndikat.golf/authors/jonas/"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/philipp/#person",
+        "name": "Philipp",
+        "url": "https://syndikat.golf/authors/philipp/",
+        "image": "https://syndikat.golf/assets/images/authors/philipp.jpg"
+      }
+    ],
+    "headings": [
+      "Season Opening in Dortmund"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/ein-entspannter-saisonausklang/index.html": {
+    "title": "Rückblick auf das Herbstfest: Ein entspannter Saisonausklang – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/ein-entspannter-saisonausklang/",
+    "description": "Am 26. Oktober trafen sich rund 25 Disc-Golfer*innen bei herbstlichem Sonnenschein auf unserem Kurs an der Scheibenstraße in Köln, um gemeinsam das Saison...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Rückblick auf das Herbstfest: Ein entspannter Saisonausklang"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/fruehlings-ausflug-nach-fredeburg/index.html": {
+    "title": "Frühlingsausflug nach Bad Fredeburg – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/fruehlings-ausflug-nach-fredeburg/",
+    "description": "Der Frühling ist da, und wir starten in die neue Saison mit einem besonderen Event! Am 30. März 2025 geht es für das Syndikat auf einen Disc Golf-Ausflug ...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Frühlingsausflug nach Bad Fredeburg"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/fsme-impfung-fuer-discgolfer/index.html": {
+    "title": "FSME-Impfung für Disc Golfer: So bleibst du sicher auf dem Kurs – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/fsme-impfung-fuer-discgolfer/",
+    "description": "Oktober und November sind perfekte Monate, um über Gesundheit nachzudenken. Erfahre, warum Disc Golfer die FSME-Impfung brauchen und wie du dich effektiv ...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "FSME-Impfung für Disc Golfer: So bleibst du sicher auf dem Kurs"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/hardtwerfen-ii/index.html": {
+    "title": "Podiumsplätze beim \"Hardtwerfen II\" in Bonn – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/hardtwerfen-ii/",
+    "description": "Rückblick auf die zweite Ausgabe des Hardtwerfen im Derletal in Bonn, bei dem der Verein Bonnsai eine spektakuläre 18-Bahnen-Herausforderung präsentierte....",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/yannik/#person",
+        "name": "Yannik",
+        "url": "https://syndikat.golf/authors/yannik/"
+      }
+    ],
+    "headings": [
+      "Podiumsplätze beim \"Hardtwerfen II\" in Bonn"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/index.html": {
+    "title": "Disc Golf Blog aus Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/",
+    "description": "Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Blog aus Köln"
+    ],
+    "cards": [
+      "/blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/",
+      "/blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/",
+      "/blog/leitfaden-fuer-einsteiger/",
+      "/blog/fsme-impfung-fuer-discgolfer/",
+      "/blog/sportpionierpark/",
+      "/blog/fruehlings-ausflug-nach-fredeburg/"
+    ],
+    "pagination": [
+      "/blog/page2/"
+    ],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/index.html": {
+    "title": "Kölner Stadt-Anzeiger zu Gast beim Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/",
+    "description": "Der Kölner Stadt-Anzeiger hat das Disc Golf Syndikat in Weidenpesch besucht. Im Sommer treffen wir uns dienstags zur Syndication Weekly.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Kölner Stadt-Anzeiger zu Gast beim Disc Golf Syndikat"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/leitfaden-fuer-einsteiger/index.html": {
+    "title": "Leitfaden für Discgolf-Einsteiger – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/leitfaden-fuer-einsteiger/",
+    "description": "Ein kompakter Leitfaden für Discgolf-Einsteiger mit den wichtigsten Grundlagen zu Ausrüstung, Würfen und den ersten Runden.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Leitfaden für Discgolf-Einsteiger"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/macht-des-geistes/index.html": {
+    "title": "Die Macht des Geistes: Die mentale Stärke im Discgolf – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/macht-des-geistes/",
+    "description": "Discgolf ist ein Sport, der Beweglichkeit, Strategie und Präzision erfordert. Doch ein entscheidender Faktor wird oft übersehen: das mentale Spiel. Gerade...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Die Macht des Geistes: Die mentale Stärke im Discgolf"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/offseason-training/index.html": {
+    "title": "Offseason: Trainieren, erholen, stärker zurückkommen – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/offseason-training/",
+    "description": "Kein Disc Golfer freut sich auf den Winter. Kurze Tage, kalt, windig und wenig Sonne. Doch auch die Offseason kann genutzt werden, um Fortschritte im eige...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Offseason: Trainieren, erholen, stärker zurückkommen"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/page2/index.html": {
+    "title": "Disc Golf Blog aus Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/page2/",
+    "description": "Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Blog aus Köln"
+    ],
+    "cards": [
+      "/blog/ein-entspannter-saisonausklang/",
+      "/blog/syndikatspieler-bei-wesel-open/",
+      "/blog/syndikat-zu-gast-in-bonn/",
+      "/blog/macht-des-geistes/",
+      "/blog/turnier-packliste/",
+      "/blog/WT-Bielefeld/"
+    ],
+    "pagination": [
+      "/blog/",
+      "/blog/page3/"
+    ],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/page3/index.html": {
+    "title": "Disc Golf Blog aus Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/page3/",
+    "description": "Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Blog aus Köln"
+    ],
+    "cards": [
+      "/blog/5te-saengerstadt-open/",
+      "/blog/die-besten-scheiben-fuer-discgolf-einsteiger/",
+      "/blog/big-arm-open-3/",
+      "/blog/hardtwerfen-ii/",
+      "/blog/preisvergleich-online-tool/",
+      "/blog/dortmund-season-opening/"
+    ],
+    "pagination": [
+      "/blog/page2/",
+      "/blog/page4/"
+    ],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/page4/index.html": {
+    "title": "Disc Golf Blog aus Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/page4/",
+    "description": "Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Blog aus Köln"
+    ],
+    "cards": [
+      "/blog/disc-golf-ruesselsheim-trip/",
+      "/blog/turnierkarte-2024/",
+      "/blog/offseason-training/",
+      "/blog/syndikat-arnhem-adventure/",
+      "/blog/cologne-disc-golf-summer/",
+      "/blog/sommerzeit/"
+    ],
+    "pagination": [
+      "/blog/page3/",
+      "/blog/page5/"
+    ],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/page5/index.html": {
+    "title": "Disc Golf Blog aus Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/page5/",
+    "description": "Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Blog aus Köln"
+    ],
+    "cards": [
+      "/blog/die-saison-2023-steht-in-den-startloechern/",
+      "/blog/rueck-und-ausblick-syndication/",
+      "/blog/discgolf-spiel-wuerfel/",
+      "/blog/syndication-weekly-tournament/"
+    ],
+    "pagination": [
+      "/blog/page4/"
+    ],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/preisvergleich-online-tool/index.html": {
+    "title": "Wo kann man Disc Golf Scheiben kaufen? Online-Shop, Verein oder gebraucht? – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/preisvergleich-online-tool/",
+    "description": "Praktischer Leitfaden zum Kauf von Disc Golf Scheiben: online, gebraucht oder über die Community. Mit Tipps für Einsteiger und Link zum Preisvergleich.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Wo kann man Disc Golf Scheiben kaufen? Online-Shop, Verein oder gebraucht?"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/rueck-und-ausblick-syndication/index.html": {
+    "title": "Rück- und Ausblick über die wöchentliche Liga – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/rueck-und-ausblick-syndication/",
+    "description": "Das Jahr 2022 liegt hinter uns und damit auch die ersten 4 Monate unserer wöchentlichen Liga “Syndication Weekly”. Seit August wurden 197 Runden von 44 Sp...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Rück- und Ausblick über die wöchentliche Liga"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/index.html": {
+    "title": "So findest du dein erstes Disc-Golf-Turnier und meldest dich an – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/",
+    "description": "So findest du dein erstes Disc-Golf-Turnier in Deutschland, meldest dich an und vermeidest typische Fehler bei der Turnieranmeldung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "So findest du dein erstes Disc-Golf-Turnier und meldest dich an"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/sommerzeit/index.html": {
+    "title": "Die Sommerzeit ist da! – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/sommerzeit/",
+    "description": "Mit der Sommerzeit startet unsere wöchentliche Disc Golf Liga in Köln wieder dienstags am Abend. Alle Levels sind willkommen.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Die Sommerzeit ist da!"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/sportpionierpark/index.html": {
+    "title": "Neue Putting-Anlage im Sportpionierpark Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/sportpionierpark/",
+    "description": "Köln setzt ein starkes Zeichen für den Disc Golf-Sport! Mit der neuen Putting-Anlage im Sportpionierpark erhält die Stadt eine großartige neue Trainingsmö...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Neue Putting-Anlage im Sportpionierpark Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/syndication-weekly-tournament/index.html": {
+    "title": "Wöchentliche Liga ab August – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/syndication-weekly-tournament/",
+    "description": "Ab August startet unsere wöchentliche Disc Golf Liga an der Scheibenstraße in Köln. Alle Levels sind willkommen, Anmeldung und Scoring laufen über UDisc.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Wöchentliche Liga ab August"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/syndikat-arnhem-adventure/index.html": {
+    "title": "Arnhem Adventure – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/syndikat-arnhem-adventure/",
+    "description": "Das Disc Golf Syndikat aus Köln ist bekannt für seine Leidenschaft für diesen aufregenden Sport. Klar, wir freuen uns wenn wir Discgolf spielen, aber wir ...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Arnhem Adventure"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/syndikat-zu-gast-in-bonn/index.html": {
+    "title": "Das Syndikat zu Gast in Bonn – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/syndikat-zu-gast-in-bonn/",
+    "description": "Am vergangenen Sonntag, den 29. September 2024, lud der Bonnsai e.V. zu den ersten Bonnsai Open ins Derletal am Hardtberg ein. Für 72 Spieler und Spieleri...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/matthias/#person",
+        "name": "Matthias",
+        "url": "https://syndikat.golf/authors/matthias/",
+        "image": "https://syndikat.golf/assets/images/authors/matthias.jpg"
+      }
+    ],
+    "headings": [
+      "Das Syndikat zu Gast in Bonn"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/syndikatspieler-bei-wesel-open/index.html": {
+    "title": "Syndikatspieler bei den 10. Wesel Open – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/syndikatspieler-bei-wesel-open/",
+    "description": "Am vergangenen Sonntag dem 06.10. luden die Flugplastik-Enthusiasten vom Disc Golf Niederrhein nun zum zehnten Mal auf dem pittoresken Gelände des Auesees...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/alex/#person",
+        "name": "Alex",
+        "url": "https://syndikat.golf/authors/alex/"
+      }
+    ],
+    "headings": [
+      "Syndikatspieler bei den 10. Wesel Open"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/turnier-packliste/index.html": {
+    "title": "Turnier-Equipment, das den Unterschied macht – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/turnier-packliste/",
+    "description": "Steht dein nächstes Turnier vor der Tür und du bist unsicher, ob du alles Nötige eingepackt hast? Klar, die Basics wie Discs, Marker und dein Smartphone s...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Turnier-Equipment, das den Unterschied macht"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "blog/turnierkarte-2024/index.html": {
+    "title": "Auf Kurs für 2024: Entdecke die Turnierkarte für Deutschland! – syndikat.golf",
+    "canonical": "https://syndikat.golf/blog/turnierkarte-2024/",
+    "description": "Die Disc Golf-Saison 2024 steht in den Startlöchern, und die Vorfreude unter den Disc Golfern ist förmlich greifbar. Doch während alle aufgeregt darauf wa...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "BlogPosting"
+    ],
+    "authors": [
+      {
+        "@type": "Person",
+        "@id": "https://syndikat.golf/authors/max/#person",
+        "name": "Max",
+        "url": "https://syndikat.golf/authors/max/",
+        "image": "https://syndikat.golf/assets/images/authors/max.jpg",
+        "sameAs": [
+          "https://twitter.com/maex2k",
+          "https://www.pdga.com/player/269738",
+          "https://rating.discgolf.de/detail.php?gtn=2791"
+        ]
+      }
+    ],
+    "headings": [
+      "Auf Kurs für 2024: Entdecke die Turnierkarte für Deutschland!"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "contact/index.html": {
+    "title": "Kontakt zum Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/contact/",
+    "description": "Schreib dem Disc Golf Syndikat aus Köln bei Fragen zu Training, Mitgliedschaft, Events, Kooperationen oder unserem Vereinsangebot.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "ContactPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Kontakt zum Disc Golf Syndikat"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "datenschutz/index.html": {
+    "title": "Datenschutz Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/datenschutz/",
+    "description": "Informationen zur Verarbeitung personenbezogener Daten auf syndikat.golf und bei Formularen des Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Datenschutz Disc Golf Syndikat"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "disc-dice/index.html": {
+    "title": "Disc Dice Würfelspiel – syndikat.golf",
+    "canonical": "https://syndikat.golf/disc-dice/",
+    "description": "Das Disc Dice Würfelspiel für Disc Golf mit Zufallswürfen, Scheiben-Challenges und schnellen Ideen für abwechslungsreiche Trainingsrunden.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Dice Würfelspiel"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/js/dice-game.js"
+    ]
+  },
+  "disc-golf-koeln/index.html": {
+    "title": "Disc Golf in Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/disc-golf-koeln/",
+    "description": "Disc Golf in Köln: So findest du über die wöchentliche Liga und den Discord-Server den einfachsten Einstieg beim Disc Golf Syndikat.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf in Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "events/index.html": {
+    "title": "Disc Golf Events in Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/events/",
+    "description": "Infos zur wöchentlichen Liga und zu weiteren Disc Golf Events des Disc Golf Syndikat in Köln mit Terminen, Ort und Kontaktmöglichkeiten.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Events in Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "faq/index.html": {
+    "title": "Häufig gestellte Fragen – syndikat.golf",
+    "canonical": "https://syndikat.golf/faq/",
+    "description": "Antworten auf häufige Fragen zu Disc Golf, Training, Mitgliedschaft und Vereinsleben beim Disc Golf Syndikat in Köln.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "FAQPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Häufig gestellte Fragen"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "impressum/index.html": {
+    "title": "Impressum Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/impressum/",
+    "description": "Rechtliche Angaben, Vereinsdaten und Kontaktinformationen des Disc Golf Syndikat e.V. aus Köln.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Impressum Disc Golf Syndikat"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "index.html": {
+    "title": "Disc Golf in Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/",
+    "description": "Entdecke die Discgolf-Szene Kölns. Tritt unserem Discord bei, mach bei unserer wöchentlichen Liga mit und erlebe gemeinsam mit anderen Enthusiasten die Fa...",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "CollectionPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Hey, wir sind das Syndikat"
+    ],
+    "cards": [
+      "/blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/",
+      "/blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/",
+      "/blog/leitfaden-fuer-einsteiger/",
+      "/blog/fsme-impfung-fuer-discgolfer/",
+      "/blog/sportpionierpark/",
+      "/blog/fruehlings-ausflug-nach-fredeburg/",
+      "/blog/ein-entspannter-saisonausklang/",
+      "/blog/syndikatspieler-bei-wesel-open/",
+      "/blog/syndikat-zu-gast-in-bonn/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "preisvergleich/index.html": {
+    "title": "Discgolf Preisvergleich – syndikat.golf",
+    "canonical": "https://syndikat.golf/preisvergleich/",
+    "description": "Vergleiche Disc Golf Scheiben über mehrere Shops und finde schneller die besten Preise, Verfügbarkeiten und Angebote für deinen nächsten Einkauf.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Discgolf Preisvergleich"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/svelte-bundle.js"
+    ]
+  },
+  "ratings/index.html": {
+    "title": "Vereinsratings Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/ratings/",
+    "description": "Aktuelle Vereinsratings der Mitglieder des Disc Golf Syndikat mit Rangliste und Verweis auf weiterführende Statistiken.",
+    "robots": "noindex",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Vereinsratings Disc Golf Syndikat"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/js/ratings.js"
+    ]
+  },
+  "register/index.html": {
+    "title": "Mitglied im Syndikat werden – syndikat.golf",
+    "canonical": "https://syndikat.golf/register/",
+    "description": "Werde Mitglied beim Disc Golf Syndikat und sichere dir Training, Turnierteilnahme, Community-Zugang und weitere Vorteile im Verein.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Mitglied im Syndikat werden"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "satzung/index.html": {
+    "title": "Vereinssatzung Disc Golf Syndikat – syndikat.golf",
+    "canonical": "https://syndikat.golf/satzung/",
+    "description": "Die Satzung des Disc Golf Syndikat e.V. mit Zweck, Mitgliedschaft und Vereinsstruktur im Überblick.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Vereinssatzung Disc Golf Syndikat",
+      "§ 1 Name, Sitz und Geschäftsjahr",
+      "§ 2 Vereinszweck und Gemeinnützigkeit",
+      "§ 3 Erwerb der Mitgliedschaft, Ehrenmitgliedschaft",
+      "§ 4 Beendigung der Mitgliedschaft",
+      "§ 5 Aufnahmegebühren und Beiträge",
+      "§ 6 Stimmrecht und Wählbarkeit, Abstimmungen",
+      "§ 7 Organe des Vereins",
+      "§ 8 Mitglieder­versammlung",
+      "§ 9 Vorstand",
+      "§ 10 Ausschüsse",
+      "§ 11 Kassenprüfung",
+      "§ 12 Auflösung des Vereins",
+      "§ 13 Gültigkeit dieser Satzung"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "success/index.html": {
+    "title": "Nachricht erfolgreich gesendet – syndikat.golf",
+    "canonical": "https://syndikat.golf/success/",
+    "description": "Bestätigung, dass deine Nachricht erfolgreich an das Disc Golf Syndikat übermittelt wurde.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "tags/index.html": {
+    "title": "Themen im Disc Golf Blog – syndikat.golf",
+    "canonical": "https://syndikat.golf/tags/",
+    "description": "Alle Themen und Schlagwörter aus dem Blog des Disc Golf Syndikat im Überblick.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Tags"
+    ],
+    "cards": [
+      "/blog/so-findest-du-dein-erstes-disc-golf-turnier-und-meldest-dich-an/",
+      "/blog/syndikatspieler-bei-wesel-open/",
+      "/blog/syndikat-zu-gast-in-bonn/",
+      "/blog/turnier-packliste/",
+      "/blog/WT-Bielefeld/",
+      "/blog/5te-saengerstadt-open/",
+      "/blog/big-arm-open-3/",
+      "/blog/hardtwerfen-ii/",
+      "/blog/dortmund-season-opening/",
+      "/blog/sommerzeit/",
+      "/blog/rueck-und-ausblick-syndication/",
+      "/blog/syndication-weekly-tournament/",
+      "/blog/preisvergleich-online-tool/",
+      "/blog/discgolf-spiel-wuerfel/",
+      "/blog/macht-des-geistes/",
+      "/blog/offseason-training/",
+      "/blog/discgolf-spiel-wuerfel/",
+      "/blog/die-saison-2023-steht-in-den-startloechern/",
+      "/blog/fruehlings-ausflug-nach-fredeburg/",
+      "/blog/ein-entspannter-saisonausklang/",
+      "/blog/disc-golf-ruesselsheim-trip/",
+      "/blog/syndikat-arnhem-adventure/",
+      "/blog/cologne-disc-golf-summer/",
+      "/blog/die-besten-scheiben-fuer-discgolf-einsteiger/",
+      "/blog/preisvergleich-online-tool/",
+      "/blog/sportpionierpark/",
+      "/blog/fsme-impfung-fuer-discgolfer/",
+      "/blog/leitfaden-fuer-einsteiger/",
+      "/blog/koelner-stadt-anzeiger-zu-gast-beim-disc-golf-syndikat/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "tools/index.html": {
+    "title": "Disc Golf Tools & Apps – syndikat.golf",
+    "canonical": "https://syndikat.golf/tools/",
+    "description": "Nützliche Tools und Web-Apps des Disc Golf Syndikat für Training, Bag Tags, Turniere, Preisvergleich und Scheibenkauf.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Tools & Apps"
+    ],
+    "cards": [
+      "/preisvergleich/",
+      "/turniere/",
+      "/bagtags/",
+      "/disc-dice/",
+      "/ratings/"
+    ],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "tracking-ignore.html": {
+    "title": "syndikat.golf",
+    "canonical": "https://syndikat.golf/tracking-ignore.html",
+    "description": "Entdecke die Discgolf-Szene Kölns. Tritt unserem Discord bei, mach bei unserer wöchentlichen Liga mit und erlebe gemeinsam mit anderen Enthusiasten die Fa...",
+    "robots": "noindex",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js"
+    ]
+  },
+  "training/index.html": {
+    "title": "Discgolf Training in Köln – syndikat.golf",
+    "canonical": "https://syndikat.golf/training/",
+    "description": "Gemeinsames Discgolf-Training in Köln für alle Levels mit Anmeldung, Terminen, Trainingsinfos und Hinweisen zum Vereinsangebot.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Discgolf Training in Köln"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/js/training.js"
+    ]
+  },
+  "turniere/index.html": {
+    "title": "Disc Golf Turnierkarte – syndikat.golf",
+    "canonical": "https://syndikat.golf/turniere/",
+    "description": "Interaktive Karte mit aktuellen Disc Golf Turnieren in Deutschland inklusive Orten, Terminen, Auslastung und Anreiseplanung.",
+    "robots": "",
+    "schemaTypes": [
+      "SportsOrganization",
+      "WebSite",
+      "WebPage"
+    ],
+    "authors": [],
+    "headings": [
+      "Disc Golf Turnierkarte"
+    ],
+    "cards": [],
+    "pagination": [],
+    "scripts": [
+      "/assets/js/scripts.js",
+      "/assets/js/common.js",
+      "/assets/js/vendors/leaflet.js",
+      "/assets/js/vendors/leaflet.markercluster.js",
+      "/assets/js/vendors/leaflet.resetview.js",
+      "/assets/js/vendors/leaflet.messagebox.js",
+      "/assets/js/tournaments-map.js"
+    ]
+  }
+}

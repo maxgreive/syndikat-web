@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Offseason: Trainieren, erholen, stärker zurückkommen"
 image: /assets/images/posts/offseason.jpg
 thumbnail: /assets/images/posts/thumbnails/offseason.jpg
-tags: training
+tags: [training]
 author: max
 ---
 

@@ -1,11 +1,10 @@
 ---
-layout: post
 title: Die besten Discgolf-Scheiben für Einsteiger
-date: 2024-05-11 00:00
+date: 2024-05-11
 description: Welche Discgolf-Scheiben eignen sich für Einsteiger? Ein praktischer Leitfaden zu Putter, Midrange, Plastik und sinnvollen Starter-Sets.
 image: /assets/images/posts/beginner-discs.jpg
 thumbnail: /assets/images/posts/thumbnails/beginner-discs.jpg
-tags: discs
+tags: [discs]
 author: max
 excerpt: Für Neulinge im Discgolf-Sport kann es sehr kompliziert sein, sich die ersten Scheiben zu kaufen. Worauf kommt es an und welche Fehler sollten vermieden werden?
 ---
@@ -31,10 +30,10 @@ Die orangene Scheibe in der Mitte ist der Zwischenschritt zwischen Driver und Pu
 > Putter und Midrange reichen für den Start aus. Lerne diese Discs zu beherrschen, bevor du weitere Scheiben kaufst.
 
 ![Grafik mit Flugkurven von Discgolf-Discs](/assets/images/posts/flight-numbers-dark.png)
-{: .hide-light.mobile-aspect-3-4 }
+{.hide-light .mobile-aspect-3-4}
 
 ![Grafik mit Flugkurven von Discgolf-Discs](/assets/images/posts/flight-numbers-light.png)
-{: .hide-dark.mobile-aspect-3-4 }
+{.hide-dark .mobile-aspect-3-4}
 
 Die Grafik oben zeigt die ungefähren Flugkurven der verschiedenen Scheiben, wenn sie als Rückhand von einem Rechtshänder geworfen werden. Der Wert unten am Start der Flugkurve gibt den Speed der Scheibe an. Wenn du nach Scheiben shopst, werden dir diese Zahlen wieder begegnen. Diese Angaben für einen Putter `2|3|0|0` oder einen Driver `7|5|0|2` zeigen dir die ungefähren Flugeigenschaften der jeweiligen Disc. Wir fokussieren uns fürs Erste auf den ersten Wert, der die Geschwindikeit der Scheibe angibt.
 

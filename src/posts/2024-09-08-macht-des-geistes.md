@@ -1,11 +1,11 @@
 ---
 title: "Die Macht des Geistes: Die mentale Stärke im Discgolf"
-layout: post
 author: max
-tag: training
+tags: [training]
 date: 2024-09-12
 image: /assets/images/posts/mental-game.jpg
 thumbnail: /assets/images/posts/thumbnails/mental-game.jpg
+description: "Discgolf ist ein Sport, der Beweglichkeit, Strategie und Präzision erfordert. Doch ein entscheidender Faktor wird oft übersehen: das mentale Spiel."
 ---
 
 Discgolf ist ein Sport, der Beweglichkeit, Strategie und Präzision erfordert. Doch ein entscheidender Faktor wird oft übersehen: das mentale Spiel. Gerade für Spieler, die anfangen, an Turnieren teilzunehmen, kann die mentale Stärke den Unterschied zwischen einer durchschnittlichen und einer großartigen Runde ausmachen. In diesem Beitrag schauen wir uns an, warum die mentale Stärke im Discgolf wichtig ist, welche Herausforderungen Spieler oft erleben, und welche Strategien Dir helfen können, einen mentalen Vorsprung zu bekommen.

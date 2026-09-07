@@ -1,11 +1,11 @@
-<form class="form" id="register-form" action="/success?ref={{ page.title | slugify }}" name="signup" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-  {% for field in site.data.register_fields %}
+<form class="form" id="register-form" action="/success?ref={{ title | slug }}" name="signup" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+  {% for field in register_fields %}
   <div class="form__group form__group--{{ field.type }}{% if field.required %} form__group--required{% endif %}">
 
     {% if field.type == 'radio' %}
     <label class="form__title">{{ field.title }}</label>
     {% if field.tooltip %}
-    {% include snippets/tooltip.html content=field.tooltip %}
+    {% include 'snippets/tooltip.html', content: field.tooltip %}
     {% endif %}
     {% for option in field.options %}
     <div>
@@ -19,7 +19,7 @@
     {% elsif field.type == 'checkbox' %}
     <label class="form__title">{{ field.title }}</label>
     {% if field.tooltip %}
-    {% include snippets/tooltip.html content=field.tooltip %}
+    {% include 'snippets/tooltip.html', content: field.tooltip %}
     {% endif %}
     {% if field.text %}
     <p><em>{{ field.text }}</em></p>

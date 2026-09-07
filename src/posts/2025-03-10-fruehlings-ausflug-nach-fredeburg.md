@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Frühlingsausflug nach Bad Fredeburg"
 image: /assets/images/posts/fruehling-frede.jpg
 thumbnail: /assets/images/posts/thumbnails/fruehling-frede.jpg
-tags: events
+tags: [events]
 author: max
 ---
 

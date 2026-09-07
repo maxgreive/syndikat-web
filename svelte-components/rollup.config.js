@@ -13,7 +13,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: '../assets/svelte-bundle.js',
+		file: '../src/assets/svelte-bundle.js',
 		globals: {
 			'tippy.js': 'tippy'
 		}

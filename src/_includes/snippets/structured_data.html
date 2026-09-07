@@ -1,8 +1,8 @@
-{%- assign page_url = page.url | absolute_url -%}
-{%- capture organization_id -%}{{ site.url }}/#organization{%- endcapture -%}
-{%- capture website_id -%}{{ site.url }}/#website{%- endcapture -%}
-{%- capture logo_url -%}{{ "/assets/images/logo.svg" | absolute_url }}{%- endcapture -%}
-{%- capture site_description -%}{{ site.description | strip_html | strip_newlines | strip }}{%- endcapture -%}
+{%- assign page_url = page.url | absoluteUrl -%}
+{%- capture organization_id -%}{{ settings.url }}/#organization{%- endcapture -%}
+{%- capture website_id -%}{{ settings.url }}/#website{%- endcapture -%}
+{%- capture logo_url -%}{{ "/assets/images/logo.svg" | absoluteUrl }}{%- endcapture -%}
+{%- capture site_description -%}{{ settings.description | strip_html | strip_newlines | strip }}{%- endcapture -%}
 
 <script type="application/ld+json">
 {
@@ -10,84 +10,83 @@
   "@graph": [
     {
       "@type": "SportsOrganization",
-      "@id": {{ organization_id | jsonify }},
-      "name": {{ site.title | jsonify }},
-      "url": {{ site.url | jsonify }},
+      "@id": {{ organization_id | json }},
+      "name": {{ settings.title | json }},
+      "url": {{ settings.url | json }},
       "logo": {
         "@type": "ImageObject",
-        "url": {{ logo_url | strip | jsonify }}
+        "url": {{ logo_url | strip | json }}
       }
     },
     {
       "@type": "WebSite",
-      "@id": {{ website_id | jsonify }},
-      "url": {{ site.url | jsonify }},
-      "name": {{ site.title | jsonify }},
-      "description": {{ site_description | jsonify }},
+      "@id": {{ website_id | json }},
+      "url": {{ settings.url | json }},
+      "name": {{ settings.title | json }},
+      "description": {{ site_description | json }},
       "inLanguage": "de"
     }
-    {%- if page.layout == "post" -%},
+    {%- if layout == "post.html" -%},
     {
       "@type": "BlogPosting",
-      "@id": {{ page_url | append: "#article" | jsonify }},
+      "@id": {{ page_url | append: "#article" | json }},
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": {{ page_url | jsonify }}
+        "@id": {{ page_url | json }}
       },
-      "headline": {{ page.title | strip_html | jsonify }},
-      "description": {{ meta_description | jsonify }},
-      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "headline": {{ title | strip_html | json }},
+      "description": {{ meta_description | json }},
+      "datePublished": {{ page.date | date: "%Y-%m-%dT%H:%M:%S%:z" | json }},
+      "dateModified": {{ last_modified_at | default: page.date | date: "%Y-%m-%dT%H:%M:%S%:z" | json }},
       "inLanguage": "de",
       "isPartOf": {
-        "@id": {{ website_id | jsonify }}
+        "@id": {{ website_id | json }}
       },
       "publisher": {
-        "@id": {{ organization_id | jsonify }}
+        "@id": {{ organization_id | json }}
       },
-      {%- if page.tags -%}
-      "keywords": {{ page.tags | join: ", " | jsonify }},
+      {%- if tags -%}
+      "keywords": {{ tags | join: ", " | json }},
       {%- endif -%}
-      {%- if page.image or page.sharing_image or site.sharing_image -%}
+      {%- if image or sharing_image or settings.sharing_image -%}
       "image": {
         "@type": "ImageObject",
-        "url": {{ sharing_image | strip | jsonify }}
+        "url": {{ sharing_image | strip | json }}
       },
       {%- endif -%}
       "author": [
-        {%- if page.author -%}
-          {%- assign author = site.data.authors[page.author] -%}
+        {%- if author -%}
+          {%- assign author = authorData -%}
           {
             "@type": "Person",
-            "@id": {{ author.url | absolute_url | append: "#person" | jsonify }},
-            "name": {{ author.name | jsonify }},
-            "url": {{ author.url | absolute_url | jsonify }}
+            "@id": {{ author.url | absoluteUrl | append: "#person" | json }},
+            "name": {{ author.name | json }},
+            "url": {{ author.url | absoluteUrl | json }}
             {%- if author.image -%},
-            "image": {{ author.image | absolute_url | jsonify }}
+            "image": {{ author.image | absoluteUrl | json }}
             {%- endif -%}
             {%- if author.same_as -%},
             "sameAs": [
               {%- for item in author.same_as -%}
-                {{ item | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+                {{ item | json }}{%- unless forloop.last -%},{%- endunless -%}
               {%- endfor -%}
             ]
             {%- endif -%}
           }
-        {%- elsif page.authors -%}
-          {%- for author_id in page.authors -%}
-            {%- assign author = site.data.authors[author_id] -%}
+        {%- elsif authorsData -%}
+          {%- for author in authorsData -%}
             {
               "@type": "Person",
-              "@id": {{ author.url | absolute_url | append: "#person" | jsonify }},
-              "name": {{ author.name | jsonify }},
-              "url": {{ author.url | absolute_url | jsonify }}
+              "@id": {{ author.url | absoluteUrl | append: "#person" | json }},
+              "name": {{ author.name | json }},
+              "url": {{ author.url | absoluteUrl | json }}
               {%- if author.image -%},
-              "image": {{ author.image | absolute_url | jsonify }}
+              "image": {{ author.image | absoluteUrl | json }}
               {%- endif -%}
               {%- if author.same_as -%},
               "sameAs": [
                 {%- for item in author.same_as -%}
-                  {{ item | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+                  {{ item | json }}{%- unless forloop.last -%},{%- endunless -%}
                 {%- endfor -%}
               ]
               {%- endif -%}
@@ -96,85 +95,84 @@
         {%- endif -%}
       ]
     }
-    {%- elsif page.layout == "faq" -%},
+    {%- elsif layout == "faq.html" -%},
     {
       "@type": "FAQPage",
-      "@id": {{ page_url | append: "#faq" | jsonify }},
-      "url": {{ page_url | jsonify }},
-      "name": {{ page.title | jsonify }},
-      "description": {{ meta_description | jsonify }},
+      "@id": {{ page_url | append: "#faq" | json }},
+      "url": {{ page_url | json }},
+      "name": {{ title | json }},
+      "description": {{ meta_description | json }},
       "isPartOf": {
-        "@id": {{ website_id | jsonify }}
+        "@id": {{ website_id | json }}
       },
       "mainEntity": [
-        {%- for faq in site.data.faqs -%}
+        {%- for faq in faqs -%}
         {%- capture faq_answer_text -%}
           {{- faq.answer -}}
           {%- if faq.list -%} {{ faq.list | join: " " }}{%- endif -%}
         {%- endcapture -%}
         {
           "@type": "Question",
-          "name": {{ faq.question | strip_html | jsonify }},
+          "name": {{ faq.question | strip_html | json }},
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": {{ faq_answer_text | strip_html | strip | jsonify }}
+            "text": {{ faq_answer_text | strip_html | strip | json }}
           }
         }{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}
       ]
     }
-    {%- elsif page.layout == "author" -%}
-      {%- assign author = site.data.authors[page.author_id] -%},
+    {%- elsif layout == "author.html" -%},
     {
       "@type": "ProfilePage",
-      "@id": {{ page_url | jsonify }},
-      "url": {{ page_url | jsonify }},
-      "name": {{ author.name | jsonify }},
-      "description": {{ author.bio | default: meta_description | jsonify }},
+      "@id": {{ page_url | json }},
+      "url": {{ page_url | json }},
+      "name": {{ author.name | json }},
+      "description": {{ author.bio | default: meta_description | json }},
       "isPartOf": {
-        "@id": {{ website_id | jsonify }}
+        "@id": {{ website_id | json }}
       },
       "mainEntity": {
-        "@id": {{ page_url | append: "#person" | jsonify }}
+        "@id": {{ page_url | append: "#person" | json }}
       }
     },
     {
       "@type": "Person",
-      "@id": {{ page_url | append: "#person" | jsonify }},
-      "name": {{ author.name | jsonify }},
-      "url": {{ page_url | jsonify }},
+      "@id": {{ page_url | append: "#person" | json }},
+      "name": {{ author.name | json }},
+      "url": {{ page_url | json }},
       "worksFor": {
-        "@id": {{ organization_id | jsonify }}
+        "@id": {{ organization_id | json }}
       }
       {%- if author.image -%},
-      "image": {{ author.image | absolute_url | jsonify }}
+      "image": {{ author.image | absoluteUrl | json }}
       {%- endif -%}
       {%- if author.bio -%},
-      "description": {{ author.bio | jsonify }}
+      "description": {{ author.bio | json }}
       {%- endif -%}
       {%- if author.same_as -%},
       "sameAs": [
         {%- for item in author.same_as -%}
-          {{ item | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+          {{ item | json }}{%- unless forloop.last -%},{%- endunless -%}
         {%- endfor -%}
       ]
       {%- endif -%}
     }
     {%- else -%},
     {
-      "@type": "{%- if page.layout == "index" -%}CollectionPage{%- elsif page.url == "/about/" -%}AboutPage{%- elsif page.url == "/contact/" -%}ContactPage{%- else -%}WebPage{%- endif -%}",
-      "@id": {{ page_url | jsonify }},
-      "url": {{ page_url | jsonify }},
-      "name": {{ page.title | default: site.title | jsonify }},
-      "description": {{ meta_description | jsonify }},
+      "@type": "{%- if layout == "index.html" -%}CollectionPage{%- elsif page.url == "/about/" -%}AboutPage{%- elsif page.url == "/contact/" -%}ContactPage{%- else -%}WebPage{%- endif -%}",
+      "@id": {{ page_url | json }},
+      "url": {{ page_url | json }},
+      "name": {{ title | default: settings.title | json }},
+      "description": {{ meta_description | json }},
       "inLanguage": "de",
       "isPartOf": {
-        "@id": {{ website_id | jsonify }}
+        "@id": {{ website_id | json }}
       }
-      {%- if page.image or page.sharing_image or site.sharing_image -%},
+      {%- if image or sharing_image or settings.sharing_image -%},
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": {{ sharing_image | strip | jsonify }}
+        "url": {{ sharing_image | strip | json }}
       }
       {%- endif -%}
     }

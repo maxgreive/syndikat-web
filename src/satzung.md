@@ -1,7 +1,7 @@
 ---
 title: Vereinssatzung Disc Golf Syndikat
 description: Die Satzung des Disc Golf Syndikat e.V. mit Zweck, Mitgliedschaft und Vereinsstruktur im Überblick.
-layout: page
+layout: page.html
 ---
 
 # § 1 Name, Sitz und Geschäftsjahr

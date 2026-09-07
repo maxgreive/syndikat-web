@@ -1,12 +1,11 @@
 ---
-layout: post
 date: 2026-08-27
 title: "Kölner Stadt-Anzeiger zu Gast beim Disc Golf Syndikat"
 description: "Der Kölner Stadt-Anzeiger hat das Disc Golf Syndikat in Weidenpesch besucht. Im Sommer treffen wir uns dienstags zur Syndication Weekly."
 excerpt: "Der Kölner Stadt-Anzeiger war bei uns in Weidenpesch zu Gast. Wer Discgolf selbst ausprobieren möchte, ist bei der Syndication Weekly willkommen."
 image: /assets/images/posts/ksta-artikel.png
 thumbnail: /assets/images/posts/thumbnails/ksta-artikel.png
-tags: presse
+tags: [presse]
 author: max
 ---
 

@@ -6,7 +6,7 @@
           <h3 class="section__title">Tools</h3>
         </div>
         <div class="row">
-          {%- for item in site.data.tools reversed -%}
+          {%- for item in tools reversed -%}
             {%- if item.hide_index -%}{%- continue -%}{%- endif -%}
             {%- capture tool_image -%}
               {%- if item.thumbnail -%}
@@ -16,12 +16,10 @@
               {%- endif -%}
             {%- endcapture -%}
             {%- assign tool_image_path = "/assets/images/" | append: tool_image | strip -%}
-            {%- capture tool_image_cdn -%}{% include snippets/netlify_image_url.html src=tool_image_path w=480 %}{%- endcapture -%}
-            {%- capture tool_image_srcset -%}{% include snippets/netlify_srcset.html src=tool_image_path widths="240,360,480,640" %}{%- endcapture -%}
             <div class="col col-3 col-d-6 col-m-12">
               <a href="{{ item.url }}" class="tag-image">
                 <span class="tag-name">{{- item.title -}}</span>
-                <img loading="lazy" src="{{ tool_image_cdn | strip }}" srcset="{{ tool_image_srcset | strip }}" sizes="(min-width: 1141px) 253px, (min-width: 1025px) 217px, (min-width: 769px) 258px, (min-width: 577px) 264px, calc(100vw - 40px)" data-original-src="{{ tool_image_path }}" alt="{{- item.alt -}}">
+                {% responsiveImage tool_image_path, item.alt, "(min-width: 1141px) 253px, (min-width: 1025px) 217px, (min-width: 769px) 258px, (min-width: 577px) 264px, calc(100vw - 40px)", "240,360,480,640" %}
               </a>
             </div>
           {%- endfor -%}

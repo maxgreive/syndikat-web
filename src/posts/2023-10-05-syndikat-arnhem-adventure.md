@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Arnhem Adventure"
 image: /assets/images/posts/arnhem.jpg
 thumbnail: /assets/images/posts/thumbnails/arnhem.jpg
-tags: events
+tags: [events]
 author: max
 ---
 

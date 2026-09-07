@@ -1,5 +1,5 @@
 ---
-layout: training
+layout: training.html
 title: Discgolf Training in Köln
 description: Gemeinsames Discgolf-Training in Köln für alle Levels mit Anmeldung, Terminen, Trainingsinfos und Hinweisen zum Vereinsangebot.
 excerpt: "Gemeinsames Discgolf-Training für alle Levels! Jeden Freitag um 16:00 Uhr an der Scheibenstraße: Verbessere deine Technik und genieße den Sport in der Gruppe. Jetzt anmelden und mitmachen!"

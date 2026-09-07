@@ -1,16 +1,15 @@
 ---
-layout: post
 title: "Turnier-Equipment, das den Unterschied macht"
 image: /assets/images/posts/packliste.jpg
 thumbnail: /assets/images/posts/thumbnails/packliste_thumb.jpg
-tags: turniere
+tags: [turniere]
 author: max
 date: 2024-08-21
 ---
 
 Steht dein nächstes Turnier vor der Tür und du bist unsicher, ob du alles Nötige eingepackt hast? Klar, die Basics wie Discs, Marker und dein Smartphone sind selbstverständlich. Aber wollen wir mit euch ein paar Geheimtipps teilen, die dein Turniererlebnis nicht nur angenehmer, sondern vielleicht sogar erfolgreicher machen können. Hier kommen sie, die kleinen Helfer, die oft übersehen werden!
 
-{% include snippets/checklist.html %}
+{% include 'snippets/checklist.html' %}
 
 ## 1. Handtuch – ja, mehrere!
 Nicht nur eines, sondern gleich ein paar Handtücher solltest du einpacken. Warum? Weil du nie weißt, wie das Wetter wird! Ein Handtuch für nasse Discs, eines gegen Schweiß und vielleicht noch eins extra für den Fall, dass du in einen Regenschauer kommst. Trockene Discs bedeuten bessere Würfe! Zusätzlich kannst du das Desinfektionsspray nutzen, um klebrige Hände nach dem Snacken zu reinigen.

@@ -2,28 +2,31 @@
 
 ## Setup
 
-Use Node.js 22.18 or newer (the critical-CSS generator requires it), then install the Node and Ruby dependencies:
+Use Node.js 22.18 or newer (the critical-CSS generator requires it), then install the dependencies:
 
 ```sh
 npm install
-bundle install
 ```
 
-Start both development processes with `npm run dev`. Use `npm run dev:jekyll` or `npm run dev:svelte` when working on only one side.
+Start both development processes with `npm run dev`. Use `npm run dev:site` or `npm run dev:svelte` when working on only one side.
 
 ## Build pipeline
 
 - `npm run build:svelte` delegates to `svelte-components/` and bundles the product-search UI.
 - `npm run build:css` minifies CSS.
 - `npm run build:assets` runs both asset tasks in parallel.
-- `npm run build:jekyll` renders the production static site.
-- `npm run build` runs assets, Jekyll, and critical-CSS generation in sequence. This is Netlify's build command.
+- `npm run build:site` renders the production static site with Eleventy.
+- `npm run build` runs assets, Eleventy, and critical-CSS generation in sequence. This is Netlify's build command.
 
 ## Content authoring
 
-Create regular pages as root-level Markdown files with front matter and posts as dated files in `_posts/`. Reuse an existing layout where possible. Put repeatable structured content in `_data/` and shared markup in `_includes/`; avoid embedding credentials or environment-specific API values in content.
+Create regular pages as Markdown files in `src/` with front matter and posts as dated files in `src/posts/`. Layout references use their explicit `.html` filenames. Put repeatable structured content in `src/_data/` and shared markup in `src/_includes/`; avoid embedding credentials or environment-specific API values in content.
 
-Images and other static files belong under `assets/`. Check responsive image and image-CDN behavior before adding very large assets. Editing `_config.yml` requires restarting Jekyll because it is not reloaded by `jekyll serve`.
+The site search is a small browser module. It fetches Eleventy’s post-only `/search.json` index once and matches normalized title, tag, and rendered post text locally, including German umlaut spellings such as `Köln`, `Koln`, and `Koeln`; no hosted search service or third-party search dependency is required.
+
+Keep a single high-resolution source image in `src/assets/images/`. During the Eleventy build, `@11ty/eleventy-img` creates WebP variants and JPEG fallbacks only for images rendered through the `responsiveImage` shortcode. Generated files are written to `_site/assets/images/generated/` and are not committed.
+
+Images and other static files belong under `assets/`. Check responsive image and image-CDN behavior before adding very large assets. Eleventy watches templates and data during development.
 
 ## API configuration
 

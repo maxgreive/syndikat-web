@@ -1,7 +1,7 @@
 ---
 title: Vereinsratings Disc Golf Syndikat
 description: Aktuelle Vereinsratings der Mitglieder des Disc Golf Syndikat mit Rangliste und Verweis auf weiterführende Statistiken.
-layout: ratings
+layout: ratings.html
 noindex: true
 image: /assets/images/ratings-sharing-image.jpg
 excerpt: Entdecke die Rangliste der Disc Golf Syndikat-Spieler! Finde heraus, wer die Highlights in unserem Club setzt und verfolge den Fortschritt deiner Lieblingsspieler. Alles, was du über die Mitglieder des Disc Golf Syndikat wissen musst, findest du hier.

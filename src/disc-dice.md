@@ -1,7 +1,7 @@
 ---
 title: Disc Dice Würfelspiel
 description: Das Disc Dice Würfelspiel für Disc Golf mit Zufallswürfen, Scheiben-Challenges und schnellen Ideen für abwechslungsreiche Trainingsrunden.
-layout: dice-game
+layout: dice-game.html
 ---
 
 * Bei "Other's choice" bestimmt der Flight für jeden Spieler eine Scheibe aus dessen Bag

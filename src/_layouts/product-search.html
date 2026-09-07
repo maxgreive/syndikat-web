@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 ---
 
 <div class="page-head">
@@ -7,7 +7,7 @@ layout: default
     <div class="row">
       <div class="col col-12">
         <div class="page__info">
-          <h1 class="page__title">{{- page.title -}}</h1>
+          <h1 class="page__title">{{- title -}}</h1>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@ layout: default
   <div class="row">
     <div class="col col-12">
       <script id="product-search-shops" type="application/json">
-        {{ site.data.product_search_shops | jsonify }}
+        {{ product_search_shops | json }}
       </script>
 
       <div>
@@ -30,7 +30,7 @@ layout: default
       <h2>Unterstützte Shops</h2>
 
       <div class="supported-shops">
-        {% for shop in site.data.product_search_shops %}
+        {% for shop in product_search_shops %}
           {% unless shop.disabled %}
             <div class="supported-shop">
               <a href="{{ shop.url }}?ref=syndikat.golf" target="_blank" rel="noopener noreferrer">

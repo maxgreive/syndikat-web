@@ -1,7 +1,7 @@
 ---
 title: Mitglied im Syndikat werden
 description: Werde Mitglied beim Disc Golf Syndikat und sichere dir Training, Turnierteilnahme, Community-Zugang und weitere Vorteile im Verein.
-layout: membership
+layout: membership.html
 ---
 
 Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
@@ -12,7 +12,7 @@ Wenn du vorab erst einmal verstehen willst, wie der Einstieg über Kurs, Liga un
 
 Wähle hier Deinen Abrechnungszeitraum aus. Die Mitgliedschaft verlängert sich automatisch, wenn Du nicht kündigst. Als Zahlungsdienstleister nutzen wir [Stripe](https://stripe.com/de). Es werden keine Daten auf unseren Servern gespeichert. Bei Fragen zu Mitgliedschaft oder Zahlungsmöglichkeiten, [schreib uns über das Kontaktformular](/contact/).
 
-{% include components/plan_selection.html %}
+{% include 'components/plan_selection.html' %}
 
 Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten zu ändern, kannst du [im Stripe Dashboard deinen Account verwalten](https://billing.stripe.com/p/login/3cseY17778iO6Vq6oo).
 

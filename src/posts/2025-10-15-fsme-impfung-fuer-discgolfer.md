@@ -1,11 +1,10 @@
 ---
-layout: post
 date: 2025-10-15
 title: "FSME-Impfung für Disc Golfer: So bleibst du sicher auf dem Kurs"
 excerpt: "Oktober und November sind perfekte Monate, um über Gesundheit nachzudenken. Erfahre, warum Disc Golfer die FSME-Impfung brauchen und wie du dich effektiv vor Zecken schützt."
 image: /assets/images/posts/fsme-title.jpg
 thumbnail: /assets/images/posts/thumbnails/fsme-thumb.jpg
-tags: gesundheit
+tags: [gesundheit]
 author: max
 ---
 

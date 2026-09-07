@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "So findest du dein erstes Disc-Golf-Turnier und meldest dich an"
 description: "So findest du dein erstes Disc-Golf-Turnier in Deutschland, meldest dich an und vermeidest typische Fehler bei der Turnieranmeldung."
 image: /assets/images/posts/turnier-guide.jpg
 thumbnail: /assets/images/posts/thumbnails/turnier-guide_thumb.jpg
-tags: turniere
+tags: [turniere]
 author: max
 excerpt: Viele Einsteiger wissen nicht, wie die Turnieranmeldung im Disc Golf in Deutschland überhaupt funktioniert. Dieser Leitfaden erklärt den Einstieg Schritt für Schritt.
 ---

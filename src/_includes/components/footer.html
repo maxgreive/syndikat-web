@@ -4,24 +4,24 @@
       <div class="row">
         <div class="col col-5 col-d-12">
           <div class="footer__author">
-            <p class="footer__author-name">{{ site.title }}</p>
-            <p class="footer__author-bio">{{ site.description | escape }}</p>
+            <p class="footer__author-name">{{ settings.title }}</p>
+            <p class="footer__author-bio">{{ settings.description | escape }}</p>
             <div class="footer-menu">
               <ul class="footer-menu__list list-reset">
-                {% for item in site.data.menus.footer_menu.items %}
+                {% for item in menus.footer_menu.items %}
                   <li class="footer-menu__item">
                     <a href="{{- item.link -}}">{{ item.label }}</a>
                   </li>
                 {% endfor %}
               </ul>
             </div>
-            {% if site.socials %}
+            {% if settings.socials %}
               <div class="social">
                 <ul class="social__list list-reset">
-                  {% for item in site.socials %}
+                  {% for item in settings.socials %}
                     <li class="social__item">
                       <a class="social__link" href="{{- item.url -}}" target="_blank" rel="noopener" aria-label="{{ item.name }}" data-social-name="{{ item.name }}">
-                        {% include snippets/lucide/icon.html name=item.name class="lucide" %}
+                        {% include 'snippets/lucide/icon.html', name: item.name, class: "lucide" %}
                       </a>
                     </li>
                   {% endfor %}
@@ -31,16 +31,14 @@
           </div>
         </div>
 
-        {% assign gallery = site.data.footer.gallery %}
+        {% assign gallery = footer.gallery %}
         <div class="col col-6 push-1 col-d-12 push-d-0">
           <div class="footer__gallery">
             <div class="gallery-footer">
               <div class="gallery" style="grid-template-columns: repeat(3, auto);">
-                {% for item in gallery.items %}
-                  {%- capture footer_thumb_cdn -%}{% include snippets/netlify_image_url.html src=item.image w=172 h=130 fit="cover" %}{%- endcapture -%}
-                  {%- capture footer_full_cdn -%}{% include snippets/netlify_image_url.html src=item.original_image w=1600 %}{%- endcapture -%}
+                {% for item in footer.gallery.items %}
                   <div class="gallery__image">
-                    <img src="{{ footer_thumb_cdn | strip }}" data-src="{{ footer_full_cdn | strip }}" data-original-src="{{ item.original_image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
+                    <img src="{{ item.image }}" data-src="{{ item.original_image }}" data-original-src="{{ item.original_image }}" alt="{{ item.alt }}" loading="lazy" width="172" height="130">
                   </div>
                 {% endfor %}
               </div>
@@ -55,8 +53,8 @@
       <div class="row">
         <div class="col col-12">
           <div class="footer__info-box">
-            <div class="copyright">{{ 'now' | date: "%Y" }} &copy; <a href="/">{{ site.title }}</a>. Crafted in <a href="https://x.com/maex2k">Cologne</a>.</div>
-            <div class="top" title="Top">{% include snippets/lucide/icon.html name="chevron-up" class="lucide" %}</div>
+            <div class="copyright">{{ 'now' | date: "%Y" }} &copy; <a href="/">{{ settings.title }}</a>. Crafted in <a href="https://x.com/maex2k">Cologne</a>.</div>
+            <div class="top" title="Top">{% include 'snippets/lucide/icon.html', name: "chevron-up", class: "lucide" %}</div>
           </div>
         </div>
       </div>

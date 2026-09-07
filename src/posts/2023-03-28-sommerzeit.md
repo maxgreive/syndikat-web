@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Die Sommerzeit ist da!
 image: /assets/images/posts/sommerzeit.jpg
 thumbnail: /assets/images/posts/thumbnails/sommerzeit.jpg
-tags: league
+tags: [league]
 author: max
 description: Mit der Sommerzeit startet unsere wöchentliche Disc Golf Liga in Köln wieder dienstags am Abend. Alle Levels sind willkommen.
 ---

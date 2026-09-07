@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Die Saison 2023 steht in den Startlöchern
 image: /assets/images/posts/saison-2023-startloecher.jpg
 thumbnail: /assets/images/posts/thumbnails/saison-2023-startloecher.jpg
-tags: community
+tags: [community]
 author: max
 ---
 

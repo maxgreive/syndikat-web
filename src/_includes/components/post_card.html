@@ -2,15 +2,15 @@
   <div class="article__inner">
     <div class="article__head">
       {%- assign is_eager = false -%}
-      {%- if include.eager == true or include.eager == "true" -%}
+      {%- if eager == true or eager == "true" -%}
         {%- assign is_eager = true -%}
       {%- endif -%}
-      {%- if include.item.date -%}
-        <time class="article__date" datetime="{{- include.item.date -}}">
-          {{- include.item.date | date_to_string -}}
+      {%- if item.date -%}
+        <time class="article__date" datetime="{{- item.date | date: "%Y-%m-%dT%H:%M:%S%:z" -}}">
+          {{- item.date | date: "%d %b %Y" -}}
         </time>
       {%- endif -%}
-      {%- if include.item.video -%}
+      {%- if item.data.video -%}
         <div class="video-icon">
           <div class="circle pulse"></div>
           <div class="circle">
@@ -20,26 +20,20 @@
           </div>
         </div>
       {%- endif -%}
-      {%- capture card_original_image -%}{%- if include.item.thumbnail -%}{{- include.item.thumbnail -}}{%- elsif include.item.image -%}{{- include.item.image -}}{%- else -%}{%- include snippets/transparent_pixel.html -%}{%- endif -%}{%- endcapture -%}
-      {%- capture card_cdn_image -%}{% include snippets/netlify_image_url.html src=card_original_image w=700 %}{%- endcapture -%}
-      {%- capture card_srcset -%}{% include snippets/netlify_srcset.html src=card_original_image widths="240,320,480,640,800" %}{%- endcapture -%}
-      <a class="article__image" href="{{- include.item.url -}}">
-        <img width="350" height="233"{% unless is_eager %} class="lazy"{% endunless %}
-          {% if is_eager %}src{% else %}data-src{% endif %}="{{ card_cdn_image | strip }}"
-          {% if is_eager %}srcset{% else %}data-srcset{% endif %}="{{ card_srcset | strip }}"
-          {% if is_eager %}sizes{% else %}data-sizes{% endif %}="(min-width: 1141px) 348px, (min-width: 1025px) 301px, (min-width: 769px) 338px, (min-width: 577px) 528px, calc(100vw - 40px)"
-          {% unless is_eager %}loading="lazy" decoding="async"{% endunless %}
-          data-original-src="{{ card_original_image | strip }}" alt="{{- include.item.title | escape -}}">
+      {%- capture card_original_image -%}{%- if item.data.thumbnail -%}{{- item.data.thumbnail -}}{%- elsif item.data.image -%}{{- item.data.image -}}{%- else -%}{%- include 'snippets/transparent_pixel.html' -%}{%- endif -%}{%- endcapture -%}
+      <a class="article__image" href="{{- item.url -}}">
+        {% responsiveImage card_original_image, item.data.title, "(min-width: 1141px) 348px, (min-width: 1025px) 301px, (min-width: 769px) 338px, (min-width: 577px) 528px, calc(100vw - 40px)", "240,320,480,640,800", is_eager %}
       </a>
     </div>
     <div class="article__content">
       <h2 class="article__title">
-        <a href="{{- include.item.url -}}">
-          {{- include.item.title -}}
+        <a href="{{- item.url -}}">
+          {{- item.data.title -}}
         </a>
       </h2>
-      {%- if include.item.excerpt -%}
-        <p class="article__excerpt">{{- include.item.excerpt | strip_html | slice: 0, 92 -}} …</p>
+      {%- assign excerpt = item | postExcerpt -%}
+      {%- if excerpt != "" -%}
+        <p class="article__excerpt">{{- excerpt | slice: 0, 92 -}} …</p>
       {%- endif -%}
     </div>
   </div>

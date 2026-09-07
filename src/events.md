@@ -1,7 +1,7 @@
 ---
 title: Disc Golf Events in Köln
 description: Infos zur wöchentlichen Liga und zu weiteren Disc Golf Events des Disc Golf Syndikat in Köln mit Terminen, Ort und Kontaktmöglichkeiten.
-layout: page
+layout: page.html
 ---
 
 ## Syndication Weekly

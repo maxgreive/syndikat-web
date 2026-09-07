@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "Wo kann man Disc Golf Scheiben kaufen? Online-Shop, Verein oder gebraucht?"
 description: "Praktischer Leitfaden zum Kauf von Disc Golf Scheiben: online, gebraucht oder über die Community. Mit Tipps für Einsteiger und Link zum Preisvergleich."
 image: /assets/images/posts/preisvergleich.jpg
 thumbnail: /assets/images/posts/thumbnails/preisvergleich_thumb.jpg
-tags: app discs
+tags: [app, discs]
 author: max
 excerpt: Disc Golf Scheiben kaufen ist für Einsteiger oft schwerer als gedacht. Hier erfährst du, welche Wege sinnvoll sind und worauf du beim Kauf achten solltest.
 ---

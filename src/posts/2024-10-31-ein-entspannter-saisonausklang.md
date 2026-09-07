@@ -1,8 +1,7 @@
 ---
-layout: post
 image: /assets/images/posts/herbstfest-title.jpg
 thumbnail: /assets/images/posts/thumbnails/herbstfest-title-t.jpg
-tags: events
+tags: [events]
 title: "Rückblick auf das Herbstfest: Ein entspannter Saisonausklang"
 author: max
 ---

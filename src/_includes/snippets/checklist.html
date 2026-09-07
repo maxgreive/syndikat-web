@@ -1,9 +1,9 @@
 <details>
     <summary>Turnier-Packliste zum Abhaken ausklappen</summary>
 
-    {% for check in site.data.checklist %}
+    {% for check in checklist %}
         <div class="form__checkbox-group"><label class="form__label form__checkbox-group">
-            <input type="checkbox" data-value="{{ check | slugify }}" class="form__input">{{ check }}</label>
+            <input type="checkbox" data-value="{{ check | slug }}" class="form__input">{{ check }}</label>
         </div>
     {% endfor %}
 

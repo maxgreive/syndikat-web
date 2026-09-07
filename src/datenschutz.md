@@ -1,7 +1,7 @@
 ---
 title: Datenschutz Disc Golf Syndikat
 description: Informationen zur Verarbeitung personenbezogener Daten auf syndikat.golf und bei Formularen des Disc Golf Syndikat.
-layout: page
+layout: page.html
 ---
 
 Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Nachfolgend informieren wir Sie gemäß den geltenden Datenschutzgesetzen, insbesondere der Europäischen Datenschutzgrundverordnung (DSGVO), über die Verarbeitung Ihrer Daten bei der Nutzung unserer Website syndikat.golf.

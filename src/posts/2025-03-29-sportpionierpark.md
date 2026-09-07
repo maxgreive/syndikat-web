@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Neue Putting-Anlage im Sportpionierpark Köln"
 image: /assets/images/posts/sportpionierpark.jpg
 thumbnail: /assets/images/posts/thumbnails/sportpionierpark.jpg
-tags: kurse
+tags: [kurse]
 author: max
 ---
 

@@ -22,4 +22,4 @@ Small page-specific features are conventional browser scripts in `assets/js/`: b
 
 ## API boundary
 
-The browser selects `http://localhost:8080` on localhost and `https://api.syndikat.golf` elsewhere. Product search, tournament maps, ratings, bag tags, and training use this backend. The endpoint and payload contract is maintained in [maxgreive/syndikat-api](https://github.com/maxgreive/syndikat-api/blob/master/docs/openapi.yaml), rather than copied into this repository.
+The browser selects `http://localhost:8080` on localhost and `https://api.syndikat.golf` elsewhere. Product search, tournament maps, ratings, bag tags, and training use this backend. The endpoint and payload contract is maintained in [mxlttr/syndikat-api](https://github.com/mxlttr/syndikat-api/blob/master/docs/openapi.yaml), rather than copied into this repository.

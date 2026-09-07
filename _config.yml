@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://syndikat.golf" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: maex2k
-github_username:  maxgreive
+github_username:  mxlttr
 permalink: /blog/:categories/:title/
 sharing_image: /assets/images/syndikat-sharing-image.png
 hero_image: /assets/images/hero.jpg

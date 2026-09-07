@@ -28,4 +28,4 @@ npm run build
 
 The full build runs Svelte and CSS asset builds, Jekyll production rendering, and critical-CSS generation. Netlify runs `npm run build` and publishes `_site`.
 
-When changing a website API call, coordinate the implementation and [API contract](https://github.com/maxgreive/syndikat-api/blob/master/docs/openapi.yaml) in `maxgreive/syndikat-api`.
+When changing a website API call, coordinate the implementation and [API contract](https://github.com/mxlttr/syndikat-api/blob/master/docs/openapi.yaml) in `mxlttr/syndikat-api`.

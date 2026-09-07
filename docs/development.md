@@ -34,4 +34,4 @@ Browser code currently chooses `http://localhost:8080` for `localhost`/`127.0.0.
 - product feed and product-search SSE stream;
 - training status, participant listing, signup, and removal.
 
-Read the API schemas in [maxgreive/syndikat-api](https://github.com/maxgreive/syndikat-api/blob/master/docs/openapi.yaml) before changing a request or response assumption.
+Read the API schemas in [mxlttr/syndikat-api](https://github.com/mxlttr/syndikat-api/blob/master/docs/openapi.yaml) before changing a request or response assumption.

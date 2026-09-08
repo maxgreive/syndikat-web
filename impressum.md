@@ -17,7 +17,7 @@ Webseite: [https://syndikat.golf/](https://syndikat.golf/)
 
 Der Verein wird gerichtlich und außergerichtlich durch den 1. Vorsitzenden und den 2. Vorsitzenden gemeinschaftlich vertreten:
 
-* **Max Greive**, 1. Vorsitzender
+* **Max Lutter**, 1. Vorsitzender
 * **Kerstin Esterle**, 2. Vorsitzende
 
 ## Registereintrag
@@ -29,7 +29,7 @@ Registernummer: VR 21064
 
 Gemäß § 18 Abs. 2 MStV:
 
-Max Greive<br>
+Max Lutter<br>
 Neuhöfferstr. 3<br>
 50679 Köln<br>
 

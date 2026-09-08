@@ -1,0 +1,40 @@
+<div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+    <div class="article__head">
+      {%- assign is_eager = false -%}
+      {%- if eager == true or eager == "true" -%}
+        {%- assign is_eager = true -%}
+      {%- endif -%}
+      {%- if item.date -%}
+        <time class="article__date" datetime="{{- item.date | date: "%Y-%m-%dT%H:%M:%S%:z" -}}">
+          {{- item.date | date: "%d %b %Y" -}}
+        </time>
+      {%- endif -%}
+      {%- if item.data.video -%}
+        <div class="video-icon">
+          <div class="circle pulse"></div>
+          <div class="circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <polygon points="40,30 65,50 40,70"></polygon>
+            </svg>
+          </div>
+        </div>
+      {%- endif -%}
+      {%- capture card_original_image -%}{%- if item.data.thumbnail -%}{{- item.data.thumbnail -}}{%- elsif item.data.image -%}{{- item.data.image -}}{%- else -%}{%- include 'snippets/transparent_pixel.html' -%}{%- endif -%}{%- endcapture -%}
+      <a class="article__image" href="{{- item.url -}}">
+        {% responsiveImage card_original_image, item.data.title, "(min-width: 1141px) 348px, (min-width: 1025px) 301px, (min-width: 769px) 338px, (min-width: 577px) 528px, calc(100vw - 40px)", "240,320,480,640,800", is_eager %}
+      </a>
+    </div>
+    <div class="article__content">
+      <h2 class="article__title">
+        <a href="{{- item.url -}}">
+          {{- item.data.title -}}
+        </a>
+      </h2>
+      {%- assign excerpt = item | postExcerpt -%}
+      {%- if excerpt != "" -%}
+        <p class="article__excerpt">{{- excerpt | slice: 0, 92 -}} …</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

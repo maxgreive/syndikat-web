@@ -1,0 +1,217 @@
+{%- capture sharing_image -%}
+{%- if image -%}
+{{- image | absoluteUrl -}}
+{%- elsif sharing_image -%}
+{{- sharing_image | absoluteUrl -}}
+{%- else -%}
+{{- settings.sharing_image | absoluteUrl -}}
+{%- endif -%}
+{%- endcapture -%}
+
+{%- capture meta_description_raw -%}
+  {%- if description != blank -%}
+    {{- description | strip_html | strip_newlines | strip -}}
+  {%- elsif layout == "author.html" and author.bio -%}
+    {{- author.bio | strip_html | strip_newlines | strip -}}
+  {%- elsif excerpt != blank -%}
+    {{- excerpt | strip_html | strip_newlines | strip -}}
+  {%- else -%}
+    {{- settings.description | strip_html | strip_newlines | strip -}}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign meta_description = meta_description_raw | strip | truncate: 157, "..." -%}
+
+{%- capture author_names -%}
+  {%- if author -%}
+    {{- authorData.name -}}
+  {%- elsif authorsData -%}
+    {%- for post_author in authorsData -%}
+      {{- post_author.name -}}{%- unless forloop.last -%}, {% endunless %}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  {% if analytics_enabled %}
+  <script defer src="https://stats.syndikat.golf/script.js"
+    data-website-id="20901b1f-9346-4191-8c70-445a09059c4f"
+    data-performance="true"
+  ></script>
+  {% endif %}
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem("theme");
+      } catch (_) {}
+      const systemPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = storedTheme === "light" || storedTheme === "dark"
+        ? storedTheme === "dark"
+        : systemPrefersDark;
+
+      root.toggleAttribute("dark", isDark);
+      root.style.colorScheme = isDark ? "dark" : "light";
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background-color: #fff;
+      --background-alt-color: #f3f7ff;
+      --text-color: #1e2740;
+      --text-alt-color: #716f8a;
+      --heading-font-color: #1e2740;
+      --link-color: #1e2740;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    :root[dark] {
+      color-scheme: dark;
+      --background-color: #111016;
+      --background-alt-color: #1a1a1f;
+      --text-color: #9e9e9e;
+      --text-alt-color: #9e9e9e;
+      --heading-font-color: #f0f0f0;
+      --link-color: #f0f0f0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .toggle-theme .toggle-moon,
+    :root[dark] .toggle-theme .toggle-sun {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+
+    .toggle-theme .toggle-sun,
+    :root[dark] .toggle-theme .toggle-moon {
+      opacity: 0;
+      filter: blur(2px);
+      transform: scale(0.25);
+    }
+
+    html,
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    .hero {
+      background-color: var(--background-alt-color);
+    }
+
+    .hero__image {
+      background-color: var(--background-color);
+    }
+  </style>
+  <title>{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}</title>
+  <link rel="preload" href="{{ '/assets/fonts/Jost-900-Black.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/Jost-400-Book.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="canonical" href="{{ page.url | absoluteUrl }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ settings.title | escape }}" href="{{ '/feed.xml' | url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{- sharing_image -}}">
+  <meta name="twitter:image:alt" content="{{ title | default: settings.title | escape }}">
+  <meta name="twitter:title" content="{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}">
+  <meta property="og:type" content="{% if layout == 'post.html' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if title %}{{ title | escape }} &ndash; {% endif %}{{ settings.title }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+  {% if noindex %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+  <meta property="og:description" content="{{ meta_description | escape }}">
+  <meta name="twitter:description" content="{{ meta_description | escape }}">
+  <meta name="description" content="{{ meta_description | escape }}">
+  <meta property="og:image" content="{{- sharing_image -}}">
+  {% assign author_names = author_names | strip %}
+  {% if author_names != "" %}
+  <meta name="author" content="{{ author_names | escape }}">
+  {% endif %}
+  {% if layout == "post.html" %}
+    {% if author %}
+      {% assign post_author = authorData %}
+      <meta property="article:author" content="{{ post_author.url | absoluteUrl }}">
+      {% if post_author.twitter %}
+        <meta name="twitter:creator" content="@{{ post_author.twitter }}">
+      {% endif %}
+    {% elsif authorsData %}
+      {% for post_author in authorsData %}
+        <meta property="article:author" content="{{ post_author.url | absoluteUrl }}">
+      {% endfor %}
+      {% assign first_author = authorsData | first %}
+      {% if first_author.twitter %}
+        <meta name="twitter:creator" content="@{{ first_author.twitter }}">
+      {% endif %}
+    {% endif %}
+    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S%:z" }}">
+    <meta property="article:modified_time" content="{{ last_modified_at | default: page.date | date: "%Y-%m-%dT%H:%M:%S%:z" }}">
+    {% if tags %}
+      {% for tag in tags %}
+        <meta property="article:tag" content="{{ tag | escape }}">
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+  <link rel="icon" href="{{ '/assets/favicon.ico' | url }}" sizes="32x32">
+  <link rel="icon" href="{{ '/assets/icon.svg' | url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | url }}">
+  <link rel="manifest" href="{{ '/manifest.json' | url }}">
+  {% include 'snippets/structured_data.html' %}
+  {% if layout == 'index.html' %}
+  {%- assign hero_image = settings.hero_image | default: "/assets/images/hero.jpg" -%}
+  {%- assign first_post = collections.posts | first -%}
+  {%- capture first_post_image -%}
+    {%- if first_post.data.thumbnail -%}
+      {{- first_post.data.thumbnail -}}
+    {%- elsif first_post.data.image -%}
+      {{- first_post.data.image -}}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- if first_post_image != "" -%}
+    {% responsiveImagePreload first_post_image, "calc(100vw - 40px)", "240,320,480,640,800", "(max-width: 576px)" %}
+  {%- endif -%}
+  {% responsiveImagePreload hero_image, "(max-width: 768px) 560px, (max-width: 1024px) 740px, 600px", "200,470,762,1020,1200", "(min-width: 577px)" %}
+  {% endif %}
+  <link href="{{ '/assets/fonts/Jost.css' | url }}" rel="stylesheet">
+
+  <script src="{{ '/assets/js/scripts.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/search.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/common.js' | url }}" defer></script>
+  {% if layout == 'product-search.html' %}
+  <script defer src="{{ '/assets/svelte-bundle.js' | url }}"></script>
+  <link href="{{ '/assets/svelte-bundle.css' | url }}" rel="stylesheet">
+  {% endif %}
+  {% if layout == 'dice-game.html' %}
+  <script src="{{ '/assets/js/dice-game.js' | url }}" defer></script>
+  {% elsif layout == 'tournaments-map.html' %}
+  <link href="{{ '/assets/css/vendors/leaflet.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/MarkerCluster.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/MarkerCluster.Default.css' | url }}" rel="stylesheet">
+  <link href="{{ '/assets/css/vendors/leaflet.resetview.css' | url }}" rel="stylesheet">
+  <script src="{{ '/assets/js/vendors/leaflet.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.markercluster.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.resetview.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/vendors/leaflet.messagebox.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/tournaments-map.js' | url }}" defer></script>
+  {% elsif layout == 'training.html' %}
+  <script src="{{ '/assets/js/training.js' | url }}" defer></script>
+  {% elsif layout == 'ratings.html' %}
+  <script src="{{ '/assets/js/ratings.js' | url }}" defer></script>
+  {% elsif layout == 'bag-tags.html' %}
+  <script src="{{ '/assets/js/bag-tags.js' | url }}" defer></script>
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | url }}">
+  {%- if production -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | url }}">
+  {%- else -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  {%- endif -%}
+</head>

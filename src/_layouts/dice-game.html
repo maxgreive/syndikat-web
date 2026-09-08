@@ -1,0 +1,35 @@
+---
+layout: default.html
+---
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- title -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <div class="page">
+    <div class="page__content">
+      <div class="dice-wrapper">
+        <p>Drück den Button und lass den Zufall entscheiden wie der nächste Wurf aussieht! Der erste Würfel gibt den Wurf an, der Zweite die Art der Scheibe. Viel Spaß beim Spielen!</p>
+        <div class="dice">
+          <div class="die">🎲</div>
+          <div class="die">🎲</div>
+        </div>
+
+        <button class="button button--primary" data-umami-event="dice_roll" data-roll-dice>Roll the dice</button>
+      </div>
+
+      <div>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

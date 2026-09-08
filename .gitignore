@@ -1,9 +1,7 @@
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+_site_jekyll/
 .DS_Store
 node_modules/
-assets/svelte-bundle*
-assets/css/style.min.css
+src/assets/svelte-bundle*
+src/assets/css/style.min.css
 editorial/*

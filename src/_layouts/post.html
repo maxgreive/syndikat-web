@@ -1,0 +1,91 @@
+---
+layout: default.html
+---
+<div class="post-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-{% if video %}12{% else %}6 col-d-12{% endif %}">
+        {% if video %}
+          <div class="post-video">
+            <div class="post-video__wrap">
+              <iframe src="https://www.youtube.com/embed/{{ video }}" loading="lazy" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        {% else %}
+          <div class="post-image">
+            {% responsiveImage image, title, "(min-width: 1140px) 538px, (min-width: 1025px) calc(50vw - 32px), (min-width: 769px) 708px, calc(100vw - 40px)", "480,720,960,1200", true %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="col col-{% if video %}12{% else %}6 col-d-12{% endif %}">
+        <div class="post__info{% if video %} post__info-video{% endif %}">
+          <div class="post__tags">
+            {% for tag in tags %}
+              <span class="post__tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <h1 class="post__title">{{ title }}</h1>
+          <div class="post__meta">
+            {% if authorData %}
+              {%- assign post_author = authorData -%}
+              <span class="post__author-image">
+                {% responsiveImage post_author.image, post_author.name, "40px", "40,80,120" %}
+              </span>
+              <div class="post__meta-bottom">
+                {% if post_author.url %}
+                  <a href="{{ post_author.url }}" rel="author" class="post__author">{{- post_author.name -}}</a>
+                {% elsif post_author.twitter %}
+                  <a href="//twitter.com/{{- post_author.twitter -}}" rel="author" class="post__author">{{- post_author.name -}}</a>
+                {% else %}
+                  <span class="post__author author">{{- post_author.name -}}</span>
+                {% endif %}
+                {% capture i18n_date %}
+                  {{ page.date | date: "%-d" | append: "." }}
+                  {% assign m = page.date | date: "%-m" | minus: 1 %}
+                  {{ de.months[m] }}
+                  {{ page.date | date: "%Y" }}
+                {% endcapture %}
+                <time class="post__date" datetime="{{- page.date | date: "%Y-%m-%dT%H:%M:%S%:z" -}}">{{- i18n_date -}}</time>
+              </div>
+            {% else %}
+            {% for post_author in authorsData %}
+              <span class="post__author-image">
+                {% responsiveImage post_author.image, post_author.name, "40px", "40,80,120" %}
+              </span>
+
+              <div class="post__meta-bottom">
+                {% if post_author.url %}
+                  <a href="{{ post_author.url }}" rel="author" class="post__author">{{- post_author.name -}}</a>
+                {% elsif post_author.twitter %}
+                  <a href="//twitter.com/{{- post_author.twitter -}}" rel="author" class="post__author">{{- post_author.name -}}</a>
+                {% else %}
+                  <span class="post__author author">{{- post_author.name -}}</span>
+                {% endif %}
+                {% if forloop.first %}
+                  {% capture i18n_date %}
+                    {{ page.date | date: "%-d" | append: "." }}
+                    {% assign m = page.date | date: "%-m" | minus: 1 %}
+                    {{ de.months[m] }}
+                    {{ page.date | date: "%Y" }}
+                  {% endcapture %}
+                  <time class="post__date" datetime="{{- page.date | date: "%Y-%m-%dT%H:%M:%S%:z" -}}">{{- i18n_date -}}</time>
+                {% else %}
+                  <span class="post__date">Co-Autor</span>
+                {% endif %}
+              </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <article class="post">
+    <div class="post__content">{{ content }}</div>
+    {% assign share_excerpt = excerpt | default: content | firstParagraph %}
+    {% include 'components/post_share.html', excerpt: share_excerpt %}
+  </article>
+</div>

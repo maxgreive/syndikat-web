@@ -1,0 +1,30 @@
+<section class="section section-tools" id="tools">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="section__head">
+          <h3 class="section__title">Tools</h3>
+        </div>
+        <div class="row">
+          {%- for item in tools reversed -%}
+            {%- if item.hide_index -%}{%- continue -%}{%- endif -%}
+            {%- capture tool_image -%}
+              {%- if item.thumbnail -%}
+                {{- item.thumbnail -}}
+              {%- else -%}
+                {{- item.image -}}
+              {%- endif -%}
+            {%- endcapture -%}
+            {%- assign tool_image_path = "/assets/images/" | append: tool_image | strip -%}
+            <div class="col col-3 col-d-6 col-m-12">
+              <a href="{{ item.url }}" class="tag-image">
+                <span class="tag-name">{{- item.title -}}</span>
+                {% responsiveImage tool_image_path, item.alt, "(min-width: 1141px) 253px, (min-width: 1025px) 217px, (min-width: 769px) 258px, (min-width: 577px) 264px, calc(100vw - 40px)", "240,360,480,640" %}
+              </a>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

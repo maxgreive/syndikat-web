@@ -1,0 +1,25 @@
+---
+title: Disc Golf Blog aus Köln
+description: Turnierberichte, Tipps, Ausflüge und Vereinsgeschichten rund um Disc Golf in Köln und aus der Community des Disc Golf Syndikat.
+layout: default.html
+pagination:
+  data: collections.posts
+  size: 6
+  addAllPagesToCollections: true
+permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page{{ pagination.pageNumber | plus: 1 }}/{% endif %}"
+---
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- title -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'components/posts_list.html', posts: pagination.items %}
+{% include 'components/pagination.html' %}

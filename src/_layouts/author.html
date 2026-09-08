@@ -1,0 +1,52 @@
+---
+layout: default.html
+---
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- author.name -}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <article class="page">
+    <div class="page__content">
+      {% if author.image %}
+      <p>
+        {% responsiveImage author.image, author.name, "160px", "160,320" %}
+      </p>
+      {% endif %}
+      <p>{{ author.bio | default: "Autor bei syndikat.golf und Mitglied des Disc Golf Syndikat Koeln." }}</p>
+      {% if author.same_as %}
+      <ul>
+        {% for url in author.same_as %}
+        <li><a href="{{ url }}" rel="me noopener">{{ url }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </article>
+</div>
+
+{% if postsByAuthor.size > 0 %}
+<div class="container">
+  <div class="row animate">
+    <div class="col col-12">
+      <div class="section__head">
+        <h2 class="section__title">Artikel von {{ author.name }}</h2>
+      </div>
+
+      <div class="row animate">
+        {% for post in postsByAuthor %}
+          {% include 'components/post_card.html', item: post %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

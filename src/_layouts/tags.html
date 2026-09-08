@@ -1,0 +1,46 @@
+---
+layout: default.html
+---
+
+<section class="tags">
+  <div class="tag__head">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+          <h1 class="tag__title">Tags</h1>
+          <ul class="tag__list list-reset">
+            {%- for tag in collections.tagList -%}
+              <li class="tag__item">
+                <a href="#{{- tag.name | downcase -}}" class="tag__link">{{- tag.name -}}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% for tag in collections.tagList %}
+    <div class="tags__inner">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <div class="tag__info">
+              <div class="tag__info-box">
+                <div class="tag__counter">
+                  {% assign tag_size = tag.posts | size %}
+                  <span>{{- tag_size -}}</span>
+                  <small>Post{%- if tag_size > 1 -%}s{%- endif -%}</small>
+                </div>
+                <h2 class="tag__name" id="{{- tag.name | downcase -}}">{{- tag.name -}}</h2>
+              </div>
+              <a class="top__link" href="#top">Nach oben</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include 'components/posts_list.html', posts: tag.posts %}
+    </div>
+  {% endfor %}
+</section>

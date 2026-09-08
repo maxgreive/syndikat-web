@@ -1,0 +1,33 @@
+---
+layout: default.html
+---
+
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      {% if image %}
+        <div class="col col-12">
+          <div class="page-image">
+            {% responsiveImage image, title, "(min-width: 792px) 760px, calc(100vw - 40px)", "480,720,960,1200,1600", true %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% unless hide_title %}
+      <div class="col col-12">
+        <div class="page__info">
+          <h1 class="page__title">{{- title -}}</h1>
+        </div>
+      </div>
+      {% endunless %}
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <article class="page">
+    <div class="page__content">
+      {{ content }}
+    </div>
+  </article>
+</div>

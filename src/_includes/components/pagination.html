@@ -1,0 +1,21 @@
+{% if pagination.pages.size > 1 %}
+<div class="container"><div class="row"><div class="col col-12">
+  <nav class="pagination animate"><div class="pagination__inner"><div class="pagination__list">
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="pagination__prev pagination__item">
+      {% include 'snippets/lucide/icon.html', name: "arrow-left", class: "lucide" %} Vorherige
+    </a>
+    {% else %}
+    <span class="pagination__prev pagination__item disabled">{% include 'snippets/lucide/icon.html', name: "arrow-left", class: "lucide" %} Vorherige</span>
+    {% endif %}
+    <div class="pagination__count pagination__item">Seite {{ pagination.pageNumber | plus: 1 }} von {{ pagination.pages.size }}</div>
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="pagination__next pagination__item">
+      Nächste {% include 'snippets/lucide/icon.html', name: "arrow-right", class: "lucide" %}
+    </a>
+    {% else %}
+    <span class="pagination__next pagination__item disabled">Nächste {% include 'snippets/lucide/icon.html', name: "arrow-right", class: "lucide" %}</span>
+    {% endif %}
+  </div></div></nav>
+</div></div></div>
+{% endif %}

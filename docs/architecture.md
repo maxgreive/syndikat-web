@@ -3,22 +3,24 @@
 ## Static content flow
 
 ```text
-Markdown + front matter + _data -> Jekyll/Liquid layouts and includes -> _site
+src/ Markdown + front matter + _data -> Eleventy/Liquid layouts and includes -> _site
                                                      ^
                          assets, browser JavaScript, and Svelte bundle --------+
 ```
 
-Pages at the repository root and posts in `_posts/` are Markdown-first content. Jekyll applies the layouts in `_layouts/`, reuses partials from `_includes/`, and reads structured site data from `_data/`. Site-wide configuration, plugins, permalinks, and exclusions live in `_config.yml`.
+Pages in `src/` and posts in `src/posts/` are Markdown-first content. Eleventy applies explicitly named `.html` layouts in `src/_layouts/`, reuses partials from `src/_includes/`, and reads structured site data from `src/_data/`. Site-wide configuration, computed data, filters, permalinks, and exclusions live in `eleventy.config.js`.
 
 ## Interactive code
 
-Small page-specific features are conventional browser scripts in `assets/js/`: bag tags, ratings, training signups, tournament maps, and the dice game. These are appropriate where the interaction belongs to an existing Jekyll page and has no component state model.
+Small page-specific features are conventional browser scripts in `src/assets/js/`: bag tags, ratings, training signups, tournament maps, the dice game, and local post search. Search fetches the Eleventy-generated `/search.json` once and matches normalized post title, tag, and rendered text. These are appropriate where the interaction belongs to an existing Eleventy page and has no component state model.
+
+The `responsiveImage` Eleventy shortcode turns a source under `src/assets/images/` into build-time WebP variants and JPEG fallbacks in `_site/assets/images/generated/`, with a `<picture>` element, `srcset`, `sizes`, and intrinsic dimensions. Templates keep only the original source path.
 
 `svelte-components/` contains the product-search application. Rollup builds it into the site assets; it streams product-search results and fetches the new-product feed. Treat its generated output as build artefacts.
 
 ## Deployment
 
-`npm run build` first builds assets, renders Jekyll with `JEKYLL_ENV=production`, then produces critical CSS. `netlify.toml` uses that command and publishes `_site`; redirects and headers are defined there.
+`npm run build` first builds assets, renders Eleventy with `NODE_ENV=production`, then produces critical CSS. `netlify.toml` uses that command and publishes `_site`; redirects and headers are defined there.
 
 ## API boundary
 

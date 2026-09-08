@@ -1,0 +1,33 @@
+---
+layout: page.html
+---
+
+<div class="page__content">
+  <div class="form-box">
+    {% if description %}
+      <div class="contact-head">
+        <p class="page-description">{{ description }}</p>
+      </div>
+    {% endif %}
+    <form class="form" id="contact-form" action="/success?ref={{ title | slug }}" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+      <div class="form__group">
+        <label class="form__label screen-reader-text" for="form-name">Dein Name</label>
+        <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="form__group">
+        <label class="form__label screen-reader-text" for="form-email">Deine Email</label>
+        <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email" required>
+      </div>
+      <div class="form__group">
+        <label class="form__label screen-reader-text" for="form-text">Deine Nachricht</label>
+        <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Nachricht" required></textarea>
+      </div>
+
+      <div data-netlify-recaptcha="true"></div>
+
+      <div class="form__group">
+        <button class="button button--primary" type="submit">Abschicken</button>
+      </div>
+    </form>
+  </div>
+</div>

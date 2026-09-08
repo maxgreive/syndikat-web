@@ -1,0 +1,31 @@
+---
+title: Mitglied im Syndikat werden
+description: Werde Mitglied beim Disc Golf Syndikat und sichere dir Training, Turnierteilnahme, Community-Zugang und weitere Vorteile im Verein.
+layout: membership.html
+---
+
+Du willst Turniere spielen, dich mit Gleichgesinnten vernetzen und dabei helfen Discgolf in Köln und Deutschland bekannter zu machen?
+
+Dann freuen wir uns über Deine Anmeldung!
+
+Wenn du vorab erst einmal verstehen willst, wie der Einstieg über Kurs, Liga und Training in Köln läuft, schau auf [Disc Golf in Köln](/disc-golf-koeln/).
+
+Wähle hier Deinen Abrechnungszeitraum aus. Die Mitgliedschaft verlängert sich automatisch, wenn Du nicht kündigst. Als Zahlungsdienstleister nutzen wir [Stripe](https://stripe.com/de). Es werden keine Daten auf unseren Servern gespeichert. Bei Fragen zu Mitgliedschaft oder Zahlungsmöglichkeiten, [schreib uns über das Kontaktformular](/contact/).
+
+{% include 'components/plan_selection.html' %}
+
+Um deine Mitgliedschaft zu ändern oder zukündigen oder um deine Zahlungsdaten zu ändern, kannst du [im Stripe Dashboard deinen Account verwalten](https://billing.stripe.com/p/login/3cseY17778iO6Vq6oo).
+
+### Benefits
+
+- DFV-Nummer (wird bei offiziellen Turnieren benötigt)
+- [Vereinstraining](/training/)
+- Versicherung bei Turnieren
+- 15% bei [frisbeeshop.com](https://frisbeeshop.com)
+- Member-Access auf dem Discord-Server
+
+### Spenden
+
+Wenn du einen Beitrag spenden möchtest, [findest du hier ein Zahlungsformular](https://buy.stripe.com/5kAdULfSzh02eOIdQV), mit dem du uns einen beliebigen Betrag schicken kannst.
+
+Wenn Du Fragen hast, [schreib uns über das Kontaktformular](/contact/).

@@ -35,3 +35,5 @@ Browser code currently chooses `http://localhost:8080` for `localhost`/`127.0.0.
 - training status, participant listing, signup, and removal.
 
 Read the API schemas in [mxlttr/syndikat-api](https://github.com/mxlttr/syndikat-api/blob/master/docs/openapi.yaml) before changing a request or response assumption.
+
+The `/tournaments/on-tour` response includes Syndikat players from both the starter and waiting lists. Each `our_players` entry includes `waitlisted` (boolean); the website lists starters first and groups waiting-list players in parentheses, e.g. “Person 1, Person 2, (Person 3, Person 4)”.

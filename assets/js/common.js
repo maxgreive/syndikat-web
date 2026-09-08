@@ -386,6 +386,10 @@ document.addEventListener("DOMContentLoaded", function () {
           const avatarColor = createTournamentAvatarColor(tournament);
           const initials = getTournamentInitials(tournament.title);
           const players = Array.isArray(tournament.our_players) ? tournament.our_players : [];
+          const formatPlayerName = player => escapeHtml(String(player.name || '').split(', ').reverse().join(' '));
+          const starters = players.filter(player => player.waitlisted !== true).map(formatPlayerName).join(', ');
+          const waitlist = players.filter(player => player.waitlisted === true).map(formatPlayerName).join(', ');
+          const playerList = [starters, waitlist ? `(${waitlist})` : ''].filter(Boolean).join(', ');
 
           const row = document.createElement('tr');
           row.dataset.href = tournament.link || '';
@@ -397,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td data-label="Status"><span class="tournaments-table__indicator${registrationStatus ? " is-active" : ""}" data-registration-status="${escapeAttribute(registrationStatus)}" aria-label="${escapeAttribute(registrationStatus || "n/a")}"></span></td>
             <td data-label="Turnier"><div class="tournaments-table__name-cell"><span class="avatar tournaments-table__avatar" style="background-color: ${escapeAttribute(avatarColor)};"><span>${escapeHtml(initials)}</span></span><div class="tournaments-table__heading"><div class="tournaments-table__title">${escapeHtml(tournament.title || "Unbenanntes Turnier")}</div></div></div></td>
             <td data-label="Datum">${formatTournamentDateCell(tournament)}</td>
-            <td data-label="Spieler*innen">${players.map(player => escapeHtml(String(player.name || '').split(', ').reverse().join(' '))).join(', ')}</td>
+            <td data-label="Spieler*innen">${playerList}</td>
           `;
 
           row.addEventListener('click', () => {

@@ -465,9 +465,7 @@ function renderUpcomingTournaments(tournaments) {
     return;
   }
 
-  const fragment = document.createDocumentFragment();
-
-  upcomingTournaments.forEach((tournament) => {
+  const fragment = renderTournamentWeeks(upcomingTournaments, 6, (tournament) => {
     const row = document.createElement("tr");
     row.dataset.eventId = String(tournament.event_id || "");
     row.dataset.href = tournament.link || "";
@@ -500,7 +498,7 @@ function renderUpcomingTournaments(tournaments) {
       row.addEventListener("keydown", handleUpcomingRowKeydown);
     }
 
-    fragment.append(row);
+    return row;
   });
 
   ui.upcomingBody.append(fragment);

@@ -380,8 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        const fragment = document.createDocumentFragment();
-        data.forEach(tournament => {
+        const fragment = renderTournamentWeeks(data, 4, tournament => {
           const registrationStatus = getTournamentRegistrationStatus(tournament);
           const avatarColor = createTournamentAvatarColor(tournament);
           const initials = getTournamentInitials(tournament.title);
@@ -415,7 +414,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             window.open(row.dataset.href, '_blank', 'noopener');
           });
-          fragment.appendChild(row);
+          return row;
         });
         onTourBody.replaceChildren(fragment);
         onTourTableWrapper.hidden = false;
@@ -510,4 +509,48 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+// Calendar arithmetic uses UTC after resolving the date in Germany, so browser
+// time zones and daylight-saving changes cannot move the Monday boundary.
+function getTournamentWeek(dateValue) {
+  if (!dateValue) return null;
+  const date = new Date(dateValue);
+  if (Number.isNaN(date.getTime())) return null;
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).formatToParts(date);
+  const part = type => Number(parts.find(item => item.type === type).value);
+  const monday = new Date(Date.UTC(part('year'), part('month') - 1, part('day')));
+  monday.setUTCDate(monday.getUTCDate() - (monday.getUTCDay() + 6) % 7);
+  const sunday = new Date(monday);
+  sunday.setUTCDate(sunday.getUTCDate() + 6);
+  const format = value => value.toLocaleDateString('de-DE', {
+    timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric'
+  });
+  return {key: monday.toISOString(), label: `${format(monday)} – ${format(sunday)}`};
+}
+
+function renderTournamentWeeks(tournaments, columnCount, renderRow) {
+  const groups = new Map();
+  for (const tournament of tournaments) {
+    const week = getTournamentWeek(tournament?.dates?.startTournament);
+    const key = week?.key || 'unknown';
+    if (!groups.has(key)) groups.set(key, {label: week?.label || 'Datum noch unbekannt', tournaments: []});
+    groups.get(key).tournaments.push(tournament);
+  }
+
+  const fragment = document.createDocumentFragment();
+  for (const [, group] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {
+    const header = document.createElement('tr');
+    header.className = 'tournaments-table__week';
+    const heading = document.createElement('th');
+    heading.colSpan = columnCount;
+    heading.textContent = group.label;
+    header.append(heading);
+    fragment.append(header);
+    group.tournaments.sort((a, b) => new Date(a?.dates?.startTournament) - new Date(b?.dates?.startTournament));
+    group.tournaments.forEach(tournament => fragment.append(renderRow(tournament)));
+  }
+  return fragment;
 }

@@ -5497,3 +5497,19 @@ table.on-tour td:nth-child(3) {
 .on-tour-status {
   margin-bottom: 16px;
 }
+
+/* Week dividers shared by the events and tournament overview tables. */
+.tournaments-table tbody tr.tournaments-table__week,
+.tournaments-table tbody tr.tournaments-table__week:hover {
+  background: rgba(128, 128, 128, 0.12);
+  cursor: default;
+}
+
+.tournaments-table__week th {
+  padding: 12px 10px;
+  border: 0;
+  border-top: 2px solid var(--brand-color);
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
